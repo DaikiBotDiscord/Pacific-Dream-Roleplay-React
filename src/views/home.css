@@ -1,0 +1,12 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover,auto;
+  background-image: url('https://cdn.discordapp.com/attachments/1134243980276678716/1189729850362183801/Untitled_design_9.png?ex=659f3944&is=658cc444&hm=825e61d42f43ab0c202ae501412bb2cd3bef4e5b92e14945cc068c5ace84c885&');
+  background-repeat: center;
+  background-position: center,top left;
+}
