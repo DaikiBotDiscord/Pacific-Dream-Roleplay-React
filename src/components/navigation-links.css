@@ -60,4 +60,13 @@
   .navigation-links-link {
     margin-left: 0px;
   }
+  .navigation-links-link1 {
+    margin-left: var(--dl-space-space-unit);
+  }
+  .navigation-links-link2 {
+    margin-left: var(--dl-space-space-unit);
+  }
+  .navigation-links-link3 {
+    margin-left: var(--dl-space-space-unit);
+  }
 }
