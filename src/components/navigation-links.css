@@ -34,21 +34,30 @@
 @media(max-width: 767px) {
   .navigation-links-nav {
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
   }
   .navigation-links-link {
-    margin-bottom: var(--dl-space-space-unit);
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
   .navigation-links-link1 {
-    margin-left: 0;
-    margin-bottom: var(--dl-space-space-unit);
+    margin-left: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: 0px;
   }
   .navigation-links-link2 {
-    margin-left: 0;
-    margin-bottom: var(--dl-space-space-unit);
+    margin-left: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: 0px;
   }
   .navigation-links-link3 {
-    margin-left: 0;
-    margin-bottom: var(--dl-space-space-unit);
+    margin-left: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: 0px;
+  }
+}
+@media(max-width: 479px) {
+  .navigation-links-nav {
+    flex-direction: row;
+  }
+  .navigation-links-link {
+    margin-left: 0px;
   }
 }
