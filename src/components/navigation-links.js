@@ -24,7 +24,7 @@ const NavigationLinks = (props) => {
         {props.text1}
       </a>
       <a
-        href="https://vm.tiktok.com/ZT8xrXd4c/"
+        href="https://tiktok.com/ZT8xrXd4c/"
         target="_blank"
         rel="noreferrer noopener"
         className="navigation-links-link2"
