@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -7,38 +8,12 @@ import './navigation-links.css'
 const NavigationLinks = (props) => {
   return (
     <nav className={`navigation-links-nav ${props.rootClassName} `}>
-      <a
-        href="https://discord.gg/jYgY8TwFac"
-        target="_blank"
-        rel="noreferrer noopener"
-        className="navigation-links-link"
-      >
-        {props.text}
-      </a>
-      <a
-        href="https://www.youtube.com/channel/UCoYE6ssoT28HPCn30r8TNxQ"
-        target="_blank"
-        rel="noreferrer noopener"
-        className="navigation-links-link1"
-      >
-        {props.text1}
-      </a>
-      <a
-        href="https://www.tiktok.com/@pacific.dream.rol"
-        target="_blank"
-        rel="noreferrer noopener"
-        className="navigation-links-link2"
-      >
-        {props.text2}
-      </a>
-      <a
-        href="https://www.instagram.com/pacificdream.official/"
-        target="_blank"
-        rel="noreferrer noopener"
-        className="navigation-links-link3"
-      >
+      <Link to="/staff" className="navigation-links-navlink">
         {props.text3}
-      </a>
+      </Link>
+      <Link to="/donation" className="navigation-links-navlink1">
+        {props.text2}
+      </Link>
     </nav>
   )
 }
@@ -46,8 +21,8 @@ const NavigationLinks = (props) => {
 NavigationLinks.defaultProps = {
   text1: 'Youtube',
   rootClassName: '',
-  text2: 'TikTok',
-  text3: 'Instagram',
+  text2: 'Donations',
+  text3: 'Our Team',
   text: 'Discord',
   text4: 'Blog',
 }
