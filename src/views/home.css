@@ -39,7 +39,7 @@
 }
 .home-nav {
   flex: 0 0 auto;
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: row;
 }
