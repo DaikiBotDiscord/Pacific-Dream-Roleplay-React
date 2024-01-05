@@ -27,29 +27,29 @@ const BlogPostCard2 = (props) => {
 BlogPostCard2.defaultProps = {
   image_src:
     'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&w=1000',
-  rootClassName: '',
-  image_alt: 'image',
-  label: 'TITLE',
+  profile_alt: 'profile',
   description: 'Profile Description',
   profile_src:
     'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&ixlib=rb-1.2.1&h=1200',
-  username: 'Name',
-  profile_alt: 'profile',
-  when: '3 days ago',
   author: 'Jane Doe',
+  label: 'TITLE',
+  when: '3 days ago',
+  username: 'Name',
+  rootClassName: '',
+  image_alt: 'image',
 }
 
 BlogPostCard2.propTypes = {
   image_src: PropTypes.string,
-  rootClassName: PropTypes.string,
-  image_alt: PropTypes.string,
-  label: PropTypes.string,
+  profile_alt: PropTypes.string,
   description: PropTypes.string,
   profile_src: PropTypes.string,
-  username: PropTypes.string,
-  profile_alt: PropTypes.string,
-  when: PropTypes.string,
   author: PropTypes.string,
+  label: PropTypes.string,
+  when: PropTypes.string,
+  username: PropTypes.string,
+  rootClassName: PropTypes.string,
+  image_alt: PropTypes.string,
 }
 
 export default BlogPostCard2

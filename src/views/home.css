@@ -386,7 +386,7 @@
     padding: var(--dl-space-space-unit);
   }
   .home-nav {
-    display: flex;
+    display: none;
   }
   .home-hero {
     width: 100%;
