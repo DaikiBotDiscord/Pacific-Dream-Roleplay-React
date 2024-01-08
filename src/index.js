@@ -18,8 +18,8 @@ const App = () => {
     <Router>
       <Switch>
         <Route component={Staff} exact path="/staff" />
-        <Route component={Donation} exact path="/donation" />
-        <Route component={Home} exact path="/" />
+        {/*         <Route component={Donation} exact path="/donation" />
+ */}        <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />
       </Switch>
