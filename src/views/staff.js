@@ -21,26 +21,38 @@ class PFP extends Component {
     axios.get('https://pdrp-web-api.vercel.app//api/staff/Founder')
       .then(response => {
         this.setState({ FounderData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
     axios.get('https://pdrp-web-api.vercel.app//api/staff/HeadAdmin')
       .then(response => {
         this.setState({ HeadAdminData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
     axios.get('https://pdrp-web-api.vercel.app//api/staff/SeniorAdmin')
       .then(response => {
         this.setState({ SeniorAdminData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
     axios.get('https://pdrp-web-api.vercel.app//api/staff/Admin')
       .then(response => {
         this.setState({ AdminData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
     axios.get('https://pdrp-web-api.vercel.app//api/staff/Staff')
       .then(response => {
         this.setState({ StaffData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
     axios.get('https://pdrp-web-api.vercel.app//api/staff/Mod')
       .then(response => {
         this.setState({ ModData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
       });
   };
 
