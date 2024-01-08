@@ -31,7 +31,9 @@
   --dl-radius-radius-radius8: 8px;
   --dl-space-space-fiveunits: 80px;
   --dl-space-space-fourunits: 64px;
+  --dl-space-space-doubleunit: 16px;
   --dl-space-space-threeunits: 48px;
+  --dl-space-space-tripleunit: 24px;
   --dl-space-space-oneandhalfunits: 24px;
 }
 .button {

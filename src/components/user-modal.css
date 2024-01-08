@@ -1,0 +1,59 @@
+.user-modal-user-modal {
+  display: flex;
+  position: relative;
+  max-width: auto;
+  align-items: stretch;
+  margin-right: var(--dl-space-space-doubleunit);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.user-modal-daiki-status-image {
+  width: 125px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: var(--dl-space-space-tripleunit);
+  border-radius: var(--dl-radius-radius-round);
+}
+.user-modal-daiki-status-container {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-modal-daiki-status-container-heading {
+  color: var(--dl-color-primary-daikipurple);
+}
+@media(max-width: 991px) {
+  .user-modal-user-modal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media(max-width: 767px) {
+  .user-modal-user-modal {
+    flex-direction: column;
+  }
+  .user-modal-daiki-status-image {
+    width: 100%;
+  }
+  .user-modal-daiki-status-container {
+    margin-top: 15px;
+    align-items: center;
+  }
+}
+@media(max-width: 479px) {
+  .user-modal-user-modal {
+    align-self: center;
+    margin-right: 0px;
+  }
+  .user-modal-daiki-status-image {
+    width: 50%;
+    align-self: center;
+  }
+  .user-modal-daiki-status-container {
+    align-self: center;
+  }
+}

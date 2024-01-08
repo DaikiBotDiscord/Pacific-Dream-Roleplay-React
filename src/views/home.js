@@ -61,11 +61,10 @@ const Home = (props) => {
             <div className="home-pricing-card">
               <img
                 alt="image"
-                src="/external/discord-logo-color-200w-200w.png"
+                src="/external/discord-logo-color-200w-200w.webp"
                 className="home-image1"
               />
-              <span className="home-text09">Franklin Network</span>
-              <span className="home-text10">Discord</span>
+              <span className="home-text09">Discord</span>
             </div>
           </a>
           <a
@@ -78,8 +77,7 @@ const Home = (props) => {
               <svg viewBox="0 0 1024 1024" className="home-icon">
                 <path d="M406.286 644.571l276.571-142.857-276.571-144.571v287.429zM512 152c215.429 0 358.286 10.286 358.286 10.286 20 2.286 64 2.286 102.857 43.429 0 0 31.429 30.857 40.571 101.714 10.857 82.857 10.286 165.714 10.286 165.714v77.714s0.571 82.857-10.286 165.714c-9.143 70.286-40.571 101.714-40.571 101.714-38.857 40.571-82.857 40.571-102.857 42.857 0 0-142.857 10.857-358.286 10.857v0c-266.286-2.286-348-10.286-348-10.286-22.857-4-74.286-2.857-113.143-43.429 0 0-31.429-31.429-40.571-101.714-10.857-82.857-10.286-165.714-10.286-165.714v-77.714s-0.571-82.857 10.286-165.714c9.143-70.857 40.571-101.714 40.571-101.714 38.857-41.143 82.857-41.143 102.857-43.429 0 0 142.857-10.286 358.286-10.286v0z"></path>
               </svg>
-              <span className="home-text11">Franklin Network</span>
-              <span className="home-text12">Youtube</span>
+              <span className="home-text10">Youtube</span>
             </div>
           </a>
           <a
@@ -91,11 +89,10 @@ const Home = (props) => {
             <div className="home-pricing-card2">
               <img
                 alt="image"
-                src="/external/tiktok%20logo-200w-200w.png"
+                src="/external/tiktok%20logo-200w-200w.webp"
                 className="home-image2"
               />
-              <span className="home-text13">franklinnetwork</span>
-              <span className="home-text14">TikTok</span>
+              <span className="home-text11">TikTok</span>
             </div>
           </a>
           <a
@@ -107,12 +104,11 @@ const Home = (props) => {
             <div className="home-pricing-card3">
               <img
                 alt="image"
-                src="/external/1-12860_new-instagram-logo-png-transparent-png-format-instagram-200h-200h.png"
+                src="/external/1-12860_new-instagram-logo-png-transparent-png-format-instagram-200h-200h.webp"
                 className="home-image3"
               />
-              <span className="home-text15">franklin_network</span>
-              <span className="home-text16">
-                <span className="home-text17">Instagram</span>
+              <span className="home-text12">
+                <span className="home-text13">Instagram</span>
               </span>
             </div>
           </a>

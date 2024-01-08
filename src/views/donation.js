@@ -31,7 +31,7 @@ const Donation = (props) => {
             rel="noreferrer noopener"
             className="donation-link button"
           >
-            <span>
+            <span className="donation-text">
               <span>FiveM Connect</span>
               <br></br>
             </span>
