@@ -18,27 +18,27 @@ class PFP extends Component {
   };
 
   fetchData = () => {
-    axios.get('https://api.pacificdreamrp.com/api/staff/Founder')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/Founder')
       .then(response => {
         this.setState({ FounderData: response.data });
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/HeadAdmin')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/HeadAdmin')
       .then(response => {
         this.setState({ HeadAdminData: response.data });
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/SeniorAdmin')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/SeniorAdmin')
       .then(response => {
         this.setState({ SeniorAdminData: response.data });
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Admin')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/Admin')
       .then(response => {
         this.setState({ AdminData: response.data });
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Staff')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/Staff')
       .then(response => {
         this.setState({ StaffData: response.data });
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Mod')
+    axios.get('https://pdrp-web-api.vercel.app//api/staff/Mod')
       .then(response => {
         this.setState({ ModData: response.data });
       });
