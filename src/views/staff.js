@@ -138,7 +138,7 @@ class PFP extends Component {
           </h1>
           <div className="staff-separator03"></div>
         </div>
-        <div className="staff-user-container1">
+        <div className="staff-user-container">
           {HeadAdminData && this.renderStaffMembers(HeadAdminData)}
         </div>
         <div className="staff-container4">
@@ -149,7 +149,7 @@ class PFP extends Component {
           </h1>
           <div className="staff-separator05"></div>
         </div>
-        <div className="staff-user-container2">
+        <div className="staff-user-container">
           {SeniorAdminData && this.renderStaffMembers(SeniorAdminData)}
         </div>
         <div className="staff-container5">
@@ -160,7 +160,7 @@ class PFP extends Component {
           </h1>
           <div className="staff-separator07"></div>
         </div>
-        <div className="staff-user-container3">
+        <div className="staff-user-container">
           {AdminData && this.renderStaffMembers(AdminData)}
         </div>
         <div className="staff-container6">
@@ -171,7 +171,7 @@ class PFP extends Component {
           </h1>
           <div className="staff-separator09"></div>
         </div>
-        <div className="staff-user-container4">
+        <div className="staff-user-container">
           {StaffData && this.renderStaffMembers(StaffData)}
         </div>
         <div className="staff-container7">
@@ -182,7 +182,7 @@ class PFP extends Component {
           </h1>
           <div className="staff-separator11"></div>
         </div>
-        <div className="staff-user-container5">
+        <div className="staff-user-container">
           {ModData && this.renderStaffMembers(ModData)}
         </div>
         <FooterContainer />
