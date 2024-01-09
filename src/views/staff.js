@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import NavigationLinks from '../components/navigation-links'
+import FooterContainer from '../components/footer-container'
 import './staff.css'
 
 class PFP extends Component {
@@ -184,6 +185,7 @@ class PFP extends Component {
         <div className="staff-user-container5">
           {ModData && this.renderStaffMembers(ModData)}
         </div>
+        <FooterContainer />
       </div>
     )
   }

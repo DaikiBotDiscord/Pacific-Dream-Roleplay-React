@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import NavigationLinks from '../components/navigation-links'
+import FooterContainer from '../components/footer-container'
 import './donation.css'
 
 const Donation = (props) => {
@@ -38,6 +39,7 @@ const Donation = (props) => {
           </a>
         </header>
       </div>
+      <FooterContainer />
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import NavigationLinks from '../components/navigation-links'
+import FooterContainer from '../components/footer-container'
 import './home.css'
 
 const Home = (props) => {
@@ -114,6 +115,7 @@ const Home = (props) => {
           </a>
         </div>
       </div>
+      <FooterContainer />
     </div>
   )
 }

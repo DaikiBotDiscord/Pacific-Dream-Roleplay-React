@@ -1,0 +1,100 @@
+.footer-container-footer-container {
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    position: relative;
+    box-shadow: 5px 5px 10px 0px #1e1e1e;
+    margin-top: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-container-footer {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-tripleunit);
+    z-index: -100;
+    position: relative;
+    max-width: var(--dl-size-size-maxcontent);
+    align-self: center;
+    margin-top: auto;
+    align-items: center;
+    padding-left: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+}
+
+.footer-container-social-links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.footer-container-link {
+    display: contents;
+}
+
+.footer-container-image {
+    width: 24px;
+    object-fit: cover;
+    margin-right: var(--dl-space-space-doubleunit);
+    text-decoration: none;
+}
+
+.footer-container-copyright-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-container-link1 {
+    display: contents;
+}
+
+.footer-container-icon {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+    margin-right: var(--dl-space-space-doubleunit);
+    text-decoration: none;
+}
+
+.footer-container-text {
+    display: none;
+}
+
+.footer-container-text1 {
+    color: var(--dl-color-gray-white);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+@media(max-width: 767px) {
+    .footer-container-text1 {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 479px) {
+    .footer-container-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: var(--dl-space-space-unit);
+    }
+
+    .footer-container-text {
+        color: var(--dl-color-gray-white);
+        display: flex;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    .footer-container-text1 {
+        display: none;
+    }
+}
