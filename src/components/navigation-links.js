@@ -11,9 +11,9 @@ const NavigationLinks = (props) => {
       <Link to="/staff" className="navigation-links-navlink">
         {props.text3}
       </Link>
-      {/* <Link to="/donation" className="navigation-links-navlink1">
+      <Link to="/donation" className="navigation-links-navlink1">
         {props.text2}
-      </Link> */}
+      </Link>
     </nav>
   )
 }

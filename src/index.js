@@ -10,6 +10,7 @@ import {
 import './style.css'
 import Staff from './views/staff'
 import Donation from './views/donation'
+import Login from './views/login'
 import Home from './views/home'
 import NotFound from './views/not-found'
 
@@ -18,7 +19,8 @@ const App = () => {
     <Router>
       <Switch>
         <Route component={Staff} exact path="/staff" />
-        {/*         <Route component={Donation} exact path="/donation" /> */}
+        <Route component={Donation} exact path="/donation" />
+        <Route component={Login} exact path="/login" />
         <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />

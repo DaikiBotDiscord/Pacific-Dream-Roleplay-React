@@ -115,7 +115,7 @@ const Home = (props) => {
           </a>
         </div>
       </div>
-      <FooterContainer />
+      <FooterContainer></FooterContainer>
     </div>
   )
 }

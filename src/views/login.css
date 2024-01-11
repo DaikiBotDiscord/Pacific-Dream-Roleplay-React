@@ -1,0 +1,157 @@
+.login-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.login-container1 {
+  width: 100%;
+  height: 943px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-size: auto,cover;
+  background-image: linear-gradient(113deg, rgba(255, 76, 92, 0.8) 6.00%,rgba(255, 177, 70, 0.8) 94.00%),url('https://cdn.discordapp.com/attachments/1134243980276678716/1191249993827356732/Pacific_Dream_Roleplay_1.png?ex=65a4c102&is=65924c02&hm=56e1bbd218fac8264857eee18d13c969e93b37d43383aabb01a368378dff5f33&');
+  background-repeat: repeat,no-repeat;
+  background-position: top left,center;
+}
+.login-header {
+  width: 100%;
+  display: flex;
+  box-shadow: 5px 5px 10px 15px rgba(148, 98, 98, 0.2);
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+}
+.login-navlink {
+  display: contents;
+}
+.login-image {
+  width: var(--dl-size-size-small);
+  height: auto;
+  text-decoration: none;
+}
+.login-nav {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.login-link {
+  transition: 0.3s;
+  font-family: "Outfit";
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.41);
+}
+.login-link:hover {
+  background-color: rgba(255, 255, 255, 0.72);
+}
+.login-text {
+  font-style: normal;
+  font-weight: 600;
+}
+.login-hero {
+  width: 100%;
+  height: 765px;
+  display: flex;
+  position: relative;
+  min-height: 80vh;
+  align-items: center;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: var(--dl-space-space-threeunits);
+  margin-bottom: -96px;
+  padding-right: var(--dl-space-space-threeunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-sixunits);
+  justify-content: center;
+}
+.login-form {
+  width: auto;
+  height: auto;
+  display: flex;
+  box-shadow: 5px 5px 10px 0px #6d5a5a;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-image: radial-gradient(circle at center, rgb(255, 76, 92) 0.00%,rgb(255, 177, 70) 98.00%);
+}
+.login-container2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.login-text3 {
+  color: var(--dl-color-gray-white);
+  align-self: center;
+  margin-top: var(--dl-space-space-oneandhalfunits);
+  margin-bottom: var(--dl-space-space-oneandhalfunits);
+}
+.login-text6 {
+  color: var(--dl-color-gray-white);
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-unit);
+}
+.login-textinput {
+  align-self: center;
+  margin-left: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
+  margin-bottom: var(--dl-space-space-unit);
+}
+.login-text7 {
+  color: var(--dl-color-gray-white);
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-unit);
+}
+.login-textinput1 {
+  align-self: center;
+  margin-left: var(--dl-space-space-unit);
+  margin-right: var(--dl-space-space-unit);
+  margin-bottom: var(--dl-space-space-halfunit);
+}
+.login-button {
+  color: #000000;
+  align-self: center;
+  border-width: 0px;
+  margin-bottom: var(--dl-space-space-unit);
+  background-color: #ffffff;
+}
+@media(max-width: 991px) {
+  .login-hero {
+    flex-direction: column;
+  }
+}
+@media(max-width: 767px) {
+  .login-header {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .login-hero {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+}
+@media(max-width: 479px) {
+  .login-header {
+    padding: var(--dl-space-space-unit);
+  }
+  .login-nav {
+    display: flex;
+  }
+  .login-text {
+    font-size: 12px;
+  }
+  .login-hero {
+    width: 100%;
+    padding: var(--dl-space-space-twounits);
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+}
