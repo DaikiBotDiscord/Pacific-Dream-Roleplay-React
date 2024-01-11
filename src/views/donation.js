@@ -39,7 +39,7 @@ const Donation = (props) => {
           </a>
         </header>
       </div>
-      <FooterContainer />
+      <FooterContainer rootClassName="footer-container-root-class-name1"></FooterContainer>
     </div>
   )
 }

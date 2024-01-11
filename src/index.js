@@ -10,6 +10,7 @@ import {
 import './style.css'
 import Staff from './views/staff'
 import Donation from './views/donation'
+import Login from './views/login'
 import Home from './views/home'
 import NotFound from './views/not-found'
 
@@ -17,10 +18,9 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/discord" component={window.location.replace('https://discord.gg/aKmGcdK6aZ')} />
-        <Route exact path="/fiveM-join" component={window.location.replace('https://cfx.re/join/zz8mqp')} />
         <Route component={Staff} exact path="/staff" />
-        {/*         <Route component={Donation} exact path="/donation" /> */}
+        <Route component={Donation} exact path="/donation" />
+        <Route component={Login} exact path="/login" />
         <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />
