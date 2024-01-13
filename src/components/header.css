@@ -50,7 +50,7 @@
     font-weight: 600;
 }
 
-.header-link1 {
+.header-navlink1 {
     transition: 0.3s;
     font-family: "Outfit";
     margin-left: var(--dl-space-space-twounits);
@@ -58,7 +58,7 @@
     background-color: rgba(255, 255, 255, 0.41);
 }
 
-.header-link1:hover {
+.header-navlink1:hover {
     background-color: rgba(255, 255, 255, 0.72);
 }
 
@@ -70,7 +70,7 @@
 
 
 @media(max-width: 991px) {
-    .header-link1 {
+    .header-navlink1 {
         margin-left: var(--dl-space-space-unit);
     }
 }
