@@ -26,18 +26,13 @@ const Header = (props) => {
                 ></NavigationLinks>
             </div>
             <div className="header-container">
-                <a
-                    href={props.link_button}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="header-link button"
-                >
+                <Link to="/register" className="header-navlink1 button">
                     <span className="header-text">
-                        <span className="">FiveM Connect</span>
+                        <span className="">Register</span>
                         <br className=""></br>
                     </span>
-                </a>
-                <Link to="/login" className="header-navlink1 button">
+                </Link>
+                <Link to="/login" className="header-navlink2 button">
                     <span className="header-text3">
                         <span className="">Login</span>
                         <br className=""></br>
@@ -54,6 +49,7 @@ Header.defaultProps = {
     button: 'Login',
     image_src: '/Pacific_Dream_RP_Clear.png',
     image_alt: 'logo',
+    link_button1: 'https://cfx.re/join/zz8mqp',
 }
 
 Header.propTypes = {
@@ -62,6 +58,7 @@ Header.propTypes = {
     button: PropTypes.string,
     image_src: PropTypes.string,
     image_alt: PropTypes.string,
+    link_button1: PropTypes.string,
 }
 
 export default Header

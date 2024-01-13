@@ -34,14 +34,14 @@
     align-items: flex-start;
 }
 
-.header-link {
+.header-navlink1 {
     transition: 0.3s;
     font-family: "Outfit";
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.41);
 }
 
-.header-link:hover {
+.header-navlink1:hover {
     background-color: rgba(255, 255, 255, 0.72);
 }
 
@@ -50,7 +50,7 @@
     font-weight: 600;
 }
 
-.header-navlink1 {
+.header-navlink2 {
     transition: 0.3s;
     font-family: "Outfit";
     margin-left: var(--dl-space-space-twounits);
@@ -58,7 +58,7 @@
     background-color: rgba(255, 255, 255, 0.41);
 }
 
-.header-navlink1:hover {
+.header-navlink2:hover {
     background-color: rgba(255, 255, 255, 0.72);
 }
 
@@ -69,8 +69,9 @@
 
 
 
+
 @media(max-width: 991px) {
-    .header-navlink1 {
+    .header-navlink2 {
         margin-left: var(--dl-space-space-unit);
     }
 }

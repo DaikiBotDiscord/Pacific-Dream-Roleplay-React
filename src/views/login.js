@@ -21,7 +21,7 @@ const Login = (props) => {
   const [isLoading, setLoading] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
-    toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+    /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -29,8 +29,8 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    });
-    /* setLoading(true);
+    }); */
+    setLoading(true);
     fetch("https://api.pacificdreamrp.com/api/login-user", {
       method: "POST",
       crossDomain: true,
@@ -60,11 +60,11 @@ const Login = (props) => {
             pauseOnHover: false,
             draggable: false,
             progress: undefined,
-            theme: 'dark'
+            theme: 'light'
           });
           setLoading(false);
           setTimeout(() => {
-            window.location.href = "http://localhost:3001/home";
+            window.location.href = "http://localhost:3000/home";
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
           }, 2500);
@@ -77,7 +77,7 @@ const Login = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
           });
           setLoading(false);
         } else {
@@ -89,7 +89,7 @@ const Login = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
           });
           setLoading(false);
         }
@@ -103,11 +103,11 @@ const Login = (props) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
         });
         setLoading(false);
         console.log(error);
-      }); */
+      });
   }
   return (
     <div className="login-container">

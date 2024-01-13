@@ -20,70 +20,6 @@
   background-position: top left, center;
 }
 
-.home-header {
-  width: 100%;
-  display: flex;
-  box-shadow: 5px 5px 10px 15px rgba(148, 98, 98, 0.2);
-  align-items: center;
-  padding-top: var(--dl-space-space-twounits);
-  padding-left: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-threeunits);
-  padding-bottom: var(--dl-space-space-twounits);
-  justify-content: space-between;
-}
-
-.home-navlink {
-  display: contents;
-}
-
-.home-image {
-  width: var(--dl-size-size-small);
-  height: auto;
-  text-decoration: none;
-}
-
-.home-nav {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.home-container2 {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: flex-start;
-}
-
-.home-link {
-  transition: 0.3s;
-  font-family: "Outfit";
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.41);
-}
-
-.home-link:hover {
-  background-color: rgba(255, 255, 255, 0.72);
-}
-
-.home-text {
-  font-style: normal;
-  font-weight: 600;
-}
-
-.home-navlink1 {
-  font-style: normal;
-  transition: 0.3s;
-  font-weight: 600;
-  margin-left: var(--dl-space-space-twounits);
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.41);
-}
-
-.home-navlink1:hover {
-  background-color: rgba(255, 255, 255, 0.72);
-}
-
 .home-hero {
   width: 100%;
   height: 765px;
@@ -100,13 +36,13 @@
   justify-content: center;
 }
 
-.home-text03 {
+.home-text {
   color: var(--dl-color-gray-white);
   font-size: 3rem;
   font-family: "Outfit";
 }
 
-.home-text06 {
+.home-text03 {
   color: var(--dl-color-gray-white);
   font-size: 20px;
   margin-top: var(--dl-space-space-twounits);
@@ -115,13 +51,29 @@
 }
 
 .home-btn-group {
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-.home-container3 {
+.home-link {
+  transition: 0.3s;
+  font-family: "Outfit";
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.41);
+}
+
+.home-link:hover {
+  background-color: rgba(255, 255, 255, 0.72);
+}
+
+.home-text06 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.home-container2 {
   width: 100%;
   height: auto;
   display: flex;
@@ -158,7 +110,7 @@
   background-color: rgba(125, 102, 102, 0.48);
 }
 
-.home-image1 {
+.home-image {
   width: var(--dl-size-size-small);
   object-fit: cover;
 }
@@ -244,7 +196,7 @@
   background-color: rgba(125, 102, 102, 0.48);
 }
 
-.home-image2 {
+.home-image1 {
   width: var(--dl-size-size-small);
   height: auto;
   object-fit: cover;
@@ -288,7 +240,7 @@
   background-color: rgba(125, 102, 102, 0.48);
 }
 
-.home-image3 {
+.home-image2 {
   width: var(--dl-size-size-small);
   height: var(--dl-size-size-small);
   object-fit: cover;
@@ -314,15 +266,15 @@
     flex-direction: column;
   }
 
+  .home-text {
+    text-align: center;
+  }
+
+  .home-text01 {
+    text-align: center;
+  }
+
   .home-text03 {
-    text-align: center;
-  }
-
-  .home-text04 {
-    text-align: center;
-  }
-
-  .home-text06 {
     text-align: center;
   }
 
@@ -357,17 +309,12 @@
 }
 
 @media(max-width: 767px) {
-  .home-header {
-    padding-left: var(--dl-space-space-twounits);
-    padding-right: var(--dl-space-space-twounits);
-  }
-
   .home-hero {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
 
-  .home-container3 {
+  .home-container2 {
     flex-flow: column;
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
@@ -416,18 +363,6 @@
     background-position: center;
   }
 
-  .home-header {
-    padding: var(--dl-space-space-unit);
-  }
-
-  .home-nav {
-    display: flex;
-  }
-
-  .home-text {
-    font-size: 12px;
-  }
-
   .home-hero {
     width: 100%;
     padding: var(--dl-space-space-twounits);
@@ -440,7 +375,11 @@
     flex-direction: column;
   }
 
-  .home-container3 {
+  .home-text06 {
+    font-size: 12px;
+  }
+
+  .home-container2 {
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);

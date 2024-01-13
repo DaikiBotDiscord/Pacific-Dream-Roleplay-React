@@ -16,22 +16,34 @@ const Home = (props) => {
         <meta property="og:title" content="Pacific Dream Roleplay" />
       </Helmet>
       <div className="home-container1">
-        <Header />
+        <Header rootClassName="header-root-class-name2"></Header>
         <div className="home-hero">
-          <h1 className="home-text03">
-            <span className="home-text04">What is Pacific Dream Roleplay</span>
+          <h1 className="home-text">
+            <span className="home-text01">What is Pacific Dream Roleplay</span>
             <br></br>
           </h1>
-          <span className="home-text06">
+          <span className="home-text03">
             <span>
               Pacific Dream Roleplay is a GTA FiveM roleplay server based off of
               the shore line of San Diego
             </span>
             <br></br>
           </span>
-          <div className="home-btn-group"></div>
+          <div className="home-btn-group">
+            <a
+              href="https://cfx.re/join/zz8mqp"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="home-link button"
+            >
+              <span className="home-text06">
+                <span>FiveM Connect</span>
+                <br></br>
+              </span>
+            </a>
+          </div>
         </div>
-        <div className="home-container3">
+        <div className="home-container2">
           <a
             href="https://discord.gg/jYgY8TwFac"
             target="_blank"
@@ -41,8 +53,8 @@ const Home = (props) => {
             <div className="home-pricing-card">
               <img
                 alt="image"
-                src="/external/discord-logo-color-200w-200w.png"
-                className="home-image1"
+                src="/external/discord-logo-color-200w-200w.webp"
+                className="home-image"
               />
               <span className="home-text09">Discord</span>
             </div>
@@ -70,7 +82,7 @@ const Home = (props) => {
               <img
                 alt="image"
                 src="/external/tiktok%20logo-200w-200w.webp"
-                className="home-image2"
+                className="home-image1"
               />
               <span className="home-text11">TikTok</span>
             </div>
@@ -85,7 +97,7 @@ const Home = (props) => {
               <img
                 alt="image"
                 src="/external/1-12860_new-instagram-logo-png-transparent-png-format-instagram-200h-200h.webp"
-                className="home-image3"
+                className="home-image2"
               />
               <span className="home-text12">
                 <span className="home-text13">Instagram</span>

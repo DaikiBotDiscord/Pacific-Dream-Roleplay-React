@@ -13,6 +13,7 @@ import Donation from './views/donation'
 import Login from './views/login'
 import Home from './views/home'
 import NotFound from './views/not-found'
+import Register from './views/register'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route component={Staff} exact path="/staff" />
         {/* <Route component={Donation} exact path="/donation" /> */}
         <Route component={Login} exact path="/login" />
+        <Route component={Register} exact path="/register" />
         <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />

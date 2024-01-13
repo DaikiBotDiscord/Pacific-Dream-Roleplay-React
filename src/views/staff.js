@@ -99,12 +99,12 @@ class PFP extends Component {
           <Header />
         </div>
         <div className="staff-container2">
-          <div className="staff-separator"></div>
+          <div className="staff-separator02"></div>
           <h1 className="staff-text03">
             <span>Founders</span>
             <br></br>
           </h1>
-          <div className="staff-separator01"></div>
+          <div className="staff-separator02"></div>
         </div>
         <div className="staff-user-container">
           {FounderData && this.renderStaffMembers(FounderData)}
