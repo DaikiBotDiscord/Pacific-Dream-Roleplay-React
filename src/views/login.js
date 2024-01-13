@@ -9,6 +9,7 @@ import './login.css'
 
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Header from '../components/header'
 
 const Login = (props) => {
   const showToast = () => {
@@ -20,8 +21,16 @@ const Login = (props) => {
   const [isLoading, setLoading] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
-    setLoading(true);
-
+    toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+      position: "top-right",
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    /* setLoading(true);
     fetch("https://api.pacificdreamrp.com/api/login-user", {
       method: "POST",
       crossDomain: true,
@@ -55,7 +64,7 @@ const Login = (props) => {
           });
           setLoading(false);
           setTimeout(() => {
-            window.location.href = "http://localhost:3000/home";
+            window.location.href = "http://localhost:3001/home";
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
           }, 2500);
@@ -98,7 +107,7 @@ const Login = (props) => {
         });
         setLoading(false);
         console.log(error);
-      });
+      }); */
   }
   return (
     <div className="login-container">
@@ -107,37 +116,15 @@ const Login = (props) => {
         <meta property="og:title" content="Login - Pacific Dream Roleplay" />
       </Helmet>
       <div className="login-container1">
-        <header data-role="Header" className="login-header">
-          <Link to="/" className="login-navlink">
-            <img
-              alt="logo"
-              src="https://cdn.discordapp.com/attachments/1134243980276678716/1191250339953918093/game_ove_6_1.png?ex=65a4c155&amp;is=65924c55&amp;hm=e2f2ebac2bf6ba6f7257bf734060b513945f2c71a27475a40b9e35a7679b561a&amp;"
-              className="login-image"
-            />
-          </Link>
-          <div className="login-nav">
-            <NavigationLinks rootClassName="rootClassName13"></NavigationLinks>
-          </div>
-          <a
-            href="https://cfx.re/join/zz8mqp"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="login-link button"
-          >
-            <span className="login-text">
-              <span>FiveM Connect</span>
-              <br></br>
-            </span>
-          </a>
-        </header>
+        <Header />
         <div className="login-hero">
           <form className="login-form">
             <div className="login-container2">
-              <h1 className="login-text3">
+              <h1 className="login-text">
                 <span>Login</span>
                 <br></br>
               </h1>
-              <span className="login-text6">Email Address</span>
+              <span className="login-text3">Email Address</span>
               <input
                 type="email"
                 placeholder="Enter Email"
@@ -146,7 +133,7 @@ const Login = (props) => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="login-textinput input"
               />
-              <span className="login-text7">Password</span>
+              <span className="login-text4">Password</span>
               <input
                 type="password"
                 required

@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .donation-container1 {
   flex: 0 0 auto;
   width: 100%;
@@ -13,11 +14,12 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background-size: auto,cover;
+  background-size: auto, cover;
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
   background-repeat: top left;
-  background-position: top left,center;
+  background-position: top left, center;
 }
+
 .donation-header {
   width: 100%;
   display: flex;
@@ -29,41 +31,70 @@
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
 }
+
 .donation-navlink {
   display: contents;
 }
+
 .donation-image {
   width: var(--dl-size-size-small);
   height: auto;
   text-decoration: none;
 }
+
 .donation-nav {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   flex-direction: row;
 }
+
+.donation-container2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
 .donation-link {
   transition: 0.3s;
+  font-family: "Outfit";
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.41);
 }
+
 .donation-link:hover {
   background-color: rgba(255, 255, 255, 0.72);
 }
+
+.donation-text {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.donation-navlink1 {
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-twounits);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.41);
+}
+
 @media(max-width: 767px) {
   .donation-header {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
 }
+
 @media(max-width: 479px) {
   .donation-header {
     padding: var(--dl-space-space-unit);
   }
+
   .donation-nav {
     display: flex;
   }
+
   .donation-text {
     font-size: 12px;
   }

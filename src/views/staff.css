@@ -49,8 +49,15 @@
   flex-direction: row;
 }
 
+.staff-container2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
 .staff-link {
   transition: 0.3s;
+  font-family: "Outfit";
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.41);
 }
@@ -59,7 +66,20 @@
   background-color: rgba(255, 255, 255, 0.72);
 }
 
-.staff-container2 {
+.staff-text {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.staff-navlink1 {
+  font-style: normal;
+  font-weight: 600;
+  margin-left: var(--dl-space-space-twounits);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.41);
+}
+
+.staff-container3 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -167,73 +187,7 @@
   text-align: center;
 }
 
-.staff-user-modal2 {
-  display: flex;
-  position: relative;
-  max-width: auto;
-  align-items: stretch;
-  margin-right: var(--dl-space-space-doubleunit);
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.staff-daiki-status-image2 {
-  width: 125px;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-  margin-right: var(--dl-space-space-tripleunit);
-  border-radius: var(--dl-radius-radius-round);
-}
-
-.staff-daiki-status-container2 {
-  flex: 0 0 auto;
-  width: 250px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.staff-daiki-status-container-heading2 {
-  color: var(--dl-color-primary-daikipurple);
-  text-align: center;
-}
-
-.staff-user-modal3 {
-  display: flex;
-  position: relative;
-  max-width: auto;
-  align-items: stretch;
-  margin-right: var(--dl-space-space-doubleunit);
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.staff-daiki-status-image3 {
-  width: 125px;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-  margin-right: var(--dl-space-space-tripleunit);
-  border-radius: var(--dl-radius-radius-round);
-}
-
-.staff-daiki-status-container3 {
-  flex: 0 0 auto;
-  width: 250px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.staff-daiki-status-container-heading3 {
-  color: var(--dl-color-primary-daikipurple);
-  text-align: center;
-}
-
-.staff-container3 {
+.staff-container4 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -263,7 +217,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container4 {
+.staff-container5 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -294,7 +248,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container5 {
+.staff-container6 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -324,7 +278,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container6 {
+.staff-container7 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -354,7 +308,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container7 {
+.staff-container8 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -394,16 +348,6 @@
     flex-direction: row;
     justify-content: space-between;
   }
-
-  .staff-user-modal2 {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .staff-user-modal3 {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 @media(max-width: 767px) {
@@ -436,34 +380,6 @@
   }
 
   .staff-daiki-status-container1 {
-    margin-top: 15px;
-    align-items: center;
-  }
-
-  .staff-user-modal2 {
-    flex-direction: column;
-  }
-
-  .staff-daiki-status-image2 {
-    width: var(--dl-size-size-xlarge);
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container2 {
-    margin-top: 15px;
-    align-items: center;
-  }
-
-  .staff-user-modal3 {
-    flex-direction: column;
-  }
-
-  .staff-daiki-status-image3 {
-    width: var(--dl-size-size-xlarge);
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container3 {
     margin-top: 15px;
     align-items: center;
   }
@@ -525,40 +441,6 @@
   }
 
   .staff-daiki-status-container1 {
-    align-self: center;
-  }
-
-  .staff-user-modal2 {
-    align-self: center;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-unit);
-  }
-
-  .staff-daiki-status-image2 {
-    width: 50%;
-    align-self: center;
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container2 {
-    align-self: center;
-  }
-
-  .staff-user-modal3 {
-    align-self: center;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-unit);
-  }
-
-  .staff-daiki-status-image3 {
-    width: 50%;
-    align-self: center;
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container3 {
     align-self: center;
   }
 
