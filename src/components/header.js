@@ -37,17 +37,12 @@ const Header = (props) => {
                         <br className=""></br>
                     </span>
                 </a>
-                <a
-                    href={props.link_button1}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="header-link1 button"
-                >
+                <Link to="/login" className="header-navlink1 button">
                     <span className="header-text3">
                         <span className="">Login</span>
                         <br className=""></br>
                     </span>
-                </a>
+                </Link>
             </div>
         </header>
     )
