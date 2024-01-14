@@ -12,6 +12,7 @@ import Header from '../components/header'
 class PFP extends Component {
   state = {
     FounderData: null,
+    HeadAdminData: null,
     AdminData: null,
     jrAdminData: null,
     SeniorStaffData: null,
@@ -23,6 +24,12 @@ class PFP extends Component {
     axios.get('https://api.pacificdreamrp.com/api/staff/Founder')
       .then(response => {
         this.setState({ FounderData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
+      });
+    axios.get('https://api.pacificdreamrp.com/api/staff/HeadAdmin')
+      .then(response => {
+        this.setState({ HeadAdminData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -82,6 +89,7 @@ class PFP extends Component {
   render() {
     const {
       FounderData,
+      HeadAdminData,
       AdminData,
       jrAdminData,
       SeniorStaffData,
@@ -108,6 +116,17 @@ class PFP extends Component {
         </div>
         <div className="staff-user-container">
           {FounderData && this.renderStaffMembers(FounderData)}
+        </div>
+        <div className="staff-container2">
+          <div className="staff-separator"></div>
+          <h1 className="staff-text">
+            <span>Head Admin</span>
+            <br></br>
+          </h1>
+          <div className="staff-separator01"></div>
+        </div>
+        <div className="staff-user-container">
+          {HeadAdminData && this.renderStaffMembers(HeadAdminData)}
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
