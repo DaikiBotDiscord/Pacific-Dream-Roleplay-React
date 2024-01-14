@@ -8,6 +8,7 @@ import NavigationLinks from '../components/navigation-links'
 import FooterContainer from '../components/footer-container'
 import './staff.css'
 import Header from '../components/header'
+import config from './config/config'
 
 class PFP extends Component {
   state = {
@@ -21,43 +22,43 @@ class PFP extends Component {
   };
 
   fetchData = () => {
-    axios.get('https://api.pacificdreamrp.com/api/staff/Founder')
+    axios.get(`${config.apiDomain}/api/staff/Founder`)
       .then(response => {
         this.setState({ FounderData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/HeadAdmin')
+    axios.get(`${config.apiDomain}/api/staff/HeadAdmin`)
       .then(response => {
         this.setState({ HeadAdminData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Admin')
+    axios.get(`${config.apiDomain}/api/staff/Admin`)
       .then(response => {
         this.setState({ AdminData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/JrAdmin')
+    axios.get(`${config.apiDomain}/api/staff/JrAdmin`)
       .then(response => {
         this.setState({ jrAdminData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/SeniorStaff')
+    axios.get(`${config.apiDomain}/api/staff/SeniorStaff`)
       .then(response => {
         this.setState({ SeniorStaffData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Staff')
+    axios.get(`${config.apiDomain}/api/staff/Staff`)
       .then(response => {
         this.setState({ StaffData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/SIT')
+    axios.get(`${config.apiDomain}/api/staff/SIT`)
       .then(response => {
         this.setState({ SITData: response.data });
       }).catch(error => {

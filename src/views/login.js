@@ -10,6 +10,7 @@ import './login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Header from '../components/header'
+import config from './config/config'
 
 const Login = (props) => {
   const showToast = () => {
@@ -21,7 +22,7 @@ const Login = (props) => {
   const [isLoading, setLoading] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
-    toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+    /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -29,15 +30,17 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    });
-    /* setLoading(true);
-    fetch("https://api.pacificdreamrp.com/api/login-user", {
+    }); */
+
+    setLoading(true);
+    fetch(`${config.apiDomain}/api/login-user`, {
       method: "POST",
       crossDomain: true,
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
         "Access-Control-Allow-Origin": "*",
+        "token": config.requiredToken,
       },
       body: JSON.stringify({
         email,
@@ -64,7 +67,7 @@ const Login = (props) => {
           });
           setLoading(false);
           setTimeout(() => {
-            window.location.href = "http://localhost:3000/home";
+            window.location.href = `${config.webDomain}/user/home`;
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
           }, 2500);
@@ -95,9 +98,9 @@ const Login = (props) => {
         }
       })
       .catch((error) => {
-        toast.error('Unable to login at this time. Please try again | If you continue to see this message please contact a system admin', {
+        toast.error('Unable to login at this time. Please try again | If you continue to see this message please create a PDPRP Support Ticket.', {
           position: "top-right",
-          autoClose: 7500,
+          autoClose: 10000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -107,7 +110,7 @@ const Login = (props) => {
         });
         setLoading(false);
         console.log(error);
-      }); */
+      });
   }
   return (
     <div className="login-container">
