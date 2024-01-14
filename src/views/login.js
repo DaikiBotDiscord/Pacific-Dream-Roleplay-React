@@ -65,11 +65,11 @@ const Login = (props) => {
             progress: undefined,
             theme: 'light'
           });
+          window.localStorage.setItem("token", data.data);
+          window.localStorage.setItem("loggedIn", true);
           setLoading(false);
           setTimeout(() => {
             window.location.href = `${config.webDomain}/user/home`;
-            window.localStorage.setItem("token", data.data);
-            window.localStorage.setItem("loggedIn", true);
           }, 2500);
         } else if (data.error === 'Invalid Password') {
           toast.warn('Invalid Password', {
