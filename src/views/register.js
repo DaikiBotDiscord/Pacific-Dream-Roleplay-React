@@ -103,7 +103,7 @@ const Register = (props) => {
                                 <br></br>
                             </h1>
                             <span className="register-fname">
-                                <span>First Name</span>
+                                <span>Legal First Name</span>
                                 <br></br>
                             </span>
                             <input
@@ -114,7 +114,7 @@ const Register = (props) => {
                                 onChange={(e) => setFname(e.target.value)}
                             />
                             <span className="register-lname">
-                                <span>Last Name</span>
+                                <span>Legal Last Name</span>
                                 <br></br>
                             </span>
                             <input

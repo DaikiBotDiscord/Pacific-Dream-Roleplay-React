@@ -50,6 +50,21 @@ const App = () => {
         // For example, redirect to the login page or display an error message
         window.localStorage.clear();
         window.location.href = '/login';
+      } else if (data.error === 'user doesn\'t exist') {
+        window.location.href = '/register';
+        setTimeout(() => {
+          toast.error('Your account no longer exists. Please create an account and try again.', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+          });
+        }, 1000);
+        window.localStorage.clear();
       }
     } catch (error) {
       console.error(error);
