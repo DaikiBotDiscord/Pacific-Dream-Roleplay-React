@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        {/* <Route component={Staff} exact path="/staff" /> */}
+        <Route component={Staff} exact path="/staff" />
         {/* <Route component={Donation} exact path="/donation" /> */}
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />

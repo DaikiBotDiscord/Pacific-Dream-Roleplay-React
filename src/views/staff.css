@@ -20,66 +20,7 @@
   background-position: top left, center;
 }
 
-.staff-header {
-  width: 100%;
-  display: flex;
-  box-shadow: 5px 5px 10px 15px rgba(148, 98, 98, 0.2);
-  align-items: center;
-  padding-top: var(--dl-space-space-twounits);
-  padding-left: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-threeunits);
-  padding-bottom: var(--dl-space-space-twounits);
-  justify-content: space-between;
-}
-
-.staff-navlink {
-  display: contents;
-}
-
-.staff-image {
-  width: var(--dl-size-size-small);
-  height: auto;
-  text-decoration: none;
-}
-
-.staff-nav {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
 .staff-container2 {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: flex-start;
-}
-
-.staff-link {
-  transition: 0.3s;
-  font-family: "Outfit";
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.41);
-}
-
-.staff-link:hover {
-  background-color: rgba(255, 255, 255, 0.72);
-}
-
-.staff-text {
-  font-style: normal;
-  font-weight: 600;
-}
-
-.staff-navlink1 {
-  font-style: normal;
-  font-weight: 600;
-  margin-left: var(--dl-space-space-twounits);
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.41);
-}
-
-.staff-container3 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -96,7 +37,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text03 {
+.staff-text {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
@@ -154,40 +95,7 @@
   text-align: center;
 }
 
-.staff-user-modal1 {
-  display: flex;
-  position: relative;
-  max-width: auto;
-  align-items: stretch;
-  margin-right: var(--dl-space-space-doubleunit);
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.staff-daiki-status-image1 {
-  width: 125px;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-  margin-right: var(--dl-space-space-tripleunit);
-  border-radius: var(--dl-radius-radius-round);
-}
-
-.staff-daiki-status-container1 {
-  flex: 0 0 auto;
-  width: 250px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.staff-daiki-status-container-heading1 {
-  color: var(--dl-color-primary-daikipurple);
-  text-align: center;
-}
-
-.staff-container4 {
+.staff-container3 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -204,7 +112,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text06 {
+.staff-text03 {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
@@ -217,7 +125,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container5 {
+.staff-container4 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -234,7 +142,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text09 {
+.staff-text06 {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   text-align: center;
@@ -248,7 +156,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container6 {
+.staff-container5 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -265,7 +173,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text12 {
+.staff-text09 {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
@@ -278,7 +186,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container7 {
+.staff-container6 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -295,7 +203,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text15 {
+.staff-text12 {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
@@ -308,7 +216,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-container8 {
+.staff-container7 {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
@@ -325,7 +233,7 @@
   background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
 }
 
-.staff-text18 {
+.staff-text15 {
   font-size: 45px;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
@@ -343,19 +251,9 @@
     flex-direction: row;
     justify-content: space-between;
   }
-
-  .staff-user-modal1 {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 @media(max-width: 767px) {
-  .staff-header {
-    padding-left: var(--dl-space-space-twounits);
-    padding-right: var(--dl-space-space-twounits);
-  }
-
   .staff-user-modal {
     flex-direction: column;
   }
@@ -369,35 +267,9 @@
     margin-top: 15px;
     align-items: center;
   }
-
-  .staff-user-modal1 {
-    flex-direction: column;
-  }
-
-  .staff-daiki-status-image1 {
-    width: var(--dl-size-size-xlarge);
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container1 {
-    margin-top: 15px;
-    align-items: center;
-  }
 }
 
 @media(max-width: 479px) {
-  .staff-header {
-    padding: var(--dl-space-space-unit);
-  }
-
-  .staff-nav {
-    display: flex;
-  }
-
-  .staff-text {
-    font-size: 12px;
-  }
-
   .staff-separator {
     width: 75%;
   }
@@ -427,23 +299,6 @@
     align-self: center;
   }
 
-  .staff-user-modal1 {
-    align-self: center;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-unit);
-  }
-
-  .staff-daiki-status-image1 {
-    width: 50%;
-    align-self: center;
-    margin-right: 0px;
-  }
-
-  .staff-daiki-status-container1 {
-    align-self: center;
-  }
-
   .staff-separator02 {
     width: 75%;
   }
@@ -456,7 +311,7 @@
     width: 75%;
   }
 
-  .staff-text09 {
+  .staff-text06 {
     text-align: center;
   }
 

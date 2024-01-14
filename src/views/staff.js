@@ -12,11 +12,11 @@ import Header from '../components/header'
 class PFP extends Component {
   state = {
     FounderData: null,
-    HeadAdminData: null,
-    SeniorAdminData: null,
     AdminData: null,
+    jrAdminData: null,
+    SeniorStaffData: null,
     StaffData: null,
-    ModData: null,
+    SITData: null,
   };
 
   fetchData = () => {
@@ -26,21 +26,21 @@ class PFP extends Component {
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/HeadAdmin')
-      .then(response => {
-        this.setState({ HeadAdminData: response.data });
-      }).catch(error => {
-        console.error('API Error:', error);
-      });
-    axios.get('https://api.pacificdreamrp.com/api/staff/SeniorAdmin')
-      .then(response => {
-        this.setState({ SeniorAdminData: response.data });
-      }).catch(error => {
-        console.error('API Error:', error);
-      });
     axios.get('https://api.pacificdreamrp.com/api/staff/Admin')
       .then(response => {
         this.setState({ AdminData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
+      });
+    axios.get('https://api.pacificdreamrp.com/api/staff/JrAdmin')
+      .then(response => {
+        this.setState({ jrAdminData: response.data });
+      }).catch(error => {
+        console.error('API Error:', error);
+      });
+    axios.get('https://api.pacificdreamrp.com/api/staff/SeniorStaff')
+      .then(response => {
+        this.setState({ SeniorStaffData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -50,9 +50,9 @@ class PFP extends Component {
       }).catch(error => {
         console.error('API Error:', error);
       });
-    axios.get('https://api.pacificdreamrp.com/api/staff/Mod')
+    axios.get('https://api.pacificdreamrp.com/api/staff/SIT')
       .then(response => {
-        this.setState({ ModData: response.data });
+        this.setState({ SITData: response.data });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -82,11 +82,11 @@ class PFP extends Component {
   render() {
     const {
       FounderData,
-      HeadAdminData,
-      SeniorAdminData,
       AdminData,
+      jrAdminData,
+      SeniorStaffData,
       StaffData,
-      ModData,
+      SITData,
     } = this.state;
 
     return (
@@ -96,55 +96,55 @@ class PFP extends Component {
           <meta property="og:title" content="Staff - Pacific Dream Roleplay" />
         </Helmet>
         <div className="staff-container1">
-          <Header />
+          <Header rootClassName="header-root-class-name1"></Header>
         </div>
         <div className="staff-container2">
-          <div className="staff-separator02"></div>
-          <h1 className="staff-text03">
+          <div className="staff-separator"></div>
+          <h1 className="staff-text">
             <span>Founders</span>
             <br></br>
           </h1>
-          <div className="staff-separator02"></div>
+          <div className="staff-separator01"></div>
         </div>
         <div className="staff-user-container">
           {FounderData && this.renderStaffMembers(FounderData)}
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
-          <h1 className="staff-text06">
-            <span>Head Admin</span>
+          <h1 className="staff-text03">
+            <span>Administration</span>
             <br></br>
           </h1>
           <div className="staff-separator03"></div>
         </div>
         <div className="staff-user-container">
-          {HeadAdminData && this.renderStaffMembers(HeadAdminData)}
+          {AdminData && this.renderStaffMembers(AdminData)}
         </div>
         <div className="staff-container4">
           <div className="staff-separator04"></div>
-          <h1 className="staff-text09">
-            <span>Senior Administration</span>
+          <h1 className="staff-text06">
+            <span>Jr. Administration</span>
             <br></br>
           </h1>
           <div className="staff-separator05"></div>
         </div>
         <div className="staff-user-container">
-          {SeniorAdminData && this.renderStaffMembers(SeniorAdminData)}
+          {jrAdminData && this.renderStaffMembers(jrAdminData)}
         </div>
         <div className="staff-container5">
           <div className="staff-separator06"></div>
-          <h1 className="staff-text12">
-            <span>Administration</span>
+          <h1 className="staff-text09">
+            <span>Senior Staff</span>
             <br></br>
           </h1>
           <div className="staff-separator07"></div>
         </div>
         <div className="staff-user-container">
-          {AdminData && this.renderStaffMembers(AdminData)}
+          {SeniorStaffData && this.renderStaffMembers(SeniorStaffData)}
         </div>
         <div className="staff-container6">
           <div className="staff-separator08"></div>
-          <h1 className="staff-text15">
+          <h1 className="staff-text12">
             <span>Staff</span>
             <br></br>
           </h1>
@@ -155,16 +155,16 @@ class PFP extends Component {
         </div>
         <div className="staff-container7">
           <div className="staff-separator10"></div>
-          <h1 className="staff-text18">
-            <span>Moderation</span>
+          <h1 className="staff-text15">
+            <span>Staff in Training</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
         </div>
         <div className="staff-user-container">
-          {ModData && this.renderStaffMembers(ModData)}
+          {SITData && this.renderStaffMembers(SITData)}
         </div>
-        <FooterContainer />
+        <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div>
     )
   }
