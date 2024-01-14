@@ -65,9 +65,7 @@ const App = () => {
         theme: 'light',
       });
     }
-    setInterval(() => {
-      checkToken()
-    }, 60 * 1000);
+
   };
 
   async function checkTokenRepeat() {
@@ -115,6 +113,9 @@ const App = () => {
         theme: 'light',
       });
     }
+    setInterval(() => {
+      checkToken()
+    }, 60 * 1000);
   };
 
   return (
