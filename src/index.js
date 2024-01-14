@@ -123,13 +123,7 @@ const App = () => {
       <Switch>
         <Route component={Staff} exact path="/staff" />
         {/* <Route component={Donation} exact path="/donation" /> */}
-        <Route
-          exact
-          path='/login'
-          render={() => {
-            return checkToken() ? <Login /> : window.location.href('/user/home');
-          }}
-        />
+        <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
         <Route
           exact
