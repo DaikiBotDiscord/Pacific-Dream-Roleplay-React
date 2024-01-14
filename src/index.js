@@ -70,19 +70,72 @@ const App = () => {
     }, 60 * 1000);
   };
 
+  async function checkTokenRepeat() {
+    try {
+      const response = await fetch(`${config.apiDomain}/api/token-check`, {
+        method: 'POST',
+        crossDomain: true,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          token: config.requiredToken,
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem('token'),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('failed to fetch!');
+      }
+
+      const data = await response.json();
+
+      if (data.data === 'token expired') {
+        window.localStorage.clear();
+        window.location.href = '/login';
+      } else if (data.status !== 'active') {
+        // Handle other cases when the token is not valid
+        // For example, redirect to the login page or display an error message
+        window.localStorage.clear();
+        window.location.href = '/login';
+      }
+    } catch (error) {
+      console.error(error);
+      window.location.href = '/';
+      toast.error('Unable to fetch user data at this time. Please try again.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+    }
+  };
+
   return (
     <Router>
       <Switch>
         <Route component={Staff} exact path="/staff" />
         {/* <Route component={Donation} exact path="/donation" /> */}
-        <Route component={Login} exact path="/login" />
+        <Route
+          exact
+          path='/login'
+          render={() => {
+            return checkToken() ? <Login /> : window.location.href('/user/home');
+          }}
+        />
         <Route component={Register} exact path="/register" />
         <Route
           exact
           path="/user/home"
           render={() => {
             // Set runEffect to true when someone visits /home
-            return checkToken() ? <UserHome /> : <Login />;
+            return checkTokenRepeat() ? <UserHome /> : <Login />;
           }}
         />
         <Route
