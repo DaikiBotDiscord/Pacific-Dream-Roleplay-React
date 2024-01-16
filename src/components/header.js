@@ -12,7 +12,7 @@ const Header = (props) => {
             data-role="Header"
             className={`header-header ${props.rootClassName} `}
         >
-            <Link to="/" className="header-navlink">
+            <Link to="/home" className="header-navlink">
                 <img
                     alt={props.image_alt}
                     src={props.image_src}
