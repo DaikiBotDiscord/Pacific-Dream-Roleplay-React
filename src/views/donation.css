@@ -117,13 +117,14 @@
   text-transform: capitalize;
 }
 
-.donation-button {
+.donation-link {
   color: var(--dl-color-gray-white);
   margin-top: auto;
   padding-top: var(--dl-space-space-unit);
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
   background-color: var(--dl-color-gray-black);
 }
 
@@ -198,13 +199,14 @@
   text-transform: capitalize;
 }
 
-.donation-button1 {
+.donation-link1 {
   color: var(--dl-color-gray-white);
   margin-top: auto;
   padding-top: var(--dl-space-space-unit);
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
   background-color: var(--dl-color-gray-black);
 }
 
@@ -278,13 +280,14 @@
   text-transform: capitalize;
 }
 
-.donation-button2 {
+.donation-link2 {
   color: var(--dl-color-gray-white);
   margin-top: auto;
   padding-top: var(--dl-space-space-unit);
   padding-left: var(--dl-space-space-twounits);
   padding-right: var(--dl-space-space-twounits);
   padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
   background-color: var(--dl-color-gray-black);
 }
 
@@ -311,7 +314,7 @@
   justify-content: center;
 }
 
-.donation-link {
+.donation-link3 {
   display: contents;
 }
 
@@ -357,7 +360,7 @@
   text-transform: capitalize;
 }
 
-.donation-link1 {
+.donation-link4 {
   display: contents;
 }
 

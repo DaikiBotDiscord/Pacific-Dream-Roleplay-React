@@ -43,7 +43,9 @@ const Donation = (props) => {
                 ✔ early access Server sneak peeks
               </span>
             </div>
-            <button className="donation-button button">Learn More</button>
+            <a href="#how-to-donate" className="donation-link button">
+              Learn More
+            </a>
           </div>
           <div className="donation-pricing-card1">
             <span className="donation-text12">
@@ -72,7 +74,9 @@ const Donation = (props) => {
                 ✔ Free Personal civilian Vehicle
               </span>
             </div>
-            <button className="donation-button1 button">Learn More</button>
+            <a href="#how-to-donate" className="donation-link1 button">
+              Learn More
+            </a>
           </div>
           <div className="donation-pricing-card2">
             <span className="donation-text26">
@@ -102,11 +106,15 @@ const Donation = (props) => {
                 <br></br>
               </span>
             </div>
-            <button className="donation-button2 button">Learn More</button>
+            <a href="#how-to-donate" className="donation-link2 button">
+              Learn More
+            </a>
           </div>
         </div>
       </div>
-      <h1 className="donation-text42">How to Donate</h1>
+      <h1 id="how-to-donate" className="donation-text42">
+        How to Donate
+      </h1>
       <span className="donation-text43">
         <span>
           Please remember to enter your discord username inside of the note on
@@ -120,7 +128,7 @@ const Donation = (props) => {
           href="https://www.paypal.com/paypalme/Scopex07"
           target="_blank"
           rel="noreferrer noopener"
-          className="donation-link"
+          className="donation-link3"
         >
           <div className="donation-pricing-card3">
             <img
@@ -137,7 +145,7 @@ const Donation = (props) => {
           href="https://cash.app/$scopex07"
           target="_blank"
           rel="noreferrer noopener"
-          className="donation-link1"
+          className="donation-link4"
         >
           <div className="donation-pricing-card4">
             <img
