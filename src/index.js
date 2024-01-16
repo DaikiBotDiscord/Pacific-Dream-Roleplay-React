@@ -158,6 +158,7 @@ const App = () => {
             return (window.location.href = "/");
           }}
         />
+        <Redirect from='/home' to='/' />
         <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
         <Redirect to="**" />
