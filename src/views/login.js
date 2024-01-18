@@ -54,9 +54,6 @@ const Login = (props) => {
       // Handle error (e.g., display an error message or redirect)
     }
   };
-  const showToast = () => {
-    toast("Toast Example")
-  }
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
