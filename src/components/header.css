@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     position: relative;
-    box-shadow: 5px 5px 10px 15px rgba(148, 98, 98, 0.2);
+    box-shadow: 5px 5px 10px 15px rgba(12, 14, 13, 0.2);
     align-items: center;
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-threeunits);
@@ -70,7 +70,7 @@
 
 
 .header-root-class-name3 {
-    background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 @media(max-width: 991px) {

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import NavigationLinks from './navigation-links'
 import './user-header.css'
+import NavigationLinksUser from './navigation-links-user'
 
 const UserHeader = (props) => {
     return (
@@ -20,10 +21,10 @@ const UserHeader = (props) => {
                 />
             </Link>
             <div className="user-header-nav">
-                <NavigationLinks
+                <NavigationLinksUser
                     rootClassName="rootClassName18"
                     className=""
-                ></NavigationLinks>
+                ></NavigationLinksUser>
             </div>
             <div className="user-header-container">
                 <Link to="/user/logout" className="user-header-navlink1 button">

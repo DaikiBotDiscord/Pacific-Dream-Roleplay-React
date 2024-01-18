@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
@@ -7,8 +7,50 @@ import NavigationLinks from '../components/navigation-links'
 import FooterContainer from '../components/footer-container'
 import './home.css'
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
+import config from './config/config'
 
 const Home = (props) => {
+  const [headerComponent, setHeaderComponent] = useState(null);
+
+  useEffect(() => {
+    checkTokenRepeat();
+  }, []);
+
+  const checkTokenRepeat = async () => {
+    try {
+      const response = await fetch(`${config.apiDomain}/api/token-check`, {
+        method: 'POST',
+        crossDomain: true,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          token: config.requiredToken,
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem('token'),
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (data.data === 'token expired') {
+        window.localStorage.clear();
+        setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+      } else if (data.status === 'active') {
+        // Set the UserHeader component to be rendered
+        setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+      } else {
+        // Set the default Header component to be rendered
+        setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+      }
+    } catch (err) {
+      console.error(err);
+      // Handle error (e.g., display an error message or redirect)
+    }
+  };
   return (
     <div className="home-container">
       <Helmet>
@@ -16,7 +58,7 @@ const Home = (props) => {
         <meta property="og:title" content="Pacific Dream Roleplay" />
       </Helmet>
       <div className="home-container1">
-        <Header rootClassName="header-root-class-name2"></Header>
+        {headerComponent}
         <div className="home-hero">
           <h1 className="home-text">
             <span className="home-text01">What is Pacific Dream Roleplay</span>
@@ -25,7 +67,19 @@ const Home = (props) => {
           <span className="home-text03">
             <span>
               Pacific Dream Roleplay is a GTA FiveM roleplay server based off of
-              the shore line of San Diego
+              the shore line of San Diego.
+            </span>
+            <br></br>
+            <span>
+              We are a semi serious roleplay server. Our server is built upon the framwork of vMenu.
+            </span>
+            <br></br>
+            <span>
+              We have departments such as Blaine County Sheriffs Office, Los Santos Police Department,
+            </span>
+            <br></br>
+            <span>
+              San Andreas State Police, San Andreas Fire Rescue, and more!
             </span>
             <br></br>
           </span>

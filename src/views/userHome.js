@@ -4,14 +4,15 @@ import "./userHome.css";
 import FooterContainer from "../components/footer-container";
 import UserHeader from "../components/user-header";
 
-const UserHome = (props) => {
+export default function UserHome({ userData }) {
+    console.log(userData);
     return (
         <div className="user-home-container">
             <div className="user-home-container1">
                 {" "}
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
             </div>{" "}
-            <h1 className="user-home-text">Welcome to your PDRP Account</h1>{" "}
+            <h1 className="user-home-text">Welcome to your PDRP Account!</h1>{" "}
             <span className="user-home-text1">
                 {" "}
                 <span>
@@ -35,6 +36,4 @@ const UserHome = (props) => {
             <FooterContainer rootClassName="footer-container-root-class-name4"></FooterContainer>{" "}
         </div>
     );
-};
-
-export default UserHome;
+}

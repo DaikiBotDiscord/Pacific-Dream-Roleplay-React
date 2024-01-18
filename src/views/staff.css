@@ -15,7 +15,7 @@
   align-items: flex-start;
   flex-direction: column;
   background-size: auto, cover;
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
   background-repeat: top left;
   background-position: top left, center;
 }
@@ -34,7 +34,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text {
@@ -47,7 +47,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-user-container {
@@ -109,7 +109,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text03 {
@@ -122,7 +122,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-container4 {
@@ -139,7 +139,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text06 {
@@ -153,7 +153,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-container5 {
@@ -170,7 +170,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text09 {
@@ -183,7 +183,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-container6 {
@@ -200,7 +200,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text12 {
@@ -213,7 +213,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-container7 {
@@ -230,7 +230,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 .staff-text15 {
@@ -243,7 +243,7 @@
   width: 50%;
   height: 1px;
   margin-top: var(--dl-space-space-halfunit);
-  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
+  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
 }
 
 @media(max-width: 991px) {

@@ -17,6 +17,7 @@ import NotFound from "./views/not-found";
 import Register from "./views/register";
 import config from "./views/config/config";
 import UserHome from "./views/userHome";
+import UserDetails from "./views/userDetails";
 
 const App = () => {
   // Function to check token
