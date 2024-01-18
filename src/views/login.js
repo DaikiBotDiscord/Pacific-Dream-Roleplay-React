@@ -59,7 +59,7 @@ const Login = (props) => {
   const [password, setPassword] = useState('');
   const [isLoading, setLoading] = useState('');
   function handleSubmit(e) {
-    e.preventDefault();
+    /* e.preventDefault();
     toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
@@ -68,9 +68,9 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    });
+    }); */
 
-    /* setLoading(true);
+    setLoading(true);
     fetch(`${config.apiDomain}/api/login-user`, {
       method: "POST",
       crossDomain: true,
@@ -148,7 +148,7 @@ const Login = (props) => {
         });
         setLoading(false);
         console.log(error);
-      }); */
+      });
   }
   return (
     <div className="login-container">
