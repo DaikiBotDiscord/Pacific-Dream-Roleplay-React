@@ -63,7 +63,7 @@ const Login = (props) => {
   const [isLoading, setLoading] = useState('');
   function handleSubmit(e) {
     e.preventDefault();
-    /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+    toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -71,9 +71,9 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    }); */
+    });
 
-    setLoading(true);
+    /* setLoading(true);
     fetch(`${config.apiDomain}/api/login-user`, {
       method: "POST",
       crossDomain: true,
@@ -95,7 +95,7 @@ const Login = (props) => {
         return res.json();
       })
       .then((data) => {
-        if (data.status) {
+        if (data.status === "ok") {
           toast.success('Login Successfully!', {
             position: 'top-right',
             autoClose: 2000,
@@ -109,9 +109,9 @@ const Login = (props) => {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
           setLoading(false);
-          /* setTimeout(() => {
+          setTimeout(() => {
             window.location.href = `${config.webDomain}/user/home`;
-          }, 2500); */
+          }, 2500);
         } else if (data.error === 'Invalid Password') {
           toast.warn('Invalid Password', {
             position: "top-right",
@@ -151,7 +151,7 @@ const Login = (props) => {
         });
         setLoading(false);
         console.log(error);
-      });
+      }); */
   }
   return (
     <div className="login-container">
