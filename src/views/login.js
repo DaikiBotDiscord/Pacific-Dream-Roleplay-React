@@ -109,9 +109,9 @@ const Login = (props) => {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
           setLoading(false);
-          setTimeout(() => {
+          /* setTimeout(() => {
             window.location.href = `${config.webDomain}/user/home`;
-          }, 2500);
+          }, 2500); */
         } else if (data.error === 'Invalid Password') {
           toast.warn('Invalid Password', {
             position: "top-right",
