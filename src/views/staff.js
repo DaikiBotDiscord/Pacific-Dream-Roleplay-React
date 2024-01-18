@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -8,6 +8,7 @@ import NavigationLinks from '../components/navigation-links'
 import FooterContainer from '../components/footer-container'
 import './staff.css'
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
 import config from './config/config'
 
 class PFP extends Component {
@@ -19,6 +20,43 @@ class PFP extends Component {
     SeniorStaffData: null,
     StaffData: null,
     SITData: null,
+    headerComponent: null,
+  };
+
+  checkTokenRepeat = async () => {
+
+    try {
+      const response = await fetch(`${config.apiDomain}/api/token-check`, {
+        method: 'POST',
+        crossDomain: true,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          token: config.requiredToken,
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem('token'),
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (data.data === 'token expired') {
+        window.localStorage.clear();
+        this.setState({ headerComponent: <Header rootClassName="header-root-class-name2" /> });
+      } else if (data.status === 'active') {
+        // Set the UserHeader component to be rendered
+        this.setState({ headerComponent: <UserHeader rootClassName="header-root-class-name2" /> });
+      } else {
+        // Set the default Header component to be rendered
+        this.setState({ headerComponent: <Header rootClassName="header-root-class-name2" /> });
+      }
+    } catch (err) {
+      console.error(err);
+      // Handle error (e.g., display an error message or redirect)
+    }
   };
 
   fetchData = () => {
@@ -66,10 +104,13 @@ class PFP extends Component {
       });
   };
 
+
   componentDidMount() {
     // Fetch data when the component mounts
     this.fetchData();
+    this.checkTokenRepeat();
   }
+
 
   renderStaffMembers = (data, position) => {
     return data.map((member) => (
@@ -96,6 +137,7 @@ class PFP extends Component {
       SeniorStaffData,
       StaffData,
       SITData,
+      headerComponent
     } = this.state;
 
     return (
@@ -105,7 +147,7 @@ class PFP extends Component {
           <meta property="og:title" content="Staff - Pacific Dream Roleplay" />
         </Helmet>
         <div className="staff-container1">
-          <Header rootClassName="header-root-class-name1"></Header>
+          {headerComponent}
         </div>
         <div className="staff-container2">
           <div className="staff-separator"></div>
