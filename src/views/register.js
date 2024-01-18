@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 
 
@@ -9,8 +9,49 @@ import Header from '../components/header'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import config from './config/config'
+import UserHeader from '../components/user-header'
 
 const Register = (props) => {
+    const [headerComponent, setHeaderComponent] = useState(null);
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                // Set the UserHeader component to be rendered
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                // Set the default Header component to be rendered
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+            // Handle error (e.g., display an error message or redirect)
+        }
+    };
     const showToast = () => {
         toast("Toast Example")
     }
@@ -94,7 +135,7 @@ const Register = (props) => {
                 <meta property="og:title" content="Register - Pacific Dream Roleplay" />
             </Helmet>
             <div className="register-container1">
-                <Header rootClassName="header-root-class-name3"></Header>
+                {headerComponent}
                 <div className="register-hero">
                     <form className="register-form">
                         <div className="register-container2">

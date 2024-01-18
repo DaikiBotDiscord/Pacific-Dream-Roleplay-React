@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
@@ -7,8 +7,50 @@ import NavigationLinks from '../components/navigation-links'
 import FooterContainer from '../components/footer-container'
 import './donation.css'
 import Header from '../components/header'
+import config from './config/config'
+import UserHeader from '../components/user-header'
 
 const Donation = (props) => {
+  const [headerComponent, setHeaderComponent] = useState(null);
+
+  useEffect(() => {
+    checkTokenRepeat();
+  }, []);
+
+  const checkTokenRepeat = async () => {
+    try {
+      const response = await fetch(`${config.apiDomain}/api/token-check`, {
+        method: 'POST',
+        crossDomain: true,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          token: config.requiredToken,
+        },
+        body: JSON.stringify({
+          token: window.localStorage.getItem('token'),
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (data.data === 'token expired') {
+        window.localStorage.clear();
+        setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+      } else if (data.status === 'active') {
+        // Set the UserHeader component to be rendered
+        setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+      } else {
+        // Set the default Header component to be rendered
+        setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+      }
+    } catch (err) {
+      console.error(err);
+      // Handle error (e.g., display an error message or redirect)
+    }
+  };
   return (
     <div className="donation-container">
       <Helmet>
@@ -16,7 +58,7 @@ const Donation = (props) => {
         <meta property="og:title" content="Donation - Pacific Dream Roleplay" />
       </Helmet>
       <div className="donation-container01">
-        <Header rootClassName="header-root-class-name"></Header>
+        {headerComponent}
       </div>
       <h1 className="donation-text">Donations Levels</h1>
       <div className="donation-pricing">
