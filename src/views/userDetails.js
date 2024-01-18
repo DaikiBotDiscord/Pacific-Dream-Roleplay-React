@@ -19,7 +19,7 @@ export default function UserDetails() {
         window.addEventListener('popstate', handleURLChange);
 
         setLoading(true);
-        fetch(`http://localhost:3001/api/user/logged/info`, {
+        fetch(`${config.apiDomain}/api/user/logged/info`, {
             method: "POST",
             crossDomain: true,
             headers: {
