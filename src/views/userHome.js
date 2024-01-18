@@ -5,14 +5,24 @@ import FooterContainer from "../components/footer-container";
 import UserHeader from "../components/user-header";
 
 export default function UserHome({ userData }) {
-    console.log(userData);
+    function capitalizeFirstLetter(str) {
+        return str?.charAt(0).toUpperCase() + str?.slice(1);
+    }
+
+    if (!userData || !userData.data) {
+        // Handle the case where userData or userData.data is undefined
+        return null; // or display a loading message, redirect, etc.
+    }
+
+    const { data } = userData;
+
     return (
         <div className="user-home-container">
             <div className="user-home-container1">
                 {" "}
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
             </div>{" "}
-            <h1 className="user-home-text">Welcome to your PDRP Account!</h1>{" "}
+            <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!</h1>
             <span className="user-home-text1">
                 {" "}
                 <span>

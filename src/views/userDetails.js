@@ -26,6 +26,7 @@ export default function UserDetails() {
                 "Content-Type": "application/json",
                 Accept: "application/json",
                 "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
             },
             body: JSON.stringify({
                 token: window.localStorage.getItem("token"),
@@ -41,6 +42,10 @@ export default function UserDetails() {
                     window.localStorage.clear();
                     return (window.location.href = "/login");
                 }
+
+                // Update userData state
+                setUserData(data);
+
             })
             .catch((error) => {
                 console.log(error);

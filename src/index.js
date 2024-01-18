@@ -148,7 +148,7 @@ const App = () => {
           path="/user/home"
           render={() => {
             // Set runEffect to true when someone visits /home
-            return checkTokenRepeat() ? <UserHome /> : <Login />;
+            return checkTokenRepeat() ? <UserDetails /> : <Login />;
           }}
         />
         <Route
