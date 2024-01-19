@@ -51,7 +51,7 @@ const UserHeader = (props) => {
                 {avatarData && (
                     <img
                         alt={props.pfp_image_alt}
-                        src={discordAuthenticated ? props.pfp_image_src : avatarData}
+                        src={discordAuthenticated === true ? props.pfp_image_src : avatarData}
                         className="user-header-pfp-image"
                     />
                 )}

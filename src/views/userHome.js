@@ -70,7 +70,7 @@ export default function UserHome({ userData, discordAuthenticated }) {
                 understanding and patience as we continue to refine and optimize our
                 features.
             </span>
-            {discordAuthenticated === true ? ( // Use discordAuthenticated to conditionally render the button
+            {discordAuthenticated === false ? ( // Use discordAuthenticated to conditionally render the button
                 <div className="user-home-container2">
                     <h1 className="user-home-text2">Discord Integration</h1>
                     <span className="user-home-text3">
