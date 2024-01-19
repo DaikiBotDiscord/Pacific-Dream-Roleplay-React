@@ -32,3 +32,38 @@
     font-size: 24px;
     text-align: center;
 }
+
+.user-home-container2 {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-home-text2 {
+    color: var(--dl-color-gray-black);
+    align-self: center;
+    margin-top: var(--dl-space-space-fiveunits);
+    text-align: center;
+    margin-bottom: var(--dl-space-space-unit);
+}
+
+.user-home-text3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.user-home-button {
+    color: var(--dl-color-gray-white);
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    transition: 0.3s;
+    border-width: 0px;
+    background-color: #5865F2;
+}
+
+.user-home-button:hover {
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+}

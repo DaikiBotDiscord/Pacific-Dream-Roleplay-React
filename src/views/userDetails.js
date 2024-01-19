@@ -9,6 +9,7 @@ export default function UserDetails() {
     const [cantShow, setCantShow] = useState(false);
     const [isLoading, setLoading] = useState("");
     const [currentURL, setCurrentURL] = useState(window.location.href)
+    const [discordAuthenticated, setDiscordAuthenticated] = useState(false); // Add this state variable
 
     useEffect(() => {
 
@@ -42,9 +43,9 @@ export default function UserDetails() {
                     window.localStorage.clear();
                     return (window.location.href = "/login");
                 }
-
                 // Update userData state
                 setUserData(data);
+                setDiscordAuthenticated(data.data.discordUserAuthenticated || false);
 
             })
             .catch((error) => {
@@ -67,7 +68,7 @@ export default function UserDetails() {
         }
     }, []);
     if (currentURL.includes('/user/home')) {
-        return <UserHome userData={userData} />
+        return <UserHome userData={userData} discordAuthenticated={discordAuthenticated} />
     } else {
         return <Redirect to='/login' />;
     }
