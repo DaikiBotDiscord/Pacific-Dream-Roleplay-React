@@ -69,7 +69,7 @@ const Register = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+        toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
             position: "top-right",
             hideProgressBar: true,
             closeOnClick: true,
@@ -77,9 +77,9 @@ const Register = (props) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-        }); */
+        });
 
-        if (!validateEmail(email)) {
+        /* if (!validateEmail(email)) {
             toast.error("Invalid Email Format", {
                 position: "top-right",
                 autoClose: 5000,
@@ -146,7 +146,7 @@ const Register = (props) => {
                         theme: "dark",
                     });
                 }
-            })
+            }) */
     }
     return (
         <div className="register-container">
