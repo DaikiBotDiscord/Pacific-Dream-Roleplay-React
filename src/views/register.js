@@ -62,9 +62,23 @@ const Register = (props) => {
     const [password, setPassword] = useState('');
 
     const validateEmail = (email) => {
-        // Regular expression for a simple email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    };
+
+    const validatePassword = (password) => {
+        const passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[a-zA-Z0-9]).{10,}$/;
+        return passwordRegex.test(password);
+    }
+
+    const validateLname = (lname) => {
+        const lnameRegex = /^[a-zA-Z0-9]{4,}$/;
+        return lnameRegex.test(lname);
+    };
+
+    const validateFname = (fname) => {
+        const fnameRegex = /^[a-zA-Z0-9]{4,}$/;
+        return fnameRegex.test(fname);
     };
 
     function handleSubmit(e) {
@@ -79,7 +93,31 @@ const Register = (props) => {
             theme: "light",
         }); */
 
-        if (!validateEmail(email)) {
+        if (!validateFname(fname)) {
+            toast.error("First Name must be 4 characters or more", {
+                position: "top-right",
+                autoClose: 10000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            return;
+        } else if (!validateLname(lname)) {
+            toast.error("Last Name must be 4 characters or more", {
+                position: "top-right",
+                autoClose: 10000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            return;
+        } else if (!validateEmail(email)) {
             toast.error("Invalid Email Format", {
                 position: "top-right",
                 autoClose: 5000,
@@ -89,6 +127,18 @@ const Register = (props) => {
                 draggable: true,
                 progress: undefined,
                 theme: "light",
+            });
+            return;
+        } else if (!validatePassword(password)) {
+            toast.error("Password must be 10 characters or more and contain at least 1 special character", {
+                position: "top-right",
+                autoClose: 10000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
             });
             return;
         }
