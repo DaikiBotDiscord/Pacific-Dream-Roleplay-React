@@ -11,8 +11,7 @@ import config from './config/config'
 import UserHeader from '../components/user-header'
 
 const Donation = (props) => {
-  const [headerComponent, setHeaderComponent] = useState(null);
-
+  const [headerComponent, setHeaderComponent] = useState(false);
   useEffect(() => {
     checkTokenRepeat();
   }, []);

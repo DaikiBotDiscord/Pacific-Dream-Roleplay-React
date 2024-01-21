@@ -11,7 +11,7 @@ import UserHeader from '../components/user-header'
 import config from './config/config'
 
 const Home = (props) => {
-  const [headerComponent, setHeaderComponent] = useState(null);
+  const [headerComponent, setHeaderComponent] = useState(false);
 
   useEffect(() => {
     checkTokenRepeat();
