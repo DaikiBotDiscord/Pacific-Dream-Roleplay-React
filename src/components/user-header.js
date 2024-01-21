@@ -62,7 +62,7 @@ const UserHeader = (props) => {
                         className="user-header-pfp-image"
                     />
                 )}
-                <Link to="/logout" className="user-header-navlink1 button">
+                <Link to="/user/logout" className="user-header-navlink1 button">
                     <span className="user-header-text">
                         <span className="">Logout</span>
                         <br className=""></br>
