@@ -21,53 +21,9 @@ export default function UserDetails() {
         window.addEventListener('popstate', handleURLChange);
 
         setLoading(true);
+        dataGrab()
         setInterval(() => {
-            fetch(`${config.apiDomain}/api/user/logged/info`, {
-                method: "POST",
-                crossDomain: true,
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    token: config.requiredToken,
-                },
-                body: JSON.stringify({
-                    token: window.localStorage.getItem("token"),
-                }),
-            }).then((res) => {
-
-                return res.json();
-            })
-                .then((data) => {
-                    setCantShow(false);
-                    setLoading(false);
-                    if (data.data === "token expired") {
-                        window.localStorage.clear();
-                        return (window.location.href = "/login");
-                    }
-                    // Update userData state
-                    setUserData(data);
-                    setDiscordAuthenticated(data.data.discordUserAuthenticated || false);
-                    setVerifiedCiv(data.data.VerifiedCiv);
-                    /* setVerifiedCiv(data.data.verifiedCiv || undefined);
-                    console.log(verifiedCiv) */
-
-                })
-                .catch((error) => {
-                    console.log(error);
-                    setCantShow(true);
-                    setLoading(false);
-                    toast.error('Unable to fetch user data at this time. Please try again.', {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                    });
-                });
+            dataGrab()
         }, 30 * 1000);
         return () => {
             window.removeEventListener('popstate', handleURLChange)
@@ -78,4 +34,53 @@ export default function UserDetails() {
     } else {
         return <Redirect to='/login' />;
     }
+}
+
+async function dataGrab() {
+    fetch(`${config.apiDomain}/api/user/logged/info`, {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
+            token: config.requiredToken,
+        },
+        body: JSON.stringify({
+            token: window.localStorage.getItem("token"),
+        }),
+    }).then((res) => {
+
+        return res.json();
+    })
+        .then((data) => {
+            setCantShow(false);
+            setLoading(false);
+            if (data.data === "token expired") {
+                window.localStorage.clear();
+                return (window.location.href = "/login");
+            }
+            // Update userData state
+            setUserData(data);
+            setDiscordAuthenticated(data.data.discordUserAuthenticated || false);
+            setVerifiedCiv(data.data.VerifiedCiv);
+            /* setVerifiedCiv(data.data.verifiedCiv || undefined);
+            console.log(verifiedCiv) */
+
+        })
+        .catch((error) => {
+            console.log(error);
+            setCantShow(true);
+            setLoading(false);
+            toast.error('Unable to fetch user data at this time. Please try again.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        });
 }
