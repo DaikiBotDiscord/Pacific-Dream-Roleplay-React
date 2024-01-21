@@ -36,7 +36,6 @@ const Login = (props) => {
       });
 
       const data = await response.json();
-      console.log(data);
 
       if (data.data === "token expired") {
         window.localStorage.clear();
