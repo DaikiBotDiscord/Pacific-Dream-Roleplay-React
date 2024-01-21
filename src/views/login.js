@@ -61,6 +61,12 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const [isLoading, setLoading] = useState("");
 
+  const validateEmail = (email) => {
+    // Regular expression for a simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   function handleDiscordSubmit(e) {
     e.preventDefault();
 
@@ -113,6 +119,20 @@ const Login = (props) => {
     }); */
 
     setLoading(true);
+    if (!validateEmail(email)) {
+      toast.error("Invalid Email Format", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setLoading(false);
+      return;
+    }
     fetch(`${config.apiDomain}/api/login-user`, {
       method: "POST",
       crossDomain: true,

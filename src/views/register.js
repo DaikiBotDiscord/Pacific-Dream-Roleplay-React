@@ -61,6 +61,12 @@ const Register = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const validateEmail = (email) => {
+        // Regular expression for a simple email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     function handleSubmit(e) {
         e.preventDefault();
         /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
@@ -72,6 +78,20 @@ const Register = (props) => {
             progress: undefined,
             theme: "light",
         }); */
+
+        if (!validateEmail(email)) {
+            toast.error("Invalid Email Format", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            return;
+        }
 
         fetch(`${config.apiDomain}/api/register`, {
             method: "POST",

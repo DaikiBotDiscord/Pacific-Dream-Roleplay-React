@@ -42,10 +42,17 @@ const UserHeader = (props) => {
             className={`user-header-header ${props.rootClassName} `}
         >
             <Link to="/home" className="user-header-navlink">
-                <img alt={props.image_alt} src={props.image_src} className="user-header-image" />
+                <img
+                    alt={props.image_alt}
+                    src={props.image_src}
+                    className="user-header-image"
+                />
             </Link>
             <div className="user-header-nav">
-                <NavigationLinksUser rootClassName="rootClassName18" className="" />
+                <NavigationLinksUser
+                    rootClassName="user-navigation-links-root-class-name"
+                    className=""
+                ></NavigationLinksUser>
             </div>
             <div className="user-header-container">
                 {avatarData && (
@@ -55,7 +62,7 @@ const UserHeader = (props) => {
                         className="user-header-pfp-image"
                     />
                 )}
-                <Link to="/user/logout" className="user-header-navlink1 button">
+                <Link to="/logout" className="user-header-navlink1 button">
                     <span className="user-header-text">
                         <span className="">Logout</span>
                         <br className=""></br>
