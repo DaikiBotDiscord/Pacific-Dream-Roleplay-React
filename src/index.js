@@ -64,7 +64,7 @@ const App = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-              theme: "light",
+              theme: "dark",
             }
           );
         }, 1000);
@@ -81,7 +81,7 @@ const App = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     }
   }
@@ -128,7 +128,7 @@ const App = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
     }
     setInterval(() => {

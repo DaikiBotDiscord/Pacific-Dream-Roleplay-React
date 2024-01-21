@@ -89,7 +89,7 @@ const Register = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
         }); */
 
         if (!validateFname(fname)) {
@@ -125,7 +125,7 @@ const Register = (props) => {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "dark",
             });
             return;
         } else if (!validatePassword(password)) {
@@ -169,7 +169,7 @@ const Register = (props) => {
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
-                        theme: "light",
+                        theme: "dark",
                     });
                 } else if (data.error === 'User Exists') {
                     toast.warn('User Already Exists | Please Login to your account', {
@@ -180,7 +180,7 @@ const Register = (props) => {
                         pauseOnHover: true,
                         draggable: true,
                         progress: undefined,
-                        theme: "light",
+                        theme: "dark",
 
                     });
                 } else {

@@ -114,7 +114,7 @@ const Login = (props) => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: "dark",
     }); */
 
     setLoading(true);
@@ -127,7 +127,7 @@ const Login = (props) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
       });
       setLoading(false);
       return;
@@ -162,7 +162,7 @@ const Login = (props) => {
             pauseOnHover: false,
             draggable: false,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
           window.localStorage.setItem("token", data.data);
           fetch(`${config.apiDomain}/api/auth/discord/user/info/refresh`, {
@@ -192,7 +192,7 @@ const Login = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
           setLoading(false);
         } else {
@@ -204,7 +204,7 @@ const Login = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
           setLoading(false);
         }
@@ -220,7 +220,7 @@ const Login = (props) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           }
         );
         setLoading(false);
