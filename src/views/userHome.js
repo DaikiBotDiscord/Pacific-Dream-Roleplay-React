@@ -5,7 +5,7 @@ import FooterContainer from "../components/footer-container";
 import UserHeader from "../components/user-header";
 import config from "./config/config";
 
-export default function UserHome({ userData, discordAuthenticated }) {
+export default function UserHome({ userData, discordAuthenticated, verifiedCiv }) {
     function capitalizeFirstLetter(str) {
         return str?.charAt(0).toUpperCase() + str?.slice(1);
     }
@@ -62,21 +62,36 @@ export default function UserHome({ userData, discordAuthenticated }) {
             <div className="user-home-container1">
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
             </div>
-            <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!</h1>
-            <span className="user-home-text1">
-                We are in the process of ongoing development for this section of the
-                website. We kindly invite you to revisit at a later time to explore the
-                latest updates and enhancements to our platform. Thank you for your
-                understanding and patience as we continue to refine and optimize our
-                features.
-            </span>
+            {verifiedCiv === false && discordAuthenticated === true ? (
+                <div>
+                    <h1 className="user-home-text">
+                        You are not a whitelisted & verified civilian of PDRP.
+                    </h1>
+                    <h1>
+                        You must be a verified and whitelisted civilian to access PDRP account services.
+                    </h1>
+                </div>
+            ) : (
+                discordAuthenticated === true ? (
+                    <div className="user-home-container">
+                        <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!</h1>
+                        <span className="user-home-text1">
+                            We are in the process of ongoing development for this section of the
+                            website. We kindly invite you to revisit at a later time to explore the
+                            latest updates and enhancements to our platform. Thank you for your
+                            understanding and patience as we continue to refine and optimize our
+                            features.
+                        </span>
+                    </div>
+                ) : null
+            )}
+
             {discordAuthenticated === false ? ( // Use discordAuthenticated to conditionally render the button
                 <div className="user-home-container2">
-                    <h1 className="user-home-text2">Discord Integration</h1>
+                    <h1 className="user-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                     <span className="user-home-text3">
                         <span>
-                            We strongly recommend clicking the button below so you don&apos;t
-                            lose access to your PDRP Account
+                            To be able to access your PDRP account you are required to integrate with Discord
                         </span>
                         <br></br>
                         <span>

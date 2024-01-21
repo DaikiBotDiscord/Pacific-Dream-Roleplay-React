@@ -9,7 +9,8 @@ export default function UserDetails() {
     const [cantShow, setCantShow] = useState(false);
     const [isLoading, setLoading] = useState("");
     const [currentURL, setCurrentURL] = useState(window.location.href)
-    const [discordAuthenticated, setDiscordAuthenticated] = useState(false); // Add this state variable
+    const [discordAuthenticated, setDiscordAuthenticated] = useState(false);
+    const [verifiedCiv, setVerifiedCiv] = useState(undefined);
 
     useEffect(() => {
 
@@ -46,6 +47,9 @@ export default function UserDetails() {
                 // Update userData state
                 setUserData(data);
                 setDiscordAuthenticated(data.data.discordUserAuthenticated || false);
+                setVerifiedCiv(data.data.VerifiedCiv);
+                /* setVerifiedCiv(data.data.verifiedCiv || undefined);
+                console.log(verifiedCiv) */
 
             })
             .catch((error) => {
@@ -68,7 +72,7 @@ export default function UserDetails() {
         }
     }, []);
     if (currentURL.includes('/user/home')) {
-        return <UserHome userData={userData} discordAuthenticated={discordAuthenticated} />
+        return <UserHome userData={userData} discordAuthenticated={discordAuthenticated} verifiedCiv={verifiedCiv} />
     } else {
         return <Redirect to='/login' />;
     }
