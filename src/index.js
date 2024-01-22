@@ -18,6 +18,7 @@ import Register from "./views/register";
 import config from "./views/config/config";
 import UserHome from "./views/userHome";
 import UserDetails from "./views/userDetails";
+import Departments from "./views/departments";
 
 const App = () => {
   // Function to check token
@@ -139,6 +140,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
+        <Route component={Departments} exact path='/departments' />
         <Route component={Staff} exact path="/staff" />
         <Route component={Donation} exact path="/donation" />
         <Route component={Login} exact path="/login" />

@@ -70,7 +70,7 @@ const Home = (props) => {
             </span>
             <br></br>
             <span>
-              We are a semi serious roleplay server. Our server is built upon the framwork of vMenu.
+              We are a semi serious roleplay server. Our server is built upon the framework of vMenu.
             </span>
             <br></br>
             <span>

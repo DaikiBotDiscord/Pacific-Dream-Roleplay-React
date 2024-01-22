@@ -1,0 +1,351 @@
+.departments-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.departments-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://cdn.discordapp.com/attachments/1134243980276678716/1197391738080333844/Untitled_design_21.png?ex=65bb18f4&is=65a8a3f4&hm=ea37cc74cd7f970d10f2d78d4ce30f157bef185cc49ca42f25f10613d6dcb029&');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.departments-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+}
+
+.departments-container3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.departments-gallery-card {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments-image {
+    width: var(--dl-size-size-large);
+    height: auto;
+    object-fit: cover;
+}
+
+.departments-text {
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.departments-text01 {
+    color: var(--dl-color-gray-900);
+    align-self: center;
+    text-align: center;
+}
+
+.departments-gallery-card1 {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments-image1 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    object-fit: cover;
+}
+
+.departments-text02 {
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.departments-text03 {
+    color: var(--dl-color-gray-900);
+    align-self: center;
+    text-align: center;
+}
+
+.departments-gallery-card2 {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments-image2 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    object-fit: cover;
+}
+
+.departments-text06 {
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.departments-text09 {
+    color: var(--dl-color-gray-900);
+    align-self: center;
+    text-align: center;
+}
+
+.departments-container4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0px;
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    padding-bottom: var(--dl-space-space-threeunits);
+}
+
+.departments-gallery-card3 {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments-image3 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    object-fit: cover;
+}
+
+.departments-text12 {
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.departments-text13 {
+    color: var(--dl-color-gray-900);
+    align-self: center;
+    text-align: center;
+}
+
+.departments-gallery-card4 {
+    width: 100%;
+    display: flex;
+    padding: var(--dl-space-space-threeunits);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.departments-image4 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    object-fit: cover;
+}
+
+.departments-text14 {
+    color: var(--dl-color-gray-white);
+    align-self: center;
+    margin-top: var(--dl-space-space-halfunit);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: var(--dl-space-space-halfunit);
+}
+
+.departments-text15 {
+    color: var(--dl-color-gray-900);
+    align-self: center;
+    text-align: center;
+}
+
+.departments-gallery {
+    width: 100%;
+    border: 2px dashed rgba(120, 120, 120, 0.4);
+    display: none;
+    padding: var(--dl-space-space-threeunits);
+    grid-gap: var(--dl-space-space-unit);
+    max-width: var(--dl-size-size-maxwidth);
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media(max-width: 991px) {
+    .departments-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 767px) {
+    .departments-gallery-card {
+        flex-direction: column;
+    }
+
+    .departments-gallery-card1 {
+        flex-direction: column;
+    }
+
+    .departments-gallery-card2 {
+        flex-direction: column;
+    }
+
+    .departments-gallery-card3 {
+        flex-direction: column;
+    }
+
+    .departments-gallery-card4 {
+        flex-direction: column;
+    }
+
+    .departments-gallery {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .departments-image {
+        height: 10rem;
+    }
+
+    .departments-image1 {
+        height: 10rem;
+    }
+
+    .departments-image2 {
+        height: 10rem;
+    }
+
+    .departments-image3 {
+        height: 10rem;
+    }
+
+    .departments-image4 {
+        height: 10rem;
+    }
+
+    .departments-gallery {
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 430px) {
+    .departments-container1 {
+        background-position: top left, center;
+    }
+
+    .departments-container2 {
+        align-self: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+    }
+
+    .departments-container3 {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .departments-gallery-card {
+        align-items: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        justify-content: center;
+    }
+
+    .departments-text01 {
+        width: 100%;
+    }
+
+    .departments-gallery-card1 {
+        align-items: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        justify-content: center;
+    }
+
+    .departments-text03 {
+        width: 100%;
+    }
+
+    .departments-gallery-card2 {
+        align-items: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        justify-content: center;
+    }
+
+    .departments-text09 {
+        width: 100%;
+    }
+
+    .departments-container4 {
+        padding: 0px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .departments-gallery-card3 {
+        align-items: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        justify-content: center;
+    }
+
+    .departments-text13 {
+        width: 100%;
+    }
+
+    .departments-gallery-card4 {
+        align-items: center;
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+        justify-content: center;
+    }
+
+    .departments-text15 {
+        width: 100%;
+    }
+}

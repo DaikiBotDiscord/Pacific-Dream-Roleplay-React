@@ -14,6 +14,9 @@ const NavigationLinks = (props) => {
       <Link to="/donation" className="navigation-links-navlink1">
         {props.text2}
       </Link>
+      <Link to="/departments" className="navigation-links-navlink2">
+        {props.text21}
+      </Link>
     </nav>
   )
 }
@@ -23,17 +26,14 @@ NavigationLinks.defaultProps = {
   rootClassName: '',
   text2: 'Donations',
   text3: 'Our Team',
-  text: 'Discord',
-  text4: 'Blog',
+  text21: 'Departments',
 }
-
 NavigationLinks.propTypes = {
   text1: PropTypes.string,
   rootClassName: PropTypes.string,
   text2: PropTypes.string,
   text3: PropTypes.string,
-  text: PropTypes.string,
-  text4: PropTypes.string,
+  text21: PropTypes.string,
 }
 
 export default NavigationLinks
