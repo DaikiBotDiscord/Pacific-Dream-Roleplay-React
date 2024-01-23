@@ -16,7 +16,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://cdn.discordapp.com/attachments/1198690354656985159/1198818353603690567/Fire_Logo_2USA.png?ex=65c04998&amp;is=65add498&amp;hm=242160714902ad380183241d139c2b51ec647c9c9aede0eb79d7170eaceff852&amp;"
+                                src="https://pacificdreamrp.com/SAFR_LOGO.png"
                                 className="departments-image"
                             />
                             <h2 className="departments-text">
@@ -33,7 +33,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card1">
                             <img
                                 alt="image"
-                                src="https://cdn.discordapp.com/attachments/1198690354656985159/1198818357722497154/8228cc65-f0c2-4eae-bdd2-42226ae65219_1.png?ex=65c04999&amp;is=65add499&amp;hm=da0ec38e0270207092c5bb13b8960b0ffc1ca43e413b712e512cca22d2527ec6&amp;"
+                                src="https://pacificdreamrp.com/LSPD_LOGO.png"
                                 className="departments-image1"
                             />
                             <h2 className="departments-text02">Los Santos Police</h2>
@@ -52,7 +52,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card2">
                             <img
                                 alt="image"
-                                src="https://cdn.discordapp.com/attachments/1198690354656985159/1198818387502059550/download.png?ex=65c049a0&amp;is=65add4a0&amp;hm=50251ab1264615cb838c686da2839c3b6eabe6ca822b1021e9d41aef4fa3f957&amp;"
+                                src="https://pacificdreamrp.com/BCSO_LOGO.png"
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
@@ -78,7 +78,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card3">
                             <img
                                 alt="image"
-                                src="https://cdn.discordapp.com/attachments/1198690354656985159/1198818413645140018/RCiv_Logo.png.62e84cd49d883db8492dc588c771b8bd.png?ex=65c049a6&amp;is=65add4a6&amp;hm=663825dcbd1f47882733cfe42793687460996bc2b9c2d176c499bf076b089e6c&amp;"
+                                src="https://pacificdreamrp.com/CIV_LOGO.png"
                                 className="departments-image3"
                             />
                             <h2 className="departments-text12">
@@ -100,7 +100,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card4">
                             <img
                                 alt="image"
-                                src="https://cdn.discordapp.com/attachments/1198690354656985159/1198818442556477510/690516657_ORPCommunicationsDepartmentLogoTeamSpeakChannel.thumb.png.3c641f93ba8bcd2c8a56de47002f20d7.png?ex=65c049ad&amp;is=65add4ad&amp;hm=305e08d363603b09efd9038d5c3c2a3d8674f68959e42eeae8165db7b2ec3f4d&amp;"
+                                src="https://pacificdreamrp.com/DOC_LOGO.png"
                                 className="departments-image4"
                             />
                             <h2 className="departments-text14">San Andreas Communications</h2>
