@@ -23,7 +23,7 @@ const Departments = (props) => {
                                 San Andreas Fire &amp; Rescue
                             </h2>
                             <span className="departments-text01">
-                                LoremThe mission of the San Andreas Fire Rescue is ensuring the
+                                The mission of the San Andreas Fire Rescue is ensuring the
                                 safety of all the citizens in the state of San Andreas, doing so
                                 in a mature and professional manner. SAFR works with other
                                 agencies to educate, protect and assist the citizens of San
