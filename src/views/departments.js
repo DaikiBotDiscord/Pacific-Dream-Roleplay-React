@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import FooterContainer from '../components/footer-container'
 import Header from '../components/header'
@@ -7,10 +7,49 @@ import config from './config/config'
 import './departments.css'
 
 const Departments = (props) => {
+    const [headerComponent, setHeaderComponent] = useState(false);
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                // Set the UserHeader component to be rendered
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                // Set the default Header component to be rendered
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+            // Handle error (e.g., display an error message or redirect)
+        }
+    };
     return (
         <div className="departments-container">
             <div className="departments-container1">
-                <Header rootClassName="header-root-class-name4"></Header>
+                {headerComponent}
                 <div className="departments-container2">
                     <div className="departments-container3">
                         <div className="departments-gallery-card">
