@@ -100,7 +100,7 @@ Header.defaultProps = {
     linkButton1: 'https://cfx.re/join/zz8mqp',
     linkButton: 'https://cfx.re/join/zz8mqp',
     button: 'Login',
-    imageSrc: '/Pacific_Dream_RP_Clear.png',
+    imageSrc: '/game_ove_6_11.png',
     imageAlt: 'logo',
 }
 

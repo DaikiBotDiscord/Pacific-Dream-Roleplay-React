@@ -179,7 +179,7 @@ UserHeader.defaultProps = {
         'https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-user-profile-character-faceless-unknown-png-image_4816132.png',
     pfpImageAlt: 'image',
     rootClassName: '',
-    imageSrc: '/Pacific_Dream_RP_Clear.png',
+    imageSrc: '/game_ove_6_11.png',
 }
 
 UserHeader.propTypes = {
