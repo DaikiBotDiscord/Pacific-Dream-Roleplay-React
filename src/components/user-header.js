@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './user-header.css'
 import NavigationLinksUser from './navigation-links-user';
+import AccountPopup from './AccountPopup'; // Import the new component
 import config from '../views/config/config';
 
 const UserHeader = (props) => {
     const [avatarData, setAvatarData] = useState(null);
-    const [discordAuthenticated, setDiscordAuthenticated] = useState(false); // Add this state variable
+    const [discordAuthenticated, setDiscordAuthenticated] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -34,13 +36,22 @@ const UserHeader = (props) => {
         };
 
         fetchData();
-    }, []); // empty dependency array ensures the effect runs only once on mount
+    }, []);
+
+    const handleOpenPopup = () => {
+        setShowPopup(true);
+    };
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
 
     return (
         <header
             data-role="Header"
             className={`user-header-header ${props.rootClassName} `}
         >
+            {showPopup && <AccountPopup handleClosePopup={handleClosePopup} />}
             <Link to="/home" className="user-header-navlink">
                 <img
                     alt={props.imageAlt}
@@ -55,13 +66,15 @@ const UserHeader = (props) => {
                 ></NavigationLinksUser>
             </div>
             <div className="user-header-container">
-                {avatarData && (
-                    <img
-                        alt={props.pfpImageAlt}
-                        src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
-                        className="user-header-pfp-image"
-                    />
-                )}
+                <button onClick={handleOpenPopup}>
+                    {avatarData && (
+                        <img
+                            alt={props.pfpImageAlt}
+                            src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
+                            className="user-header-pfp-image1"
+                        />
+                    )}
+                </button>
                 <Link to="/user/logout" className="user-header-navlink1 button">
                     <span className="user-header-text">
                         <span className="">Logout</span>
@@ -149,13 +162,15 @@ const UserHeader = (props) => {
                 </ul>
             </div>
             <div className="user-header-container1">
-                {avatarData && (
-                    <img
-                        alt={props.pfpImageAlt}
-                        src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
-                        className="user-header-pfp-image1"
-                    />
-                )}
+                <button onClick={handleOpenPopup}>
+                    {avatarData && (
+                        <img
+                            alt={props.pfpImageAlt}
+                            src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
+                            className="user-header-pfp-image1"
+                        />
+                    )}
+                </button>
                 <button type="button" className="user-header-button button">
                     <span className="user-header-text12">
                         <span className="">Logout</span>
