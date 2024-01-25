@@ -29,7 +29,7 @@ AccountPopup.defaultProps = {
 
 AccountPopup.propTypes = {
     button: PropTypes.string,
-    handleClosePopup: PropTypes.func.isRequired, // Ensure handleClosePopup is passed as a prop
+    handleClosePopup: PropTypes.func.isRequired,
 };
 
 export default AccountPopup;
