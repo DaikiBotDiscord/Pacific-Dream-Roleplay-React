@@ -246,14 +246,14 @@ const Login = (props) => {
                 type="email"
                 placeholder="Enter Email"
                 autoComplete="email"
-                required
+                required="true"
                 onChange={(e) => setEmail(e.target.value)}
                 className="login-textinput input"
               />
               <span className="login-text4">Password</span>
               <input
                 type="password"
-                required
+                required="true"
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter Password"
                 className="login-textinput1 input"

@@ -52,7 +52,7 @@ const UserHeader = (props) => {
             className={`user-header-header ${props.rootClassName} `}
         >
             {showPopup && <AccountPopup handleClosePopup={handleClosePopup} />}
-            <Link to="/home" className="user-header-navlink">
+            <Link to="/user/home" className="user-header-navlink">
                 <img
                     alt={props.imageAlt}
                     src={props.imageSrc}
@@ -105,7 +105,7 @@ const UserHeader = (props) => {
                         data-thq="thq-dropdown"
                         className="user-header-dropdown list-item"
                     >
-                        <Link to="/home" className="">
+                        <Link to="/user/home" className="">
                             <div
                                 data-thq="thq-dropdown-toggle"
                                 className="user-header-dropdown-toggle1"
