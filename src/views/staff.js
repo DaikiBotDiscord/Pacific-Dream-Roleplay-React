@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import NavigationLinks from '../components/navigation-links';
@@ -127,13 +127,18 @@ class PFP extends Component {
   componentDidMount() {
     // Fetch data when the component mounts
     this.fetchData();
+    this.checkTokenRepeat();
   }
 
   renderStaffMembers = (data, position) => {
     const loading = this.state[`${position}DataLoading`];
 
     if (loading) {
-      return <h1 className='staff-daiki-status-container-heading'>Loading...</h1>
+      return (
+        <div>
+          <h1 className='staff-daiki-status-container-heading'>Loading...</h1>
+        </div>
+      )
     }
 
     return data.map((member) => (
