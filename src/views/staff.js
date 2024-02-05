@@ -1,15 +1,12 @@
-import React, { Component, useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-
-import { Helmet } from 'react-helmet'
-
-import NavigationLinks from '../components/navigation-links'
-import FooterContainer from '../components/footer-container'
-import './staff.css'
-import Header from '../components/header'
-import UserHeader from '../components/user-header'
-import config from './config/config'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Helmet } from 'react-helmet';
+import NavigationLinks from '../components/navigation-links';
+import FooterContainer from '../components/footer-container';
+import './staff.css';
+import Header from '../components/header';
+import UserHeader from '../components/user-header';
+import config from './config/config';
 
 class PFP extends Component {
   state = {
@@ -20,7 +17,14 @@ class PFP extends Component {
     SeniorStaffData: null,
     StaffData: null,
     SITData: null,
-    headerComponent: null,
+    FounderDataLoading: true,
+    HeadAdminDataLoading: true,
+    AdminDataLoading: true,
+    jrAdminDataLoading: true,
+    SeniorStaffDataLoading: true,
+    StaffDataLoading: true,
+    SITDataLoading: true,
+    headerComponent: false,
   };
 
   checkTokenRepeat = async () => {
@@ -59,59 +63,79 @@ class PFP extends Component {
   };
 
   fetchData = () => {
+    this.setState({
+      FounderDataLoading: true,
+      HeadAdminDataLoading: true,
+      AdminDataLoading: true,
+      jrAdminDataLoading: true,
+      SeniorStaffDataLoading: true,
+      StaffDataLoading: true,
+      SITDataLoading: true,
+      headerComponent: false,
+    });
+
     axios.get(`${config.apiDomain}/api/staff/Founder`)
       .then(response => {
-        this.setState({ FounderData: response.data });
+        this.setState({ FounderData: response.data, FounderDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/HeadAdmin`)
       .then(response => {
-        this.setState({ HeadAdminData: response.data });
+        this.setState({ HeadAdminData: response.data, HeadAdminDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/Admin`)
       .then(response => {
-        this.setState({ AdminData: response.data });
+        this.setState({ AdminData: response.data, AdminDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/JrAdmin`)
       .then(response => {
-        this.setState({ jrAdminData: response.data });
+        this.setState({ jrAdminData: response.data, jrAdminDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/SeniorStaff`)
       .then(response => {
-        this.setState({ SeniorStaffData: response.data });
+        this.setState({ SeniorStaffData: response.data, SeniorStaffDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/Staff`)
       .then(response => {
-        this.setState({ StaffData: response.data });
+        this.setState({ StaffData: response.data, StaffDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
+
     axios.get(`${config.apiDomain}/api/staff/SIT`)
       .then(response => {
-        this.setState({ SITData: response.data });
+        this.setState({ SITData: response.data, SITDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
   };
 
-
   componentDidMount() {
     // Fetch data when the component mounts
     this.fetchData();
-    this.checkTokenRepeat();
   }
 
-
   renderStaffMembers = (data, position) => {
+    const loading = this.state[`${position}DataLoading`];
+
+    if (loading) {
+      return <h1 className='staff-daiki-status-container-heading'>Loading...</h1>
+    }
+
     return data.map((member) => (
       <div key={member._id} className="staff-user-modal">
         <img
@@ -121,7 +145,6 @@ class PFP extends Component {
         />
         <div className="staff-daiki-status-container">
           <h1 className="staff-daiki-status-container-heading">{member.nickname}</h1>
-          <p>{position}</p>
         </div>
       </div>
     ));
@@ -157,7 +180,7 @@ class PFP extends Component {
           <div className="staff-separator01"></div>
         </div>
         <div className="staff-user-container">
-          {FounderData && this.renderStaffMembers(FounderData)}
+          {FounderData && this.renderStaffMembers(FounderData, 'Founder', this.state.FounderDataLoading)}
         </div>
         <div className="staff-container2">
           <div className="staff-separator"></div>
@@ -168,7 +191,7 @@ class PFP extends Component {
           <div className="staff-separator01"></div>
         </div>
         <div className="staff-user-container">
-          {HeadAdminData && this.renderStaffMembers(HeadAdminData)}
+          {HeadAdminData && this.renderStaffMembers(HeadAdminData, 'Head Admin', this.state.HeadAdminDataLoading)}
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
@@ -179,7 +202,7 @@ class PFP extends Component {
           <div className="staff-separator03"></div>
         </div>
         <div className="staff-user-container">
-          {AdminData && this.renderStaffMembers(AdminData)}
+          {AdminData && this.renderStaffMembers(AdminData, 'Administration', this.state.AdminDataLoading)}
         </div>
         <div className="staff-container4">
           <div className="staff-separator04"></div>
@@ -190,7 +213,7 @@ class PFP extends Component {
           <div className="staff-separator05"></div>
         </div>
         <div className="staff-user-container">
-          {jrAdminData && this.renderStaffMembers(jrAdminData)}
+          {jrAdminData && this.renderStaffMembers(jrAdminData, 'Jr. Administration', this.state.jrAdminDataLoading)}
         </div>
         <div className="staff-container5">
           <div className="staff-separator06"></div>
@@ -201,7 +224,7 @@ class PFP extends Component {
           <div className="staff-separator07"></div>
         </div>
         <div className="staff-user-container">
-          {SeniorStaffData && this.renderStaffMembers(SeniorStaffData)}
+          {SeniorStaffData && this.renderStaffMembers(SeniorStaffData, 'Senior Staff', this.state.SeniorStaffDataLoading)}
         </div>
         <div className="staff-container6">
           <div className="staff-separator08"></div>
@@ -212,7 +235,7 @@ class PFP extends Component {
           <div className="staff-separator09"></div>
         </div>
         <div className="staff-user-container">
-          {StaffData && this.renderStaffMembers(StaffData)}
+          {StaffData && this.renderStaffMembers(StaffData, 'Staff', this.state.StaffDataLoading)}
         </div>
         <div className="staff-container7">
           <div className="staff-separator10"></div>
@@ -223,7 +246,7 @@ class PFP extends Component {
           <div className="staff-separator11"></div>
         </div>
         <div className="staff-user-container">
-          {SITData && this.renderStaffMembers(SITData)}
+          {SITData && this.renderStaffMembers(SITData, 'Staff in Training', this.state.SITDataLoading)}
         </div>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div>
