@@ -5,5 +5,5 @@ const config = {
     webDomain: "https://pacificdreamrp.com",
     apiDomain: "https://api.pacificdreamrp.com"
 };
-
+/*  */
 module.exports = config;

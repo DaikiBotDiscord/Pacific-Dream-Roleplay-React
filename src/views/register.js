@@ -218,7 +218,7 @@ const Register = (props) => {
                             </span>
                             <input
                                 type="text"
-                                required="true"
+                                required={true}
                                 placeholder="First Name"
                                 className="register-fname-input input"
                                 onChange={(e) => setFname(e.target.value)}
@@ -229,7 +229,7 @@ const Register = (props) => {
                             </span>
                             <input
                                 type="text"
-                                required="true"
+                                required={true}
                                 placeholder="Last Name"
                                 className="register-lname-input input"
                                 onChange={(e) => setLname(e.target.value)}
@@ -237,7 +237,7 @@ const Register = (props) => {
                             <span className="register-email">Email Address</span>
                             <input
                                 type="email"
-                                required="true"
+                                required={true}
                                 placeholder="Enter Email Address"
                                 className="register-email-input input"
                                 onChange={(e) => setEmail(e.target.value)}
@@ -245,7 +245,7 @@ const Register = (props) => {
                             <span className="register-password">Password</span>
                             <input
                                 type="password"
-                                required="true"
+                                required={true}
                                 placeholder="Enter Password"
                                 className="register-password-input input"
                                 onChange={(e) => setPassword(e.target.value)}

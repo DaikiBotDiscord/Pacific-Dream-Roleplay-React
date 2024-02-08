@@ -19,6 +19,8 @@ import config from "./views/config/config";
 import UserHome from "./views/userHome";
 import UserDetails from "./views/userDetails";
 import Departments from "./views/departments";
+import ForgotResetPassword from "./views/ForgotpasswordReset";
+import ResetPassword from "./views/passwordReset";
 
 const App = () => {
   // Function to check token
@@ -145,6 +147,8 @@ const App = () => {
         <Route component={Donation} exact path="/donation" />
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
+        <Route component={ForgotResetPassword} exact path='/forgot-password' />
+        <Route component={ResetPassword} exact path='/reset-password' />
         <Route
           exact
           path="/user/home"
