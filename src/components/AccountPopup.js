@@ -57,7 +57,57 @@ const AccountPopup = (props) => {
                     theme: "dark",
                 });
             });
+        setInterval(() => {
+            fetch(`${config.apiDomain}/api/user/logged/info`, {
+                method: "POST",
+                crossDomain: true,
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem("token"),
+                }),
+            }).then((res) => {
 
+                return res.json();
+            })
+                .then((data) => {
+                    if (data.data === "token expired") {
+                        window.localStorage.clear();
+                        return (window.location.href = "/login");
+                    }
+
+                    if (data.data.VerifiedCiv === true) {
+                        setVerifiedCivStatus("Active")
+                    } else if (data.data.VerifiedCiv === false) {
+                        setVerifiedCivStatus("Inactive")
+                    } else {
+                        setVerifiedCivStatus("Not Available at this time")
+                    }
+                    // Update userData state
+                    setUserData(data.data);
+                    /* setVerifiedCiv(data.data.verifiedCiv || undefined);
+                    console.log(verifiedCiv) */
+
+                })
+                .catch((error) => {
+                    console.log(error);
+                    toast.error('Unable to fetch user data at this time. Please try again.', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                });
+
+        }, 10000);
     }, []);
     return (
         <div className="account-popup-container">
@@ -99,10 +149,10 @@ const AccountPopup = (props) => {
                             {props.button1}
                         </Link>
                         <span className="account-popup-text11">{props.text12}</span>
-                        <Link to="/home" className="account-popup-navlink1 button">
+                        <Link to="/forgot-password" className="account-popup-navlink1 button">
                             {props.button11}
                         </Link>
-                    </div> */}
+                    </div>*/}
                 </div>
             </div>
         </div>
