@@ -179,7 +179,7 @@ class PFP extends Component {
         <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
-            <span>Founders</span>
+            <span>Community Administration</span>
             <br></br>
           </h1>
           <div className="staff-separator01"></div>
@@ -187,14 +187,14 @@ class PFP extends Component {
         <div className="staff-user-container">
           {FounderData && this.renderStaffMembers(FounderData, 'Founder', this.state.FounderDataLoading)}
         </div>
-        <div className="staff-container2">
+        {/* <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
             <span>Head Admin</span>
             <br></br>
           </h1>
           <div className="staff-separator01"></div>
-        </div>
+        </div> */}
         <div className="staff-user-container">
           {HeadAdminData && this.renderStaffMembers(HeadAdminData, 'Head Admin', this.state.HeadAdminDataLoading)}
         </div>
