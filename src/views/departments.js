@@ -151,6 +151,17 @@ const Departments = (props) => {
                                 Dream Roleplay FiveM server.
                             </span>
                         </div>
+                        <div className="departments-gallery-card4">
+                            <img
+                                alt="image"
+                                src="https://pacificdreamrp.com/SASC_LOGO.jpg"
+                                className="departments-image4"
+                            />
+                            <h2 className="departments-text14">San Andreas State Constable</h2>
+                            <span className="departments-text15">
+                                No Information at this Time.
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div className="departments-gallery"></div>

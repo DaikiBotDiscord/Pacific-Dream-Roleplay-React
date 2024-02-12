@@ -39,8 +39,10 @@
 
 .staff-text {
   font-size: 45px;
+  align-self: center;
   margin-top: var(--dl-space-space-halfunit);
   font-family: "Outfit";
+  text-align: center;
 }
 
 .staff-separator01 {
