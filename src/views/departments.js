@@ -163,6 +163,19 @@ const Departments = (props) => {
                             </span>
                         </div>
                     </div>
+                    <div className="departments-container4">
+                        <div className="departments-gallery-card4">
+                            <img
+                                alt="image"
+                                src="https://pacificdreamrp.com/DOT_LOGO.png"
+                                className="departments-image4"
+                            />
+                            <h2 className="departments-text14">San Andreas Department of Transportation</h2>
+                            <span className="departments-text15">
+                                No Information at this Time.
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <div className="departments-gallery"></div>
             </div>
