@@ -176,7 +176,16 @@ class PFP extends Component {
         <div className="staff-container1">
           {headerComponent}
         </div>
-        <div className="staff-container2">
+        <h3 className="not-found-text2" style={{ textAlign: "center", fontWeight: '400', color: "black" }}>OOPS! PAGE NOT AVAILABLE</h3>
+        <div className="not-found-container1" style={{ display: 'flex', position: "relative", alignItems: 'center', flexDirection: "column", justifyContent: 'center' }}>
+          <h1 className="not-found-text1">503</h1>
+        </div>
+        <div className="not-found-container2" style={{ width: "421px", display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}>
+          <h2 className="not-found-text2" style={{ textAlign: "center", fontWeight: '400', color: "black" }}>
+            WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND
+          </h2>
+        </div>
+        {/* <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
             <span>Community Administration</span>
@@ -187,14 +196,6 @@ class PFP extends Component {
         <div className="staff-user-container">
           {FounderData && this.renderStaffMembers(FounderData, 'Founder', this.state.FounderDataLoading)}
         </div>
-        {/* <div className="staff-container2">
-          <div className="staff-separator"></div>
-          <h1 className="staff-text">
-            <span>Head Admin</span>
-            <br></br>
-          </h1>
-          <div className="staff-separator01"></div>
-        </div> */}
         <div className="staff-user-container">
           {HeadAdminData && this.renderStaffMembers(HeadAdminData, 'Head Admin', this.state.HeadAdminDataLoading)}
         </div>
@@ -252,9 +253,9 @@ class PFP extends Component {
         </div>
         <div className="staff-user-container">
           {SITData && this.renderStaffMembers(SITData, 'Staff in Training', this.state.SITDataLoading)}
-        </div>
+        </div> */}
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
-      </div>
+      </div >
     )
   }
 }

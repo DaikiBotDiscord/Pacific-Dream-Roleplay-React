@@ -82,7 +82,7 @@ const Register = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+        return toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
             position: "top-right",
             hideProgressBar: true,
             closeOnClick: true,
@@ -90,7 +90,7 @@ const Register = (props) => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-        }); */
+        });
 
         if (!validateFname(fname)) {
             toast.error("First Name must be 4 characters or more", {

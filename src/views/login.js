@@ -14,6 +14,7 @@ import config from "./config/config";
 import UserHeader from "../components/user-header";
 
 const Login = (props) => {
+
   const [headerComponent, setHeaderComponent] = useState(false);
   useEffect(() => {
     checkTokenRepeat();
@@ -106,7 +107,7 @@ const Login = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+    return toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -114,7 +115,7 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "dark",
-    }); */
+    });
 
     setLoading(true);
     if (!validateEmail(email)) {
