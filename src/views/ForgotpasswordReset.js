@@ -73,15 +73,6 @@ const ForgotResetPassword = () => {
     };
     function handleSubmit(e) {
         e.preventDefault();
-        /* toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
-          position: "top-right",
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        }); */
 
         setLoading(true);
         if (!validateEmail(email)) {

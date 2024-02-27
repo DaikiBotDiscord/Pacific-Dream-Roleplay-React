@@ -147,9 +147,9 @@ const App = () => {
         <Route component={Donation} exact path="/donation" />
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
-        {/*<Route component={ForgotResetPassword} exact path='/forgot-password' />
-        <Route component={ResetPassword} exact path='/reset-password' /> */}
-        {/* <Route
+        {/* <Route component={ForgotResetPassword} exact path='/forgot-password' />
+        <Route component={ResetPassword} exact path='/reset-password' />
+        <Route
           exact
           path="/user/home"
           render={() => {

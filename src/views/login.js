@@ -107,7 +107,7 @@ const Login = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    return toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+    /* return toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -115,7 +115,7 @@ const Login = (props) => {
       draggable: true,
       progress: undefined,
       theme: "dark",
-    });
+    }); */
 
     setLoading(true);
     if (!validateEmail(email)) {
@@ -259,10 +259,10 @@ const Login = (props) => {
                 placeholder="Enter Password"
                 className="login-textinput1 input"
               />
-              {/* <Link to="/forgot-password" className="login-navlink">
+              <Link to="/forgot-password" className="login-navlink">
                 <span>Forgot Password?</span>
                 <br></br>
-              </Link> */}
+              </Link>
               <button
                 type="submit"
                 className="login-button button"
