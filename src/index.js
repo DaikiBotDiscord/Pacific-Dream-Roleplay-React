@@ -148,7 +148,7 @@ const App = () => {
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
         {/* <Route component={ForgotResetPassword} exact path='/forgot-password' />
-        <Route component={ResetPassword} exact path='/reset-password' />
+        <Route component={ResetPassword} exact path='/reset-password' /> */}
         <Route
           exact
           path="/user/home"
@@ -164,7 +164,7 @@ const App = () => {
             window.localStorage.clear();
             return (window.location.href = "/");
           }}
-        /> */}
+        />
         <Redirect from='/home' to='/' />
         <Route component={Home} exact path="/" />
         <Route component={NotFound} path="**" />
