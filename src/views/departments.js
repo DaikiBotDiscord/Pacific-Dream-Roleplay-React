@@ -159,7 +159,10 @@ const Departments = (props) => {
                             />
                             <h2 className="departments-text14">San Andreas State Constable</h2>
                             <span className="departments-text15">
-                                No Information at this Time.
+                                The San Andreas State Constables have a very important mission within the state.
+                                We provide services to all of San Andreas and have no limits on were we can be.
+                                We support all departments and aid them when needed. We are the best of the best and no other, you must be a sergeant ore above in any department and recommended by your superior officer.
+                                But we do have open enrollment periods.
                             </span>
                         </div>
                     </div>
