@@ -3,7 +3,7 @@ const config = {
     /* webDomain: "http://localhost:3000",
     apiDomain: "http://localhost:3001" */
     webDomain: "https://pacificdreamrp.com",
-    apiDomain: "https://pdrp-new-api.vercel.app"
+    apiDomain: "https://pdrp-new-api.vercel.app`"
 };
 
 module.exports = config;
