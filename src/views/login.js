@@ -259,10 +259,10 @@ const Login = (props) => {
                 placeholder="Enter Password"
                 className="login-textinput1 input"
               />
-              <Link to="/forgot-password" className="login-navlink">
+              {{/* <Link to="/forgot-password" className="login-navlink">
                 <span>Forgot Password?</span>
                 <br></br>
-              </Link>
+              </Link> */}}
               <button
                 type="submit"
                 className="login-button button"
