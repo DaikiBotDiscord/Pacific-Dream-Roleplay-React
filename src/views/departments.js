@@ -166,7 +166,7 @@ const Departments = (props) => {
                             </span>
                         </div>
                     </div>
-                    <div className="departments-container4">
+                    {/* <div className="departments-container4">
                         <div className="departments-gallery-card4">
                             <img
                                 alt="image"
@@ -178,7 +178,7 @@ const Departments = (props) => {
                                 No Information at this Time.
                             </span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="departments-gallery"></div>
             </div>
