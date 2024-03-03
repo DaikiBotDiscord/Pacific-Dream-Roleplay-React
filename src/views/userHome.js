@@ -78,7 +78,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                         <span className="user-home-text1">
                             We are in the process of ongoing development for this section of the
                             website. We kindly invite you to revisit at a later time to explore the
-                            latest updates and enhancements to our platform. Thank you for your
+                            new application management system! Thank you for your
                             understanding and patience as we continue to refine and optimize our
                             features.
                         </span>
