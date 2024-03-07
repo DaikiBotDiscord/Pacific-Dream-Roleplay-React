@@ -47,10 +47,10 @@ const FooterContainer = (props) => {
 }
 
 FooterContainer.defaultProps = {
-  text: 'Pacific Dream Roleplay',
+  text: 'Pinal County Roleplay',
   image_alt: 'image',
   image_src: 'https://www.daiki-bot.xyz/playground_assets/discord%20logo.svg',
-  text1: 'All Rights Reserved, Pacific Dream Roleplay',
+  text1: 'All Rights Reserved, Pinal County Roleplay',
   rootClassName: '',
 }
 

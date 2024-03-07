@@ -65,16 +65,16 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             {verifiedCiv === false && discordAuthenticated === true ? (
                 <div>
                     <h1 className="user-home-text">
-                        You are not a whitelisted & verified civilian of PDRP.
+                        You are not a whitelisted & verified civilian of PCRP.
                     </h1>
                     <h1>
-                        You must be a verified and whitelisted civilian to access PDRP account services.
+                        You must be a verified and whitelisted civilian to access PCRP account services.
                     </h1>
                 </div>
             ) : (
                 discordAuthenticated === true ? (
                     <div className="user-home-container">
-                        <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!</h1>
+                        <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!</h1>
                         <span className="user-home-text1">
                             We are in the process of ongoing development for this section of the
                             website. We kindly invite you to revisit at a later time to explore the
@@ -91,7 +91,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                     <h1 className="user-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                     <span className="user-home-text3">
                         <span>
-                            To be able to access your PDRP account you are required to integrate with Discord
+                            To be able to access your PCRP account you are required to integrate with Discord
                         </span>
                         <br></br>
                         <span>

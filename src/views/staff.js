@@ -170,8 +170,8 @@ class PFP extends Component {
     return (
       <div className="staff-container">
         <Helmet>
-          <title>Staff - Pacific Dream Roleplay</title>
-          <meta property="og:title" content="Staff - Pacific Dream Roleplay" />
+          <title>Staff - Pinal County Roleplay</title>
+          <meta property="og:title" content="Staff - Pinal County Roleplay" />
         </Helmet>
         <div className="staff-container1">
           {headerComponent}

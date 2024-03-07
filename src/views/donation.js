@@ -52,8 +52,8 @@ const Donation = (props) => {
   return (
     <div className="donation-container">
       <Helmet>
-        <title>Donation - Pacific Dream Roleplay</title>
-        <meta property="og:title" content="Donation - Pacific Dream Roleplay" />
+        <title>Donation - Pinal County Roleplay</title>
+        <meta property="og:title" content="Donation - Pinal County Roleplay" />
       </Helmet>
       <div className="donation-container01">
         {headerComponent}

@@ -53,19 +53,19 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Pacific Dream Roleplay</title>
-        <meta property="og:title" content="Pacific Dream Roleplay" />
+        <title>Pinal County Roleplay</title>
+        <meta property="og:title" content="Pinal County Roleplay" />
       </Helmet>
       <div className="home-container1">
         {headerComponent}
         <div className="home-hero">
-          <h1 className="home-text">
-            <span className="home-text01">What is Pacific Dream Roleplay</span>
+          {/* <h1 className="home-text">
+            <span className="home-text01">What is Pinal County Roleplay</span>
             <br></br>
           </h1>
           <span className="home-text03">
             <span>
-              Pacific Dream Roleplay is a GTA FiveM roleplay server based off of
+              Pinal County Roleplay is a GTA FiveM roleplay server based off of
               the shore line of San Diego.
             </span>
             <br></br>
@@ -81,7 +81,7 @@ const Home = (props) => {
               San Andreas State Police, San Andreas Fire Rescue, and more!
             </span>
             <br></br>
-          </span>
+          </span> */}
           <div className="home-btn-group">
             <a
               href="https://cfx.re/join/zz8mqp"

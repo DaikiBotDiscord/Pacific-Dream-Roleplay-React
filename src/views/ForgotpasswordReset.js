@@ -209,8 +209,8 @@ const ForgotResetPassword = () => {
     return (
         <div className="login-container">
             <Helmet>
-                <title>Login - Pacific Dream Roleplay</title>
-                <meta property="og:title" content="Login - Pacific Dream Roleplay" />
+                <title>Login - Pinal County Roleplay</title>
+                <meta property="og:title" content="Login - Pinal County Roleplay" />
             </Helmet>
             <div className="login-container1">
                 {headerComponent}

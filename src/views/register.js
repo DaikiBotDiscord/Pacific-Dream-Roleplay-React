@@ -82,7 +82,7 @@ const Register = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        /* return toast.error('Pacific Dream RP Account Services are currently unavailable. Please try again later', {
+        /* return toast.error('Pinal County RP Account Services are currently unavailable. Please try again later', {
             position: "top-right",
             hideProgressBar: true,
             closeOnClick: true,
@@ -200,8 +200,8 @@ const Register = (props) => {
     return (
         <div className="register-container">
             <Helmet>
-                <title>Register - Pacific Dream Roleplay</title>
-                <meta property="og:title" content="Register - Pacific Dream Roleplay" />
+                <title>Register - Pinal County Roleplay</title>
+                <meta property="og:title" content="Register - Pinal County Roleplay" />
             </Helmet>
             <div className="register-container1">
                 {headerComponent}

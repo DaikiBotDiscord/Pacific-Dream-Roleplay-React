@@ -55,35 +55,26 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/SAFR_LOGO.png"
+                                src="https://pinalcountyroleplay.com/SAFR_LOGO.png"
                                 className="departments-image"
                             />
                             <h2 className="departments-text">
-                                San Andreas Fire &amp; Rescue
+                                Phoenix Fire &amp; Rescue
                             </h2>
                             <span className="departments-text01">
-                                The mission of the San Andreas Fire Rescue is ensuring the
-                                safety of all the citizens in the state of San Andreas, doing so
-                                in a mature and professional manner. SAFR works with other
-                                agencies to educate, protect and assist the citizens of San
-                                Andreas. We have many divisions to help achieve this.
+                                More Information Coming Soon!
                             </span>
                         </div>
                         <div className="departments-gallery-card1">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/LSPD_LOGO.png"
+                                src="https://pinalcountyroleplay.com/LSPD_LOGO.png"
                                 className="departments-image1"
                             />
-                            <h2 className="departments-text02">Los Santos Police</h2>
+                            <h2 className="departments-text02">Arizona State Patrol</h2>
                             <span className="departments-text03">
                                 <span>
-                                    The Los Santos Police Department is dedicated to protecting
-                                    rights, property, and lives, maintaining order, and enforcing
-                                    laws. We aim to achieve this by setting goals, practicing core
-                                    values, and being totally dedicated to our mission. Our values
-                                    guide members in treating people with respect, fairness, and
-                                    compassion.
+                                    More Information Coming Soon!
                                 </span>
                                 <br></br>
                             </span>
@@ -91,23 +82,16 @@ const Departments = (props) => {
                         <div className="departments-gallery-card2">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/BCSO_LOGO.png"
+                                src="https://pinalcountyroleplay.com/BCSO_LOGO.png"
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
-                                <span>Blaine County</span>
+                                <span>Pinal County Sheriffs Office</span>
                                 <br></br>
                             </h2>
                             <span className="departments-text09">
                                 <span>
-                                    The Blaine County Sheriff&apos;s Office is on a crucial
-                                    mission to protect the Blaine County district in San Andreas.
-                                    Our core values include Loyalty, Strength, Courageousness, and
-                                    Obedience, guiding each deputy to play a vital role in the
-                                    community. Committed to serving and enhancing the state of
-                                    living for everyone, our deputies prioritize the proper care
-                                    and respect needed for trust. Various divisions work towards
-                                    upholding these values.
+                                    More Information Coming Soon!
                                 </span>
                                 <br></br>
                             </span>
@@ -117,29 +101,20 @@ const Departments = (props) => {
                         <div className="departments-gallery-card3">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/CIV_LOGO.png"
+                                src="https://pinalcountyroleplay.com/CIV_LOGO.png"
                                 className="departments-image3"
                             />
                             <h2 className="departments-text12">
-                                San Andreas Civilians Operations
+                                Arizona Department of Transportation
                             </h2>
                             <span className="departments-text13">
-                                Embark on a new chapter in your life on our server, where
-                                everything depends on you and your fellow citizens. With
-                                diligence, you can start your own company and turn your
-                                imagination into reality. Life here goes beyond a simple
-                                role-playing game; you are fully immersed in your character.
-                                Every knowledge and experience in San Andreas contributes to
-                                your advancement. Details matter, influencing the history of San
-                                Andreas. Whether a friendly police officer, a successful rich
-                                person, or an aggressive criminal, Pacific Dream has no
-                                limitations.
+                                More Information Coming Soon!
                             </span>
                         </div>
-                        <div className="departments-gallery-card4">
+                        {/* <div className="departments-gallery-card4">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/DOC_LOGO.png"
+                                src="https://pinalcountyroleplay.com/DOC_LOGO.png"
                                 className="departments-image4"
                             />
                             <h2 className="departments-text14">San Andreas Communications</h2>
@@ -150,27 +125,13 @@ const Departments = (props) => {
                                 ranks but also for those who depend on us, including the Pacific
                                 Dream Roleplay FiveM server.
                             </span>
-                        </div>
-                        <div className="departments-gallery-card4">
-                            <img
-                                alt="image"
-                                src="https://pacificdreamrp.com/SASC_LOGO.jpg"
-                                className="departments-image4"
-                            />
-                            <h2 className="departments-text14">San Andreas State Constable</h2>
-                            <span className="departments-text15">
-                                The San Andreas State Constables have a very important mission within the state.
-                                We provide services to all of San Andreas and have no limits on were we can be.
-                                We support all departments and aid them when needed. We are the best of the best and no other, you must be a sergeant ore above in any department and recommended by your superior officer.
-                                But we do have open enrollment periods.
-                            </span>
-                        </div>
+                        </div> */}
                     </div>
                     {/* <div className="departments-container4">
                         <div className="departments-gallery-card4">
                             <img
                                 alt="image"
-                                src="https://pacificdreamrp.com/DOT_LOGO.png"
+                                src="https://pinalcountyroleplay.com/DOT_LOGO.png"
                                 className="departments-image4"
                             />
                             <h2 className="departments-text14">San Andreas Department of Transportation</h2>
