@@ -55,7 +55,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/SAFR_LOGO.png"
+                                src="https://pinalcountyroleplay.com/FFD_LOGO.png"
                                 className="departments-image"
                             />
                             <h2 className="departments-text">
@@ -68,10 +68,10 @@ const Departments = (props) => {
                         <div className="departments-gallery-card1">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/LSPD_LOGO.png"
+                                src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
                                 className="departments-image1"
                             />
-                            <h2 className="departments-text02">Arizona State Patrol</h2>
+                            <h2 className="departments-text02">Arizona Department of Public Safety</h2>
                             <span className="departments-text03">
                                 <span>
                                     More Information Coming Soon!
@@ -82,7 +82,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card2">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/BCSO_LOGO.png"
+                                src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
@@ -101,7 +101,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
                                 className="departments-image3"
                             />
                             <h2 className="departments-text12">

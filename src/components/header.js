@@ -7,6 +7,9 @@ import NavigationLinks from './navigation-links'
 import './header.css'
 
 const Header = (props) => {
+    function handleContextMenu(event) {
+        event.preventDefault();
+    }
     return (
         <header
             data-role="Header"
@@ -17,6 +20,7 @@ const Header = (props) => {
                     alt={props.imageAlt}
                     src={props.imageSrc}
                     className="header-image"
+                    onContextMenu={handleContextMenu}
                 />
             </Link>
             <div data-thq="thq-dropdown" className="header-thq-dropdown list-item">
@@ -100,7 +104,7 @@ Header.defaultProps = {
     linkButton1: 'https://cfx.re/join/zz8mqp',
     linkButton: 'https://cfx.re/join/zz8mqp',
     button: 'Login',
-    imageSrc: '/pdrp_logo.png',
+    imageSrc: '/pcrp_logo.png',
     imageAlt: 'logo',
 }
 

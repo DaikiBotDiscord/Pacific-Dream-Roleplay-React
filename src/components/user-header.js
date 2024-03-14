@@ -45,18 +45,21 @@ const UserHeader = (props) => {
     const handleClosePopup = () => {
         setShowPopup(false);
     };
-
+    function handleContextMenu(event) {
+        event.preventDefault();
+    }
     return (
         <header
             data-role="Header"
             className={`user-header-header ${props.rootClassName} `}
         >
             {showPopup && <AccountPopup handleClosePopup={handleClosePopup} />}
-            <Link to="/user/home" className="user-header-navlink">
+            <Link to="/" className="user-header-navlink">
                 <img
                     alt={props.imageAlt}
                     src={props.imageSrc}
                     className="user-header-image"
+                    onContextMenu={handleContextMenu}
                 />
             </Link>
             <div className="user-header-nav">
@@ -72,6 +75,7 @@ const UserHeader = (props) => {
                             alt={props.pfpImageAlt}
                             src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
                             className="user-header-pfp-image1"
+                            onContextMenu={handleContextMenu}
                         />
                     )}
                 </button>
@@ -168,6 +172,7 @@ const UserHeader = (props) => {
                             alt={props.pfpImageAlt}
                             src={discordAuthenticated === true ? props.pfpImageSrc : avatarData}
                             className="user-header-pfp-image1"
+                            onContextMenu={handleContextMenu}
                         />
                     )}
                 </button>
@@ -194,7 +199,7 @@ UserHeader.defaultProps = {
         'https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-user-profile-character-faceless-unknown-png-image_4816132.png',
     pfpImageAlt: 'image',
     rootClassName: '',
-    imageSrc: '/pdrp_logo.png',
+    imageSrc: '/pcrp_logo.png',
 }
 
 UserHeader.propTypes = {

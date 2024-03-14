@@ -1,0 +1,561 @@
+.phoenix-fd-application-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.phoenix-fd-application-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyroleplay.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.phoenix-fd-application-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.phoenix-fd-application-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.phoenix-fd-application-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.phoenix-fd-application-container3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    margin: var(--dl-space-space-oneandhalfunits);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.phoenix-fd-application-text {
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-halfunit);
+    text-decoration: underline;
+}
+
+.phoenix-fd-application-text01 {
+    align-self: flex-start;
+    margin-left: var(--dl-space-space-unit);
+}
+
+.phoenix-fd-application-text04 {
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-halfunit);
+    text-decoration: underline;
+}
+
+.phoenix-fd-application-text05 {
+    align-self: flex-start;
+    margin-left: var(--dl-space-space-unit);
+}
+
+.phoenix-fd-application-text08 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.phoenix-fd-application-text09 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.phoenix-fd-application-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text11 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-textinput {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text12 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text14 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput01 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text15 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text17 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput02 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text19 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text21 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput03 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text23 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text25 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput04 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text27 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text29 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput05 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text31 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text33 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-select {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-separator {
+    width: 100%;
+    height: auto;
+}
+
+.phoenix-fd-application-separator1 {
+    width: 200px;
+    height: 2px;
+    background-color: var(--dl-color-gray-500);
+}
+
+.phoenix-fd-application-question-8 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text38 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text40 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput06 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text42 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text44 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput07 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-10 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text46 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text48 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput08 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-separator2 {
+    width: 100%;
+    height: auto;
+}
+
+.phoenix-fd-application-separator3 {
+    width: 200px;
+    height: 2px;
+    background-color: var(--dl-color-gray-500);
+}
+
+.phoenix-fd-application-question-11 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text53 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text55 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-select1 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-12 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text57 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text59 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-select2 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-13 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text61 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text63 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-select3 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-14 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text65 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text67 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput09 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-15 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text69 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text71 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput10 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-question-141 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.phoenix-fd-application-text73 {
+    font-size: 1.5rem;
+}
+
+.phoenix-fd-application-text75 {
+    color: #dc3424;
+}
+
+.phoenix-fd-application-textinput11 {
+    margin-top: 3px;
+}
+
+.phoenix-fd-application-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.phoenix-fd-application-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.phoenix-fd-application-text78:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .phoenix-fd-application-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .phoenix-fd-application-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+phoenix-fd-application @media(max-width: 479px) {
+    .phoenix-fd-application-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .phoenix-fd-application-text78 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 430px) {
+    .phoenix-fd-application-container1 {
+        background-position: top left, center;
+    }
+
+    .phoenix-fd-application-image {
+        width: 100%;
+    }
+
+    .phoenix-fd-application-hero {
+        width: 100%;
+        padding: var(--dl-space-space-twounits);
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-unit);
+        padding-right: var(--dl-space-space-unit);
+    }
+}

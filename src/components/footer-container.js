@@ -12,7 +12,7 @@ const FooterContainer = (props) => {
       <div className="footer-container-footer">
         <div className="footer-container-social-links">
           <a
-            href="https://discord.gg/aKmGcdK6aZ"
+            href="https://discord.gg/pinalcountyrp"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link"
@@ -25,8 +25,12 @@ const FooterContainer = (props) => {
           </a>
         </div>
         <div className="footer-container-copyright-container">
+          {/* <a class="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/nF3fYdJ2PP54SkXj">
+            <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcset="https://static.copyrighted.com/badges/125x25/02_2_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/02_2.png">
+              </a> */}
+          <script src="https://static.copyrighted.com/badges/helper.js"></script>
           <a
-            href="https://app.copyrighted.com/website/HZGlhTu4u2sWBYQ5"
+            href="https://app.copyrighted.com/website/nF3fYdJ2PP54SkXj"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link1"

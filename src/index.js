@@ -21,6 +21,10 @@ import UserDetails from "./views/userDetails";
 import Departments from "./views/departments";
 import ForgotResetPassword from "./views/ForgotpasswordReset";
 import ResetPassword from "./views/passwordReset";
+import AZDPSApplication from "./views/azdps-application";
+import PhoenixPDApplication from "./views/phoenix-pd-application";
+import PhoenixFDApplication from "./views/phoenix-fd-application";
+import Applications from './views/applications'
 
 const App = () => {
   // Function to check token
@@ -148,6 +152,10 @@ const App = () => {
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
         <Route component={ForgotResetPassword} exact path='/forgot-password' />
+        <Route component={AZDPSApplication} exact path='/user/azdps-application' />
+        <Route component={PhoenixPDApplication} exact path='/user/ppd-application' />
+        <Route component={PhoenixFDApplication} exact path='/user/pfd-application' />
+        <Route component={Applications} exact path='/user/applications' />
         <Route component={ResetPassword} exact path='/reset-password' />
         <Route
           exact
