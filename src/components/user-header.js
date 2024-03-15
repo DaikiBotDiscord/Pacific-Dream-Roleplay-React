@@ -163,6 +163,19 @@ const UserHeader = (props) => {
                             </div>
                         </Link>
                     </li>
+                    <li
+                        data-thq="thq-dropdown"
+                        className="user-header-dropdown3 list-item"
+                    >
+                        <Link to="/user/applications" className="">
+                            <div
+                                data-thq="thq-dropdown-toggle"
+                                className="user-header-dropdown-toggle4"
+                            >
+                                <span className="user-header-text11">Applications</span>
+                            </div>
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className="user-header-container1">

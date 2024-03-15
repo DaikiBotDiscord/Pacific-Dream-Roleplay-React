@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
@@ -17,7 +17,6 @@ import NotFound from "./views/not-found";
 import Register from "./views/register";
 import config from "./views/config/config";
 import UserHome from "./views/userHome";
-import UserDetails from "./views/userDetails";
 import Departments from "./views/departments";
 import ForgotResetPassword from "./views/ForgotpasswordReset";
 import ResetPassword from "./views/passwordReset";
@@ -27,121 +26,93 @@ import PhoenixFDApplication from "./views/phoenix-fd-application";
 import Applications from './views/applications'
 
 const App = () => {
-  // Function to check token
-  async function checkToken() {
-    try {
-      const response = await fetch(`${config.apiDomain}/api/token-check`, {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-          token: config.requiredToken,
-        },
-        body: JSON.stringify({
-          token: window.localStorage.getItem("token"),
-        }),
-      });
+  const [userData, setUserData] = useState("");
+  const [cantShow, setCantShow] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [currentURL, setCurrentURL] = useState(window.location.href);
+  const [discordAuthenticated, setDiscordAuthenticated] = useState(false);
+  const [verifiedCiv, setVerifiedCiv] = useState(undefined);
 
-      if (!response.ok) {
-        throw new Error("failed to fetch!");
+  useEffect(() => {
+    const handleURLChange = () => {
+      setCurrentURL(window.location.href);
+    };
+
+    window.addEventListener('popstate', handleURLChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleURLChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    let intervalId;
+
+    const fetchData = async () => {
+      try {
+        const token = window.localStorage.getItem('token');
+        if (!token) {
+          throw new Error('Token not found');
+        }
+
+        const response = await fetch(`${config.apiDomain}/api/user/logged/info`, {
+          method: 'POST',
+          crossDomain: true,
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            token: config.requiredToken,
+          },
+          body: JSON.stringify({
+            token: token,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch user data');
+        }
+
+        const data = await response.json();
+        console.log('User Data:', data);
+
+        setUserData(data);
+        setDiscordAuthenticated(data?.data?.discordUserAuthenticated || false);
+        setVerifiedCiv(data?.data?.VerifiedCiv);
+      } catch (error) {
+        console.error('Fetch Data Error:', error);
+        setCantShow(true);
+        setLoading(false);
+        toast.error('Unable to fetch user data at this time. Please try again.', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        });
       }
+    };
 
-      const data = await response.json();
+    if (window.localStorage.getItem("token")) {
+      fetchData();
+      intervalId = setInterval(fetchData, 30000); // Fetch data every 30 seconds
 
-      if (data.data === "token expired") {
-        window.localStorage.clear();
-        window.location.href = "/login";
-      } else if (data.status !== "active") {
-        // Handle other cases when the token is not valid
-        // For example, redirect to the login page or display an error message
-        window.localStorage.clear();
-        window.location.href = "/login";
-      } else if (data.error === "user doesn't exist") {
-        window.location.href = "/register";
-        setTimeout(() => {
-          toast.error(
-            "Your account no longer exists. Please create an account and try again.",
-            {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            }
-          );
-        }, 1000);
-        window.localStorage.clear();
-      }
-    } catch (error) {
-      console.error(error);
-      window.location.href = "/";
-      toast.error("Unable to fetch user data at this time. Please try again.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      return () => {
+        clearInterval(intervalId);
+      };
     }
-  }
 
-  async function checkTokenRepeat() {
-    try {
-      const response = await fetch(`${config.apiDomain}/api/token-check`, {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-          token: config.requiredToken,
-        },
-        body: JSON.stringify({
-          token: window.localStorage.getItem("token"),
-        }),
-      });
+    return () => { };
+  }, []);
 
-      if (!response.ok) {
-        throw new Error("failed to fetch!");
-      }
 
-      const data = await response.json();
+  const memoizedUserData = useMemo(() => userData, [userData]);
+  const memoizedDiscordAuthenticated = useMemo(() => discordAuthenticated, [discordAuthenticated]);
+  const memoizedVerifiedCiv = useMemo(() => verifiedCiv, [verifiedCiv]);
 
-      if (data.data === "token expired") {
-        window.localStorage.clear();
-        window.location.href = "/login";
-      } else if (data.status !== "active") {
-        // Handle other cases when the token is not valid
-        // For example, redirect to the login page or display an error message
-        window.localStorage.clear();
-        window.location.href = "/login";
-      }
-    } catch (error) {
-      console.error(error);
-      window.location.href = "/";
-      toast.error("Unable to fetch user data at this time. Please try again.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-    }
-    setInterval(() => {
-      checkToken();
-    }, 60 * 1000);
-  }
 
   return (
     <Router>
@@ -152,17 +123,50 @@ const App = () => {
         <Route component={Login} exact path="/login" />
         <Route component={Register} exact path="/register" />
         <Route component={ForgotResetPassword} exact path='/forgot-password' />
-        <Route component={AZDPSApplication} exact path='/user/azdps-application' />
-        <Route component={PhoenixPDApplication} exact path='/user/ppd-application' />
-        <Route component={PhoenixFDApplication} exact path='/user/pfd-application' />
-        <Route component={Applications} exact path='/user/applications' />
         <Route component={ResetPassword} exact path='/reset-password' />
         <Route
           exact
           path="/user/home"
           render={() => {
-            // Set runEffect to true when someone visits /home
-            return checkTokenRepeat() ? <UserDetails /> : <Login />;
+            return window.localStorage.getItem("token") ? (
+              <UserHome
+                userData={memoizedUserData}
+                discordAuthenticated={memoizedDiscordAuthenticated}
+                verifiedCiv={memoizedVerifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/user/phoenix-pd-application"
+          render={() => {
+            return window.localStorage.getItem("token") ? (
+              <PhoenixPDApplication
+                userData={memoizedUserData}
+                discordAuthenticated={memoizedDiscordAuthenticated}
+                verifiedCiv={memoizedVerifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/user/applications"
+          render={() => {
+            return window.localStorage.getItem("token") ? (
+              <Applications
+                userData={memoizedUserData}
+                discordAuthenticated={memoizedDiscordAuthenticated}
+                verifiedCiv={memoizedVerifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
           }}
         />
         <Route

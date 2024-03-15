@@ -17,8 +17,11 @@ const NavigationLinksUser = (props) => {
       <Link to="/donation" className="navigation-links-user-navlink2">
         {props.text2}
       </Link>
-      <Link to="/departments" className="navigation-links-user-navlink3">
+      <Link to="/departments" className="navigation-links-user-navlink2">
         {props.text21}
+      </Link>
+      <Link to="/user/applications" className="navigation-links-user-navlink3">
+        {props.text22}
       </Link>
     </nav>
   )
@@ -30,6 +33,7 @@ NavigationLinksUser.defaultProps = {
   rootClassName: '',
   text2: 'Donations',
   text21: 'Departments',
+  text22: 'Applications',
   text311: 'Our Team',
 }
 
@@ -39,6 +43,7 @@ NavigationLinksUser.propTypes = {
   rootClassName: PropTypes.string,
   text2: PropTypes.string,
   text21: PropTypes.string,
+  text22: PropTypes.string,
   text311: PropTypes.string,
 }
 

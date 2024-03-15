@@ -1,16 +1,91 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
 import FooterContainer from '../components/footer-container'
 import './applications.css'
 import { Helmet } from 'react-helmet'
+import config from './config/config'
 
-const Applications = (props) => {
+export default function Applications({ userData, discordAuthenticated, VerifiedCiv }) {
+    const [headerComponent, setHeaderComponent] = useState(false);
+    const [ppdStatus, setPPDStatus] = useState("Loading...");
+    const [ppdLight, setPPDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const user = userData.data
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+    setTimeout(() => {
+        fetchData();
+    }, 10);
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                // Set the UserHeader component to be rendered
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                // Set the default Header component to be rendered
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+            // Handle error (e.g., display an error message or redirect)
+        }
+    };
+
+    const fetchData = async () => {
+        if (!user || !user.email) {
+            return; // Exit early if user or user.email is not available
+        }
+
+        fetch(`${config.apiDomain}/api/user/applications/ppd-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setPPDStatus(data.status);
+                setPPDLight(data.statusLight)
+            })
+    }
+
+
     return (
         <div className="applications-container">
+            <Helmet>
+                <title>Applications - Pinal County Roleplay</title>
+                <meta property="og:title" content="Applications - Pinal County Roleplay" />
+            </Helmet>
             <div className="applications-container01">
-                <Header rootClassName="header-root-class-name6"></Header>
+                {headerComponent}
                 <img
                     alt="image"
                     src="https://pinalcountyroleplay.com/applications.png"
@@ -31,15 +106,15 @@ const Applications = (props) => {
                                         />
                                     </span>
                                     <br></br>
-                                    <span>Sheriff&apos;s Office </span>
+                                    <span>Sheriff&apos;s Office </span>
                                 </span>
                                 <span className="applications-text05">
-                                    <span>APPROVED</span>
+                                    <span>UNAVAILABLE</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/accepted.png"
+                                    src="https://pinalcountyroleplay.com/not_started.png"
                                     className="applications-image01"
                                 />
                             </div>
@@ -51,12 +126,12 @@ const Applications = (props) => {
                                     <br></br>
                                 </span>
                                 <span className="applications-text13">
-                                    <span>DENIED</span>
+                                    <span>{ppdStatus.toUpperCase()}</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/denied.png"
+                                    src={ppdLight}
                                     className="applications-image02"
                                 />
                             </div>
@@ -68,54 +143,30 @@ const Applications = (props) => {
                                     <br></br>
                                 </span>
                                 <span className="applications-text21">
-                                    <span>IN PROGRESS</span>
-                                    <br></br>
-                                </span>
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/in_progress.png"
-                                    className="applications-image03"
-                                />
-                            </div>
-                            <div className="applications-container07">
-                                <span className="applications-text24">
-                                    <span>
-                                        AZ Internal
-                                        <span
-                                            dangerouslySetInnerHTML={{
-                                                __html: ' ',
-                                            }}
-                                        />
-                                    </span>
-                                    <span>Affairs </span>
-                                    <span>Department</span>
-                                    <br></br>
-                                </span>
-                                <span className="applications-text29">
-                                    <span>NOT STARTED</span>
+                                    <span>UNAVAILABLE</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
                                     src="https://pinalcountyroleplay.com/not_started.png"
-                                    className="applications-image04"
+                                    className="applications-image03"
                                 />
                             </div>
                             <div className="applications-container08">
                                 <span className="applications-text32">
                                     <span>AZ Department</span>
                                     <br></br>
-                                    <span>of </span>
+                                    <span>of </span>
                                     <span>Communications</span>
                                     <br></br>
                                 </span>
                                 <span className="applications-text38">
-                                    <span>APPROVED</span>
+                                    <span>UNAVAILABLE</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/accepted.png"
+                                    src="https://pinalcountyroleplay.com/not_started.png"
                                     className="applications-image05"
                                 />
                             </div>
@@ -127,29 +178,29 @@ const Applications = (props) => {
                                     <br></br>
                                 </span>
                                 <span className="applications-text46">
-                                    <span>DENIED</span>
+                                    <span>UNAVAILABLE</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/denied.png"
+                                    src="https://pinalcountyroleplay.com/not_started.png"
                                     className="applications-image06"
                                 />
                             </div>
                             <div className="applications-container10">
                                 <span className="applications-text49">
-                                    <span>AZ Department of </span>
+                                    <span>AZ Department of </span>
                                     <br></br>
                                     <span>Public Safety</span>
                                     <br></br>
                                 </span>
                                 <span className="applications-text54">
-                                    <span>IN PROGRESS</span>
+                                    <span>UNAVAILABLE</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/in_progress.png"
+                                    src="https://pinalcountyroleplay.com/not_started.png"
                                     className="applications-image07"
                                 />
                             </div>
@@ -161,31 +212,50 @@ const Applications = (props) => {
                             <br></br>
                         </h1>
                         <div className="applications-container12">
-                            <div className="applications-container13">
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
-                                    className="applications-image08"
-                                />
-                                <span className="applications-text60">
-                                    <span>Pinal County</span>
-                                    <br></br>
-                                    <span>Sheriff&apos;s Office</span>
-                                    <br></br>
-                                </span>
-                            </div>
-                            <div className="applications-container14">
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/FFD_LOGO.png"
-                                    className="applications-image09"
-                                />
-                                <span className="applications-text65">
-                                    <span>Phoenix Fire &amp; Rescue</span>
-                                    <br></br>
-                                </span>
-                            </div>
-                            <Link to="/azdps-application" className="applications-navlink">
+                            {/* <Link to="/user/pcso-application" className="applications-navlink">
+                                <div className="applications-container13">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
+                                        className="applications-image08"
+                                    />
+                                    <span className="applications-text60">
+                                        <span>Pinal County</span>
+                                        <br></br>
+                                        <span>Sheriff&apos;s Office</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link> */}
+                            <Link to="/user/phoenix-pd-application" className="applications-navlink3">
+                                <div className="applications-container16">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/PPD_LOGO.png"
+                                        className="applications-image11"
+                                    />
+                                    <span className="applications-text73">
+                                        <span>Phoenix Police</span>
+                                        <br></br>
+                                        <span>Department</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link>
+                            {/* <Link to="/user/phoenix-fd-application" className="applications-navlink1">
+                                <div className="applications-container14">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/FFD_LOGO.png"
+                                        className="applications-image09"
+                                    />
+                                    <span className="applications-text65">
+                                        <span>Phoenix Fire &amp; Rescue</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link>
+                            <Link to="/user/azdps-application" className="applications-navlink2">
                                 <div className="applications-container15">
                                     <img
                                         alt="image"
@@ -200,45 +270,36 @@ const Applications = (props) => {
                                     </span>
                                 </div>
                             </Link>
-                            <div className="applications-container16">
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/DOC_LOGO.png"
-                                    className="applications-image11"
-                                />
-                                <span className="applications-text73">
-                                    <span>Phoenix Police</span>
-                                    <br></br>
-                                    <span>Department</span>
-                                    <br></br>
-                                </span>
-                            </div>
-                            <div className="applications-container17">
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/DOC_LOGO.png"
-                                    className="applications-image12"
-                                />
-                                <span className="applications-text78">
-                                    <span>Department of</span>
-                                    <br></br>
-                                    <span>Communications</span>
-                                    <br></br>
-                                </span>
-                            </div>
-                            <div className="applications-container18">
-                                <img
-                                    alt="image"
-                                    src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
-                                    className="applications-image13"
-                                />
-                                <span className="applications-text83">
-                                    <span>Department of</span>
-                                    <br></br>
-                                    <span>Transportation</span>
-                                    <br></br>
-                                </span>
-                            </div>
+                            <Link to="/user/doc-application" className="applications-navlink4">
+                                <div className="applications-container17">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/DOC_LOGO.png"
+                                        className="applications-image12"
+                                    />
+                                    <span className="applications-text78">
+                                        <span>Department of</span>
+                                        <br></br>
+                                        <span>Communications</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link>
+                            <Link to="/user/dot-application" className="applications-navlin4">
+                                <div className="applications-container18">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
+                                        className="applications-image13"
+                                    />
+                                    <span className="applications-text83">
+                                        <span>Department of</span>
+                                        <br></br>
+                                        <span>Transportation</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
@@ -247,5 +308,3 @@ const Applications = (props) => {
         </div>
     )
 }
-
-export default Applications
