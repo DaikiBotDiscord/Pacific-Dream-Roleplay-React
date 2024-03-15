@@ -22,6 +22,10 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
         fetchData();
     }, 10);
 
+    setInterval(() => {
+        fetchData();
+    }, 10 * 1000);
+
     const checkTokenRepeat = async () => {
         try {
             const response = await fetch(`${config.apiDomain}/api/token-check`, {

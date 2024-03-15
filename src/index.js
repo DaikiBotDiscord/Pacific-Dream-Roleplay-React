@@ -74,7 +74,6 @@ const App = () => {
         }
 
         const data = await response.json();
-        console.log('User Data:', data);
 
         setUserData(data);
         setDiscordAuthenticated(data?.data?.discordUserAuthenticated || false);
