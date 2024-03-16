@@ -196,7 +196,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                 </div>
                                 <div className="pcso-applicaiton-question-3">
                                     <span className="pcso-applicaiton-text23">
-                                        <span>How long have you been in our server? </span>
+                                        <span>How old are you? </span>
                                         <span className="pcso-applicaiton-text25">*</span>
                                         <br></br>
                                     </span>
@@ -208,7 +208,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                     >
                                         <option defaultValue value=""></option>
                                         <option value="15 or Younger">15 or Younger</option>
-                                        <option value="16-18">16-18</option>
+                                        <option value="16-17">16-17</option>
                                         <option value="18+">18+</option>
                                     </select>
                                 </div>
