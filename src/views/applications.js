@@ -14,6 +14,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [ppdLight, setPPDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [pfdStatus, setPFDStatus] = useState("Loading...");
     const [pfdLight, setPFDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [pcsoStatus, setPCSOStatus] = useState("Loading...");
+    const [pcsoLight, setPCSOLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const user = userData.data
 
     useEffect(() => {
@@ -95,6 +97,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setPFDStatus(data.status);
                 setPFDLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/pcso-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setPCSOStatus(data.status);
+                setPCSOLight(data.statusLight)
+            })
     }
 
 
@@ -129,12 +145,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     <span>Sheriff&apos;s Office </span>
                                 </span>
                                 <span className="applications-text05">
-                                    <span>UNAVAILABLE</span>
+                                    <span>{pcsoStatus.toUpperCase()}</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/not_started.png"
+                                    src={pcsoLight}
                                     className="applications-image01"
                                 />
                             </div>
@@ -231,7 +247,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             <br></br>
                         </h1>
                         <div className="applications-container12">
-                            {/* <Link to="/user/pcso-application" className="applications-navlink">
+                            <Link to="/user/pcso-application" className="applications-navlink">
                                 <div className="applications-container13">
                                     <img
                                         alt="image"
@@ -245,7 +261,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         <br></br>
                                     </span>
                                 </div>
-                            </Link> */}
+                            </Link>
                             <Link to="/user/phoenix-pd-application" className="applications-navlink3">
                                 <div className="applications-container16">
                                     <img

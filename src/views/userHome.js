@@ -62,7 +62,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             <div className="user-home-container1">
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
             </div>
-            {verifiedCiv === false && discordAuthenticated === true ? (
+            {/* {verifiedCiv === false && discordAuthenticated === true ? (
                 <div>
                     <h1 className="user-home-text">
                         You are not a whitelisted & verified civilian of PCRP.
@@ -71,20 +71,20 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                         You must be a verified and whitelisted civilian to access PCRP account services.
                     </h1>
                 </div>
-            ) : (
-                discordAuthenticated === true ? (
-                    <div className="user-home-container">
-                        <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!</h1>
-                        <span className="user-home-text1">
-                            We are in the process of ongoing development for this section of the
-                            website. We kindly invite you to revisit at a later time to explore the
-                            new application management system! Thank you for your
-                            understanding and patience as we continue to refine and optimize our
-                            features.
-                        </span>
-                    </div>
-                ) : null
-            )}
+            ) : ( 
+                discordAuthenticated === true ? (*/}
+            <div className="user-home-container">
+                <h1 className="user-home-text">Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!</h1>
+                <span className="user-home-text1">
+                    We are in the process of ongoing development for this section of the
+                    website. We kindly invite you to revisit at a later time to explore the
+                    new application management system! Thank you for your
+                    understanding and patience as we continue to refine and optimize our
+                    features.
+                </span>
+            </div>
+            ) : null
+            {/*   )} */}
 
             {discordAuthenticated === false ? ( // Use discordAuthenticated to conditionally render the button
                 <div className="user-home-container2">

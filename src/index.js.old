@@ -24,7 +24,6 @@ import AZDPSApplication from "./views/azdps-application";
 import PhoenixPDApplication from "./views/phoenix-pd-application";
 import PhoenixFDApplication from "./views/phoenix-fd-application";
 import Applications from './views/applications'
-import PCSOApplication from './views/pcso-application'
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -220,7 +219,7 @@ const App = () => {
     }
     setInterval(() => {
       checkToken();
-    }, 10 * 1000);
+    }, 60 * 1000);
   }
 
   return (
@@ -233,49 +232,71 @@ const App = () => {
         <Route component={Register} exact path="/register" />
         <Route component={ForgotResetPassword} exact path='/forgot-password' />
         <Route component={ResetPassword} exact path='/reset-password' />
+        {/* <Route
+          exact
+          path="/user/home"
+          render={() => {
+            return window.localStorage.getItem("token") ? (
+              <UserHome
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
+          }}
+        /> */}
         <Route
           exact
           path='/user/home'
           render={() => {
-            return checkTokenRepeat() ? <UserHome userData={userData}
-              discordAuthenticated={discordAuthenticated}
-              verifiedCiv={verifiedCiv} /> : <Login />;
+            return checkTokenRepeat ? <UserHome /> : <Login />;
           }}
         />
         <Route
           exact
-          path='/user/phoenix-pd-application'
+          path="/user/phoenix-pd-application"
           render={() => {
-            return checkTokenRepeat() ? <PhoenixPDApplication userData={userData}
-              discordAuthenticated={discordAuthenticated}
-              verifiedCiv={verifiedCiv} /> : <Login />;
+            return window.localStorage.getItem("token") ? (
+              <PhoenixPDApplication
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
           }}
         />
         <Route
           exact
-          path='/user/phoenix-fd-application'
+          path="/user/phoenix-fd-application"
           render={() => {
-            return checkTokenRepeat() ? <PhoenixFDApplication userData={userData}
-              discordAuthenticated={discordAuthenticated}
-              verifiedCiv={verifiedCiv} /> : <Login />;
+            return window.localStorage.getItem("token") ? (
+              <PhoenixFDApplication
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
           }}
         />
         <Route
           exact
-          path='/user/pcso-application'
+          path="/user/applications"
           render={() => {
-            return checkTokenRepeat() ? <PCSOApplication userData={userData}
-              discordAuthenticated={discordAuthenticated}
-              verifiedCiv={verifiedCiv} /> : <Login />;
-          }}
-        />
-        <Route
-          exact
-          path='/user/applications'
-          render={() => {
-            return checkTokenRepeat() ? <Applications userData={userData}
-              discordAuthenticated={discordAuthenticated}
-              verifiedCiv={verifiedCiv} /> : <Login />;
+            return window.localStorage.getItem("token") ? (
+              <Applications
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
           }}
         />
         <Route

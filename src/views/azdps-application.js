@@ -7,7 +7,8 @@ import './azdps-application.css'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 
-const AZDPSApplication = (props) => {
+export default function AZDPSApplication({ userData, discordAuthenticated, verifiedCiv }) {
+
     const [headerComponent, setHeaderComponent] = useState(false);
     const [q1, setQ1] = useState("");
     const [q2, setQ2] = useState("");
@@ -503,5 +504,3 @@ const AZDPSApplication = (props) => {
             <FooterContainer rootClassName="footer-container-root-class-name7"></FooterContainer>
         </div>)
 }
-
-export default AZDPSApplication
