@@ -83,8 +83,8 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                     features.
                 </span>
             </div>
-            ) : null
-            {/*   )} */}
+            {/*) : null
+               )} */}
 
             {discordAuthenticated === false ? ( // Use discordAuthenticated to conditionally render the button
                 <div className="user-home-container2">
