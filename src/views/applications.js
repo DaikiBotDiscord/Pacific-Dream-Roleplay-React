@@ -12,6 +12,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [headerComponent, setHeaderComponent] = useState(false);
     const [ppdStatus, setPPDStatus] = useState("Loading...");
     const [ppdLight, setPPDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [pfdStatus, setPFDStatus] = useState("Loading...");
+    const [pfdLight, setPFDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const user = userData.data
 
     useEffect(() => {
@@ -78,6 +80,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
             .then((data) => {
                 setPPDStatus(data.status);
                 setPPDLight(data.statusLight)
+            })
+        fetch(`${config.apiDomain}/api/user/applications/pfd-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setPFDStatus(data.status);
+                setPFDLight(data.statusLight)
             })
     }
 
@@ -147,20 +163,19 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     <br></br>
                                 </span>
                                 <span className="applications-text21">
-                                    <span>UNAVAILABLE</span>
+                                    <span>{pfdStatus.toUpperCase()}</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/not_started.png"
+                                    src={pfdLight}
                                     className="applications-image03"
                                 />
                             </div>
                             <div className="applications-container08">
                                 <span className="applications-text32">
-                                    <span>AZ Department</span>
+                                    <span>AZ Department of</span>
                                     <br></br>
-                                    <span>of </span>
                                     <span>Communications</span>
                                     <br></br>
                                 </span>
@@ -176,7 +191,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             </div>
                             <div className="applications-container09">
                                 <span className="applications-text41">
-                                    <span>AZ Department of</span>
+                                    <span>Department of</span>
                                     <br></br>
                                     <span>Certified Civilians</span>
                                     <br></br>
@@ -246,7 +261,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     </span>
                                 </div>
                             </Link>
-                            {/* <Link to="/user/phoenix-fd-application" className="applications-navlink1">
+                            <Link to="/user/phoenix-fd-application" className="applications-navlink1">
                                 <div className="applications-container14">
                                     <img
                                         alt="image"
@@ -259,7 +274,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     </span>
                                 </div>
                             </Link>
-                            <Link to="/user/azdps-application" className="applications-navlink2">
+                            {/* <Link to="/user/azdps-application" className="applications-navlink2">
                                 <div className="applications-container15">
                                     <img
                                         alt="image"

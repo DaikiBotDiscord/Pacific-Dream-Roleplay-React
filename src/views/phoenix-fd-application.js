@@ -1,11 +1,127 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
 import FooterContainer from '../components/footer-container'
 import './phoenix-fd-application.css'
 import { Helmet } from 'react-helmet'
+import config from './config/config'
+import { ToastContainer, toast } from 'react-toastify';
 
-const PhoenixFDApplication = (props) => {
+export default function PhoenixPDApplication({ userData, discordAuthenticated, verifiedCiv }) {
+    const [headerComponent, setHeaderComponent] = useState(false);
+    const [q1, setQ1] = useState("");
+    const [q2, setQ2] = useState("");
+    const [q3, setQ3] = useState("");
+    const [q4, setQ4] = useState("");
+    const [q5, setQ5] = useState("");
+    const [q6, setQ6] = useState("");
+    const [q7, setQ7] = useState("");
+    const [q8, setQ8] = useState("");
+    const [q9, setQ9] = useState("");
+    const [q10, setQ10] = useState("");
+    const [q11, setQ11] = useState("");
+    const [q12, setQ12] = useState("");
+    const [q13, setQ13] = useState("");
+    const [q14, setQ14] = useState("");
+    const [q15, setQ15] = useState("");
+    const [q16, setQ16] = useState("");
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        fetch(`${config.apiDomain}/api/user/applications/pfd-submit/${userData.data.email}/${userData.data.discordId}`, {
+            method: 'POST',
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            },
+            body: JSON.stringify({
+                Q1: q1,
+                Q2: q2,
+                Q3: q3,
+                Q4: q4,
+                Q5: q5,
+                Q6: q6,
+                Q7: q7,
+                Q8: q8,
+                Q9: q9,
+                Q10: q10,
+                Q11: q11,
+                Q12: q12,
+                Q13: q13,
+                Q14: q14,
+                Q15: q15,
+                Q16: q16
+            }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.message === "Successfully Applied") {
+                    toast.success('Successfully Applied!', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                } else if (data.error) {
+                    toast.error(`${data.error}`, {
+                        position: "top-right",
+                        autoClose: 10000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                }
+            })
+    }
+
     return (
         <div className="phoenix-fd-application-container">
             <Helmet>
@@ -13,7 +129,7 @@ const PhoenixFDApplication = (props) => {
                 <meta property="og:title" content="Pinal County Roleplay" />
             </Helmet>
             <div className="phoenix-fd-application-container1">
-                <Header rootClassName="header-root-class-name9"></Header>
+                {headerComponent}
                 <img
                     alt="image"
                     src="https://pinalcountyroleplay.com/PFD_title.png"
@@ -50,12 +166,16 @@ const PhoenixFDApplication = (props) => {
                                 <div className="phoenix-fd-application-question-1">
                                     <span className="phoenix-fd-application-text11">
                                         Email Address
+                                        <span className="phoenix-fd-application-text17"> *</span>
+                                        <br></br>
                                     </span>
                                     <input
                                         type="email"
                                         id="q1"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput input"
+                                        onChange={(e) => setQ1(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-2">
@@ -66,9 +186,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q2"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput01 input"
+                                        onChange={(e) => setQ2(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-3">
@@ -80,9 +201,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q3"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput02 input"
+                                        onChange={(e) => setQ3(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-4">
@@ -96,9 +218,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q4"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput03 input"
+                                        onChange={(e) => setQ4(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-5">
@@ -110,9 +233,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="date"
                                         id="q5"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput04 input"
+                                        onChange={(e) => setQ5(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-6">
@@ -124,9 +248,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q6"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput05 input"
+                                        onChange={(e) => setQ6(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-7">
@@ -137,9 +262,11 @@ const PhoenixFDApplication = (props) => {
                                     </span>
                                     <select
                                         id="q7"
-                                        required="true"
+                                        required={true}
                                         className="phoenix-fd-application-select"
+                                        onChange={(e) => setQ7(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
@@ -164,9 +291,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q8"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput06 input"
+                                        onChange={(e) => setQ8(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-9">
@@ -181,9 +309,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q9"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput07 input"
+                                        onChange={(e) => setQ9(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-10">
@@ -197,9 +326,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q10"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput08 input"
+                                        onChange={(e) => setQ10(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-separator2">
@@ -219,9 +349,11 @@ const PhoenixFDApplication = (props) => {
                                     </span>
                                     <select
                                         id="q11"
-                                        required="true"
+                                        required={true}
                                         className="phoenix-fd-application-select1"
+                                        onChange={(e) => setQ11(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
@@ -238,9 +370,11 @@ const PhoenixFDApplication = (props) => {
                                     </span>
                                     <select
                                         id="q12"
-                                        required="true"
+                                        required={true}
                                         className="phoenix-fd-application-select2"
+                                        onChange={(e) => setQ12(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
@@ -258,9 +392,11 @@ const PhoenixFDApplication = (props) => {
                                     </span>
                                     <select
                                         id="q13"
-                                        required="true"
+                                        required={true}
                                         className="phoenix-fd-application-select3"
+                                        onChange={(e) => setQ13(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
@@ -275,9 +411,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q14"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput09 input"
+                                        onChange={(e) => setQ14(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-15">
@@ -289,9 +426,10 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="date"
                                         id="q15"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput10 input"
+                                        onChange={(e) => setQ15(e.target.value)}
                                     />
                                 </div>
                                 <div className="phoenix-fd-application-question-141">
@@ -303,12 +441,13 @@ const PhoenixFDApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q16"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput11 input"
+                                        onChange={(e) => setQ16(e.target.value)}
                                     />
                                 </div>
-                                <button className="phoenix-fd-application-button button">
+                                <button onClick={handleSubmit} className="phoenix-fd-application-button button">
                                     <span>
                                         <span className="phoenix-fd-application-text78">
                                             Submit
@@ -325,5 +464,3 @@ const PhoenixFDApplication = (props) => {
         </div>
     )
 }
-
-export default PhoenixFDApplication

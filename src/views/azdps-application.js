@@ -178,7 +178,7 @@ const AZDPSApplication = (props) => {
                                         id="q1"
                                         cols="25"
                                         rows="4"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textarea textarea"
                                     ></textarea>
@@ -222,7 +222,7 @@ const AZDPSApplication = (props) => {
                                     </span>
                                     <select
                                         id="q4"
-                                        required="true"
+                                        required={true}
                                         className="azdps-application-select"
                                     >
                                         <option value="Yes">Yes</option>
@@ -245,7 +245,7 @@ const AZDPSApplication = (props) => {
                                     </span>
                                     <select
                                         id="q5"
-                                        required="true"
+                                        required={true}
                                         className="azdps-application-select1"
                                     >
                                         <option value="Yes">Yes</option>
@@ -292,7 +292,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q7"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput03 input"
                                     />
@@ -312,7 +312,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q8"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput04 input"
                                     />
@@ -331,7 +331,7 @@ const AZDPSApplication = (props) => {
                                     </span>
                                     <select
                                         id="q9"
-                                        required="true"
+                                        required={true}
                                         className="azdps-application-select2"
                                     >
                                         <option value="No">No</option>
@@ -347,7 +347,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="email"
                                         id="q10"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput05 input"
                                     />
@@ -360,7 +360,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q11"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput06 input"
                                     />
@@ -373,7 +373,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q12"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput07 input"
                                     />
@@ -385,7 +385,7 @@ const AZDPSApplication = (props) => {
                                     </span>
                                     <select
                                         id="q13"
-                                        required="true"
+                                        required={true}
                                         className="azdps-application-select3"
                                     >
                                         <option value="Yes">Yes</option>
@@ -403,7 +403,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q14"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput08 input"
                                     />
@@ -420,7 +420,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="date"
                                         id="q15"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput09 input"
                                     />
@@ -435,7 +435,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q16"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput10 input"
                                     />
@@ -461,7 +461,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q17"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput11 input"
                                     />
@@ -484,7 +484,7 @@ const AZDPSApplication = (props) => {
                                     <input
                                         type="date"
                                         id="q19"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput12 input"
                                     />

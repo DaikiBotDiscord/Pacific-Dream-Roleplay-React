@@ -107,12 +107,6 @@ const App = () => {
     return () => { };
   }, []);
 
-
-  const memoizedUserData = useMemo(() => userData, [userData]);
-  const memoizedDiscordAuthenticated = useMemo(() => discordAuthenticated, [discordAuthenticated]);
-  const memoizedVerifiedCiv = useMemo(() => verifiedCiv, [verifiedCiv]);
-
-
   return (
     <Router>
       <Switch>
@@ -129,9 +123,9 @@ const App = () => {
           render={() => {
             return window.localStorage.getItem("token") ? (
               <UserHome
-                userData={memoizedUserData}
-                discordAuthenticated={memoizedDiscordAuthenticated}
-                verifiedCiv={memoizedVerifiedCiv}
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
               />
             ) : (
               <Redirect to="/login" />
@@ -144,9 +138,24 @@ const App = () => {
           render={() => {
             return window.localStorage.getItem("token") ? (
               <PhoenixPDApplication
-                userData={memoizedUserData}
-                discordAuthenticated={memoizedDiscordAuthenticated}
-                verifiedCiv={memoizedVerifiedCiv}
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/user/phoenix-fd-application"
+          render={() => {
+            return window.localStorage.getItem("token") ? (
+              <PhoenixFDApplication
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
               />
             ) : (
               <Redirect to="/login" />
@@ -159,9 +168,9 @@ const App = () => {
           render={() => {
             return window.localStorage.getItem("token") ? (
               <Applications
-                userData={memoizedUserData}
-                discordAuthenticated={memoizedDiscordAuthenticated}
-                verifiedCiv={memoizedVerifiedCiv}
+                userData={userData}
+                discordAuthenticated={discordAuthenticated}
+                verifiedCiv={verifiedCiv}
               />
             ) : (
               <Redirect to="/login" />
