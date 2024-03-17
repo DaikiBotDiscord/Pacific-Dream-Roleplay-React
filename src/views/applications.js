@@ -16,6 +16,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [pfdLight, setPFDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [pcsoStatus, setPCSOStatus] = useState("Loading...");
     const [pcsoLight, setPCSOLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [DOCStatus, setDOCStatus] = useState("Loading...");
+    const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const user = userData.data
 
     useEffect(() => {
@@ -111,6 +113,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setPCSOStatus(data.status);
                 setPCSOLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/doc-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setDOCStatus(data.status);
+                setDOCLight(data.statusLight)
+            })
     }
 
 
@@ -196,12 +212,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     <br></br>
                                 </span>
                                 <span className="applications-text38">
-                                    <span>UNAVAILABLE</span>
+                                    <span>{DOCStatus.toUpperCase()}</span>
                                     <br></br>
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/not_started.png"
+                                    src={DOCLight}
                                     className="applications-image05"
                                 />
                             </div>
@@ -304,7 +320,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         <br></br>
                                     </span>
                                 </div>
-                            </Link>
+                            </Link> */}
                             <Link to="/user/doc-application" className="applications-navlink4">
                                 <div className="applications-container17">
                                     <img
@@ -320,7 +336,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     </span>
                                 </div>
                             </Link>
-                            <Link to="/user/dot-application" className="applications-navlin4">
+                            { /* <Link to="/user/dot-application" className="applications-navlin4">
                                 <div className="applications-container18">
                                     <img
                                         alt="image"
@@ -334,7 +350,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         <br></br>
                                     </span>
                                 </div>
-                            </Link> */}
+                                        </Link> */}
                         </div>
                     </div>
                 </div>

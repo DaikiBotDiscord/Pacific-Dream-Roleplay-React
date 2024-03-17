@@ -25,6 +25,7 @@ import PhoenixPDApplication from "./views/phoenix-pd-application";
 import PhoenixFDApplication from "./views/phoenix-fd-application";
 import Applications from './views/applications'
 import PCSOApplication from './views/pcso-application'
+import DOCApplication from "./views/doc-application";
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -265,6 +266,15 @@ const App = () => {
           path='/user/pcso-application'
           render={() => {
             return checkTokenRepeat() ? <PCSOApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        />
+        <Route
+          exact
+          path='/user/doc-application'
+          render={() => {
+            return checkTokenRepeat() ? <DOCApplication userData={userData}
               discordAuthenticated={discordAuthenticated}
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
