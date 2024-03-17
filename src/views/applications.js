@@ -173,9 +173,9 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             </div>
                             <div className="applications-container06">
                                 <span className="applications-text16">
-                                    <span>Phoenix Fire &amp;</span>
+                                    <span>Phoenix Fire</span>
                                     <br></br>
-                                    <span>Rescue</span>
+                                    <span>Department</span>
                                     <br></br>
                                 </span>
                                 <span className="applications-text21">
@@ -285,7 +285,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         className="applications-image09"
                                     />
                                     <span className="applications-text65">
-                                        <span>Phoenix Fire &amp; Rescue</span>
+                                        <span>Phoenix Fire Department</span>
                                         <br></br>
                                     </span>
                                 </div>

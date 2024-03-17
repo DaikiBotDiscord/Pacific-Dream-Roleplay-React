@@ -305,8 +305,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 <div className="phoenix-pd-application-question-10">
                                     <span className="phoenix-pd-application-text43">
                                         <span>
-                                            Are you willing to listen to instructions and respect your
-                                            fellow officers that are of a higher rank?
+                                            Do you understand lying on these applications will result in automatic denial?
                                         </span>
                                         <span className="phoenix-pd-application-text45">*</span>
                                     </span>
