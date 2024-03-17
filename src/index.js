@@ -26,6 +26,7 @@ import PhoenixFDApplication from "./views/phoenix-fd-application";
 import Applications from './views/applications'
 import PCSOApplication from './views/pcso-application'
 import DOCApplication from "./views/doc-application";
+import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -279,6 +280,15 @@ const App = () => {
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
         />
+        {/* <Route
+          exact
+          path='/user/civ-application'
+          render={() => {
+            return checkTokenRepeat() ? <CertifiedCivilianApplicaiton userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
         <Route
           exact
           path='/user/applications'

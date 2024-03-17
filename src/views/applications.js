@@ -336,7 +336,22 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     </span>
                                 </div>
                             </Link>
-                            { /* <Link to="/user/dot-application" className="applications-navlin4">
+                            {/* <Link to="/user/civ-application" className="applications-navlink4">
+                                <div className="applications-container17">
+                                    <img
+                                        alt="image"
+                                        src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                        className="applications-image12"
+                                    />
+                                    <span className="applications-text78">
+                                        <span>Department of</span>
+                                        <br></br>
+                                        <span>Communications</span>
+                                        <br></br>
+                                    </span>
+                                </div>
+                            </Link> */}
+                            {/* <Link to="/user/dot-application" className="applications-navlin4">
                                 <div className="applications-container18">
                                     <img
                                         alt="image"

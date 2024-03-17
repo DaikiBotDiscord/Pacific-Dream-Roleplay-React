@@ -1,0 +1,430 @@
+.certified-civilian-applicaiton-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyroleplay.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.certified-civilian-applicaiton-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.certified-civilian-applicaiton-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.certified-civilian-applicaiton-container2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.certified-civilian-applicaiton-container3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    margin: var(--dl-space-space-oneandhalfunits);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.certified-civilian-applicaiton-image1 {
+    width: 100%;
+    align-self: center;
+    object-fit: cover;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+}
+
+.certified-civilian-applicaiton-text {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.certified-civilian-applicaiton-text01 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.certified-civilian-applicaiton-text02 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.certified-civilian-applicaiton-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text04 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text06 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text08 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text10 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput1 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text12 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text14 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-select {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text16 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text18 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput2 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text20 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text22 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput3 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text24 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text26 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput4 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text28 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text30 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput5 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-8 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text32 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text34 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-select1 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.certified-civilian-applicaiton-text36 {
+    font-size: 1.5rem;
+}
+
+.certified-civilian-applicaiton-text38 {
+    color: #dc3424;
+}
+
+.certified-civilian-applicaiton-textinput6 {
+    margin-top: 3px;
+}
+
+.certified-civilian-applicaiton-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.certified-civilian-applicaiton-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.certified-civilian-applicaiton-text41:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .certified-civilian-applicaiton-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .certified-civilian-applicaiton-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .certified-civilian-applicaiton-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .certified-civilian-applicaiton-text41 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 430px) {
+    .certified-civilian-applicaiton-container1 {
+        background-position: top left, center;
+    }
+
+    .certified-civilian-applicaiton-image {
+        width: 100%;
+    }
+
+    .certified-civilian-applicaiton-hero {
+        width: 100%;
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+
+    .certified-civilian-applicaiton-container2 {
+        width: 100%;
+    }
+
+    .certified-civilian-applicaiton-container3 {
+        width: 100%;
+    }
+
+    .certified-civilian-applicaiton-image1 {
+        width: 95%;
+    }
+
+    .certified-civilian-applicaiton-text {
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .certified-civilian-applicaiton-form {
+        flex-wrap: wrap;
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .certified-civilian-applicaiton-question-1 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-2 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-3 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-4 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-5 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-6 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-7 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-8 {
+        flex-wrap: wrap;
+    }
+
+    .certified-civilian-applicaiton-question-9 {
+        flex-wrap: wrap;
+    }
+}
