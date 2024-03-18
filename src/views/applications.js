@@ -191,7 +191,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                         <div className="a-home-container1">
                             <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
                         </div>
-                        <div className="user-home-container2">
+                        <div className="a-home-container">
                             <h1 className="a-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                             <span className="a-home-text3">
                                 <span>
@@ -307,7 +307,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         </span>
                                         <img
                                             alt="image"
-                                            src="https://pinalcountyroleplay.com/not_started.png"
+                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
                                             className="applications-image06"
                                         />
                                     </div>
@@ -324,7 +324,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         </span>
                                         <img
                                             alt="image"
-                                            src="https://pinalcountyroleplay.com/not_started.png"
+                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
                                             className="applications-image07"
                                         />
                                     </div>

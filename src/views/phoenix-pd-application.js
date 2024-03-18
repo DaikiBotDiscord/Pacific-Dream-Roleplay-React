@@ -172,7 +172,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 <div className="phoenix-pd-application-question-3">
                                     <span className="phoenix-pd-application-text10">
                                         <span>
-                                            Are you a Certified Civilian with PDRP? (Pinal County
+                                            Are you a Certified Civilian with PCRP? (Pinal County
                                             Roleplay)
                                         </span>
                                         <span className="phoenix-pd-application-text12">*</span>
