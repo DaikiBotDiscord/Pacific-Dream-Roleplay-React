@@ -321,7 +321,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                     </span>
                                 </div>
                             </Link> */}
-                            {/* <Link to="/user/doc-application" className="applications-navlink4">
+                            <Link to="/user/doc-application" className="applications-navlink4">
                                 <div className="applications-container17">
                                     <img
                                         alt="image"
@@ -335,7 +335,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         <br></br>
                                     </span>
                                 </div>
-                            </Link> */}
+                            </Link>
                             {/* <Link to="/user/civ-application" className="applications-navlink4">
                                 <div className="applications-container17">
                                     <img
