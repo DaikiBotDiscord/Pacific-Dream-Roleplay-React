@@ -53,6 +53,12 @@
     object-fit: cover;
 }
 
+.departments-image-fire {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
 .departments-text {
     color: var(--dl-color-gray-white);
     align-self: center;
