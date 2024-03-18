@@ -7,6 +7,43 @@
     flex-direction: column;
 }
 
+.a-home-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.a-home-container1 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
+    background-repeat: top left;
+    background-position: top left, center;
+}
+
+.a-home-text2 {
+    color: var(--dl-color-gray-black);
+    align-self: center;
+    margin-top: var(--dl-space-space-fiveunits);
+    text-align: center;
+    margin-bottom: var(--dl-space-space-unit);
+    color: white;
+}
+
+.a-home-text3 {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
 .applications-container01 {
     width: 100%;
     height: 928px;
