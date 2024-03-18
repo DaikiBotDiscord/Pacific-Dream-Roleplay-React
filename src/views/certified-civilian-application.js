@@ -174,7 +174,7 @@ const CertifiedCivilianApplicaiton = (props) => {
                                         className="certified-civilian-applicaiton-select1"
                                     >
                                         <option></option>
-                                        <option value="Yes">No</option>
+                                        <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
                                 </div>
