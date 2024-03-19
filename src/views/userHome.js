@@ -137,7 +137,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                 setDOCStatus(data.status);
                 setDOCLight(data.statusLight)
             })
-        fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
+        /* fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -150,7 +150,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             .then((data) => {
                 setCIVStatus(data.status);
                 setCIVLight(data.statusLight)
-            })
+            }) */
     }
 
     return (
@@ -272,12 +272,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 <br></br>
                                             </span>
                                             <span className="user-home-text47">
-                                                <span>{CIVStatus.toUpperCase()}</span>
+                                                <span>CLOSED</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src={CIVLight}
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
                                                 className="user-home-image5"
                                             />
                                         </div>

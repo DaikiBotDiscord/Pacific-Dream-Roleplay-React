@@ -318,12 +318,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <br></br>
                                         </span>
                                         <span className="applications-text46">
-                                            <span>{CIVStatus.toUpperCase()}</span>
+                                            <span>CLOSED</span>
                                             <br></br>
                                         </span>
                                         <img
                                             alt="image"
-                                            src={CIVLight}
+                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
                                             className="applications-image06"
                                         />
                                     </div>
