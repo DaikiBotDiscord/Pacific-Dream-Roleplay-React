@@ -19,6 +19,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [pcsoLight, setPCSOLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [DOCStatus, setDOCStatus] = useState("Loading...");
     const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [CIVStatus, setCIVStatus] = useState("Loading...");
+    const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const user = userData.data
     const { data } = userData;
     function handleDiscordSubmit(e) {
@@ -168,6 +170,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setDOCStatus(data.status);
                 setDOCLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setCIVStatus(data.status);
+                setCIVLight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -302,12 +318,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <br></br>
                                         </span>
                                         <span className="applications-text46">
-                                            <span>UNAVAILABLE</span>
+                                            <span>{CIVStatus.toUpperCase()}</span>
                                             <br></br>
                                         </span>
                                         <img
                                             alt="image"
-                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                            src={CIVLight}
                                             className="applications-image06"
                                         />
                                     </div>
@@ -316,6 +332,23 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <span>AZ Department of </span>
                                             <br></br>
                                             <span>Public Safety</span>
+                                            <br></br>
+                                        </span>
+                                        <span className="applications-text54">
+                                            <span>UNAVAILABLE</span>
+                                            <br></br>
+                                        </span>
+                                        <img
+                                            alt="image"
+                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                            className="applications-image07"
+                                        />
+                                    </div>
+                                    <div className="applications-container10">
+                                        <span className="applications-text49">
+                                            <span>AZ Department of </span>
+                                            <br></br>
+                                            <span>Transportation</span>
                                             <br></br>
                                         </span>
                                         <span className="applications-text54">
@@ -409,21 +442,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                         </div>
                                     </Link>
-                                    {/* <Link to="/user/civ-application" className="applications-navlink4">
-                                <div className="applications-container17">
-                                    <img
-                                        alt="image"
-                                        src="https://pinalcountyroleplay.com/CIV_LOGO.png"
-                                        className="applications-image12"
-                                    />
-                                    <span className="applications-text78">
-                                        <span>Department of</span>
-                                        <br></br>
-                                        <span>Certified Civilians</span>
-                                        <br></br>
-                                    </span>
-                                </div>
-                            </Link> */}
+                                    <Link to="/user/civ-application" className="applications-navlink4">
+                                        <div className="applications-container17">
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                                className="applications-image12"
+                                            />
+                                            <span className="applications-text78">
+                                                <span>Department of</span>
+                                                <br></br>
+                                                <span>Certified Civilians</span>
+                                                <br></br>
+                                            </span>
+                                        </div>
+                                    </Link>
                                     {/* <Link to="/user/dot-application" className="applications-navlin4">
                                 <div className="applications-container18">
                                     <img

@@ -111,7 +111,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
         <div className="doc-application-container">
             <Helmet>
                 <title>DOC Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Phoenix PD Application - Pinal County Roleplay" />
+                <meta property="og:title" content="DOC Application - Pinal County Roleplay" />
             </Helmet>
             <div className="doc-application-container1">
                 {headerComponent}

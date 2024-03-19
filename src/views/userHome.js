@@ -14,6 +14,8 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
     const [pcsoLight, setPCSOLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [DOCStatus, setDOCStatus] = useState("Loading...");
     const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [CIVStatus, setCIVStatus] = useState("Loading...");
+    const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const user = userData.data
     function capitalizeFirstLetter(str) {
         return str?.charAt(0).toUpperCase() + str?.slice(1);
@@ -134,6 +136,20 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             .then((data) => {
                 setDOCStatus(data.status);
                 setDOCLight(data.statusLight)
+            })
+        fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setCIVStatus(data.status);
+                setCIVLight(data.statusLight)
             })
     }
 
@@ -256,12 +272,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 <br></br>
                                             </span>
                                             <span className="user-home-text47">
-                                                <span>UNAVAILABLE</span>
+                                                <span>{CIVStatus.toUpperCase()}</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                src={CIVLight}
                                                 className="user-home-image5"
                                             />
                                         </div>
@@ -270,6 +286,23 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 <span>AZ Department of </span>
                                                 <br></br>
                                                 <span>Public Safety</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="user-home-text55">
+                                                <span>UNAVAILABLE</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="user-home-image6"
+                                            />
+                                        </div>
+                                        <div className="user-home-container11">
+                                            <span className="user-home-text50">
+                                                <span>AZ Department of </span>
+                                                <br></br>
+                                                <span>Transportation</span>
                                                 <br></br>
                                             </span>
                                             <span className="user-home-text55">

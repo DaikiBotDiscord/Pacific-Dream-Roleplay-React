@@ -80,7 +80,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
         <div className="azdps-application-container" >
             <Helmet>
                 <title>AZDPS Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Pinal County Roleplay" />
+                <meta property="og:title" content="AZDPS Application - Pinal County Roleplay" />
             </Helmet>
             <div className="azdps-application-container1">
                 {headerComponent}

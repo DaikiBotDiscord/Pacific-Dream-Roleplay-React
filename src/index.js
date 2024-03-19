@@ -280,7 +280,7 @@ const App = () => {
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
         />
-        {/* <Route
+        <Route
           exact
           path='/user/civ-application'
           render={() => {
@@ -288,7 +288,7 @@ const App = () => {
               discordAuthenticated={discordAuthenticated}
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
-        /> */}
+        />
         <Route
           exact
           path='/user/applications'

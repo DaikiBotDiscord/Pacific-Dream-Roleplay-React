@@ -126,7 +126,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
         <div className="phoenix-fd-application-container">
             <Helmet>
                 <title>Phoenix FD Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Pinal County Roleplay" />
+                <meta property="og:title" content="Phoenix FD Application - Pinal County Roleplay" />
             </Helmet>
             <div className="phoenix-fd-application-container1">
                 {headerComponent}

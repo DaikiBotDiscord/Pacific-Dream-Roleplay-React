@@ -114,7 +114,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
         <div className="pcso-applicaiton-container">
             <Helmet>
                 <title>PCSO Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Pinal County Roleplay" />
+                <meta property="og:title" content="PCSO Application - Pinal County Roleplay" />
             </Helmet>
             <div className="pcso-applicaiton-container1">
                 {headerComponent}
