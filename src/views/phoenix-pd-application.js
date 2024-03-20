@@ -246,7 +246,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 </div>
                                 <div className="phoenix-pd-application-question-7">
                                     <span className="phoenix-pd-application-text28">
-                                        <span>Why do you want to be a trooper with us? </span>
+                                        <span>Why do you want to be a officer with us? </span>
                                         <span className="phoenix-pd-application-text30">*</span>
                                     </span>
                                     <input
