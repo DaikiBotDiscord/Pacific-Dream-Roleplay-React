@@ -69,7 +69,7 @@ const Departments = (props) => {
                             </h2>
                             <span className="departments-text09">
                                 <span>
-                                    More Information Coming Soon!
+                                    The Pinal County’s Sheriffs Office is a diverse community with in the office that Preserve the Peace, Protect Life and Property, and promote Public Safety while upholding the Constitution. And we Ensures that we have the  integrity by implementing policy, investigating citizen complaints. Are Mission Core Value is to serve the Pinal County resident with pride and honor, and in a professional manner awhile Protecting the our community.
                                 </span>
                                 <br></br>
                             </span>
@@ -97,7 +97,7 @@ const Departments = (props) => {
                                 Phoenix Fire Department
                             </h2>
                             <span className="departments-text01">
-                                More Information Coming Soon!
+                                Phoenix Fire Department supports the city of Phoenix and Pinal County, providing emergency medicine, technical rescue fire services for both structural and wildland, along with hazardous material management.
                             </span>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ const Departments = (props) => {
                             <h2 className="departments-text02">Arizona Department of Public Safety</h2>
                             <span className="departments-text03">
                                 <span>
-                                    More Information Coming Soon!
+                                    At AZDPS, our mission is clear, To safeguard lives, protect property, and uphold the rights of all individuals within our jurisdiction. We are dedicated to enforcing the law impartially, responding to emergencies swiftly, and working tirelessly to prevent crime and maintain order. Through proactive policing strategies and community engagement initiatives, we strive to create a safe and secure environment where everyone can thrive.
                                 </span>
                                 <br></br>
                             </span>
