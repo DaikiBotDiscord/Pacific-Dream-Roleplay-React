@@ -98,7 +98,7 @@ const Donation = (props) => {
                 <span></span>
               </span>
               <span className="donation-text18">
-                <span>15</span>
+                <span>20</span>
                 <br></br>
               </span>
               <span className="donation-text21">
@@ -129,7 +129,7 @@ const Donation = (props) => {
                 <span></span>
               </span>
               <span className="donation-text32">
-                <span>25</span>
+                <span>35</span>
                 <br></br>
               </span>
               <span className="donation-text35">
