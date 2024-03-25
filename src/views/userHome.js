@@ -16,6 +16,8 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
     const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [CIVStatus, setCIVStatus] = useState("Loading...");
     const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
+    const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyroleplay.com/not_started.png');
     const user = userData.data
     function capitalizeFirstLetter(str) {
         return str?.charAt(0).toUpperCase() + str?.slice(1);
@@ -137,6 +139,20 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                 setDOCStatus(data.status);
                 setDOCLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/azdps-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setAZDPSStatus(data.status);
+                setAZDPSLight(data.statusLight)
+            })
         /* fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
             method: "POST",
             crossDomain: true,
@@ -245,7 +261,6 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 className="user-home-image2"
                                             />
                                         </div>
-
                                         <div className="user-home-container09">
                                             <span className="user-home-text33">
                                                 <span>AZ Department</span>
@@ -264,6 +279,23 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 className="user-home-image4"
                                             />
                                         </div>
+                                        <div className="user-home-container11">
+                                            <span className="user-home-text50">
+                                                <span>AZ Department of </span>
+                                                <br></br>
+                                                <span>Public Safety</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="user-home-text55">
+                                                <span>{AZDPSStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={AZDPSLight}
+                                                className="user-home-image6"
+                                            />
+                                        </div>
                                         <div className="user-home-container10">
                                             <span className="user-home-text42">
                                                 <span>AZ Department of</span>
@@ -279,23 +311,6 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 alt="image"
                                                 src="https://pinalcountyroleplay.com/denied_flash.gif"
                                                 className="user-home-image5"
-                                            />
-                                        </div>
-                                        <div className="user-home-container11">
-                                            <span className="user-home-text50">
-                                                <span>AZ Department of </span>
-                                                <br></br>
-                                                <span>Public Safety</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text55">
-                                                <span>UNAVAILABLE</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                                className="user-home-image6"
                                             />
                                         </div>
                                         <div className="user-home-container11">

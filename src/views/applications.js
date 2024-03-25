@@ -21,6 +21,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [CIVStatus, setCIVStatus] = useState("Loading...");
     const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
+    const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyroleplay.com/not_started.png');
     const user = userData.data
     const { data } = userData;
     function handleDiscordSubmit(e) {
@@ -184,6 +186,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setCIVStatus(data.status);
                 setCIVLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/azdps-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setAZDPSStatus(data.status);
+                setAZDPSLight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -310,6 +326,23 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             className="applications-image05"
                                         />
                                     </div>
+                                    <div className="applications-container10">
+                                        <span className="applications-text49">
+                                            <span>AZ Department of </span>
+                                            <br></br>
+                                            <span>Public Safety</span>
+                                            <br></br>
+                                        </span>
+                                        <span className="applications-text54">
+                                            <span>{AZDPSStatus.toUpperCase()}</span>
+                                            <br></br>
+                                        </span>
+                                        <img
+                                            alt="image"
+                                            src={AZDPSLight}
+                                            className="applications-image07"
+                                        />
+                                    </div>
                                     <div className="applications-container09">
                                         <span className="applications-text41">
                                             <span>Department of</span>
@@ -325,23 +358,6 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             alt="image"
                                             src="https://pinalcountyroleplay.com/denied_flash.gif"
                                             className="applications-image06"
-                                        />
-                                    </div>
-                                    <div className="applications-container10">
-                                        <span className="applications-text49">
-                                            <span>AZ Department of </span>
-                                            <br></br>
-                                            <span>Public Safety</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text54">
-                                            <span>UNAVAILABLE</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                            className="applications-image07"
                                         />
                                     </div>
                                     <div className="applications-container10">
@@ -412,21 +428,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                         </div>
                                     </Link>
-                                    {/* <Link to="/user/azdps-application" className="applications-navlink2">
-                                <div className="applications-container15">
-                                    <img
-                                        alt="image"
-                                        src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
-                                        className="applications-image10"
-                                    />
-                                    <span className="applications-text68">
-                                        <span>Department of</span>
-                                        <br></br>
-                                        <span>Public Safety</span>
-                                        <br></br>
-                                    </span>
-                                </div>
-                            </Link> */}
+                                    <Link to="/user/azdps-application" className="applications-navlink2">
+                                        <div className="applications-container15">
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
+                                                className="applications-image10"
+                                            />
+                                            <span className="applications-text68">
+                                                <span>Department of</span>
+                                                <br></br>
+                                                <span>Public Safety</span>
+                                                <br></br>
+                                            </span>
+                                        </div>
+                                    </Link>
                                     <Link to="/user/doc-application" className="applications-navlink4">
                                         <div className="applications-container17">
                                             <img

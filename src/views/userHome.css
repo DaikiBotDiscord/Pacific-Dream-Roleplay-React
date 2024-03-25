@@ -71,7 +71,7 @@
     height: auto;
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .user-home-container03 {
@@ -125,6 +125,7 @@
     font-size: 1.25rem;
     align-self: center;
     text-align: center;
+    font-weight: bold;
     margin-left: var(--dl-space-space-oneandhalfunits);
 }
 
@@ -155,6 +156,7 @@
 
 .user-home-text14 {
     font-size: 1.25rem;
+    font-weight: bold;
     align-self: center;
     text-align: center;
     margin-left: var(--dl-space-space-oneandhalfunits);
@@ -187,6 +189,7 @@
 
 .user-home-text22 {
     font-size: 1.25rem;
+    font-weight: bold;
     align-self: center;
     text-align: center;
     margin-left: var(--dl-space-space-oneandhalfunits);
@@ -252,6 +255,7 @@
 .user-home-text39 {
     font-size: 1.25rem;
     align-self: center;
+    font-weight: bold;
     text-align: center;
     margin-left: var(--dl-space-space-oneandhalfunits);
 }
@@ -284,6 +288,7 @@
 
 .user-home-text47 {
     font-size: 1.25rem;
+    font-weight: bold;
     align-self: center;
     text-align: center;
     margin-left: var(--dl-space-space-oneandhalfunits);
@@ -318,6 +323,7 @@
 .user-home-text55 {
     font-size: 1.25rem;
     align-self: center;
+    font-weight: bold;
     text-align: center;
     margin-left: var(--dl-space-space-oneandhalfunits);
 }

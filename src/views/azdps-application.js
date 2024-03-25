@@ -6,6 +6,7 @@ import FooterContainer from '../components/footer-container'
 import './azdps-application.css'
 import UserHeader from '../components/user-header'
 import config from './config/config'
+import { toast, ToastContainer } from 'react-toastify'
 
 export default function AZDPSApplication({ userData, discordAuthenticated, verifiedCiv }) {
 
@@ -69,12 +70,64 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
 
     function handleSubmit(e) {
         e.preventDefault();
-        const validateEmail = (email) => {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        };
 
-
+        fetch(`${config.apiDomain}/api/user/applications/azdps-submit/${userData.data.email}/${userData.data.discordId}`, {
+            method: 'POST',
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            },
+            body: JSON.stringify({
+                Q1: q1,
+                Q2: q2,
+                Q3: q3,
+                Q4: q4,
+                Q5: q5,
+                Q6: q6,
+                Q7: q7,
+                Q8: q8,
+                Q9: q9,
+                Q10: q10,
+                Q11: q11,
+                Q12: q12,
+                Q13: q13,
+                Q14: q14,
+                Q15: q15,
+                Q16: q16,
+                Q17: q17,
+                Q18: q18,
+                Q19: q19,
+            }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.message === "Successfully Applied") {
+                    toast.success('Successfully Applied!', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                } else if (data.error) {
+                    toast.error(`${data.error}`, {
+                        position: "top-right",
+                        autoClose: 10000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                }
+            })
     }
     return (
         <div className="azdps-application-container" >
@@ -182,6 +235,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textarea textarea"
+                                        onChange={(e) => setQ1(e.target.value)}
                                     ></textarea>
                                 </div>
                                 <div className="azdps-application-question-2">
@@ -193,6 +247,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q2"
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput input"
+                                        onChange={(e) => setQ2(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-3">
@@ -206,6 +261,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q3"
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput01 input"
+                                        onChange={(e) => setQ3(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-4">
@@ -225,7 +281,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q4"
                                         required={true}
                                         className="azdps-application-select"
+                                        onChange={(e) => setQ4(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -248,7 +306,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q5"
                                         required={true}
                                         className="azdps-application-select1"
+                                        onChange={(e) => setQ5(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
@@ -263,6 +323,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q6"
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput02 input"
+                                        onChange={(e) => setQ6(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-7">
@@ -296,6 +357,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput03 input"
+                                        onChange={(e) => setQ7(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-8">
@@ -316,6 +378,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput04 input"
+                                        onChange={(e) => setQ8(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-9">
@@ -334,7 +397,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q9"
                                         required={true}
                                         className="azdps-application-select2"
+                                        onChange={(e) => setQ9(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="No">No</option>
                                         <option value="Yes">Yes</option>
                                         <option value="Maybe">Maybe</option>
@@ -351,6 +416,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput05 input"
+                                        onChange={(e) => setQ10(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-11">
@@ -364,6 +430,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput06 input"
+                                        onChange={(e) => setQ11(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-12">
@@ -377,6 +444,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput07 input"
+                                        onChange={(e) => setQ12(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-13">
@@ -388,7 +456,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         id="q13"
                                         required={true}
                                         className="azdps-application-select3"
+                                        onChange={(e) => setQ13(e.target.value)}
                                     >
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Maybe">Maybe</option>
@@ -407,6 +477,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput08 input"
+                                        onChange={(e) => setQ14(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-15">
@@ -424,6 +495,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput09 input"
+                                        onChange={(e) => setQ15(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-16">
@@ -439,6 +511,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput10 input"
+                                        onChange={(e) => setQ16(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-17">
@@ -465,13 +538,16 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput11 input"
+                                        onChange={(e) => setQ17(e.target.value)}
                                     />
                                 </div>
                                 <div className="azdps-application-question-18">
                                     <span className="azdps-application-text91">
                                         Can you record videos with your current computer?
                                     </span>
-                                    <select id="q18" className="azdps-application-select4">
+                                    <select id="q18" className="azdps-application-select4"
+                                        onChange={(e) => setQ18(e.target.value)}>
+                                        <option defaultValue value=""></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
@@ -488,9 +564,10 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput12 input"
+                                        onChange={(e) => setQ19(e.target.value)}
                                     />
                                 </div>
-                                <button className="azdps-application-button button">
+                                <button onClick={handleSubmit} className="azdps-application-button button">
                                     <span>
                                         <span className="azdps-application-text96">Submit</span>
                                         <br></br>

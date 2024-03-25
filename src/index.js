@@ -291,6 +291,12 @@ const App = () => {
         /> */}
         <Route
           exact
+          path="/user/azdps-application"
+          render={() => {
+            return checkTokenRepeat() ? <AZDPSApplication userData={userData} discordAuthenticated={discordAuthenticated} verifiedCiv={verifiedCiv} /> : <Login />;
+          }} />
+        <Route
+          exact
           path='/user/applications'
           render={() => {
             return checkTokenRepeat() ? <Applications userData={userData}
