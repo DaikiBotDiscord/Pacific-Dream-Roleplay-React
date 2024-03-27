@@ -432,7 +432,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <br></br>
                                         </h1>
                                         <div className="applications-container17">
-                                            <Link to="/pcso-application" className="applications-navlink">
+                                            <Link to="/user/pcso-application" className="applications-navlink">
                                                 <div className="applications-container18">
                                                     <img
                                                         alt="image"
@@ -447,7 +447,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link to="/phoenix-fd-application" className="applications-navlink1">
+                                            <Link to="/user/phoenix-fd-application" className="applications-navlink1">
                                                 <div className="applications-container19">
                                                     <img
                                                         alt="image"
@@ -460,7 +460,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            {/* <Link to="/azdps-application" className="applications-navlink2">
+                                            {/* <Link to="/user/azdps-application" className="applications-navlink2">
                                                 <div className="applications-container20">
                                                     <img
                                                         alt="image"
@@ -476,7 +476,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 </div>
                                             </Link> */}
                                             <Link
-                                                to="/phoenix-pd-application"
+                                                to="/user/phoenix-pd-application"
                                                 className="applications-navlink3"
                                             >
                                                 <div className="applications-container21">
@@ -493,7 +493,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link to="/doc-application" className="applications-navlink4">
+                                            <Link to="/user/doc-application" className="applications-navlink4">
                                                 <div className="applications-container22">
                                                     <img
                                                         alt="image"
@@ -508,7 +508,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            {/* <Link to="/" className="applications-navlink5">
+                                            {/* <Link to="/user/dot-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
