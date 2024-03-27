@@ -196,137 +196,181 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                     </div>
                 ) : (
                     discordAuthenticated === true ? (
-                        <div className='user-home-container01'>
-                            <h1 className="user-home-text">
-                                Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!
-                            </h1>
-                            <div className="user-home-container02">
-                                <div className="user-home-container03">
-                                    <h1 className="user-home-text01">Application Status</h1>
-                                    <div className="user-home-container04">
-                                        <div className="user-home-container05">
-                                            <span className="user-home-text02">
-                                                <span>
-                                                    Pinal County
-                                                    <span
-                                                        dangerouslySetInnerHTML={{
-                                                            __html: ' ',
-                                                        }}
-                                                    />
+                        <div className="user-home-container">
+                            <div className="user-home-container01">
+                                <h1 className="user-home-text">
+                                    Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!
+                                </h1>
+                                <div className="user-home-container02">
+                                    <div className="user-home-container03">
+                                        <h1 className="user-home-text01">
+                                            <span>Department</span>
+                                            <br></br>
+                                            <span>Application Status</span>
+                                        </h1>
+                                        <div className="user-home-container04">
+                                            <div className="user-home-container05">
+                                                <span className="user-home-text05">
+                                                    <span>
+                                                        Pinal County
+                                                        <span
+                                                            dangerouslySetInnerHTML={{
+                                                                __html: ' ',
+                                                            }}
+                                                        />
+                                                    </span>
+                                                    <br></br>
+                                                    <span>Sheriff&apos;s Office </span>
                                                 </span>
-                                                <br></br>
-                                                <span>Sheriff&apos;s Office </span>
-                                            </span>
-                                            <span className="user-home-text06">
-                                                <span>{pcsoStatus.toUpperCase()}</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src={pcsoLight}
-                                                className="user-home-image"
-                                            />
+                                                <span className="user-home-text09">
+                                                    <span>{pcsoStatus.toUpperCase()}</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src={pcsoLight}
+                                                    className="user-home-image"
+                                                />
+                                            </div>
+                                            <div className="user-home-container06">
+                                                <span className="user-home-text12">
+                                                    <span>Phoenix Police</span>
+                                                    <br></br>
+                                                    <span>Department</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text17">
+                                                    <span>{ppdStatus.toUpperCase()}</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src={ppdLight}
+                                                    className="user-home-image1"
+                                                />
+                                            </div>
+                                            <div className="user-home-container07">
+                                                <span className="user-home-text20">
+                                                    <span>Phoenix Fire</span>
+                                                    <br></br>
+                                                    <span>Departmnet</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text25">
+                                                    <span>{pfdStatus.toUpperCase()}</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src={pfdLight}
+                                                    className="user-home-image2"
+                                                />
+                                            </div>
+                                            <div className="user-home-container08">
+                                                <span className="user-home-text28">
+                                                    <span>AZ Department</span>
+                                                    <br></br>
+                                                    <span>of </span>
+                                                    <span>Communications</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text34">
+                                                    <span>{DOCStatus.toUpperCase()}</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src={DOCLight}
+                                                    className="user-home-image3"
+                                                />
+                                            </div>
+                                            <div className="user-home-container09">
+                                                <span className="user-home-text37">
+                                                    <span>AZ Department of </span>
+                                                    <br></br>
+                                                    <span>Public Safety</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text42">
+                                                    <span>CLOSED</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    className="user-home-image4"
+                                                />
+                                            </div>
+                                            <div className="user-home-container10">
+                                                <span className="user-home-text45">
+                                                    <span>AZ Department of</span>
+                                                    <br></br>
+                                                    <span>Certified Civilians</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text50">
+                                                    <span>CLOSED</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    className="user-home-image5"
+                                                />
+                                            </div>
+                                            <div className="user-home-container11">
+                                                <span className="user-home-text53">
+                                                    <span>AZ Department of Transportation</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text56">
+                                                    <span>UNAVAILABLE</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    className="user-home-image6"
+                                                />
+                                            </div>
                                         </div>
-                                        <div className="user-home-container06">
-                                            <span className="user-home-text09">
-                                                <span>Phoenix Police</span>
-                                                <br></br>
-                                                <span>Department</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text14">
-                                                <span>{ppdStatus.toUpperCase()}</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src={ppdLight}
-                                                className="user-home-image1"
-                                            />
-                                        </div>
-                                        <div className="user-home-container07">
-                                            <span className="user-home-text17">
-                                                <span>Phoenix Fire Department</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text22">
-                                                <span>{pfdStatus.toUpperCase()}</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src={pfdLight}
-                                                className="user-home-image2"
-                                            />
-                                        </div>
-                                        <div className="user-home-container09">
-                                            <span className="user-home-text33">
-                                                <span>AZ Department</span>
-                                                <br></br>
-                                                <span>of </span>
-                                                <span>Communications</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text39">
-                                                <span>{DOCStatus.toUpperCase()}</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src={DOCLight}
-                                                className="user-home-image4"
-                                            />
-                                        </div>
-                                        <div className="user-home-container11">
-                                            <span className="user-home-text50">
-                                                <span>AZ Department of </span>
-                                                <br></br>
-                                                <span>Public Safety</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text55">
-                                                <span>CLOSED</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src='https://pinalcountyroleplay.com/denied_flash.gif'
-                                                className="user-home-image6"
-                                            />
-                                        </div>
-                                        <div className="user-home-container10">
-                                            <span className="user-home-text42">
-                                                <span>AZ Department of</span>
-                                                <br></br>
-                                                <span>Certified Civilians</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text47">
-                                                <span>CLOSED</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                                className="user-home-image5"
-                                            />
-                                        </div>
-                                        <div className="user-home-container11">
-                                            <span className="user-home-text50">
-                                                <span>AZ Department of </span>
-                                                <br></br>
-                                                <span>Transportation</span>
-                                                <br></br>
-                                            </span>
-                                            <span className="user-home-text55">
-                                                <span>UNAVAILABLE</span>
-                                                <br></br>
-                                            </span>
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                                className="user-home-image6"
-                                            />
+                                    </div>
+                                    <div className="user-home-container12">
+                                        <h1 className="user-home-text59">
+                                            <span>Business</span>
+                                            <br></br>
+                                            <span>Application Status</span>
+                                        </h1>
+                                        <div className="user-home-container13">
+                                            <div className="user-home-container14">
+                                                <span className="user-home-text63">
+                                                    <span>Civilian Business</span>
+                                                    <br></br>
+                                                    <span>Application</span>
+                                                    <br></br>
+                                                </span>
+                                                <span className="user-home-text68">
+                                                    <span>UNAVAILABLE</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    className="user-home-image7"
+                                                />
+                                            </div>
+                                            <div className="user-home-container15">
+                                                <span className="user-home-text71">SK Security</span>
+                                                <span className="user-home-text72">
+                                                    <span>UNAVAILABLE</span>
+                                                    <br></br>
+                                                </span>
+                                                <img
+                                                    alt="image"
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    className="user-home-image8"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
