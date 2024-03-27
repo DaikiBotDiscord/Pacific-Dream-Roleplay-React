@@ -334,12 +334,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <br></br>
                                         </span>
                                         <span className="applications-text54">
-                                            <span>{AZDPSStatus.toUpperCase()}</span>
+                                            <span>CLOSED</span>
                                             <br></br>
                                         </span>
                                         <img
                                             alt="image"
-                                            src={AZDPSLight}
+                                            src='https://pinalcountyroleplay.com/denied_flash.gif'
                                             className="applications-image07"
                                         />
                                     </div>
@@ -428,7 +428,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                         </div>
                                     </Link>
-                                    <Link to="/user/azdps-application" className="applications-navlink2">
+                                    {/* <Link to="/user/azdps-application" className="applications-navlink2">
                                         <div className="applications-container15">
                                             <img
                                                 alt="image"
@@ -442,7 +442,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <br></br>
                                             </span>
                                         </div>
-                                    </Link>
+                                    </Link> */}
                                     <Link to="/user/doc-application" className="applications-navlink4">
                                         <div className="applications-container17">
                                             <img
