@@ -21,6 +21,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     const [q9, setQ9] = useState("");
     const [q10, setQ10] = useState("");
     const [q11, setQ11] = useState("");
+    const maxLength = 1024;
 
     useEffect(() => {
         checkTokenRepeat();
@@ -154,7 +155,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-input input"
                                         onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="phoenix-pd-application-question-2">
                                     <span className="phoenix-pd-application-text07">
@@ -199,7 +202,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-input1 input"
                                         onChange={(e) => setQ4(e.target.value)}
+                                        maxLength={15}
                                     />
+                                    <p>Characters left: {15 - q4.length}</p>
                                 </div>
                                 <div className="phoenix-pd-application-question-5">
                                     <span className="phoenix-pd-application-text16">
@@ -242,7 +247,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-input2 input"
                                         onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q6.length}</p>
                                 </div>
                                 <div className="phoenix-pd-application-question-7">
                                     <span className="phoenix-pd-application-text28">
@@ -256,7 +263,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-input3 input"
                                         onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q7.length}</p>
                                 </div>
                                 <div className="phoenix-pd-application-question-8">
                                     <span className="phoenix-pd-application-text31">
@@ -270,7 +279,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-input4 input"
                                         onChange={(e) => setQ8(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q8.length}</p>
                                 </div>
                                 <div className="phoenix-pd-application-separator2">
                                     <div className="phoenix-pd-application-separator3"></div>
@@ -333,7 +344,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-pd-application-textarea textarea"
                                         onChange={(e) => setQ11(e.target.value)}
-                                    ></textarea>
+                                        maxLength={maxLength}
+                                    />
+                                    <p>Characters left: {maxLength - q11.length}</p>
                                 </div>
                                 <button type='submit' className="phoenix-pd-application-button button" onClick={handleSubmit}>
                                     <span>

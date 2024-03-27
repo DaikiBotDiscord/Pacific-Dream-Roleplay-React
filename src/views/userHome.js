@@ -246,9 +246,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                         </div>
                                         <div className="user-home-container07">
                                             <span className="user-home-text17">
-                                                <span>Phoenix Fire &amp;</span>
-                                                <br></br>
-                                                <span>Rescue</span>
+                                                <span>Phoenix Fire Department</span>
                                                 <br></br>
                                             </span>
                                             <span className="user-home-text22">

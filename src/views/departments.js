@@ -127,7 +127,7 @@ const Departments = (props) => {
                                 Department of Certified Civilians
                             </h2>
                             <span className="departments-text13">
-                                More Information Coming Soon!
+                                More information coming soon!
                             </span>
                         </div>
                         <div className="departments-gallery-card">
@@ -142,21 +142,6 @@ const Departments = (props) => {
                                     At AZDPS, our mission is clear, To safeguard lives, protect property, and uphold the rights of all individuals within our jurisdiction. We are dedicated to enforcing the law impartially, responding to emergencies swiftly, and working tirelessly to prevent crime and maintain order. Through proactive policing strategies and community engagement initiatives, we strive to create a safe and secure environment where everyone can thrive.
                                 </span>
                                 <br></br>
-                            </span>
-                        </div>
-                    </div>
-                    <div className="departments-container4">
-                        <div className="departments-gallery-card">
-                            <img
-                                alt="image"
-                                src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
-                                className="departments-image3"
-                            />
-                            <h2 className="departments-text12">
-                                Arizona Department of Transportation
-                            </h2>
-                            <span className="departments-text13">
-                                More Information Coming Soon!
                             </span>
                         </div>
                     </div>

@@ -26,6 +26,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     const [q14, setQ14] = useState("");
     const [q15, setQ15] = useState("");
     const [q16, setQ16] = useState("");
+    const maxLength = 1024;
 
     useEffect(() => {
         checkTokenRepeat();
@@ -176,7 +177,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q1.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-2">
                                     <span className="phoenix-fd-application-text12">
@@ -190,7 +193,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput01 input"
                                         onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={40}
                                     />
+                                    <p>Characters left: {40 - q2.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-3">
                                     <span className="phoenix-fd-application-text15">
@@ -205,7 +210,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput02 input"
                                         onChange={(e) => setQ3(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q3.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-4">
                                     <span className="phoenix-fd-application-text19">
@@ -222,7 +229,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput03 input"
                                         onChange={(e) => setQ4(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q4.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-5">
                                     <span className="phoenix-fd-application-text23">
@@ -246,13 +255,15 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         <br></br>
                                     </span>
                                     <input
-                                        type="text"
+                                        type="number"
                                         id="q6"
                                         required={true}
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput05 input"
                                         onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={2}
                                     />
+                                    <p>Characters left: {2 - q6.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-7">
                                     <span className="phoenix-fd-application-text31">
@@ -295,7 +306,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput06 input"
                                         onChange={(e) => setQ8(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q8.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-9">
                                     <span className="phoenix-fd-application-text42">
@@ -313,7 +326,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput07 input"
                                         onChange={(e) => setQ9(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q9.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-10">
                                     <span className="phoenix-fd-application-text46">
@@ -330,7 +345,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput08 input"
                                         onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q10.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-separator2">
                                     <div className="phoenix-fd-application-separator3"></div>
@@ -415,7 +432,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput09 input"
                                         onChange={(e) => setQ14(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q14.length}</p>
                                 </div>
                                 <div className="phoenix-fd-application-question-15">
                                     <span className="phoenix-fd-application-text69">
@@ -445,7 +464,9 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         placeholder="Your Answer"
                                         className="phoenix-fd-application-textinput11 input"
                                         onChange={(e) => setQ16(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q16.length}</p>
                                 </div>
                                 <button onClick={handleSubmit} className="phoenix-fd-application-button button">
                                     <span>

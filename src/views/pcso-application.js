@@ -20,6 +20,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
     const [q8, setQ8] = useState("");
     const [q9, setQ9] = useState("");
     const [q10, setQ10] = useState("");
+    const maxLength = 1024;
 
     useEffect(() => {
         checkTokenRepeat();
@@ -177,7 +178,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="pcso-applicaiton-question-2">
                                     <span className="pcso-applicaiton-text19">
@@ -192,7 +195,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={15}
                                     />
+                                    <p>Characters left: {15 - q2.length}</p>
                                 </div>
                                 <div className="pcso-applicaiton-question-3">
                                     <span className="pcso-applicaiton-text23">
@@ -228,7 +233,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput2 input"
                                         onChange={(e) => setQ4(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q4.length}</p>
                                 </div>
                                 <div className="pcso-applicaiton-question-5">
                                     <span className="pcso-applicaiton-text31">
@@ -265,7 +272,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput3 input"
                                         onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q6.length}</p>
                                 </div>
                                 <div className="pcso-applicaiton-question-7">
                                     <span className="pcso-applicaiton-text39">
@@ -280,7 +289,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput4 input"
                                         onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q7.length}</p>
                                 </div>
                                 <div className="pcso-applicaiton-question-8">
                                     <span className="pcso-applicaiton-text43">
@@ -335,7 +346,9 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         required="true"
                                         className="pcso-applicaiton-textinput5 input"
                                         onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q10.length}</p>
                                 </div>
                                 <button onClick={handleSubmit} className="pcso-applicaiton-button button">
                                     <span>

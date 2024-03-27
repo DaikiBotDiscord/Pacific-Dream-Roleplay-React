@@ -19,6 +19,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
     const [q7, setQ7] = useState("");
     const [q8, setQ8] = useState("");
     const [q9, setQ9] = useState("");
+    const maxLength = 1024;
 
     useEffect(() => {
         checkTokenRepeat();
@@ -151,7 +152,9 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         placeholder="Your Answer"
                                         className="doc-application-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="doc-application-question-2">
                                     <span className="doc-application-text08">
@@ -160,13 +163,15 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         <br></br>
                                     </span>
                                     <input
-                                        type="text"
+                                        type="number"
                                         id="q2"
                                         required="true"
                                         placeholder="Your Answer"
                                         className="doc-application-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={2}
                                     />
+                                    <p>Characters left: {2 - q2.length}</p>
                                 </div>
                                 <div className="doc-application-question-3">
                                     <span className="doc-application-text12">
@@ -181,7 +186,9 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         placeholder="Your Answer"
                                         className="doc-application-textinput2 input"
                                         onChange={(e) => setQ3(e.target.value)}
+                                        maxLength={15}
                                     />
+                                    <p>Characters left: {15 - q3.length}</p>
                                 </div>
                                 <div className="doc-application-separator">
                                     <div className="doc-application-separator1"></div>
@@ -234,7 +241,9 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         placeholder="Your Answer"
                                         className="doc-application-textinput3 input"
                                         onChange={(e) => setQ5(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q5.length}</p>
                                 </div>
                                 <div className="doc-application-question-6">
                                     <span className="doc-application-text28">
@@ -252,7 +261,9 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         placeholder="Your Answer"
                                         className="doc-application-textinput4 input"
                                         onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q6.length}</p>
                                 </div>
                                 <div className="doc-application-question-7">
                                     <span className="doc-application-text32">
@@ -270,7 +281,9 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                         placeholder="Your Answer"
                                         className="doc-application-textinput5 input"
                                         onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q7.length}</p>
                                 </div>
                                 <div className="doc-application-separator2">
                                     <div className="doc-application-separator3"></div>

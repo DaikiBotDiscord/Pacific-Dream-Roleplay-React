@@ -30,6 +30,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
     const [q17, setQ17] = useState("");
     const [q18, setQ18] = useState("");
     const [q19, setQ19] = useState("");
+    const maxLength = 1024;
 
 
     useEffect(() => {
@@ -236,7 +237,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textarea textarea"
                                         onChange={(e) => setQ1(e.target.value)}
-                                    ></textarea>
+                                        maxLength={maxLength}
+                                    />
+                                    <p>Characters left: {maxLength - q1.length}</p>
                                 </div>
                                 <div className="azdps-application-question-2">
                                     <span className="azdps-application-text31">
@@ -248,7 +251,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput input"
                                         onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q2.length}</p>
                                 </div>
                                 <div className="azdps-application-question-3">
                                     <span className="azdps-application-text32">
@@ -262,7 +267,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput01 input"
                                         onChange={(e) => setQ3(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q3.length}</p>
                                 </div>
                                 <div className="azdps-application-question-4">
                                     <span className="azdps-application-text36">
@@ -324,7 +331,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput02 input"
                                         onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={20}
                                     />
+                                    <p>Characters left: {20 - q6.length}</p>
                                 </div>
                                 <div className="azdps-application-question-7">
                                     <span className="azdps-application-text47">
@@ -358,7 +367,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput03 input"
                                         onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q7.length}</p>
                                 </div>
                                 <div className="azdps-application-question-8">
                                     <span className="azdps-application-text54">
@@ -379,7 +390,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput04 input"
                                         onChange={(e) => setQ8(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q8.length}</p>
                                 </div>
                                 <div className="azdps-application-question-9">
                                     <span className="azdps-application-text57">
@@ -417,7 +430,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput05 input"
                                         onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q10.length}</p>
                                 </div>
                                 <div className="azdps-application-question-11">
                                     <span className="azdps-application-text63">
@@ -431,7 +446,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput06 input"
                                         onChange={(e) => setQ11(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q11.length}</p>
                                 </div>
                                 <div className="azdps-application-question-12">
                                     <span className="azdps-application-text66">
@@ -445,7 +462,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput07 input"
                                         onChange={(e) => setQ12(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q12.length}</p>
                                 </div>
                                 <div className="azdps-application-question-13">
                                     <span className="azdps-application-text69">
@@ -478,7 +497,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput08 input"
                                         onChange={(e) => setQ14(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q14.length}</p>
                                 </div>
                                 <div className="azdps-application-question-15">
                                     <span className="azdps-application-text75">
@@ -512,7 +533,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput10 input"
                                         onChange={(e) => setQ16(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q16.length}</p>
                                 </div>
                                 <div className="azdps-application-question-17">
                                     <span className="azdps-application-text84">
@@ -539,7 +562,9 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput11 input"
                                         onChange={(e) => setQ17(e.target.value)}
+                                        maxLength={maxLength}
                                     />
+                                    <p>Characters left: {maxLength - q17.length}</p>
                                 </div>
                                 <div className="azdps-application-question-18">
                                     <span className="azdps-application-text91">
