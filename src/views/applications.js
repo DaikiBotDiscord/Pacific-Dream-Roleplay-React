@@ -241,253 +241,324 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                         </div>
                     </div>
                 ) : (
-                    <div className="applications-container01">
-                        {headerComponent}
-                        <img
-                            alt="image"
-                            src="https://pinalcountyroleplay.com/applications.png"
-                            className="applications-image"
-                        />
-                        <div className="applications-hero">
-                            <div className="applications-container02">
-                                <h1 className="applications-text">Application Status</h1>
-                                <div className="applications-container03">
-                                    <div className="applications-container04">
-                                        <span className="applications-text01">
-                                            <span>
-                                                Pinal County
-                                                <span
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: ' ',
-                                                    }}
-                                                />
+                    <div className="applications-container">
+                        <div className="applications-container01">
+                            {headerComponent}
+                            <img
+                                alt="image"
+                                src="https://pinalcountyroleplay.com/applications.png"
+                                className="applications-image"
+                            />
+                            <div className="applications-hero">
+                                <div className="applications-container02">
+                                    <h1 className="applications-text">
+                                        <span>Department</span>
+                                        <br></br>
+                                        <span>Application Status</span>
+                                    </h1>
+                                    <div className="applications-container03">
+                                        <div className="applications-container04">
+                                            <span className="applications-text004">
+                                                <span>
+                                                    Pinal County
+                                                    <span
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: ' ',
+                                                        }}
+                                                    />
+                                                </span>
+                                                <br></br>
+                                                <span>Sheriff&apos;s Office </span>
                                             </span>
-                                            <br></br>
-                                            <span>Sheriff&apos;s Office </span>
-                                        </span>
-                                        <span className="applications-text05">
-                                            <span>{pcsoStatus.toUpperCase()}</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src={pcsoLight}
-                                            className="applications-image01"
-                                        />
-                                    </div>
-                                    <div className="applications-container05">
-                                        <span className="applications-text08">
-                                            <span>Phoenix Police</span>
-                                            <br></br>
-                                            <span>Department</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text13">
-                                            <span>{ppdStatus.toUpperCase()}</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src={ppdLight}
-                                            className="applications-image02"
-                                        />
-                                    </div>
-                                    <div className="applications-container06">
-                                        <span className="applications-text16">
-                                            <span>Phoenix Fire</span>
-                                            <br></br>
-                                            <span>Department</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text21">
-                                            <span>{pfdStatus.toUpperCase()}</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src={pfdLight}
-                                            className="applications-image03"
-                                        />
-                                    </div>
-                                    <div className="applications-container08">
-                                        <span className="applications-text32">
-                                            <span>AZ Department of</span>
-                                            <br></br>
-                                            <span>Communications</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text38">
-                                            <span>{DOCStatus.toUpperCase()}</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src={DOCLight}
-                                            className="applications-image05"
-                                        />
-                                    </div>
-                                    <div className="applications-container10">
-                                        <span className="applications-text49">
-                                            <span>AZ Department of </span>
-                                            <br></br>
-                                            <span>Public Safety</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text54">
-                                            <span>CLOSED</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src='https://pinalcountyroleplay.com/denied_flash.gif'
-                                            className="applications-image07"
-                                        />
-                                    </div>
-                                    <div className="applications-container09">
-                                        <span className="applications-text41">
-                                            <span>Department of</span>
-                                            <br></br>
-                                            <span>Certified Civilians</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text46">
-                                            <span>CLOSED</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                            className="applications-image06"
-                                        />
-                                    </div>
-                                    <div className="applications-container10">
-                                        <span className="applications-text49">
-                                            <span>AZ Department of </span>
-                                            <br></br>
-                                            <span>Transportation</span>
-                                            <br></br>
-                                        </span>
-                                        <span className="applications-text54">
-                                            <span>UNAVAILABLE</span>
-                                            <br></br>
-                                        </span>
-                                        <img
-                                            alt="image"
-                                            src="https://pinalcountyroleplay.com/denied_flash.gif"
-                                            className="applications-image07"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="applications-container11">
-                                <h1 className="applications-text57">
-                                    <span>Applications</span>
-                                    <br></br>
-                                </h1>
-                                <div className="applications-container12">
-                                    <Link to="/user/pcso-application" className="applications-navlink">
-                                        <div className="applications-container13">
+                                            <span className="applications-text008">
+                                                <span>{pcsoStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
-                                                className="applications-image08"
+                                                src={pcsoLight}
+                                                className="applications-image01"
                                             />
-                                            <span className="applications-text60">
-                                                <span>Pinal County</span>
-                                                <br></br>
-                                                <span>Sheriff&apos;s Office</span>
-                                                <br></br>
-                                            </span>
                                         </div>
-                                    </Link>
-                                    <Link to="/user/phoenix-pd-application" className="applications-navlink3">
-                                        <div className="applications-container16">
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/PPD_LOGO.png"
-                                                className="applications-image11"
-                                            />
-                                            <span className="applications-text73">
+                                        <div className="applications-container05">
+                                            <span className="applications-text011">
                                                 <span>Phoenix Police</span>
                                                 <br></br>
                                                 <span>Department</span>
                                                 <br></br>
                                             </span>
-                                        </div>
-                                    </Link>
-                                    <Link to="/user/phoenix-fd-application" className="applications-navlink1">
-                                        <div className="applications-container14">
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/FFD_LOGO.png"
-                                                className="applications-image09"
-                                            />
-                                            <span className="applications-text65">
-                                                <span>Phoenix Fire Department</span>
+                                            <span className="applications-text016">
+                                                <span>{ppdStatus.toUpperCase()}</span>
                                                 <br></br>
                                             </span>
-                                        </div>
-                                    </Link>
-                                    {/* <Link to="/user/azdps-application" className="applications-navlink2">
-                                        <div className="applications-container15">
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
-                                                className="applications-image10"
+                                                src={ppdLight}
+                                                className="applications-image02"
                                             />
-                                            <span className="applications-text68">
-                                                <span>Department of</span>
+                                        </div>
+                                        <div className="applications-container06">
+                                            <span className="applications-text019">
+                                                <span>Phoenix Fire</span>
+                                                <br></br>
+                                                <span>Department</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text024">
+                                                <span>{pfdStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={pfdLight}
+                                                className="applications-image03"
+                                            />
+                                        </div>
+                                        <div className="applications-container07">
+                                            <span className="applications-text027">
+                                                <span>AZ Department</span>
+                                                <br></br>
+                                                <span>of </span>
+                                                <span>Communications</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text033">
+                                                <span>{DOCStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={DOCLight}
+                                                className="applications-image04"
+                                            />
+                                        </div>
+                                        <div className="applications-container08">
+                                            <span className="applications-text036">
+                                                <span>AZ Department of </span>
                                                 <br></br>
                                                 <span>Public Safety</span>
                                                 <br></br>
                                             </span>
-                                        </div>
-                                    </Link> */}
-                                    <Link to="/user/doc-application" className="applications-navlink4">
-                                        <div className="applications-container17">
-                                            <img
-                                                alt="image"
-                                                src="https://pinalcountyroleplay.com/DOC_LOGO.png"
-                                                className="applications-image12"
-                                            />
-                                            <span className="applications-text78">
-                                                <span>Department of</span>
-                                                <br></br>
-                                                <span>Communications</span>
+                                            <span className="applications-text041">
+                                                <span>CLOSED</span>
                                                 <br></br>
                                             </span>
-                                        </div>
-                                    </Link>
-                                    {/* <Link to="/user/civ-application" className="applications-navlink4">
-                                        <div className="applications-container17">
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/CIV_LOGO.png"
-                                                className="applications-image12"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="applications-image05"
                                             />
-                                            <span className="applications-text78">
-                                                <span>Department of</span>
+                                        </div>
+                                        <div className="applications-container09">
+                                            <span className="applications-text044">
+                                                <span>AZ Department of</span>
                                                 <br></br>
                                                 <span>Certified Civilians</span>
                                                 <br></br>
                                             </span>
+                                            <span className="applications-text049">
+                                                <span>CLOSED</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="applications-image06"
+                                            />
                                         </div>
-                                    </Link> */}
-                                    {/* <Link to="/user/dot-application" className="applications-navlin4">
-                                <div className="applications-container18">
-                                    <img
-                                        alt="image"
-                                        src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
-                                        className="applications-image13"
-                                    />
-                                    <span className="applications-text83">
-                                        <span>Department of</span>
-                                        <br></br>
-                                        <span>Transportation</span>
-                                        <br></br>
-                                    </span>
+                                        <div className="applications-container10">
+                                            <span className="applications-text052">
+                                                <span>AZ Department of Transportation</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text055">
+                                                <span>UNAVAILABLE</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="applications-image07"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                                        </Link> */}
+                                <div className="applications-container11">
+                                    <h1 className="applications-text058">
+                                        <span>Business</span>
+                                        <br></br>
+                                        <span>Application Status</span>
+                                    </h1>
+                                    <div className="applications-container12">
+                                        <div className="applications-container13">
+                                            <span className="applications-text062">
+                                                <span>Civilian Business</span>
+                                                <br></br>
+                                                <span>Application</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text067">
+                                                <span>UNAVAILABLE</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="applications-image08"
+                                            />
+                                        </div>
+                                        <div className="applications-container14">
+                                            <span className="applications-text070">SK Security</span>
+                                            <span className="applications-text071">
+                                                <span>UNAVAILABLE</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                className="applications-image09"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="applications-container15">
+                                    <h1 className="applications-text074">
+                                        <span>Applications</span>
+                                        <br></br>
+                                    </h1>
+                                    <div className="applications-container16">
+                                        <h1 className="applications-text077">
+                                            <span>Departments</span>
+                                            <br></br>
+                                        </h1>
+                                        <div className="applications-container17">
+                                            <Link to="/" className="applications-navlink">
+                                                <div className="applications-container18">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
+                                                        className="applications-image10"
+                                                    />
+                                                    <span className="applications-text080">
+                                                        <span>Pinal County</span>
+                                                        <br></br>
+                                                        <span>Sheriff&apos;s Office</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/" className="applications-navlink1">
+                                                <div className="applications-container19">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/FFD_LOGO.png"
+                                                        className="applications-image11"
+                                                    />
+                                                    <span className="applications-text085">
+                                                        <span>Phoenix Fire &amp; Rescue</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/azdps-application" className="applications-navlink2">
+                                                <div className="applications-container20">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
+                                                        className="applications-image12"
+                                                    />
+                                                    <span className="applications-text088">
+                                                        <span>Department of</span>
+                                                        <br></br>
+                                                        <span>Public Safety</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link
+                                                to="/phoenix-pd-application"
+                                                className="applications-navlink3"
+                                            >
+                                                <div className="applications-container21">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/PPD_LOGO.png"
+                                                        className="applications-image13"
+                                                    />
+                                                    <span className="applications-text093">
+                                                        <span>Phoenix Police</span>
+                                                        <br></br>
+                                                        <span>Department</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/" className="applications-navlink4">
+                                                <div className="applications-container22">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/DOC_LOGO.png"
+                                                        className="applications-image14"
+                                                    />
+                                                    <span className="applications-text098">
+                                                        <span>Department of</span>
+                                                        <br></br>
+                                                        <span>Communications</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Department of</span>
+                                                        <br></br>
+                                                        <span>Transportation</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        {/* <h1 className="applications-text108">
+                                            <span>Business</span>
+                                            <br></br>
+                                        </h1>
+                                        <div className="applications-container24">
+                                            <Link to="/" className="applications-navlink6">
+                                                <div className="applications-container25">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/pcrp_logo.png"
+                                                        className="applications-image16"
+                                                    />
+                                                    <span className="applications-text111">
+                                                        <span>Civilian Business</span>
+                                                        <br></br>
+                                                        <span>Application</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/" className="applications-navlink7">
+                                                <div className="applications-container26">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/SK_SECURITY_LOGO.png"
+                                                        className="applications-image17"
+                                                    />
+                                                    <span className="applications-text116">
+                                                        <span>SK Security</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        </div> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
