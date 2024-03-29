@@ -77,35 +77,25 @@
 }
 
 .azdps-application-text {
-    align-self: flex-start;
-    margin-top: var(--dl-space-space-oneandhalfunits);
-    margin-left: var(--dl-space-space-unit);
-}
-
-.azdps-application-text03 {
-    font-weight: 700;
-}
-
-.azdps-application-text04 {
     margin-top: var(--dl-space-space-oneandhalfunits);
     margin-left: var(--dl-space-space-unit);
     margin-bottom: var(--dl-space-space-halfunit);
     text-decoration: underline;
 }
 
-.azdps-application-text05 {
+.azdps-application-text01 {
     align-self: flex-start;
     margin-left: var(--dl-space-space-unit);
 }
 
-.azdps-application-text12 {
+.azdps-application-text10 {
     margin-top: var(--dl-space-space-oneandhalfunits);
     margin-left: var(--dl-space-space-unit);
     margin-bottom: var(--dl-space-space-halfunit);
     text-decoration: underline;
 }
 
-.azdps-application-text13 {
+.azdps-application-text11 {
     align-self: flex-start;
     margin-left: var(--dl-space-space-unit);
 }
@@ -149,16 +139,7 @@
     color: #dc3424;
 }
 
-.azdps-application-text28 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text29 {
-    font-style: normal;
-    font-weight: 700;
-}
-
-.azdps-application-textarea {
+.azdps-application-textinput {
     margin-top: 3px;
 }
 
@@ -173,11 +154,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text31 {
+.azdps-application-text28 {
     font-size: 1.5rem;
 }
 
-.azdps-application-textinput {
+.azdps-application-text30 {
+    color: #dc3424;
+}
+
+.azdps-application-textinput1 {
     margin-top: 3px;
 }
 
@@ -192,15 +177,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text32 {
+.azdps-application-text31 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text34 {
+.azdps-application-text33 {
     color: #dc3424;
 }
 
-.azdps-application-textinput01 {
+.azdps-application-select {
     margin-top: 3px;
 }
 
@@ -215,15 +200,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text36 {
+.azdps-application-text35 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text38 {
+.azdps-application-text37 {
     color: #dc3424;
 }
 
-.azdps-application-select {
+.azdps-application-select1 {
     margin-top: 3px;
 }
 
@@ -238,15 +223,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text40 {
+.azdps-application-text39 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text42 {
+.azdps-application-text41 {
     color: #dc3424;
 }
 
-.azdps-application-select1 {
+.azdps-application-select2 {
     margin-top: 3px;
 }
 
@@ -261,11 +246,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text44 {
+.azdps-application-text43 {
     font-size: 1.5rem;
 }
 
-.azdps-application-textinput02 {
+.azdps-application-text45 {
+    color: #dc3424;
+}
+
+.azdps-application-textarea {
     margin-top: 3px;
 }
 
@@ -288,15 +277,7 @@
     color: #dc3424;
 }
 
-.azdps-application-text50 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text51 {
-    font-weight: 700;
-}
-
-.azdps-application-textinput03 {
+.azdps-application-textarea1 {
     margin-top: 3px;
 }
 
@@ -311,280 +292,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text54 {
+.azdps-application-text50 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text56 {
+.azdps-application-text52 {
     color: #dc3424;
 }
 
-.azdps-application-textinput04 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-9 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text57 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text59 {
-    color: #dc3424;
-}
-
-.azdps-application-select2 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-10 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text60 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text62 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput05 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-11 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text63 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text65 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput06 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-12 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text66 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text68 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput07 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-13 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text69 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text71 {
-    color: #dc3424;
-}
-
-.azdps-application-select3 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-14 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text72 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text74 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput08 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-15 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text75 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text77 {
-    color: #dc3424;
-}
-
-.azdps-application-text78 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text79 {
-    font-weight: 700;
-}
-
-.azdps-application-textinput09 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-16 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text81 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text83 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput10 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-17 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text84 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text86 {
-    color: #dc3424;
-}
-
-.azdps-application-text87 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text88 {
-    font-weight: 700;
-}
-
-.azdps-application-textinput11 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-18 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text91 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-select4 {
-    margin-top: 3px;
-}
-
-.azdps-application-question-19 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.azdps-application-text92 {
-    font-size: 1.5rem;
-}
-
-.azdps-application-text94 {
-    color: #dc3424;
-}
-
-.azdps-application-textinput12 {
+.azdps-application-textarea2 {
     margin-top: 3px;
 }
 
@@ -602,7 +318,7 @@
     background-color: transparent;
 }
 
-.azdps-application-text96:hover {
+.azdps-application-text54:hover {
     color: var(--dl-color-gray-black);
     background-color: transparent;
 }
@@ -626,13 +342,13 @@
         margin-left: 0px;
     }
 
-    .azdps-application-text96 {
+    .azdps-application-text54 {
         margin-top: var(--dl-space-space-unit);
         margin-left: 0px;
     }
 }
 
-@media(max-width: 430px) {
+@media(max-width: 375px) {
     .azdps-application-container1 {
         background-position: top left, center;
     }
@@ -661,15 +377,11 @@
         width: 95%;
     }
 
-    .azdps-application-text {
-        margin-left: var(--dl-space-space-halfunit);
-    }
-
-    .azdps-application-text05 {
+    .azdps-application-text01 {
         margin-right: var(--dl-space-space-unit);
     }
 
-    .azdps-application-text13 {
+    .azdps-application-text11 {
         margin-left: var(--dl-space-space-halfunit);
         margin-right: var(--dl-space-space-halfunit);
     }
@@ -708,50 +420,6 @@
     }
 
     .azdps-application-question-8 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-9 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-10 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-11 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-12 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-13 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-14 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-15 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-16 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-17 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-18 {
-        flex-wrap: wrap;
-    }
-
-    .azdps-application-question-19 {
         flex-wrap: wrap;
     }
 }
