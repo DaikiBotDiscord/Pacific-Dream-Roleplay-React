@@ -292,12 +292,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text42">
-                                                    <span>CLOSED</span>
+                                                    <span>{AZDPSStatus.toUpperCase()}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    src={AZDPSLight}
                                                     className="user-home-image4"
                                                 />
                                             </div>
