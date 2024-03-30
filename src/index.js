@@ -26,6 +26,7 @@ import PhoenixFDApplication from "./views/phoenix-fd-application";
 import Applications from './views/applications'
 import PCSOApplication from './views/pcso-application'
 import DOCApplication from "./views/doc-application";
+import DOTApplication from "./views/azdot-application";
 import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
 
 const App = () => {
@@ -295,6 +296,15 @@ const App = () => {
           render={() => {
             return checkTokenRepeat() ? <AZDPSApplication userData={userData} discordAuthenticated={discordAuthenticated} verifiedCiv={verifiedCiv} /> : <Login />;
           }} />
+        <Route
+          exact
+          path='/user/dot-application'
+          render={() => {
+            return checkTokenRepeat() ? <DOTApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        />
         <Route
           exact
           path='/user/applications'

@@ -18,6 +18,8 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
     const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
     const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyroleplay.com/not_started.png');
+    const [AZDOTStatus, setAZDOTStatus] = useState('Loading...');
+    const [AZDOTLight, setAZDOTLight] = useState('https://pinalcountyroleplay.com/not_started.png');
     const user = userData.data
     function capitalizeFirstLetter(str) {
         return str?.charAt(0).toUpperCase() + str?.slice(1);
@@ -152,6 +154,20 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             .then((data) => {
                 setAZDPSStatus(data.status);
                 setAZDPSLight(data.statusLight)
+            })
+        fetch(`${config.apiDomain}/api/user/applications/dot-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setAZDOTStatus(data.status);
+                setAZDOTLight(data.statusLight)
             })
         /* fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
             method: "POST",
@@ -324,12 +340,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text56">
-                                                    <span>UNAVAILABLE</span>
+                                                    <span>{AZDOTStatus.toUpperCase()}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                    src={AZDOTLight}
                                                     className="user-home-image6"
                                                 />
                                             </div>

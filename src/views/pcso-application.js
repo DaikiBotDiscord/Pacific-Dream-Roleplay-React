@@ -175,7 +175,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q1"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
                                         maxLength={32}
@@ -192,7 +192,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q2"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
                                         maxLength={15}
@@ -206,7 +206,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         <br></br>
                                     </span>
                                     <select
-                                        required="true"
+                                        required={true}
                                         id="q3"
                                         className="pcso-applicaiton-select"
                                         onChange={(e) => setQ3(e.target.value)}
@@ -230,7 +230,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q4"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput2 input"
                                         onChange={(e) => setQ4(e.target.value)}
                                         maxLength={maxLength}
@@ -247,7 +247,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         <br></br>
                                     </span>
                                     <select
-                                        required="true"
+                                        required={true}
                                         id="q5"
                                         className="pcso-applicaiton-select1"
                                         onChange={(e) => setQ5(e.target.value)}
@@ -269,7 +269,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q6"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput3 input"
                                         onChange={(e) => setQ6(e.target.value)}
                                         maxLength={maxLength}
@@ -286,7 +286,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q7"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput4 input"
                                         onChange={(e) => setQ7(e.target.value)}
                                         maxLength={maxLength}
@@ -303,7 +303,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         <br></br>
                                     </span>
                                     <select
-                                        required="true"
+                                        required={true}
                                         id="q8"
                                         className="pcso-applicaiton-select2"
                                         onChange={(e) => setQ8(e.target.value)}
@@ -323,7 +323,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         <br></br>
                                     </span>
                                     <select
-                                        required="true"
+                                        required={true}
                                         id="q9"
                                         className="pcso-applicaiton-select3"
                                         onChange={(e) => setQ9(e.target.value)}
@@ -343,7 +343,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                                         type="text"
                                         id="q10"
                                         placeholder="Your Answer"
-                                        required="true"
+                                        required={true}
                                         className="pcso-applicaiton-textinput5 input"
                                         onChange={(e) => setQ10(e.target.value)}
                                         maxLength={maxLength}

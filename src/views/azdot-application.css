@@ -1,0 +1,333 @@
+.azdot-application-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.azdot-application-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyroleplay.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.azdot-application-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.azdot-application-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.azdot-application-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: var(--dl-space-space-oneandhalfunits);
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.azdot-application-container3 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.azdot-application-image1 {
+    width: 100%;
+    align-self: center;
+    object-fit: cover;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+}
+
+.azdot-application-text {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.azdot-application-text03 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.azdot-application-text04 {
+    color: #dc3424;
+}
+
+.azdot-application-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.azdot-application-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.azdot-application-text06 {
+    font-size: 1.5rem;
+}
+
+.azdot-application-text08 {
+    font-weight: 700;
+}
+
+.azdot-application-text10 {
+    color: #dc3424;
+}
+
+.azdot-application-textinput {
+    margin-top: 3px;
+}
+
+.azdot-application-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdot-application-text11 {
+    font-size: 1.5rem;
+}
+
+.azdot-application-text13 {
+    font-weight: 700;
+}
+
+.azdot-application-text15 {
+    color: #dc3424;
+}
+
+.azdot-application-textinput1 {
+    margin-top: 3px;
+}
+
+.azdot-application-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdot-application-text16 {
+    font-size: 1.5rem;
+}
+
+.azdot-application-text18 {
+    color: #dc3424;
+}
+
+.azdot-application-textinput2 {
+    margin-top: 3px;
+}
+
+.azdot-application-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdot-application-text20 {
+    font-size: 1.5rem;
+}
+
+.azdot-application-text22 {
+    font-weight: 700;
+}
+
+.azdot-application-text24 {
+    color: #dc3424;
+}
+
+.azdot-application-textinput3 {
+    margin-top: 3px;
+}
+
+.azdot-application-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdot-application-text26 {
+    font-size: 1.5rem;
+}
+
+.azdot-application-text28 {
+    color: #dc3424;
+}
+
+.azdot-application-textinput4 {
+    margin-top: 3px;
+}
+
+.azdot-application-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.azdot-application-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.azdot-application-text31:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .azdot-application-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .azdot-application-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .azdot-application-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .azdot-application-text31 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 375px) {
+    .azdot-application-container1 {
+        background-position: top left, center;
+    }
+
+    .azdot-application-image {
+        width: 100%;
+    }
+
+    .azdot-application-hero {
+        width: 100%;
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+
+    .azdot-application-container2 {
+        width: 100%;
+    }
+
+    .azdot-application-container3 {
+        width: 100%;
+    }
+
+    .azdot-application-image1 {
+        width: 95%;
+    }
+
+    .azdot-application-text {
+        margin-right: var(--dl-space-space-unit);
+    }
+
+    .azdot-application-form {
+        flex-wrap: wrap;
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .azdot-application-question-1 {
+        flex-wrap: wrap;
+    }
+
+    .azdot-application-question-2 {
+        flex-wrap: wrap;
+    }
+
+    .azdot-application-question-3 {
+        flex-wrap: wrap;
+    }
+
+    .azdot-application-question-4 {
+        flex-wrap: wrap;
+    }
+
+    .azdot-application-question-5 {
+        flex-wrap: wrap;
+    }
+}

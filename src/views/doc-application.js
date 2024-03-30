@@ -148,7 +148,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="text"
                                         id="q1"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
@@ -165,7 +165,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="number"
                                         id="q2"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
@@ -182,7 +182,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="text"
                                         id="q3"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput2 input"
                                         onChange={(e) => setQ3(e.target.value)}
@@ -237,7 +237,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="text"
                                         id="q5"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput3 input"
                                         onChange={(e) => setQ5(e.target.value)}
@@ -257,7 +257,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="text"
                                         id="q6"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput4 input"
                                         onChange={(e) => setQ6(e.target.value)}
@@ -277,7 +277,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                     <input
                                         type="text"
                                         id="q7"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="doc-application-textinput5 input"
                                         onChange={(e) => setQ7(e.target.value)}

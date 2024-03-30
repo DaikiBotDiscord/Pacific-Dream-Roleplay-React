@@ -148,7 +148,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q1"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
@@ -165,7 +165,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q2"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
@@ -180,7 +180,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                         <br></br>
                                     </span>
                                     <select
-                                        required="true"
+                                        required={true}
                                         id="q3"
                                         className="certified-civilian-applicaiton-select"
                                         onChange={(e) => setQ3(e.target.value)}
@@ -202,7 +202,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q4"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput2 input"
                                         onChange={(e) => setQ4(e.target.value)}
@@ -219,7 +219,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q5"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput3 input"
                                         onChange={(e) => setQ5(e.target.value)}
@@ -239,7 +239,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q6"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput5 input"
                                         onChange={(e) => setQ6(e.target.value)}
@@ -258,7 +258,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     </span>
                                     <select
                                         id="q7"
-                                        required="true"
+                                        required={true}
                                         className="certified-civilian-applicaiton-select1"
                                         onChange={(e) => setQ7(e.target.value)}
                                     >
@@ -278,7 +278,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                     <input
                                         type="text"
                                         id="q8"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput6 input"
                                         onChange={(e) => setQ8(e.target.value)}

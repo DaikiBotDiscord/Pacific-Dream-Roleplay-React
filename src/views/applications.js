@@ -23,6 +23,9 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [CIVLight, setCIVLight] = useState("https://pinalcountyroleplay.com/not_started.png");
     const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
     const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyroleplay.com/not_started.png');
+    const [AZDOTStatus, setAZDOTStatus] = useState('Loading...');
+    const [AZDOTLight, setAZDOTLight] = useState('https://pinalcountyroleplay.com/not_started.png');
+
     const user = userData.data
     const { data } = userData;
     function handleDiscordSubmit(e) {
@@ -200,6 +203,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setAZDPSStatus(data.status);
                 setAZDPSLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/dot-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setAZDOTStatus(data.status);
+                setAZDOTLight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -372,12 +389,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <br></br>
                                             </span>
                                             <span className="applications-text055">
-                                                <span>UNAVAILABLE</span>
+                                                <span>{AZDOTStatus.toUpperCase()}</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                src={AZDOTLight}
                                                 className="applications-image07"
                                             />
                                         </div>
@@ -475,10 +492,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link
-                                                to="/user/phoenix-pd-application"
-                                                className="applications-navlink3"
-                                            >
+                                            <Link to="/user/phoenix-pd-application" className="applications-navlink3">
                                                 <div className="applications-container21">
                                                     <img
                                                         alt="image"
@@ -508,7 +522,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            {/* <Link to="/user/dot-application" className="applications-navlink5">
+                                            <Link to="/user/dot-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
@@ -522,7 +536,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link> */}
+                                            </Link>
                                         </div>
                                         {/* <h1 className="applications-text108">
                                             <span>Business</span>
