@@ -538,12 +538,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 </div>
                                             </Link>
                                         </div>
-                                        {/* <h1 className="applications-text108">
+                                        <h1 className="applications-text108">
                                             <span>Business</span>
                                             <br></br>
                                         </h1>
                                         <div className="applications-container24">
-                                            <Link to="/" className="applications-navlink6">
+                                            {/* <Link to="/" className="applications-navlink6">
                                                 <div className="applications-container25">
                                                     <img
                                                         alt="image"
@@ -557,7 +557,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link>
+                                            </Link> */}
                                             <Link to="/" className="applications-navlink7">
                                                 <div className="applications-container26">
                                                     <img
@@ -571,7 +571,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

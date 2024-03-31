@@ -214,7 +214,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                         onChange={(e) => setQ3(e.target.value)}
                                         maxLength={1024}
                                     />
-                                    <p>Characters left: {1024 - q1.length}</p>
+                                    <p>Characters left: {1024 - q3.length}</p>
                                 </div>
                                 <div className="azdot-application-question-4">
                                     <span className="azdot-application-text20">
@@ -240,9 +240,9 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                         placeholder="Your Answer"
                                         className="azdot-application-textinput3 input"
                                         onChange={(e) => setQ4(e.target.value)}
-                                        maxLength={32}
+                                        maxLength={1024}
                                     />
-                                    <p>Characters left: {32 - q1.length}</p>
+                                    <p>Characters left: {1024 - q4.length}</p>
                                 </div>
                                 <div className="azdot-application-question-5">
                                     <span className="azdot-application-text26">
