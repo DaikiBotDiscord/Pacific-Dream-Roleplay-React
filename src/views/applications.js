@@ -538,11 +538,11 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 </div>
                                             </Link>
                                         </div>
-                                        <h1 className="applications-text108">
+                                        {/* <h1 className="applications-text108">
                                             <span>Business</span>
                                             <br></br>
                                         </h1>
-                                        {/* <div className="applications-container24">
+                                        <div className="applications-container24">
                                             <Link to="/" className="applications-navlink6">
                                                 <div className="applications-container25">
                                                     <img
