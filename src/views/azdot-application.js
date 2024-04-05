@@ -199,8 +199,8 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                 <div className="azdot-application-question-3">
                                     <span className="azdot-application-text16">
                                         <span>
-                                            Do you have any previous experience with fire and rescue
-                                            IRL or In FiveM? If so please explain here, N/A If none
+                                            Do you have any previous experience with Mechanical or
+                                            Transportation IRL or In FiveM? If so please explain here, N/A If none
                                         </span>
                                         <span className="azdot-application-text18">*</span>
                                         <br></br>
