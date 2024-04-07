@@ -235,7 +235,7 @@ const Donation = (props) => {
           <div className="donation-pricing-card5">
             <img
               alt="image"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/151790f7-6583-4936-911e-8f0137220d74/62096b95-ddaf-4d14-aa54-2571c37f94b1?org_if_sml=114047&amp;force_format=original"
+              src="/diamond_donations"
               className="donation-image1"
             />
             <span className="donation-text69">
@@ -244,12 +244,13 @@ const Donation = (props) => {
           </div>
         </a>
       </div>
-      {/* <span className='disclaimer'>
-        *Pinal County Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Pinal County Roleplay Server*
-      </span>
       <span className='disclaimer'>
+        *Pinal County Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Pinal County Roleplay Server*
+        <br></br>
+        *Your Personals will have a script to lock them only to you and you may give access to other users*
+        <br></br>
         *Donation Assets are a privilege and may be taken away by community directors at any point*
-      </span> */}
+      </span>
       <FooterContainer rootClassName="footer-container-root-class-name1"></FooterContainer>
     </div>
   )
