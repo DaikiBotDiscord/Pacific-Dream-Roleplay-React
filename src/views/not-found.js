@@ -8,7 +8,7 @@ import Analytics from '@vercel/analytics'
 const NotFound = (props) => {
   return (
     <div className="not-found-container">
-      <Analytics />
+
       <Helmet>
         <title>404 - Not Found</title>
       </Helmet>

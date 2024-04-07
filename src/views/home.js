@@ -87,7 +87,6 @@ const Home = (props) => {
 
   return (
     <div className="home-container">
-      <Analytics />
       <Helmet>
         <title>Pinal County Roleplay</title>
         <meta property="og:title" content="Pinal County Roleplay" />

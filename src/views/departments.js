@@ -50,7 +50,6 @@ const Departments = (props) => {
     };
     return (
         <div className="departments-container">
-            <Analytics />
             <Helmet>
                 <title>Departments - Pinal County Roleplay</title>
                 <meta property="og:title" content="Pinal County Roleplay" />

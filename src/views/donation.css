@@ -55,8 +55,14 @@
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
+  background-size: auto, cover;
   justify-content: space-between;
-  background-color: var(--dl-color-gray-900);
+  background-image: linear-gradient(90deg,
+      rgba(193, 127, 95, 0.5) 33%,
+      rgba(44, 62, 80, 0.5) 100%),
+    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226423439699480576/NEW_DONATION_PERK_8.png?ex=6624b6d5&is=661241d5&hm=53c8ae1b57fea13e9d856a3e79f31877a0a709dde91d30ed5caf2ea112d4132d&');
+  background-repeat: repeat, no-repeat;
+  background-position: top left, right;
 }
 
 .donation-pricing-card:hover {
@@ -77,18 +83,18 @@
   flex-direction: row;
 }
 
-.donation-text02 {
+.donation-text04 {
   font-size: 1.15rem;
   margin-top: var(--dl-space-space-twounits);
   font-weight: 300;
 }
 
-.donation-text05 {
+.donation-text07 {
   font-size: 4rem;
   font-weight: 700;
 }
 
-.donation-text06 {
+.donation-text08 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -102,17 +108,23 @@
   flex-direction: column;
 }
 
-.donation-text09 {
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
-.donation-text10 {
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
 .donation-text11 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text12 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text13 {
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
   text-transform: capitalize;
 }
@@ -142,15 +154,21 @@
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
+  background-size: auto, cover;
   justify-content: space-between;
-  background-color: var(--dl-color-gray-900);
+  background-image: linear-gradient(90deg,
+      rgba(238, 192, 2, 0.25) 32%,
+      rgba(44, 62, 80, 0.5) 100%),
+    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226420631105437696/NEW_DONATION_PERK_3.png?ex=6624b438&is=66123f38&hm=c048fe2b6e67e53048404fa1971e7b6a7f33f1b4466dadfef0d970effc9888b1&');
+  background-repeat: repeat, no-repeat;
+  background-position: top left, right;
 }
 
 .donation-pricing-card1:hover {
   transform: scale(1.02);
 }
 
-.donation-text12 {
+.donation-text14 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
@@ -164,18 +182,19 @@
   flex-direction: row;
 }
 
-.donation-text15 {
+.donation-text17 {
   font-size: 1.15rem;
   margin-top: var(--dl-space-space-twounits);
   font-weight: 300;
 }
 
-.donation-text18 {
+.donation-text20 {
   font-size: 4rem;
+  font-style: normal;
   font-weight: 700;
 }
 
-.donation-text21 {
+.donation-text23 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -189,12 +208,23 @@
   flex-direction: column;
 }
 
-.donation-text24 {
+.donation-text26 {
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
   text-transform: capitalize;
 }
 
-.donation-text25 {
+.donation-text27 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text28 {
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
   text-transform: capitalize;
 }
@@ -224,15 +254,21 @@
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
+  background-size: auto, cover;
   justify-content: space-between;
-  background-color: var(--dl-color-gray-900);
+  background-image: linear-gradient(90deg,
+      rgba(189, 195, 199, 0.5) 34%,
+      rgba(44, 62, 80, 0.5) 100%),
+    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226419285765918821/NEW_DONATION_PERK_2.png?ex=6624b2f7&is=66123df7&hm=3c223aca0aabff3c31f9af86a933386464c8c49383f2e1ea33a44a7f90e3804d&');
+  background-repeat: repeat, no-repeat;
+  background-position: top left, right;
 }
 
 .donation-pricing-card2:hover {
   transform: scale(1.02);
 }
 
-.donation-text26 {
+.donation-text29 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
@@ -246,18 +282,19 @@
   flex-direction: row;
 }
 
-.donation-text29 {
+.donation-text32 {
   font-size: 1.15rem;
   margin-top: var(--dl-space-space-twounits);
   font-weight: 300;
 }
 
-.donation-text32 {
+.donation-text35 {
   font-size: 4rem;
+  font-style: normal;
   font-weight: 700;
 }
 
-.donation-text35 {
+.donation-text38 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -271,11 +308,15 @@
   flex-direction: column;
 }
 
-.donation-text38 {
+.donation-text41 {
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
 }
 
-.donation-text39 {
+.donation-text42 {
+  font-style: normal;
+  font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
   text-transform: capitalize;
 }
@@ -291,12 +332,110 @@
   background-color: var(--dl-color-gray-black);
 }
 
-.donation-text42 {
+.donation-pricing-card3 {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-threeunits);
+  max-width: 450px;
+  min-height: 450px;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-twounits);
+  margin-right: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  background-size: cover;
+  justify-content: space-between;
+  background-image: linear-gradient(90deg,
+      rgba(112, 225, 255, 0.5) 34%,
+      rgba(44, 62, 80, 0.5) 100%),
+    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226421339204878366/NEW_DONATION_PERK_4.png?ex=6624b4e1&is=66123fe1&hm=c8d638853d01162e826466baccf7af36007f7fd2a2a9e99a1c20624e89fddf4a&');
+  background-position: right;
+}
+
+.donation-pricing-card3:hover {
+  transform: scale(1.02);
+}
+
+.donation-text45 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-twounits);
+  text-transform: uppercase;
+}
+
+.donation-container09 {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-twounits);
+  flex-direction: row;
+}
+
+.donation-text48 {
+  font-size: 1.15rem;
+  margin-top: var(--dl-space-space-twounits);
+  font-weight: 300;
+}
+
+.donation-text51 {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.donation-text54 {
+  font-size: 2rem;
+  align-self: flex-end;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.donation-container10 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-threeunits);
+  flex-direction: column;
+}
+
+.donation-text57 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+}
+
+.donation-text58 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text61 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-link3 {
+  color: var(--dl-color-gray-white);
+  margin-top: auto;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+  background-color: var(--dl-color-gray-black);
+}
+
+.donation-text62 {
   font-size: 3em;
   margin-top: var(--dl-space-space-threeunits);
 }
 
-.donation-text43 {
+.donation-text63 {
   font-size: 16px;
   text-align: center;
   font-family: Inter;
@@ -306,7 +445,28 @@
   text-decoration: none;
 }
 
-.donation-container09 {
+.refund {
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.disclaimer {
+  font-size: 16px;
+  text-align: center;
+  font-family: Inter;
+  font-weight: bold;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.donation-container11 {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-threeunits);
@@ -314,11 +474,11 @@
   justify-content: center;
 }
 
-.donation-link3 {
+.donation-link4 {
   display: contents;
 }
 
-.donation-pricing-card3 {
+.donation-pricing-card4 {
   width: 15%;
   height: var(--dl-size-size-large);
   display: flex;
@@ -335,10 +495,10 @@
   background-color: var(--dl-color-gray-900);
 }
 
-.donation-pricing-card3:hover {
+.donation-pricing-card4:hover {
   transform: scale(1.02);
   border-color: var(--dl-color-gray-black);
-  border-width: .5px;
+  border-width: 0.5px;
 }
 
 .donation-image {
@@ -348,23 +508,23 @@
   margin-bottom: var(--dl-space-space-halfunit);
 }
 
-.donation-text47 {
+.donation-text67 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
   text-transform: uppercase;
 }
 
-.donation-text48 {
+.donation-text68 {
   font-weight: 600;
   text-transform: capitalize;
 }
 
-.donation-link4 {
+.donation-link5 {
   display: contents;
 }
 
-.donation-pricing-card4 {
+.donation-pricing-card5 {
   width: 15%;
   height: var(--dl-size-size-large);
   display: flex;
@@ -381,10 +541,10 @@
   background-color: var(--dl-color-gray-900);
 }
 
-.donation-pricing-card4:hover {
+.donation-pricing-card5:hover {
   transform: scale(1.02);
   border-color: var(--dl-color-gray-black);
-  border-width: .5px;
+  border-width: 0.5px;
 }
 
 .donation-image1 {
@@ -394,7 +554,7 @@
   margin-bottom: var(--dl-space-space-halfunit);
 }
 
-.donation-text49 {
+.donation-text69 {
   width: var(--dl-size-size-large);
   font-size: 1.5rem;
   text-align: center;
@@ -403,12 +563,12 @@
   text-transform: capitalize;
 }
 
-.donation-text50 {
+.donation-text70 {
   font-weight: 600;
   text-transform: capitalize;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .donation-pricing-card {
     width: 100%;
     padding: var(--dl-space-space-twounits);
@@ -431,7 +591,7 @@
   }
 
   .donation-pricing-card3 {
-    width: var(--dl-size-size-large);
+    width: 100%;
     padding: var(--dl-space-space-twounits);
     max-width: 100%;
     align-items: center;
@@ -439,12 +599,19 @@
 
   .donation-pricing-card4 {
     width: var(--dl-size-size-large);
+    padding: var(--dl-space-space-twounits);
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .donation-pricing-card5 {
+    width: var(--dl-size-size-large);
     max-width: 100%;
     align-items: center;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .donation-container02 {
     flex-flow: column;
     padding-left: var(--dl-space-space-twounits);
@@ -475,18 +642,18 @@
     margin-bottom: var(--dl-space-space-twounits);
   }
 
-  .donation-container09 {
-    flex-flow: column;
-    padding-left: var(--dl-space-space-twounits);
-    padding-right: var(--dl-space-space-twounits);
-  }
-
   .donation-pricing-card3 {
     width: 100%;
     max-width: 450px;
     align-items: center;
     margin-right: 0px;
     margin-bottom: var(--dl-space-space-twounits);
+  }
+
+  .donation-container11 {
+    flex-flow: column;
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
   }
 
   .donation-pricing-card4 {
@@ -496,9 +663,17 @@
     margin-right: 0px;
     margin-bottom: var(--dl-space-space-twounits);
   }
+
+  .donation-pricing-card5 {
+    width: 100%;
+    max-width: 450px;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-twounits);
+  }
 }
 
-@media(max-width: 479px) {
+@media (max-width: 390px) {
   .donation-container02 {
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
@@ -506,7 +681,7 @@
     padding-bottom: var(--dl-space-space-twounits);
   }
 
-  .donation-container09 {
+  .donation-container11 {
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);

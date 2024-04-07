@@ -28,7 +28,6 @@ import PCSOApplication from './views/pcso-application'
 import DOCApplication from "./views/doc-application";
 import DOTApplication from "./views/azdot-application";
 import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
-import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   const [userData, setUserData] = useState("");

@@ -111,7 +111,6 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
     }
     return (
         <div className="doc-application-container">
-            <Analytics />
             <Helmet>
                 <title>DOC Application - Pinal County Roleplay</title>
                 <meta property="og:title" content="DOC Application - Pinal County Roleplay" />

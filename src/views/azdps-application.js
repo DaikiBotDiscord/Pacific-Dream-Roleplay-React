@@ -111,7 +111,6 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
     }
     return (
         <div className="azdps-application-container">
-            <Analytics />
             <Helmet>
                 <title>AZDPS Application - Pacific Dream Roleplay</title>
                 <meta

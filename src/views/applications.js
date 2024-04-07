@@ -231,7 +231,6 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
 
     return (
         <div className="applications-container">
-            <Analytics />
             <Helmet>
                 <title>Applications - Pinal County Roleplay</title>
                 <meta property="og:title" content="Applications - Pinal County Roleplay" />

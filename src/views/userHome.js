@@ -189,7 +189,6 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
 
     return (
         <div className="user-home-container">
-            <Analytics />
             <div className="user-home-container01">
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
                 {discordAuthenticated === false ? (

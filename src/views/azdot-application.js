@@ -104,7 +104,6 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
     }
     return (
         <div className="azdot-application-container">
-            <Analytics />
             <Helmet>
                 <title>AZDOT Application - Pacific Dream Roleplay</title>
                 <meta

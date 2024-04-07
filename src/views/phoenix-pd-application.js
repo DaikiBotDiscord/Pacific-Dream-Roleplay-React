@@ -115,7 +115,6 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     }
     return (
         <div className="phoenix-pd-application-container">
-            <Analytics />
             <Helmet>
                 <title>Phoenix PD Application - Pinal County Roleplay</title>
                 <meta property="og:title" content="Phoenix PD Application - Pinal County Roleplay" />

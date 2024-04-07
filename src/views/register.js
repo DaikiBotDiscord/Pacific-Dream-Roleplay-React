@@ -201,7 +201,6 @@ const Register = (props) => {
     }
     return (
         <div className="register-container">
-            <Analytics />
             <Helmet>
                 <title>Register - Pinal County Roleplay</title>
                 <meta property="og:title" content="Register - Pinal County Roleplay" />

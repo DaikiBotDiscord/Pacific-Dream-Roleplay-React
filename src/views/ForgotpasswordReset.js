@@ -210,7 +210,6 @@ const ForgotResetPassword = () => {
 
     return (
         <div className="login-container">
-            <Analytics />
             <Helmet>
                 <title>Login - Pinal County Roleplay</title>
                 <meta property="og:title" content="Login - Pinal County Roleplay" />
