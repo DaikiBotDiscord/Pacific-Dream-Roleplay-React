@@ -7,6 +7,8 @@ import './staff.css';
 import Header from '../components/header';
 import UserHeader from '../components/user-header';
 import config from './config/config';
+import Analytics from '@vercel/analytics'
+
 
 class PFP extends Component {
   state = {
@@ -169,6 +171,7 @@ class PFP extends Component {
 
     return (
       <div className="staff-container">
+        <Analytics />
         <Helmet>
           <title>Staff - Pinal County Roleplay</title>
           <meta property="og:title" content="Staff - Pinal County Roleplay" />

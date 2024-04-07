@@ -7,6 +7,7 @@ import './phoenix-fd-application.css'
 import { Helmet } from 'react-helmet'
 import config from './config/config'
 import { ToastContainer, toast } from 'react-toastify';
+import Analytics from '@vercel/analytics'
 
 export default function PhoenixPDApplication({ userData, discordAuthenticated, verifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -125,6 +126,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
 
     return (
         <div className="phoenix-fd-application-container">
+            <Analytics />
             <Helmet>
                 <title>Phoenix FD Application - Pinal County Roleplay</title>
                 <meta property="og:title" content="Phoenix FD Application - Pinal County Roleplay" />

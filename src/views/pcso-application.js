@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 import { ToastContainer, toast } from 'react-toastify';
+import Analytics from '@vercel/analytics'
 
 export default function PCSOApplicaiton({ userData, discordAuthenticated, verifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -113,6 +114,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
 
     return (
         <div className="pcso-applicaiton-container">
+            <Analytics />
             <Helmet>
                 <title>PCSO Application - Pinal County Roleplay</title>
                 <meta property="og:title" content="PCSO Application - Pinal County Roleplay" />

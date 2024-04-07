@@ -4,6 +4,8 @@ import "./userHome.css";
 import FooterContainer from "../components/footer-container";
 import UserHeader from "../components/user-header";
 import config from "./config/config";
+import Analytics from '@vercel/analytics'
+
 
 export default function UserHome({ userData, discordAuthenticated, verifiedCiv }) {
     const [ppdStatus, setPPDStatus] = useState("Loading...");
@@ -187,6 +189,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
 
     return (
         <div className="user-home-container">
+            <Analytics />
             <div className="user-home-container01">
                 <UserHeader rootClassName="user-header-root-class-name"></UserHeader>
                 {discordAuthenticated === false ? (

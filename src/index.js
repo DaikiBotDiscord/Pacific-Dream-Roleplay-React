@@ -230,7 +230,6 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Analytics />
         <Route component={Departments} exact path='/departments' />
         <Route component={Staff} exact path="/staff" />
         <Route component={Donation} exact path="/donation" />

@@ -8,6 +8,7 @@ import FooterContainer from '../components/footer-container'
 import './applications.css'
 import { Helmet } from 'react-helmet'
 import config from './config/config'
+import Analytics from '@vercel/analytics'
 
 export default function Applications({ userData, discordAuthenticated, VerifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -230,6 +231,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
 
     return (
         <div className="applications-container">
+            <Analytics />
             <Helmet>
                 <title>Applications - Pinal County Roleplay</title>
                 <meta property="og:title" content="Applications - Pinal County Roleplay" />

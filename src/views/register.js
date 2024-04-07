@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import config from './config/config'
 import UserHeader from '../components/user-header'
+import Analytics from '@vercel/analytics'
+
 
 const Register = (props) => {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -199,6 +201,7 @@ const Register = (props) => {
     }
     return (
         <div className="register-container">
+            <Analytics />
             <Helmet>
                 <title>Register - Pinal County Roleplay</title>
                 <meta property="og:title" content="Register - Pinal County Roleplay" />

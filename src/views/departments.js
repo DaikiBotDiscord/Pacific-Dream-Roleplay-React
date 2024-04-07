@@ -6,6 +6,7 @@ import UserHeader from '../components/user-header'
 import config from './config/config'
 import './departments.css'
 import { Helmet } from 'react-helmet'
+import Analytics from '@vercel/analytics'
 
 const Departments = (props) => {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -49,6 +50,7 @@ const Departments = (props) => {
     };
     return (
         <div className="departments-container">
+            <Analytics />
             <Helmet>
                 <title>Departments - Pinal County Roleplay</title>
                 <meta property="og:title" content="Pinal County Roleplay" />

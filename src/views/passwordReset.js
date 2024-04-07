@@ -14,6 +14,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Header from "../components/header";
 import UserHeader from "../components/user-header";
+import Analytics from '@vercel/analytics'
+
 
 const ResetPassword = () => {
     const location = useLocation(); // Use useLocation hook
@@ -286,6 +288,7 @@ const ResetPassword = () => {
 
     return (
         <div className="login-container">
+            <Analytics />
             <Helmet>
                 <title>Login - Pinal County Roleplay</title>
                 <meta property="og:title" content="Login - Pinal County Roleplay" />

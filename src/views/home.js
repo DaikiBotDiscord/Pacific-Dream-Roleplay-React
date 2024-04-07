@@ -10,6 +10,7 @@ import Header from '../components/header'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 import axios from 'axios'
+import Analytics from '@vercel/analytics'
 
 const Home = (props) => {
   const [headerComponent, setHeaderComponent] = useState(false);
@@ -86,6 +87,7 @@ const Home = (props) => {
 
   return (
     <div className="home-container">
+      <Analytics />
       <Helmet>
         <title>Pinal County Roleplay</title>
         <meta property="og:title" content="Pinal County Roleplay" />

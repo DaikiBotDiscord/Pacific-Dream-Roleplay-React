@@ -9,6 +9,7 @@ import './donation.css'
 import Header from '../components/header'
 import config from './config/config'
 import UserHeader from '../components/user-header'
+import Analytics from '@vercel/analytics'
 
 const Donation = (props) => {
   const [headerComponent, setHeaderComponent] = useState(false);
@@ -51,6 +52,7 @@ const Donation = (props) => {
   };
   return (
     <div className="donation-container">
+      <Analytics />
       <Helmet>
         <title>Donation - Pinal County Roleplay</title>
         <meta property="og:title" content="Donation - Pinal County Roleplay" />

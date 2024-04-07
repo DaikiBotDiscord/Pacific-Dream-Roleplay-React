@@ -12,6 +12,9 @@ import { ToastContainer, toast } from "react-toastify";
 import Header from "../components/header";
 import config from "./config/config";
 import UserHeader from "../components/user-header";
+import Analytics from '@vercel/analytics'
+
+
 
 const Login = (props) => {
 
@@ -229,6 +232,7 @@ const Login = (props) => {
   }
   return (
     <div className="login-container">
+      <Analytics />
       <Helmet>
         <title>Login - Pinal County Roleplay</title>
         <meta property="og:title" content="Login - Pinal County Roleplay" />

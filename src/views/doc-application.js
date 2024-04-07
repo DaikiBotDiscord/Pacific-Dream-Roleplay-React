@@ -7,6 +7,7 @@ import './doc-application.css'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 import { ToastContainer, toast } from 'react-toastify';
+import Analytics from '@vercel/analytics'
 
 export default function DOCApplication({ userData, discordAuthenticated, verifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
@@ -110,6 +111,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
     }
     return (
         <div className="doc-application-container">
+            <Analytics />
             <Helmet>
                 <title>DOC Application - Pinal County Roleplay</title>
                 <meta property="og:title" content="DOC Application - Pinal County Roleplay" />
