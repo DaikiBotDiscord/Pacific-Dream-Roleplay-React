@@ -235,7 +235,7 @@ const Donation = (props) => {
           <div className="donation-pricing-card5">
             <img
               alt="image"
-              src="/diamond_donations"
+              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/151790f7-6583-4936-911e-8f0137220d74/62096b95-ddaf-4d14-aa54-2571c37f94b1?org_if_sml=114047&amp;force_format=original"
               className="donation-image1"
             />
             <span className="donation-text69">

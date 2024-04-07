@@ -60,7 +60,7 @@
   background-image: linear-gradient(90deg,
       rgba(193, 127, 95, 0.5) 33%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226423439699480576/NEW_DONATION_PERK_8.png?ex=6624b6d5&is=661241d5&hm=53c8ae1b57fea13e9d856a3e79f31877a0a709dde91d30ed5caf2ea112d4132d&');
+    url('https://pinalcountyroleplay.com/copper_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -159,7 +159,7 @@
   background-image: linear-gradient(90deg,
       rgba(238, 192, 2, 0.25) 32%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226420631105437696/NEW_DONATION_PERK_3.png?ex=6624b438&is=66123f38&hm=c048fe2b6e67e53048404fa1971e7b6a7f33f1b4466dadfef0d970effc9888b1&');
+    url('https://pinalcountyroleplay.com/gold_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -259,7 +259,7 @@
   background-image: linear-gradient(90deg,
       rgba(189, 195, 199, 0.5) 34%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226419285765918821/NEW_DONATION_PERK_2.png?ex=6624b2f7&is=66123df7&hm=3c223aca0aabff3c31f9af86a933386464c8c49383f2e1ea33a44a7f90e3804d&');
+    url('https://pinalcountyroleplay.com/platinum_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -351,7 +351,7 @@
   background-image: linear-gradient(90deg,
       rgba(112, 225, 255, 0.5) 34%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://cdn.discordapp.com/attachments/1134243980276678716/1226421339204878366/NEW_DONATION_PERK_4.png?ex=6624b4e1&is=66123fe1&hm=c8d638853d01162e826466baccf7af36007f7fd2a2a9e99a1c20624e89fddf4a&');
+    url('https://pinalcountyroleplay.com/diamond_donations.png');
   background-position: right;
 }
 
