@@ -293,12 +293,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text34">
-                                                    <span>{DOCStatus.toUpperCase()}</span>
+                                                    <span>CLOSED{/* {DOCStatus.toUpperCase()} */}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src={DOCLight}
+                                                    src="https://pinalcountyroleplay.com/denied_flash.gif"
                                                     className="user-home-image3"
                                                 />
                                             </div>

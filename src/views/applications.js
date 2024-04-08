@@ -341,12 +341,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <br></br>
                                             </span>
                                             <span className="applications-text033">
-                                                <span>{DOCStatus.toUpperCase()}</span>
+                                                <span>CLOSED{/* {DOCStatus.toUpperCase()} */}</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src={DOCLight}
+                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
                                                 className="applications-image04"
                                             />
                                         </div>
