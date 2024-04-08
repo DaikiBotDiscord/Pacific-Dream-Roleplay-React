@@ -272,7 +272,7 @@ const App = () => {
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
         />
-        <Route
+       {/* <Route
           exact
           path='/user/doc-application'
           render={() => {
@@ -281,7 +281,7 @@ const App = () => {
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
         />
-        {/* <Route
+         <Route
           exact
           path='/user/civ-application'
           render={() => {
