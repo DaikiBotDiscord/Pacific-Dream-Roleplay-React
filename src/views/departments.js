@@ -6,7 +6,6 @@ import UserHeader from '../components/user-header'
 import config from './config/config'
 import './departments.css'
 import { Helmet } from 'react-helmet'
-import Analytics from '@vercel/analytics'
 
 const Departments = (props) => {
     const [headerComponent, setHeaderComponent] = useState(false);

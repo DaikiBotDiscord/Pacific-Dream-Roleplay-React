@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Header from "../components/header";
 import UserHeader from "../components/user-header";
-import Analytics from '@vercel/analytics'
 
 
 const ResetPassword = () => {

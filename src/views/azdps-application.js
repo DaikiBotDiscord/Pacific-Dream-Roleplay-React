@@ -7,7 +7,6 @@ import './azdps-application.css'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 import { toast, ToastContainer } from 'react-toastify'
-import Analytics from '@vercel/analytics'
 
 export default function AZDPSApplication({ userData, discordAuthenticated, verifiedCiv }) {
 

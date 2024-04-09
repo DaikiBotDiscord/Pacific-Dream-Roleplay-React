@@ -9,7 +9,6 @@ import './donation.css'
 import Header from '../components/header'
 import config from './config/config'
 import UserHeader from '../components/user-header'
-import Analytics from '@vercel/analytics'
 
 const Donation = (props) => {
   const [headerComponent, setHeaderComponent] = useState(false);
@@ -115,7 +114,7 @@ const Donation = (props) => {
             </div>
             <div className="donation-container06">
               <span className="donation-text26">
-                ✔ All Features Basic Includes
+                ✔ All Features Copper Includes
               </span>
               <span className="donation-text27">
                 ✔ Free Personal civilian Vehicle
@@ -147,7 +146,7 @@ const Donation = (props) => {
             </div>
             <div className="donation-container08">
               <span className="donation-text41">
-                ✔ All features Premium Includes
+                ✔ All features Gold Includes
               </span>
               <span className="donation-text42">
                 <span>✔ Free Personal LEO Vehicle</span>
@@ -179,7 +178,7 @@ const Donation = (props) => {
             </div>
             <div className="donation-container10">
               <span className="donation-text57">
-                ✔ All features Basic Includes
+                ✔ All features Copper Includes
               </span>
               <span className="donation-text58">
                 <span>

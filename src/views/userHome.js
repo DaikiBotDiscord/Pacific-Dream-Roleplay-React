@@ -4,7 +4,6 @@ import "./userHome.css";
 import FooterContainer from "../components/footer-container";
 import UserHeader from "../components/user-header";
 import config from "./config/config";
-import Analytics from '@vercel/analytics'
 
 
 export default function UserHome({ userData, discordAuthenticated, verifiedCiv }) {

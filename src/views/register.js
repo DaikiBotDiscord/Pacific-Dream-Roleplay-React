@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import config from './config/config'
 import UserHeader from '../components/user-header'
-import Analytics from '@vercel/analytics'
 
 
 const Register = (props) => {

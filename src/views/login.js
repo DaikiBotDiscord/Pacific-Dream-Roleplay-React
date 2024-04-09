@@ -12,7 +12,6 @@ import { ToastContainer, toast } from "react-toastify";
 import Header from "../components/header";
 import config from "./config/config";
 import UserHeader from "../components/user-header";
-import Analytics from '@vercel/analytics'
 
 
 

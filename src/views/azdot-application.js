@@ -7,7 +7,6 @@ import FooterContainer from '../components/footer-container'
 import './azdot-application.css'
 import config from './config/config'
 import UserHeader from '../components/user-header'
-import Analytics from '@vercel/analytics'
 
 export default function AZDOTApplication({ userData, discordAuthenticated, verifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);

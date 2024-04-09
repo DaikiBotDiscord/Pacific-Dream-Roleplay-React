@@ -10,7 +10,6 @@ import Header from '../components/header'
 import UserHeader from '../components/user-header'
 import config from './config/config'
 import axios from 'axios'
-import Analytics from '@vercel/analytics'
 
 const Home = (props) => {
   const [headerComponent, setHeaderComponent] = useState(false);
