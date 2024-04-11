@@ -11,15 +11,15 @@ import config from './config/config';
 
 class PFP extends Component {
   state = {
-    FounderData: null,
-    HeadAdminData: null,
+    CommunityDirectorData: null,
+    CommunityManagerData: null,
     AdminData: null,
     jrAdminData: null,
     SeniorStaffData: null,
     StaffData: null,
     SITData: null,
-    FounderDataLoading: true,
-    HeadAdminDataLoading: true,
+    CommunityDirectorDataLoading: true,
+    CommunityManagerDataLoading: true,
     AdminDataLoading: true,
     jrAdminDataLoading: true,
     SeniorStaffDataLoading: true,
@@ -65,8 +65,8 @@ class PFP extends Component {
 
   fetchData = () => {
     this.setState({
-      FounderDataLoading: true,
-      HeadAdminDataLoading: true,
+      CommunityDirectorDataLoading: true,
+      CommunityManagerDataLoading: true,
       AdminDataLoading: true,
       jrAdminDataLoading: true,
       SeniorStaffDataLoading: true,
@@ -75,16 +75,16 @@ class PFP extends Component {
       headerComponent: false,
     });
 
-    axios.get(`${config.apiDomain}/api/staff/Founder`)
+    axios.get(`${config.apiDomain}/api/staff/CommunityDirectors`)
       .then(response => {
-        this.setState({ FounderData: response.data, FounderDataLoading: false });
+        this.setState({ CommunityDirectorData: response.data, CommunityDirectorDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/HeadAdmin`)
+    axios.get(`${config.apiDomain}/api/staff/CommunityManagers`)
       .then(response => {
-        this.setState({ HeadAdminData: response.data, HeadAdminDataLoading: false });
+        this.setState({ CommunityManagerData: response.data, CommunityManagerDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -158,8 +158,8 @@ class PFP extends Component {
 
   render() {
     const {
-      FounderData,
-      HeadAdminData,
+      CommunityDirectorData,
+      CommunityManagerData,
       AdminData,
       jrAdminData,
       SeniorStaffData,
@@ -190,16 +190,24 @@ class PFP extends Component {
         <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
-            <span>Community Administration</span>
+            <span>Community Directors</span>
             <br></br>
           </h1>
           <div className="staff-separator01"></div>
+          <div className="staff-user-container">
+            {CommunityDirectorData && this.renderStaffMembers(CommunityDirectorData, 'Founder', this.state.CommunityDirectorDataLoading)}
+          </div>
         </div>
-        <div className="staff-user-container">
-          {FounderData && this.renderStaffMembers(FounderData, 'Founder', this.state.FounderDataLoading)}
-        </div>
-        <div className="staff-user-container">
-          {HeadAdminData && this.renderStaffMembers(HeadAdminData, 'Head Admin', this.state.HeadAdminDataLoading)}
+        <div className="staff-container2">
+          <div className="staff-separator"></div>
+          <h1 className="staff-text">
+            <span>Community Managers</span>
+            <br></br>
+          </h1>
+          <div className="staff-separator01"></div>
+          <div className="staff-user-container">
+            {CommunityManagerData && this.renderStaffMembers(CommunityManagerData, 'Head Admin', this.state.CommunityManagerDataLoading)}
+          </div>
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
