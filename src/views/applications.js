@@ -368,18 +368,18 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         </div>
                                         <div className="applications-container09">
                                             <span className="applications-text044">
-                                                <span>AZ Department of</span>
+                                                <span>Department of</span>
                                                 <br></br>
                                                 <span>Certified Civilians</span>
                                                 <br></br>
                                             </span>
                                             <span className="applications-text049">
-                                                <span>CLOSED</span>
+                                                <span>{CIVStatus.toUpperCase()}</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyroleplay.com/denied_flash.gif"
+                                                src={CIVLight}
                                                 className="applications-image06"
                                             />
                                         </div>
@@ -400,7 +400,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         </div>
                                     </div>
                                 </div>
-                                <div className="applications-container11">
+                                {/*  <div className="applications-container11">
                                     <h1 className="applications-text058">
                                         <span>Business</span>
                                         <br></br>
@@ -437,7 +437,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             />
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="applications-container15">
                                     <h1 className="applications-text074">
                                         <span>Applications</span>
@@ -533,6 +533,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <span>Department of</span>
                                                         <br></br>
                                                         <span>Transportation</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/user/civ-application" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Department of</span>
+                                                        <br></br>
+                                                        <span>Certified Civilians</span>
                                                         <br></br>
                                                     </span>
                                                 </div>

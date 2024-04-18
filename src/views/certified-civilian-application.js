@@ -18,7 +18,8 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
     const [q6, setQ6] = useState("");
     const [q7, setQ7] = useState("");
     const [q8, setQ8] = useState("");
-    const [q9, setQ9] = useState("");
+    const maxLength = 1024;
+
 
     useEffect(() => {
         checkTokenRepeat();
@@ -128,22 +129,23 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                 className="certified-civilian-applicaiton-image1"
                             />
                             <span className="certified-civilian-applicaiton-text">
-                                The Official Pinal County Roleplay Civilian APP.
+                                <br></br>
+                                <span>The Official Pinal County Roleplay Civilian APP.</span>
+                                <br></br>
                             </span>
-                            <span className="certified-civilian-applicaiton-text01">
-                                <span className="certified-civilian-applicaiton-text02">
+                            <span className="certified-civilian-applicaiton-text04">
+                                <span className="certified-civilian-applicaiton-text05">
                                     * Indicates required question
                                 </span>
                                 <br></br>
                             </span>
                             <form className="certified-civilian-applicaiton-form">
                                 <div className="certified-civilian-applicaiton-question-1">
-                                    <span className="certified-civilian-applicaiton-text04">
-                                        <span>What is your Discord username? ex.scopex07 </span>
-                                        <span className="certified-civilian-applicaiton-text06">
+                                    <span className="certified-civilian-applicaiton-text07">
+                                        <span>What is your Discord username? ex. scopex07 </span>
+                                        <span className="certified-civilian-applicaiton-text09">
                                             *
                                         </span>
-                                        <br></br>
                                     </span>
                                     <input
                                         type="text"
@@ -152,15 +154,16 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={35}
                                     />
+                                    <p>Characters left: {35 - q1.length}</p>
                                 </div>
                                 <div className="certified-civilian-applicaiton-question-2">
-                                    <span className="certified-civilian-applicaiton-text08">
-                                        <span>How long have you been in the server? </span>
-                                        <span className="certified-civilian-applicaiton-text10">
+                                    <span className="certified-civilian-applicaiton-text10">
+                                        <span>How long have you been in the server? </span>
+                                        <span className="certified-civilian-applicaiton-text12">
                                             *
                                         </span>
-                                        <br></br>
                                     </span>
                                     <input
                                         type="text"
@@ -169,92 +172,93 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                         placeholder="Your Answer"
                                         className="certified-civilian-applicaiton-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={25}
                                     />
+                                    <p>Characters left: {25 - q2.length}</p>
                                 </div>
                                 <div className="certified-civilian-applicaiton-question-3">
-                                    <span className="certified-civilian-applicaiton-text12">
-                                        <span>How old are you? </span>
-                                        <span className="certified-civilian-applicaiton-text14">
+                                    <span className="certified-civilian-applicaiton-text13">
+                                        <span>How old are you </span>
+                                        <span className="certified-civilian-applicaiton-text15">
                                             *
                                         </span>
                                         <br></br>
                                     </span>
                                     <select
-                                        required={true}
                                         id="q3"
+                                        required={true}
                                         className="certified-civilian-applicaiton-select"
                                         onChange={(e) => setQ3(e.target.value)}
                                     >
-                                        <option value="" defaultValue></option>
+                                        <option defaultValue defaultChecked></option>
                                         <option value="14-15">14-15</option>
                                         <option value="16-17">16-17</option>
                                         <option value="18+">18+</option>
                                     </select>
                                 </div>
                                 <div className="certified-civilian-applicaiton-question-4">
-                                    <span className="certified-civilian-applicaiton-text16">
-                                        <span>What is Fail RP? </span>
-                                        <span className="certified-civilian-applicaiton-text18">
+                                    <span className="certified-civilian-applicaiton-text17">
+                                        <span>What is Fail RP? </span>
+                                        <span className="certified-civilian-applicaiton-text19">
                                             *
                                         </span>
                                         <br></br>
                                     </span>
-                                    <input
-                                        type="text"
+                                    <textarea
                                         id="q4"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="certified-civilian-applicaiton-textinput2 input"
+                                        className="certified-civilian-applicaiton-textarea textarea"
                                         onChange={(e) => setQ4(e.target.value)}
-                                    />
+                                        maxLength={1024}
+                                    ></textarea>
+                                    <p>Characters left: {1024 - q4.length}</p>
                                 </div>
                                 <div className="certified-civilian-applicaiton-question-5">
-                                    <span className="certified-civilian-applicaiton-text20">
-                                        <span>What is Meta Gaming? </span>
-                                        <span className="certified-civilian-applicaiton-text22">
+                                    <span className="certified-civilian-applicaiton-text21">
+                                        <span>What is Meta Gaming? </span>
+                                        <span className="certified-civilian-applicaiton-text23">
                                             *
                                         </span>
                                         <br></br>
                                     </span>
-                                    <input
-                                        type="text"
+                                    <textarea
                                         id="q5"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="certified-civilian-applicaiton-textinput3 input"
+                                        className="certified-civilian-applicaiton-textarea1 textarea"
                                         onChange={(e) => setQ5(e.target.value)}
-                                    />
+                                        maxLength={1024}
+                                    ></textarea>
+                                    <p>Characters left: {1024 - q5.length}</p>
+                                </div>
+                                <div className="certified-civilian-applicaiton-question-6">
+                                    <span className="certified-civilian-applicaiton-text25">
+                                        <span>
+                                            Please provide an in-depth description of a roleplay
+                                            scene you could do in game.
+                                        </span>
+                                        <span className="certified-civilian-applicaiton-text27">
+                                            *
+                                        </span>
+                                        <br></br>
+                                    </span>
+                                    <textarea
+                                        id="q6"
+                                        placeholder="Your Answer"
+                                        className="certified-civilian-applicaiton-textarea2 textarea"
+                                        onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={1024}
+                                    ></textarea>
+                                    <p>Characters left: {1024 - q6.length}</p>
                                 </div>
                                 <div className="certified-civilian-applicaiton-question-7">
-                                    <span className="certified-civilian-applicaiton-text28">
+                                    <span className="certified-civilian-applicaiton-text29">
                                         <span>
-                                            Please provide an in-depth description of a roleplay scene
-                                            you could do in game.
+                                            Do you understand lying on these applications will
+                                            result in automatic denial?
                                         </span>
-                                        <span className="certified-civilian-applicaiton-text30">
+                                        <span className="certified-civilian-applicaiton-text31">
                                             *
                                         </span>
-                                        <br></br>
-                                    </span>
-                                    <input
-                                        type="text"
-                                        id="q6"
-                                        required={true}
-                                        placeholder="Your Answer"
-                                        className="certified-civilian-applicaiton-textinput5 input"
-                                        onChange={(e) => setQ6(e.target.value)}
-                                    />
-                                </div>
-                                <div className="certified-civilian-applicaiton-question-8">
-                                    <span className="certified-civilian-applicaiton-text32">
-                                        <span>
-                                            Do you understand lying on these applications will result
-                                            in automatic denial?
-                                        </span>
-                                        <span className="certified-civilian-applicaiton-text34">
-                                            *
-                                        </span>
-                                        <br></br>
                                     </span>
                                     <select
                                         id="q7"
@@ -262,31 +266,30 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                                         className="certified-civilian-applicaiton-select1"
                                         onChange={(e) => setQ7(e.target.value)}
                                     >
-                                        <option value="" defaultValue></option>
+                                        <option></option>
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
                                     </select>
                                 </div>
-                                <div className="certified-civilian-applicaiton-question-9">
-                                    <span className="certified-civilian-applicaiton-text36">
-                                        <span>Anything you would like to Add? </span>
-                                        <span className="certified-civilian-applicaiton-text38">
+                                <div className="certified-civilian-applicaiton-question-8">
+                                    <span className="certified-civilian-applicaiton-text32">
+                                        <span>Anything you would like to add? </span>
+                                        <span className="certified-civilian-applicaiton-text34">
                                             *
                                         </span>
-                                        <br></br>
                                     </span>
-                                    <input
-                                        type="text"
+                                    <textarea
                                         id="q8"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="certified-civilian-applicaiton-textinput6 input"
+                                        className="certified-civilian-applicaiton-textarea3 textarea"
                                         onChange={(e) => setQ8(e.target.value)}
-                                    />
+                                        maxLength={1024}
+                                    ></textarea>
+                                    <p>Characters left: {1024 - q8.length}</p>
                                 </div>
                                 <button onClick={handleSubmit} className="certified-civilian-applicaiton-button button">
                                     <span>
-                                        <span className="certified-civilian-applicaiton-text41">
+                                        <span className="certified-civilian-applicaiton-text36">
                                             Submit
                                         </span>
                                         <br></br>

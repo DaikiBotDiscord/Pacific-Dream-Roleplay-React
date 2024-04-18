@@ -14,7 +14,10 @@
     align-items: flex-start;
     flex-direction: column;
     background-size: auto, cover;
-    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyroleplay.com/blank_banner.png');
+    background-image: linear-gradient(113deg,
+            rgba(31, 35, 34, 0.8) 7%,
+            rgba(58, 78, 110, 0.8) 93%),
+        url('https://pinalcountyroleplay.com/blank_banner.png');
     background-repeat: repeat, no-repeat;
     background-position: top left, center;
 }
@@ -43,22 +46,23 @@
 }
 
 .certified-civilian-applicaiton-container2 {
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
+    padding-left: var(--dl-space-space-unit);
     border-radius: var(--dl-radius-radius-radius4);
+    padding-right: var(--dl-space-space-unit);
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.25);
 }
 
 .certified-civilian-applicaiton-container3 {
     flex: 0 0 auto;
-    width: auto;
+    width: 100%;
     height: auto;
     margin: var(--dl-space-space-oneandhalfunits);
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     padding-top: var(--dl-space-space-unit);
     flex-direction: column;
@@ -77,17 +81,16 @@
 
 .certified-civilian-applicaiton-text {
     align-self: flex-start;
-    margin-top: var(--dl-space-space-oneandhalfunits);
     margin-left: var(--dl-space-space-unit);
 }
 
-.certified-civilian-applicaiton-text01 {
+.certified-civilian-applicaiton-text04 {
     align-self: flex-start;
     margin-top: var(--dl-space-space-halfunit);
     margin-left: var(--dl-space-space-unit);
 }
 
-.certified-civilian-applicaiton-text02 {
+.certified-civilian-applicaiton-text05 {
     color: #dc3424;
 }
 
@@ -108,17 +111,15 @@
     width: auto;
     height: auto;
     display: flex;
-    margin-top: var(--dl-space-space-unit);
     align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text04 {
+.certified-civilian-applicaiton-text07 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text06 {
+.certified-civilian-applicaiton-text09 {
     color: #dc3424;
 }
 
@@ -137,11 +138,11 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text08 {
+.certified-civilian-applicaiton-text10 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text10 {
+.certified-civilian-applicaiton-text12 {
     color: #dc3424;
 }
 
@@ -160,11 +161,11 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text12 {
+.certified-civilian-applicaiton-text13 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text14 {
+.certified-civilian-applicaiton-text15 {
     color: #dc3424;
 }
 
@@ -183,15 +184,15 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text16 {
+.certified-civilian-applicaiton-text17 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text18 {
+.certified-civilian-applicaiton-text19 {
     color: #dc3424;
 }
 
-.certified-civilian-applicaiton-textinput2 {
+.certified-civilian-applicaiton-textarea {
     margin-top: 3px;
 }
 
@@ -206,15 +207,15 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text20 {
+.certified-civilian-applicaiton-text21 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text22 {
+.certified-civilian-applicaiton-text23 {
     color: #dc3424;
 }
 
-.certified-civilian-applicaiton-textinput3 {
+.certified-civilian-applicaiton-textarea1 {
     margin-top: 3px;
 }
 
@@ -229,15 +230,15 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text24 {
+.certified-civilian-applicaiton-text25 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text26 {
+.certified-civilian-applicaiton-text27 {
     color: #dc3424;
 }
 
-.certified-civilian-applicaiton-textinput4 {
+.certified-civilian-applicaiton-textarea2 {
     margin-top: 3px;
 }
 
@@ -252,15 +253,15 @@
     flex-direction: column;
 }
 
-.certified-civilian-applicaiton-text28 {
+.certified-civilian-applicaiton-text29 {
     font-size: 1.5rem;
 }
 
-.certified-civilian-applicaiton-text30 {
+.certified-civilian-applicaiton-text31 {
     color: #dc3424;
 }
 
-.certified-civilian-applicaiton-textinput5 {
+.certified-civilian-applicaiton-select1 {
     margin-top: 3px;
 }
 
@@ -276,6 +277,7 @@
 }
 
 .certified-civilian-applicaiton-text32 {
+    width: 100%;
     font-size: 1.5rem;
 }
 
@@ -283,30 +285,7 @@
     color: #dc3424;
 }
 
-.certified-civilian-applicaiton-select1 {
-    margin-top: 3px;
-}
-
-.certified-civilian-applicaiton-question-9 {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    display: flex;
-    margin-top: var(--dl-space-space-unit);
-    align-items: flex-start;
-    margin-bottom: var(--dl-space-space-unit);
-    flex-direction: column;
-}
-
-.certified-civilian-applicaiton-text36 {
-    font-size: 1.5rem;
-}
-
-.certified-civilian-applicaiton-text38 {
-    color: #dc3424;
-}
-
-.certified-civilian-applicaiton-textinput6 {
+.certified-civilian-applicaiton-textarea3 {
     margin-top: 3px;
 }
 
@@ -324,37 +303,37 @@
     background-color: transparent;
 }
 
-.certified-civilian-applicaiton-text41:hover {
+.certified-civilian-applicaiton-text36:hover {
     color: var(--dl-color-gray-black);
     background-color: transparent;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
     .certified-civilian-applicaiton-hero {
         flex-direction: column;
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .certified-civilian-applicaiton-hero {
         padding-left: var(--dl-space-space-twounits);
         padding-right: var(--dl-space-space-twounits);
     }
 }
 
-@media(max-width: 479px) {
+@media (max-width: 479px) {
     .certified-civilian-applicaiton-button {
         margin-top: var(--dl-space-space-unit);
         margin-left: 0px;
     }
 
-    .certified-civilian-applicaiton-text41 {
+    .certified-civilian-applicaiton-text36 {
         margin-top: var(--dl-space-space-unit);
         margin-left: 0px;
     }
 }
 
-@media(max-width: 430px) {
+@media (max-width: 390px) {
     .certified-civilian-applicaiton-container1 {
         background-position: top left, center;
     }
@@ -384,7 +363,7 @@
     }
 
     .certified-civilian-applicaiton-text {
-        margin-left: var(--dl-space-space-halfunit);
+        margin-right: var(--dl-space-space-unit);
     }
 
     .certified-civilian-applicaiton-form {
@@ -421,10 +400,6 @@
     }
 
     .certified-civilian-applicaiton-question-8 {
-        flex-wrap: wrap;
-    }
-
-    .certified-civilian-applicaiton-question-9 {
         flex-wrap: wrap;
     }
 }

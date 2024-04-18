@@ -320,7 +320,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                             </div>
                                             <div className="user-home-container10">
                                                 <span className="user-home-text45">
-                                                    <span>AZ Department of</span>
+                                                    <span>Department of</span>
                                                     <br></br>
                                                     <span>Certified Civilians</span>
                                                     <br></br>
