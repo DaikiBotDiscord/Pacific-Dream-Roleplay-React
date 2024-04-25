@@ -230,7 +230,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="home-site-notification">
+      {/* <div className="home-site-notification">
         <span className='home-notification-text-bold'>
           <span>
             MAJOR SERVER OUTAGES
@@ -243,15 +243,15 @@ const App = () => {
           </span>
           <br></br>
         </span>
-        {/* <a
+        <a
           href="https://discord.com/invite/b6EZgfTMmz"
           target="_blank"
           rel="noreferrer noopener"
           className="home-notification-button button"
         >
           View More In Discord
-        </a> */}
-      </div>
+        </a>
+      </div> */}
       <Switch>
         <Route component={Departments} exact path='/departments' />
         <Route component={Staff} exact path="/staff" />
