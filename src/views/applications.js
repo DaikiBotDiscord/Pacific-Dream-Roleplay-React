@@ -25,6 +25,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyroleplay.com/not_started.png');
     const [AZDOTStatus, setAZDOTStatus] = useState('Loading...');
     const [AZDOTLight, setAZDOTLight] = useState('https://pinalcountyroleplay.com/not_started.png');
+    const [FAAStatus, setFAAStatus] = useState('Loading...');
+    const [FAALight, setFAALight] = useState('https://pinalcountyroleplay.com/not_started.png');
 
     const user = userData.data
     const { data } = userData;
@@ -217,6 +219,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setAZDOTStatus(data.status);
                 setAZDOTLight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/faa-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setFAAStatus(data.status);
+                setFAALight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -398,6 +414,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 className="applications-image07"
                                             />
                                         </div>
+                                        <div className="applications-container10">
+                                            <span className="applications-text052">
+                                                <span>Federal Aviation Administration</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text055">
+                                                <span>{FAAStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={FAALight}
+                                                className="applications-image07"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                                 {/*  <div className="applications-container11">
@@ -552,6 +583,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
+                                            {/* <Link to="/user/faa-application" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://pinalcountyroleplay.com/FAA_LOGO.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Federal Aviation</span>
+                                                        <br></br>
+                                                        <span>Administration</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link> */}
                                         </div>
                                         {/* <h1 className="applications-text108">
                                             <span>Business</span>

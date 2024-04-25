@@ -1,0 +1,558 @@
+.faa-application-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faa-application-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyroleplay.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.faa-application-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.faa-application-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.faa-application-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.faa-application-container3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    margin: var(--dl-space-space-oneandhalfunits);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.faa-application-image1 {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    object-fit: cover;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+}
+
+.faa-application-text {
+    align-self: flex-start;
+    margin-left: var(--dl-space-space-unit);
+}
+
+.faa-application-text07 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.faa-application-text08 {
+    color: #dc3424;
+}
+
+.faa-application-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.faa-application-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.faa-application-text10 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text12 {
+    color: #dc3424;
+}
+
+.faa-application-textinput {
+    margin-top: 3px;
+}
+
+.faa-application-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text13 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text15 {
+    color: #dc3424;
+}
+
+.faa-application-textinput1 {
+    margin-top: 3px;
+}
+
+.faa-application-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text16 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text18 {
+    color: #dc3424;
+}
+
+.faa-application-textinput2 {
+    margin-top: 3px;
+}
+
+.faa-application-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text20 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text22 {
+    color: #dc3424;
+}
+
+.faa-application-select {
+    margin-top: 3px;
+}
+
+.faa-application-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text24 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text26 {
+    color: #dc3424;
+}
+
+.faa-application-select1 {
+    margin-top: 3px;
+}
+
+.faa-application-question-6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text28 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text30 {
+    color: #dc3424;
+}
+
+.faa-application-textarea {
+    margin-top: 3px;
+}
+
+.faa-application-question-7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text32 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text34 {
+    color: #dc3424;
+}
+
+.faa-application-textarea1 {
+    margin-top: 3px;
+}
+
+.faa-application-question-8 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text35 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text37 {
+    color: #dc3424;
+}
+
+.faa-application-textarea2 {
+    margin-top: 3px;
+}
+
+.faa-application-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text38 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text40 {
+    color: #dc3424;
+}
+
+.faa-application-textarea3 {
+    margin-top: 3px;
+}
+
+.faa-application-question-10 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text41 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text43 {
+    color: #dc3424;
+}
+
+.faa-application-container4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.faa-application-checkbox {
+    width: var(--dl-size-size-xsmall);
+    height: var(--dl-size-size-xsmall);
+}
+
+.faa-application-text44 {
+    margin-left: 3px;
+}
+
+.faa-application-container5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.faa-application-checkbox1 {
+    width: var(--dl-size-size-xsmall);
+    height: var(--dl-size-size-xsmall);
+}
+
+.faa-application-text47 {
+    margin-left: 3px;
+}
+
+.faa-application-container6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.faa-application-checkbox2 {
+    width: var(--dl-size-size-xsmall);
+    height: var(--dl-size-size-xsmall);
+}
+
+.faa-application-text50 {
+    margin-left: 3px;
+}
+
+.faa-application-container7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.faa-application-checkbox3 {
+    width: var(--dl-size-size-xsmall);
+    height: var(--dl-size-size-xsmall);
+}
+
+.faa-application-text53 {
+    margin-left: 3px;
+}
+
+.faa-application-question-11 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.faa-application-text56 {
+    font-size: 1.5rem;
+}
+
+.faa-application-text58 {
+    color: #dc3424;
+}
+
+.faa-application-select2 {
+    margin-top: 3px;
+}
+
+.faa-application-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.faa-application-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.faa-application-text60:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .faa-application-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .faa-application-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .faa-application-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .faa-application-text60 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 390px) {
+    .faa-application-container1 {
+        background-position: top left, center;
+    }
+
+    .faa-application-image {
+        width: 100%;
+    }
+
+    .faa-application-hero {
+        width: 100%;
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+
+    .faa-application-container2 {
+        width: 100%;
+    }
+
+    .faa-application-container3 {
+        width: 100%;
+    }
+
+    .faa-application-image1 {
+        width: 95%;
+    }
+
+    .faa-application-text {
+        margin-right: var(--dl-space-space-unit);
+    }
+
+    .faa-application-form {
+        flex-wrap: wrap;
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .faa-application-question-1 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-2 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-3 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-4 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-5 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-6 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-7 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-8 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-9 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-10 {
+        flex-wrap: wrap;
+    }
+
+    .faa-application-question-11 {
+        flex-wrap: wrap;
+    }
+}

@@ -28,6 +28,8 @@ import PCSOApplication from './views/pcso-application'
 import DOCApplication from "./views/doc-application";
 import DOTApplication from "./views/azdot-application";
 import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
+import FAAApplication from "./views/faa-application";
+import './views/home.css'
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -228,6 +230,28 @@ const App = () => {
 
   return (
     <Router>
+      <div className="home-site-notification">
+        <span className='home-notification-text-bold'>
+          <span>
+            MAJOR SERVER OUTAGES
+          </span>
+        </span>
+        <br></br>
+        <span className="home-notification-text">
+          <span>
+            Some Pinal County Roleplay Account Services will be unavailable until further notice!
+          </span>
+          <br></br>
+        </span>
+        {/* <a
+          href="https://discord.com/invite/b6EZgfTMmz"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="home-notification-button button"
+        >
+          View More In Discord
+        </a> */}
+      </div>
       <Switch>
         <Route component={Departments} exact path='/departments' />
         <Route component={Staff} exact path="/staff" />
@@ -314,6 +338,15 @@ const App = () => {
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}
         />
+        {/* <Route
+          exact
+          path='/user/faa-application'
+          render={() => {
+            return checkTokenRepeat() ? <FAAApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
         <Route
           exact
           path="/user/logout"
