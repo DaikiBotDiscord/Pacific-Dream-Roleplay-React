@@ -361,7 +361,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://www.pinalcountyrp.com/denied_flash.gif"
+                                                src={DOCLight}
                                                 className="applications-image04"
                                             />
                                         </div>
