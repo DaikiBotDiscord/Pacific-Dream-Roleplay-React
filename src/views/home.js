@@ -92,7 +92,7 @@ const Home = (props) => {
       </Helmet>
       <div className="home-container1">
         {headerComponent}
-        <div className="home-hero">Waiting for disboard.org to respond...
+        <div className="home-hero">
           <img
             alt="image"
             src="https://www.pinalcountyrp.com/welcome_banner.png"
