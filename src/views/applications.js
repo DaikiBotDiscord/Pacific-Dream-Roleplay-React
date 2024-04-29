@@ -414,7 +414,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 className="applications-image07"
                                             />
                                         </div>
-                                        <div className="applications-container10">
+                                        {/* <div className="applications-container10">
                                             <span className="applications-text052">
                                                 <span>Federal Aviation Administration</span>
                                                 <br></br>
@@ -428,7 +428,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 src={FAALight}
                                                 className="applications-image07"
                                             />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 {/*  <div className="applications-container11">
@@ -538,7 +538,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            {/* <Link to="/user/doc-application" className="applications-navlink4">
+                                            <Link to="/user/doc-application" className="applications-navlink4">
                                                 <div className="applications-container22">
                                                     <img
                                                         alt="image"
@@ -552,7 +552,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link> */}
+                                            </Link>
                                             <Link to="/user/dot-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
