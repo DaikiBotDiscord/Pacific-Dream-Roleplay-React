@@ -114,7 +114,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyrp.com/AZDOT_title.png"
+                    src="https://www.pinalcountyrp.com/AZDOT_title.png"
                     className="azdot-application-image"
                 />
                 <div className="azdot-application-hero">
@@ -122,7 +122,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                         <div className="azdot-application-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyrp.com/DOT_background.jpg"
+                                src="https://www.pinalcountyrp.com/DOT_background.jpg"
                                 className="azdot-application-image1"
                             />
                             <span className="azdot-application-text">

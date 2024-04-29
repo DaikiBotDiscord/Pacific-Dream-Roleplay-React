@@ -133,7 +133,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyrp.com/PFD_title.png"
+                    src="https://www.pinalcountyrp.com/PFD_title.png"
                     className="phoenix-fd-application-image"
                 />
                 <div className="phoenix-fd-application-hero">

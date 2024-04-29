@@ -8,19 +8,19 @@ import config from "./config/config";
 
 export default function UserHome({ userData, discordAuthenticated, verifiedCiv }) {
     const [ppdStatus, setPPDStatus] = useState("Loading...");
-    const [ppdLight, setPPDLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [ppdLight, setPPDLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [pfdStatus, setPFDStatus] = useState("Loading...");
-    const [pfdLight, setPFDLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [pfdLight, setPFDLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [pcsoStatus, setPCSOStatus] = useState("Loading...");
-    const [pcsoLight, setPCSOLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [pcsoLight, setPCSOLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [DOCStatus, setDOCStatus] = useState("Loading...");
-    const [DOCLight, setDOCLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [DOCLight, setDOCLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [CIVStatus, setCIVStatus] = useState("Loading...");
-    const [CIVLight, setCIVLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [CIVLight, setCIVLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
-    const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyrp.com/not_started.png');
+    const [AZDPSLight, setAZDPSLight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const [AZDOTStatus, setAZDOTStatus] = useState('Loading...');
-    const [AZDOTLight, setAZDOTLight] = useState('https://pinalcountyrp.com/not_started.png');
+    const [AZDOTLight, setAZDOTLight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const user = userData.data
     function capitalizeFirstLetter(str) {
         return str?.charAt(0).toUpperCase() + str?.slice(1);
@@ -297,7 +297,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyrp.com/denied_flash.gif"
+                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                     className="user-home-image3"
                                                 />
                                             </div>
@@ -331,7 +331,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyrp.com/denied_flash.gif"
+                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                     className="user-home-image5"
                                                 />
                                             </div>
@@ -372,7 +372,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyrp.com/denied_flash.gif"
+                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                     className="user-home-image7"
                                                 />
                                             </div>
@@ -384,7 +384,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyrp.com/denied_flash.gif"
+                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                     className="user-home-image8"
                                                 />
                                             </div>

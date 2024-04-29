@@ -12,21 +12,21 @@ import config from './config/config'
 export default function Applications({ userData, discordAuthenticated, VerifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
     const [ppdStatus, setPPDStatus] = useState("Loading...");
-    const [ppdLight, setPPDLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [ppdLight, setPPDLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [pfdStatus, setPFDStatus] = useState("Loading...");
-    const [pfdLight, setPFDLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [pfdLight, setPFDLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [pcsoStatus, setPCSOStatus] = useState("Loading...");
-    const [pcsoLight, setPCSOLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [pcsoLight, setPCSOLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [DOCStatus, setDOCStatus] = useState("Loading...");
-    const [DOCLight, setDOCLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [DOCLight, setDOCLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [CIVStatus, setCIVStatus] = useState("Loading...");
-    const [CIVLight, setCIVLight] = useState("https://pinalcountyrp.com/not_started.png");
+    const [CIVLight, setCIVLight] = useState("https://www.pinalcountyrp.com/not_started.png");
     const [AZDPSStatus, setAZDPSStatus] = useState("Loading...");
-    const [AZDPSLight, setAZDPSLight] = useState('https://pinalcountyrp.com/not_started.png');
+    const [AZDPSLight, setAZDPSLight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const [AZDOTStatus, setAZDOTStatus] = useState('Loading...');
-    const [AZDOTLight, setAZDOTLight] = useState('https://pinalcountyrp.com/not_started.png');
+    const [AZDOTLight, setAZDOTLight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const [FAAStatus, setFAAStatus] = useState('Loading...');
-    const [FAALight, setFAALight] = useState('https://pinalcountyrp.com/not_started.png');
+    const [FAALight, setFAALight] = useState('https://www.pinalcountyrp.com/not_started.png');
 
     const user = userData.data
     const { data } = userData;
@@ -279,7 +279,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             {headerComponent}
                             <img
                                 alt="image"
-                                src="https://pinalcountyrp.com/applications.png"
+                                src="https://www.pinalcountyrp.com/applications.png"
                                 className="applications-image"
                             />
                             <div className="applications-hero">
@@ -361,7 +361,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyrp.com/denied_flash.gif"
+                                                src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                 className="applications-image04"
                                             />
                                         </div>
@@ -451,7 +451,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyrp.com/denied_flash.gif"
+                                                src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                 className="applications-image08"
                                             />
                                         </div>
@@ -463,7 +463,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             </span>
                                             <img
                                                 alt="image"
-                                                src="https://pinalcountyrp.com/denied_flash.gif"
+                                                src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                 className="applications-image09"
                                             />
                                         </div>
@@ -484,7 +484,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container18">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/PCSO_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/PCSO_LOGO.png"
                                                         className="applications-image10"
                                                     />
                                                     <span className="applications-text080">
@@ -499,7 +499,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container19">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/FFD_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/FFD_LOGO.png"
                                                         className="applications-image11"
                                                     />
                                                     <span className="applications-text085">
@@ -512,7 +512,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container20">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/AZSP_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/AZSP_LOGO.png"
                                                         className="applications-image12"
                                                     />
                                                     <span className="applications-text088">
@@ -527,7 +527,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container21">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/PPD_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/PPD_LOGO.png"
                                                         className="applications-image13"
                                                     />
                                                     <span className="applications-text093">
@@ -542,7 +542,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container22">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/DOC_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/DOC_LOGO.png"
                                                         className="applications-image14"
                                                     />
                                                     <span className="applications-text098">
@@ -557,7 +557,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/AZDOT_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/AZDOT_LOGO.png"
                                                         className="applications-image15"
                                                     />
                                                     <span className="applications-text103">
@@ -572,7 +572,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/CIV_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/CIV_LOGO.png"
                                                         className="applications-image15"
                                                     />
                                                     <span className="applications-text103">
@@ -587,7 +587,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/FAA_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/FAA_LOGO.png"
                                                         className="applications-image15"
                                                     />
                                                     <span className="applications-text103">
@@ -608,7 +608,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container25">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/pcrp_logo.png"
+                                                        src="https://www.pinalcountyrp.com/pcrp_logo.png"
                                                         className="applications-image16"
                                                     />
                                                     <span className="applications-text111">
@@ -623,7 +623,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <div className="applications-container26">
                                                     <img
                                                         alt="image"
-                                                        src="https://pinalcountyrp.com/SK_SECURITY_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/SK_SECURITY_LOGO.png"
                                                         className="applications-image17"
                                                     />
                                                     <span className="applications-text116">

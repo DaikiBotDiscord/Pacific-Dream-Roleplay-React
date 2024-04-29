@@ -60,7 +60,7 @@
   background-image: linear-gradient(90deg,
       rgba(193, 127, 95, 0.5) 33%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://pinalcountyrp.com/copper_donations.png');
+    url('https://www.pinalcountyrp.com/copper_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -159,7 +159,7 @@
   background-image: linear-gradient(90deg,
       rgba(238, 192, 2, 0.25) 32%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://pinalcountyrp.com/gold_donations.png');
+    url('https://www.pinalcountyrp.com/gold_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -259,7 +259,7 @@
   background-image: linear-gradient(90deg,
       rgba(189, 195, 199, 0.5) 34%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://pinalcountyrp.com/platinum_donations.png');
+    url('https://www.pinalcountyrp.com/platinum_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -351,7 +351,7 @@
   background-image: linear-gradient(90deg,
       rgba(112, 225, 255, 0.5) 34%,
       rgba(44, 62, 80, 0.5) 100%),
-    url('https://pinalcountyrp.com/diamond_donations.png');
+    url('https://www.pinalcountyrp.com/diamond_donations.png');
   background-position: right;
 }
 
