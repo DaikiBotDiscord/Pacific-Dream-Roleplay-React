@@ -292,12 +292,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text34">
-                                                    <span>CLOSED{/* {DOCStatus.toUpperCase()} */}</span>
+                                                    <span>{DOCStatus.toUpperCase()}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
+                                                    src={DOCLight}
                                                     className="user-home-image3"
                                                 />
                                             </div>
@@ -309,12 +309,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text42">
-                                                    <span>{AZDPSStatus.toUpperCase()}</span>
+                                                    <span>CLOSED{/* {AZDPSStatus.toUpperCase()} */}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src={AZDPSLight}
+                                                    src="https://pinalcountyrp.com/denied_flash.gif"
                                                     className="user-home-image4"
                                                 />
                                             </div>
@@ -352,7 +352,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="user-home-container12">
+                                    {/* <div className="user-home-container12">
                                         <h1 className="user-home-text59">
                                             <span>Business</span>
                                             <br></br>
@@ -389,7 +389,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                 />
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
