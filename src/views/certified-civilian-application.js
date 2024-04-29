@@ -117,7 +117,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/CIV_title.png"
+                    src="https://pinalcountyrp.com/CIV_title.png"
                     className="certified-civilian-applicaiton-image"
                 />
                 <div className="certified-civilian-applicaiton-hero">
@@ -125,7 +125,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                         <div className="certified-civilian-applicaiton-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/CIV_background.png"
+                                src="https://pinalcountyrp.com/CIV_background.png"
                                 className="certified-civilian-applicaiton-image1"
                             />
                             <span className="certified-civilian-applicaiton-text">

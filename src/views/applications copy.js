@@ -11,13 +11,13 @@ import config from './config/config'
 export default function Applications({ userData, discordAuthenticated, VerifiedCiv }) {
     const [headerComponent, setHeaderComponent] = useState(false);
     const [ppdStatus, setPPDStatus] = useState("Loading...");
-    const [ppdLight, setPPDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [ppdLight, setPPDLight] = useState("https://pinalcountyrp.com/not_started.png");
     const [pfdStatus, setPFDStatus] = useState("Loading...");
-    const [pfdLight, setPFDLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [pfdLight, setPFDLight] = useState("https://pinalcountyrp.com/not_started.png");
     const [pcsoStatus, setPCSOStatus] = useState("Loading...");
-    const [pcsoLight, setPCSOLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [pcsoLight, setPCSOLight] = useState("https://pinalcountyrp.com/not_started.png");
     const [DOCStatus, setDOCStatus] = useState("Loading...");
-    const [DOCLight, setDOCLight] = useState("https://pinalcountyroleplay.com/not_started.png");
+    const [DOCLight, setDOCLight] = useState("https://pinalcountyrp.com/not_started.png");
     const user = userData.data
 
     useEffect(() => {
@@ -140,7 +140,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/applications.png"
+                    src="https://pinalcountyrp.com/applications.png"
                     className="applications-image"
                 />
                 <div className="applications-hero">
@@ -234,7 +234,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/not_started.png"
+                                    src="https://pinalcountyrp.com/not_started.png"
                                     className="applications-image06"
                                 />
                             </div>
@@ -251,7 +251,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 </span>
                                 <img
                                     alt="image"
-                                    src="https://pinalcountyroleplay.com/not_started.png"
+                                    src="https://pinalcountyrp.com/not_started.png"
                                     className="applications-image07"
                                 />
                             </div>
@@ -267,7 +267,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container13">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
+                                        src="https://pinalcountyrp.com/PCSO_LOGO.png"
                                         className="applications-image08"
                                     />
                                     <span className="applications-text60">
@@ -282,7 +282,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container16">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/PPD_LOGO.png"
+                                        src="https://pinalcountyrp.com/PPD_LOGO.png"
                                         className="applications-image11"
                                     />
                                     <span className="applications-text73">
@@ -297,7 +297,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container14">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/FFD_LOGO.png"
+                                        src="https://pinalcountyrp.com/FFD_LOGO.png"
                                         className="applications-image09"
                                     />
                                     <span className="applications-text65">
@@ -310,7 +310,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container15">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
+                                        src="https://pinalcountyrp.com/AZSP_LOGO.png"
                                         className="applications-image10"
                                     />
                                     <span className="applications-text68">
@@ -325,7 +325,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container17">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/DOC_LOGO.png"
+                                        src="https://pinalcountyrp.com/DOC_LOGO.png"
                                         className="applications-image12"
                                     />
                                     <span className="applications-text78">
@@ -340,7 +340,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container17">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                        src="https://pinalcountyrp.com/CIV_LOGO.png"
                                         className="applications-image12"
                                     />
                                     <span className="applications-text78">
@@ -355,7 +355,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                 <div className="applications-container18">
                                     <img
                                         alt="image"
-                                        src="https://pinalcountyroleplay.com/AZDOT_LOGO.png"
+                                        src="https://pinalcountyrp.com/AZDOT_LOGO.png"
                                         className="applications-image13"
                                     />
                                     <span className="applications-text83">

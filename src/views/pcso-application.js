@@ -121,7 +121,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/PCSO_title.png"
+                    src="https://pinalcountyrp.com/PCSO_title.png"
                     className="pcso-applicaiton-image"
                 />
                 <div className="pcso-applicaiton-hero">
@@ -129,7 +129,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                         <div className="pcso-applicaiton-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/PCSO_background.png"
+                                src="https://pinalcountyrp.com/PCSO_background.png"
                                 className="pcso-applicaiton-image1"
                             />
                             <span className="pcso-applicaiton-text">

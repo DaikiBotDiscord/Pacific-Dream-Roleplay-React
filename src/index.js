@@ -39,17 +39,7 @@ const App = () => {
   const [discordAuthenticated, setDiscordAuthenticated] = useState(false);
   const [verifiedCiv, setVerifiedCiv] = useState(undefined);
 
-  useEffect(() => {
-    const handleURLChange = () => {
-      setCurrentURL(window.location.href);
-    };
 
-    window.addEventListener('popstate', handleURLChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleURLChange);
-    };
-  }, []);
 
   useEffect(() => {
     let intervalId;

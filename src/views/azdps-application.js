@@ -121,7 +121,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/AZDPS_title.png"
+                    src="https://pinalcountyrp.com/AZDPS_title.png"
                     className="azdps-application-image"
                 />
                 <div className="azdps-application-hero">
@@ -129,7 +129,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                         <div className="azdps-application-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/AZDPS_background.png"
+                                src="https://pinalcountyrp.com/AZDPS_background.png"
                                 className="azdps-application-image1"
                             />
                             <h1 className="azdps-application-text">Requirements:</h1>

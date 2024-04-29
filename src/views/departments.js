@@ -60,7 +60,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/PCSO_LOGO.png"
+                                src="https://pinalcountyrp.com/PCSO_LOGO.png"
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
@@ -77,7 +77,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card1">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/PPD_LOGO.png"
+                                src="https://pinalcountyrp.com/PPD_LOGO.png"
                                 className="departments-image"
                             />
                             <h2 className="departments-text">
@@ -90,7 +90,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card2">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/FFD_LOGO.png"
+                                src="https://pinalcountyrp.com/FFD_LOGO.png"
                                 className="departments-image-fire"
                             />
                             <h2 className="departments-text">
@@ -105,7 +105,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card2">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/DOC_LOGO.png"
+                                src="https://pinalcountyrp.com/DOC_LOGO.png"
                                 className="departments-image4"
                             />
                             <h2 className="departments-text14">Arizona Department of Communications</h2>
@@ -120,7 +120,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card1">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/CIV_LOGO.png"
+                                src="https://pinalcountyrp.com/CIV_LOGO.png"
                                 className="departments-image3"
                             />
                             <h2 className="departments-text12">
@@ -133,7 +133,7 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/AZSP_LOGO.png"
+                                src="https://pinalcountyrp.com/AZSP_LOGO.png"
                                 className="departments-image1"
                             />
                             <h2 className="departments-text02">Arizona Department of Public Safety</h2>

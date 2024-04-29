@@ -122,7 +122,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/PPD_title.png"
+                    src="https://pinalcountyrp.com/PPD_title.png"
                     className="phoenix-pd-application-image"
                 />
                 <div className="phoenix-pd-application-hero">
@@ -130,7 +130,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                         <div className="phoenix-pd-application-container3">
                             <img
                                 alt="image" a
-                                src="https://pinalcountyroleplay.com/PPD_background.png"
+                                src="https://pinalcountyrp.com/PPD_background.png"
                                 className="phoenix-pd-application-image1"
                             />
                             <span className="phoenix-pd-application-text">

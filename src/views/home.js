@@ -95,13 +95,13 @@ const Home = (props) => {
         <div className="home-hero">
           <img
             alt="image"
-            src="https://pinalcountyroleplay.com/welcome_banner.png"
+            src="https://pinalcountyrp.com/welcome_banner.png"
             className="home-image"
             onContextMenu={handleContextMenu}
           />
           <img
             alt="image"
-            src="https://pinalcountyroleplay.com/mobile_welcome_banner.png"
+            src="https://pinalcountyrp.com/mobile_welcome_banner.png"
             className="home-image1"
             onContextMenu={handleContextMenu}
           />
@@ -114,7 +114,7 @@ const Home = (props) => {
             >
               <img
                 alt="image"
-                src="https://pinalcountyroleplay.com/Play_Now.png"
+                src="https://pinalcountyrp.com/Play_Now.png"
                 className="home-image2"
                 onContextMenu={handleContextMenu}
               />
@@ -127,7 +127,7 @@ const Home = (props) => {
             >
               <img
                 alt="image"
-                src="https://pinalcountyroleplay.com/Join_Discord.png"
+                src="https://pinalcountyrp.com/Join_Discord.png"
                 className="home-image3"
                 onContextMenu={handleContextMenu}
               />
@@ -136,7 +136,7 @@ const Home = (props) => {
           <div className="home-container2">
             <div className="home-container3">
               <img
-                src="https://pinalcountyroleplay.com/FiveM_Logo.png"
+                src="https://pinalcountyrp.com/FiveM_Logo.png"
                 alt="image"
                 className="home-image4"
                 onContextMenu={handleContextMenu}
@@ -151,7 +151,7 @@ const Home = (props) => {
             </div>
             <div className="home-container5">
               <img
-                src="https://pinalcountyroleplay.com/discord_blurple.png"
+                src="https://pinalcountyrp.com/discord_blurple.png"
                 alt="image"
                 className="home-image5"
                 onContextMenu={handleContextMenu}

@@ -118,7 +118,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/DOC_title.png"
+                    src="https://pinalcountyrp.com/DOC_title.png"
                     className="doc-application-image"
                 />
                 <div className="doc-application-hero">
@@ -126,7 +126,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                         <div className="doc-application-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/DOC_background.png"
+                                src="https://pinalcountyrp.com/DOC_background.png"
                                 className="doc-application-image1"
                             />
                             <span className="doc-application-text">

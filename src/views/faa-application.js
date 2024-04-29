@@ -129,7 +129,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://pinalcountyroleplay.com/FAA_title.png"
+                    src="https://pinalcountyrp.com/FAA_title.png"
                     className="faa-application-image"
                 />
                 <div className="faa-application-hero">
@@ -137,7 +137,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                         <div className="faa-application-container3">
                             <img
                                 alt="image"
-                                src="https://pinalcountyroleplay.com/FAA_background.png"
+                                src="https://pinalcountyrp.com/FAA_background.png"
                                 className="faa-application-image1"
                             />
                             <span className="faa-application-text">
