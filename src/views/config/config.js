@@ -3,7 +3,7 @@ const config = {
     /* webDomain: "http://localhost:3000",
     apiDomain: "http://localhost:3001" */
     webDomain: "https://www.pinalcountyrp.com",
-    apiDomain: "https://api.www.pinalcountyrp.com"
+    apiDomain: "https://www.pinalcountyrp.com"
 };
 
 module.exports = config;
