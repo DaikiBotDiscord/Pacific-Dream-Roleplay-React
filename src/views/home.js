@@ -92,7 +92,7 @@ const Home = (props) => {
       </Helmet>
       <div className="home-container1">
         {headerComponent}
-        <div className="home-hero">
+        <div className="home-hero">Waiting for disboard.org to respond...
           <img
             alt="image"
             src="https://www.pinalcountyrp.com/welcome_banner.png"
@@ -120,7 +120,7 @@ const Home = (props) => {
               />
             </a>
             <a
-              href="https://discord.gg/pinalcountyrp"
+              href="https://discord.gg/azpcrp"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link1"
@@ -171,7 +171,7 @@ const Home = (props) => {
         </div>
         <div className="home-container7">
           <a
-            href="https://discord.gg/jYgY8TwFac"
+            href="https://discord.gg/azpcrp"
             target="_blank"
             rel="noreferrer noopener"
             className="home-link2"
