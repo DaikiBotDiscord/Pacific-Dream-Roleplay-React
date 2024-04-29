@@ -373,12 +373,12 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <br></br>
                                             </span>
                                             <span className="applications-text041">
-                                                <span>{AZDPSStatus.toUpperCase()}</span>
+                                                <span>CLOSED{/* {AZDPSStatus.toUpperCase()} */}</span>
                                                 <br></br>
                                             </span>
                                             <img
                                                 alt="image"
-                                                src={AZDPSLight}
+                                                src="https://www.pinalcountyrp.com/denied_flash.gif"
                                                 className="applications-image05"
                                             />
                                         </div>
@@ -508,7 +508,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link to="/user/azdps-application" className="applications-navlink2">
+                                            {/* <Link to="/user/azdps-application" className="applications-navlink2">
                                                 <div className="applications-container20">
                                                     <img
                                                         alt="image"
@@ -522,7 +522,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link>
+                                            </Link> */}
                                             <Link to="/user/phoenix-pd-application" className="applications-navlink3">
                                                 <div className="applications-container21">
                                                     <img
