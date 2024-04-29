@@ -356,7 +356,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 <br></br>
                                             </span>
                                             <span className="applications-text033">
-                                                <span>CLOSED{/* {DOCStatus.toUpperCase()} */}</span>
+                                                <span>{DOCStatus.toUpperCase()}</span>
                                                 <br></br>
                                             </span>
                                             <img
