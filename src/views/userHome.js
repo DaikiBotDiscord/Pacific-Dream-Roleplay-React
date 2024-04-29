@@ -170,7 +170,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                 setAZDOTStatus(data.status);
                 setAZDOTLight(data.statusLight)
             })
-        /* fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
+        fetch(`${config.apiDomain}/api/user/applications/civ-status/${user.email}`, {
             method: "POST",
             crossDomain: true,
             headers: {
@@ -183,7 +183,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
             .then((data) => {
                 setCIVStatus(data.status);
                 setCIVLight(data.statusLight)
-            }) */
+            })
     }
 
     return (
@@ -309,12 +309,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text42">
-                                                    <span>CLOSED{/* {AZDPSStatus.toUpperCase()} */}</span>
+                                                    <span>{AZDPSStatus.toUpperCase()}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://pinalcountyrp.com/denied_flash.gif"
+                                                    src={AZDPSLight}
                                                     className="user-home-image4"
                                                 />
                                             </div>
@@ -326,12 +326,12 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                                     <br></br>
                                                 </span>
                                                 <span className="user-home-text50">
-                                                    <span>CLOSED</span>
+                                                    <span>{CIVStatus.toUpperCase()}</span>
                                                     <br></br>
                                                 </span>
                                                 <img
                                                     alt="image"
-                                                    src="https://www.pinalcountyrp.com/denied_flash.gif"
+                                                    src={CIVLight}
                                                     className="user-home-image5"
                                                 />
                                             </div>

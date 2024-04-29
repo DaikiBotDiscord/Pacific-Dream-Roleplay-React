@@ -19,6 +19,8 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
     const [q6, setQ6] = useState("");
     const [q7, setQ7] = useState("");
     const [q8, setQ8] = useState("");
+    const [q9, setQ9] = useState("");
+    const [q10, setQ10] = useState("");
     const maxLength = 1024;
 
 
@@ -79,6 +81,8 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                 Q6: q6,
                 Q7: q7,
                 Q8: q8,
+                Q9: q9,
+                Q10: q10,
             }),
         }).then((res) => res.json())
             .then((data) => {
@@ -129,7 +133,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                         <div className="azdps-application-container3">
                             <img
                                 alt="image"
-                                src="https://www.pinalcountyrp.com/AZDPS_background.png"
+                                src="https://pinalcountyrp.com/AZDPS_background.png"
                                 className="azdps-application-image1"
                             />
                             <h1 className="azdps-application-text">Requirements:</h1>
@@ -193,19 +197,19 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                             <form className="azdps-application-form">
                                 <div className="azdps-application-question-1">
                                     <span className="azdps-application-text25">
-                                        <span>What is your email? </span>
+                                        <span>What is your name? </span>
                                         <span className="azdps-application-text27">*</span>
                                     </span>
                                     <input
-                                        type="email"
+                                        type="text"
                                         id="q1"
-                                        required={true}
+                                        required="true"
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
-                                        maxLength={35}
+                                        maxLength={32}
                                     />
-                                    <p>Characters left: {35 - q1.length}</p>
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="azdps-application-question-2">
                                     <span className="azdps-application-text28">
@@ -222,163 +226,180 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                     <input
                                         type="text"
                                         id="q2"
-                                        required={true}
+                                        required="true"
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
-                                        maxLength={35}
+                                        maxLength={32}
                                     />
-                                    <p>Characters left: {35 - q2.length}</p>
+                                    <p>Characters left: {32 - q2.length}</p>
                                 </div>
                                 <div className="azdps-application-question-3">
                                     <span className="azdps-application-text31">
-                                        <span>
-                                            Are you able to speak, read, write, and comprehend the
-                                            English language?
-                                        </span>
+                                        <span>What is your age? </span>
                                         <span className="azdps-application-text33">*</span>
-                                        <br></br>
                                     </span>
-                                    <select
+                                    <input
+                                        type="number"
                                         id="q3"
-                                        required={true}
-                                        className="azdps-application-select"
+                                        required="true"
+                                        placeholder="Your Answer"
+                                        className="azdps-application-textinput2 input"
                                         onChange={(e) => setQ3(e.target.value)}
-                                    >
-                                        <option defaultChecked defaultValue></option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                        maxLength={2}
+                                    />
+                                    <p>Characters left: {2 - q3.length}</p>
                                 </div>
                                 <div className="azdps-application-question-4">
-                                    <span className="azdps-application-text35">
+                                    <span className="azdps-application-text34">
                                         <span>
-                                            Do you understand that lying on this application, as well
-                                            as Command members from the AZDPS have the final say on
-                                            your application status?
+                                            What is your date of birth?
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: ' ',
+                                                }}
+                                            />
                                         </span>
-                                        <span className="azdps-application-text37">*</span>
-                                        <br></br>
+                                        <span className="azdps-application-text36">*</span>
                                     </span>
-                                    <select
+                                    <input
+                                        type="date"
                                         id="q4"
-                                        required={true}
-                                        className="azdps-application-select1"
+                                        required="true"
+                                        placeholder="Your Answer"
+                                        className="azdps-application-textinput3 input"
                                         onChange={(e) => setQ4(e.target.value)}
-                                    >
-                                        <option defaultChecked defaultValue></option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                    />
                                 </div>
                                 <div className="azdps-application-question-5">
-                                    <span className="azdps-application-text39">
+                                    <span className="azdps-application-text37">
                                         <span>
-                                            Do you understand that you will be judged based on written
-                                            answers regarding this application?
-                                            <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html: ' ',
-                                                }}
-                                            />
+                                            Why do you want to join Arizona Department of Public
+                                            Safety?
                                         </span>
-                                        <span className="azdps-application-text41">*</span>
+                                        <span className="azdps-application-text39">*</span>
                                         <br></br>
                                     </span>
-                                    <select
+                                    <textarea
                                         id="q5"
+                                        placeholder="Your Answer"
+                                        className="azdps-application-textarea textarea"
                                         required={true}
-                                        className="azdps-application-select2"
                                         onChange={(e) => setQ5(e.target.value)}
-                                    >
-                                        <option defaultChecked defaultValue></option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
+                                        maxLength={1024}
+                                    />
+                                    <p>Characters left: {1024 - q5.length}</p>
                                 </div>
                                 <div className="azdps-application-question-6">
-                                    <span className="azdps-application-text43">
-                                        <span>
-                                            You are on scene of a disturbance regarding two parties,
-                                            the first party is instantly coming to your vehicle
-                                            complaining that the second party is threatening them with
-                                            violence, you find out the entire situation started due to
-                                            a road rage, and the second party had hit the back of the
-                                            Reporting parties vehicle, what would you do?
-                                            <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html: ' ',
-                                                }}
-                                            />
-                                        </span>
-                                        <span className="azdps-application-text45">*</span>
+                                    <span className="azdps-application-text41">
+                                        <span>What does CoC stand for? </span>
+                                        <span className="azdps-application-text43">*</span>
                                         <br></br>
                                     </span>
                                     <textarea
                                         id="q6"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="azdps-application-textarea textarea"
+                                        className="azdps-application-textarea1 textarea"
+                                        require={true}
                                         onChange={(e) => setQ6(e.target.value)}
                                         maxLength={1024}
                                     />
                                     <p>Characters left: {1024 - q6.length}</p>
                                 </div>
                                 <div className="azdps-application-question-7">
-                                    <span className="azdps-application-text47">
+                                    <span className="azdps-application-text45">
                                         <span>
-                                            You arrive on scene to a shoplifting call, the caller is a
-                                            loss prevention officer in charge of the cameras, during
-                                            your call you establish contact with the reporting party,
-                                            you observed the camera footage of the shoplifting however
-                                            you are unable to articulate the original complain of
-                                            shoplifting, how would you go about this situation?
+                                            Give a detailed reason how the AZDPS would benefit from
+                                            hiring you?
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
                                                 }}
                                             />
                                         </span>
-                                        <span className="azdps-application-text49">*</span>
+                                        <span className="azdps-application-text47">*</span>
+                                        <br></br>
                                     </span>
                                     <textarea
                                         id="q7"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="azdps-application-textarea1 textarea"
+                                        className="azdps-application-textarea2 textarea"
+                                        required={true}
                                         onChange={(e) => setQ7(e.target.value)}
                                         maxLength={1024}
                                     />
                                     <p>Characters left: {1024 - q7.length}</p>
                                 </div>
                                 <div className="azdps-application-question-8">
-                                    <span className="azdps-application-text50">
+                                    <span className="azdps-application-text49">
                                         <span>
-                                            A dispatcher assigns you to a call outside of your patrol
-                                            designation, you have already told the dispatcher that you
-                                            are unable to accept that call, how would you go about
-                                            this situation?
+                                            What is RDM and VDM?
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
                                                 }}
                                             />
                                         </span>
-                                        <span className="azdps-application-text52">*</span>
+                                        <span className="azdps-application-text51">*</span>
+                                        <br></br>
                                     </span>
                                     <textarea
                                         id="q8"
-                                        required={true}
                                         placeholder="Your Answer"
-                                        className="azdps-application-textarea2 textarea"
+                                        className="azdps-application-textarea3 textarea"
+                                        required={true}
                                         onChange={(e) => setQ8(e.target.value)}
                                         maxLength={1024}
                                     />
                                     <p>Characters left: {1024 - q8.length}</p>
                                 </div>
+                                <div className="azdps-application-question-9">
+                                    <span className="azdps-application-text53">
+                                        <span>
+                                            For how long have you played Fivem?
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: ' ',
+                                                }}
+                                            />
+                                        </span>
+                                        <span className="azdps-application-text55">*</span>
+                                    </span>
+                                    <textarea
+                                        id="q9"
+                                        placeholder="Your Answer"
+                                        className="azdps-application-textarea4 textarea"
+                                        required={true}
+                                        onChange={(e) => setQ9(e.target.value)}
+                                        maxLength={1024}
+                                    />
+                                    <p>Characters left: {1024 - q9.length}</p>
+                                </div>
+                                <div className="azdps-application-question-10">
+                                    <span className="azdps-application-text56">
+                                        <span>
+                                            Give a brief detailed example of a LEO scene.
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: ' ',
+                                                }}
+                                            />
+                                        </span>
+                                        <span className="azdps-application-text58">*</span>
+                                    </span>
+                                    <textarea
+                                        id="q10"
+                                        placeholder="Your Answer"
+                                        className="azdps-application-textarea5 textarea"
+                                        required={true}
+                                        onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={1024}
+                                    />
+                                    <p>Characters left: {1024 - q10.length}</p>
+                                </div>
                                 <button onClick={handleSubmit} className="azdps-application-button button">
                                     <span>
-                                        <span className="azdps-application-text54">Submit</span>
+                                        <span className="azdps-application-text60">Submit</span>
                                         <br></br>
                                     </span>
                                 </button>

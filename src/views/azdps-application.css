@@ -14,7 +14,7 @@
     align-items: flex-start;
     flex-direction: column;
     background-size: auto, cover;
-    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://www.pinalcountyrp.com/blank_banner.png');
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyrp.com/blank_banner.png');
     background-repeat: repeat, no-repeat;
     background-position: top left, center;
 }
@@ -185,7 +185,7 @@
     color: #dc3424;
 }
 
-.azdps-application-select {
+.azdps-application-textinput2 {
     margin-top: 3px;
 }
 
@@ -200,15 +200,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text35 {
+.azdps-application-text34 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text37 {
+.azdps-application-text36 {
     color: #dc3424;
 }
 
-.azdps-application-select1 {
+.azdps-application-textinput3 {
     margin-top: 3px;
 }
 
@@ -223,15 +223,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text39 {
+.azdps-application-text37 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text41 {
+.azdps-application-text39 {
     color: #dc3424;
 }
 
-.azdps-application-select2 {
+.azdps-application-textarea {
     margin-top: 3px;
 }
 
@@ -246,15 +246,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text43 {
+.azdps-application-text41 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text45 {
+.azdps-application-text43 {
     color: #dc3424;
 }
 
-.azdps-application-textarea {
+.azdps-application-textarea1 {
     margin-top: 3px;
 }
 
@@ -269,15 +269,15 @@
     flex-direction: column;
 }
 
-.azdps-application-text47 {
+.azdps-application-text45 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text49 {
+.azdps-application-text47 {
     color: #dc3424;
 }
 
-.azdps-application-textarea1 {
+.azdps-application-textarea2 {
     margin-top: 3px;
 }
 
@@ -292,15 +292,61 @@
     flex-direction: column;
 }
 
-.azdps-application-text50 {
+.azdps-application-text49 {
     font-size: 1.5rem;
 }
 
-.azdps-application-text52 {
+.azdps-application-text51 {
     color: #dc3424;
 }
 
-.azdps-application-textarea2 {
+.azdps-application-textarea3 {
+    margin-top: 3px;
+}
+
+.azdps-application-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdps-application-text53 {
+    font-size: 1.5rem;
+}
+
+.azdps-application-text55 {
+    color: #dc3424;
+}
+
+.azdps-application-textarea4 {
+    margin-top: 3px;
+}
+
+.azdps-application-question-10 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.azdps-application-text56 {
+    font-size: 1.5rem;
+}
+
+.azdps-application-text58 {
+    color: #dc3424;
+}
+
+.azdps-application-textarea5 {
     margin-top: 3px;
 }
 
@@ -318,7 +364,7 @@
     background-color: transparent;
 }
 
-.azdps-application-text54:hover {
+.azdps-application-text60:hover {
     color: var(--dl-color-gray-black);
     background-color: transparent;
 }
@@ -342,13 +388,13 @@
         margin-left: 0px;
     }
 
-    .azdps-application-text54 {
+    .azdps-application-text60 {
         margin-top: var(--dl-space-space-unit);
         margin-left: 0px;
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 390px) {
     .azdps-application-container1 {
         background-position: top left, center;
     }
@@ -420,6 +466,14 @@
     }
 
     .azdps-application-question-8 {
+        flex-wrap: wrap;
+    }
+
+    .azdps-application-question-9 {
+        flex-wrap: wrap;
+    }
+
+    .azdps-application-question-10 {
         flex-wrap: wrap;
     }
 }
