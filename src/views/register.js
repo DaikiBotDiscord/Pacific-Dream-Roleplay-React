@@ -72,7 +72,7 @@ const Register = (props) => {
     }
 
     const validateLname = (lname) => {
-        const lnameRegex = /^[a-zA-Z0-9]{4,}$/;
+        const lnameRegex = /^[a-zA-Z0-9]{2,}$/;
         return lnameRegex.test(lname);
     };
 
