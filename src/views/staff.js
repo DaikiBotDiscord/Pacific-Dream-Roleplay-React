@@ -11,20 +11,22 @@ import config from './config/config';
 
 class PFP extends Component {
   state = {
-    CommunityDirectorData: null,
-    CommunityManagerData: null,
+    FoundersData: null,
+    CoOwnerData: null,
+    CommunityDirectorsData: null,
+    CommunityManagersData: null,
     AdminData: null,
-    jrAdminData: null,
-    SeniorStaffData: null,
-    StaffData: null,
-    SITData: null,
-    CommunityDirectorDataLoading: true,
-    CommunityManagerDataLoading: true,
+    JuniorAdminData: null,
+    SeniorModData: null,
+    ModData: null,
+    FoundersDataLoading: true,
+    CoOwnerDataLoading: true,
+    CommunityDirectorsDataLoading: true,
+    CommunityManagersDataLoading: true,
     AdminDataLoading: true,
-    jrAdminDataLoading: true,
-    SeniorStaffDataLoading: true,
-    StaffDataLoading: true,
-    SITDataLoading: true,
+    JuniorAdminDataLoading: true,
+    SeniorModDataLoading: true,
+    ModDataLoading: true,
     headerComponent: false,
   };
 
@@ -65,26 +67,41 @@ class PFP extends Component {
 
   fetchData = () => {
     this.setState({
-      CommunityDirectorDataLoading: true,
-      CommunityManagerDataLoading: true,
+      FoundersDataLoading: true,
+      CoOwnerDataLoading: true,
+      CommunityDirectorsDataLoading: true,
+      CommunityManagersDataLoading: true,
       AdminDataLoading: true,
-      jrAdminDataLoading: true,
-      SeniorStaffDataLoading: true,
-      StaffDataLoading: true,
-      SITDataLoading: true,
+      JuniorAdminDataLoading: true,
+      SeniorModDataLoading: true,
+      ModDataLoading: true,
       headerComponent: false,
     });
 
+    axios.get(`${config.apiDomain}/api/staff/Founder`)
+      .then(response => {
+        this.setState({ FoundersData: response.data, FoundersDataLoading: false });
+      }).catch(error => {
+        console.error('API Error:', error);
+      });
+
+    axios.get(`${config.apiDomain}/api/staff/CoOwner`)
+      .then(response => {
+        this.setState({ CoOwnerData: response.data, CoOwnerDataLoading: false });
+      }).catch(error => {
+        console.error('API Error:', error);
+      });
+
     axios.get(`${config.apiDomain}/api/staff/CommunityDirectors`)
       .then(response => {
-        this.setState({ CommunityDirectorData: response.data, CommunityDirectorDataLoading: false });
+        this.setState({ CommunityDirectorsData: response.data, CommunityDirectorsDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
 
     axios.get(`${config.apiDomain}/api/staff/CommunityManagers`)
       .then(response => {
-        this.setState({ CommunityManagerData: response.data, CommunityManagerDataLoading: false });
+        this.setState({ CommunityManagersData: response.data, CommunityManagersDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -96,30 +113,23 @@ class PFP extends Component {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/JrAdmin`)
+    axios.get(`${config.apiDomain}/api/staff/JuniorAdmin`)
       .then(response => {
-        this.setState({ jrAdminData: response.data, jrAdminDataLoading: false });
+        this.setState({ JuniorAdminData: response.data, JuniorAdminDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/SeniorStaff`)
+    axios.get(`${config.apiDomain}/api/staff/SeniorMod`)
       .then(response => {
-        this.setState({ SeniorStaffData: response.data, SeniorStaffDataLoading: false });
+        this.setState({ SeniorModData: response.data, SeniorModDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/Staff`)
+    axios.get(`${config.apiDomain}/api/staff/Mod`)
       .then(response => {
-        this.setState({ StaffData: response.data, StaffDataLoading: false });
-      }).catch(error => {
-        console.error('API Error:', error);
-      });
-
-    axios.get(`${config.apiDomain}/api/staff/SIT`)
-      .then(response => {
-        this.setState({ SITData: response.data, SITDataLoading: false });
+        this.setState({ ModData: response.data, ModDataLoading: false });
       }).catch(error => {
         console.error('API Error:', error);
       });
@@ -158,14 +168,15 @@ class PFP extends Component {
 
   render() {
     const {
-      CommunityDirectorData,
-      CommunityManagerData,
+      FoundersData,
+      CoOwnerData,
+      CommunityDirectorsData,
+      CommunityManagersData,
       AdminData,
-      jrAdminData,
-      SeniorStaffData,
-      StaffData,
-      SITData,
-      headerComponent
+      JuniorAdminData,
+      SeniorModData,
+      ModData,
+      headerComponent,
     } = this.state;
 
     return (
@@ -190,79 +201,90 @@ class PFP extends Component {
         <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
-            <span>Community Directors</span>
+            <span>Founders</span>
             <br></br>
           </h1>
           <div className="staff-separator01"></div>
           <div className="staff-user-container">
-            {CommunityDirectorData && this.renderStaffMembers(CommunityDirectorData, 'Founder', this.state.CommunityDirectorDataLoading)}
+            {FoundersData && this.renderStaffMembers(FoundersData, 'Founder', this.state.FoundersDataLoading)}
           </div>
         </div>
         <div className="staff-container2">
           <div className="staff-separator"></div>
           <h1 className="staff-text">
-            <span>Community Managers</span>
+            <span>Co-Owner</span>
             <br></br>
           </h1>
           <div className="staff-separator01"></div>
           <div className="staff-user-container">
-            {CommunityManagerData && this.renderStaffMembers(CommunityManagerData, 'Head Admin', this.state.CommunityManagerDataLoading)}
+            {CoOwnerData && this.renderStaffMembers(CoOwnerData, 'Co Owner', this.state.CoOwnerDataLoading)}
           </div>
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
           <h1 className="staff-text03">
-            <span>Administration</span>
+            <span>Community Directors</span>
             <br></br>
           </h1>
           <div className="staff-separator03"></div>
         </div>
         <div className="staff-user-container">
-          {AdminData && this.renderStaffMembers(AdminData, 'Administration', this.state.AdminDataLoading)}
+          {CommunityDirectorsData && this.renderStaffMembers(CommunityDirectorsData, 'Administration', this.state.CommunityDirectorsDataLoading)}
         </div>
         <div className="staff-container4">
           <div className="staff-separator04"></div>
           <h1 className="staff-text06">
-            <span>Jr. Administration</span>
+            <span>Community Managers</span>
             <br></br>
           </h1>
           <div className="staff-separator05"></div>
         </div>
         <div className="staff-user-container">
-          {jrAdminData && this.renderStaffMembers(jrAdminData, 'Jr. Administration', this.state.jrAdminDataLoading)}
+          {CommunityManagersData && this.renderStaffMembers(CommunityManagersData, 'Jr. Administration', this.state.CommunityManagersDataLoading)}
         </div>
         <div className="staff-container5">
           <div className="staff-separator06"></div>
           <h1 className="staff-text09">
-            <span>Senior Staff</span>
+            <span>Administrators</span>
             <br></br>
           </h1>
           <div className="staff-separator07"></div>
         </div>
         <div className="staff-user-container">
-          {SeniorStaffData && this.renderStaffMembers(SeniorStaffData, 'Senior Staff', this.state.SeniorStaffDataLoading)}
+          {AdminData && this.renderStaffMembers(AdminData, 'Senior Staff', this.state.AdminDataLoading)}
         </div>
         <div className="staff-container6">
           <div className="staff-separator08"></div>
           <h1 className="staff-text12">
-            <span>Staff</span>
+            <span>Junior Administrator</span>
             <br></br>
           </h1>
           <div className="staff-separator09"></div>
         </div>
         <div className="staff-user-container">
-          {StaffData && this.renderStaffMembers(StaffData, 'Staff', this.state.StaffDataLoading)}
+          {JuniorAdminData && this.renderStaffMembers(JuniorAdminData, 'Staff', this.state.JuniorAdminDataLoading)}
         </div>
         <div className="staff-container7">
           <div className="staff-separator10"></div>
           <h1 className="staff-text15">
-            <span>Staff in Training</span>
+            <span>Senior Moderator</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
         </div>
         <div className="staff-user-container">
-          {SITData && this.renderStaffMembers(SITData, 'Staff in Training', this.state.SITDataLoading)}
+          {SeniorModData && this.renderStaffMembers(SeniorModData, 'Staff in Training', this.state.SeniorModDataLoading)}
+        </div>
+        <div className="staff-container7">
+          <div className="staff-separator10"></div>
+          <h1 className="staff-text15">
+            <span>Moderator</span>
+            <br></br>
+          </h1>
+          <div className="staff-separator11"></div>
+        </div>
+        <div className="staff-user-container">
+          {ModData && this.renderStaffMembers(ModData, 'Staff in Training', this.state.ModDataLoading)}
         </div>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div >
