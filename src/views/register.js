@@ -77,7 +77,7 @@ const Register = (props) => {
     };
 
     const validateFname = (fname) => {
-        const fnameRegex = /^[a-zA-Z0-9]{4,}$/;
+        const fnameRegex = /^[a-zA-Z0-9]{2,}$/;
         return fnameRegex.test(fname);
     };
 
@@ -106,7 +106,7 @@ const Register = (props) => {
             });
             return;
         } else if (!validateLname(lname)) {
-            toast.error("Last Name must be 4 characters or more", {
+            toast.error("Last Name must be 2 characters or more", {
                 position: "top-right",
                 autoClose: 10000,
                 hideProgressBar: false,
