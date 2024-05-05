@@ -153,7 +153,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                 </span>
                                 <br></br>
                                 <span>
-                                    • You are required to be at least 16 years of age during your
+                                    • You are required to be at least 15 years of age during your
                                     application, exceptions WILL not be made
                                 </span>
                                 <br></br>
