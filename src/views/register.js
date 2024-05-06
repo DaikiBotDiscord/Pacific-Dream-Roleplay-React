@@ -162,7 +162,7 @@ const Register = (props) => {
             .then((data) => {
                 console.log(data)
                 if (data.status == 'ok') {
-                    toast.success('Registration Successful!', {
+                    toast.success('Registration Successful! Redirecting to Discord', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -197,6 +197,143 @@ const Register = (props) => {
                     });
                 }
             })
+        setTimeout(() => {
+            fetch(`${config.apiDomain}/api/login-user`, {
+                method: "POST",
+                crossDomain: true,
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            })
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error("Failed to fetch!");
+                    }
+                    return res.json();
+                })
+                .then((data) => {
+                    if (data.status === "ok") {
+                        toast.success("Login Successfully!", {
+                            position: "top-right",
+                            autoClose: 2000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: false,
+                            draggable: false,
+                            progress: undefined,
+                            theme: "dark",
+                        });
+                        window.localStorage.setItem("token", data.data);
+                        window.localStorage.setItem("loggedIn", true);
+                        setTimeout(() => {
+                            fetch(`${config.apiDomain}/api/user/logged/info`, {
+                                method: "POST",
+                                crossDomain: true,
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    Accept: "application/json",
+                                    "Access-Control-Allow-Origin": "*",
+                                    token: config.requiredToken,
+                                },
+                                body: JSON.stringify({
+                                    token: window.localStorage.getItem("token"),
+                                }),
+                            }).then((res) => {
+                                return res.json();
+                            }).then((data) => {
+                                console.log(data);
+                                fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
+                                    method: "POST",
+                                    crossDomain: true,
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        Accept: "application/json",
+                                        "Access-Control-Allow-Origin": "*",
+                                        token: config.requiredToken,
+                                    },
+                                    body: JSON.stringify({
+                                        userMongoId: data.data._id,
+                                    })
+                                }).then((res) => {
+                                    return res.json();
+                                }).then((data) => {
+                                    console.log(data)
+                                    window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
+                                })
+                            })
+                        }, 1000);
+                    } else {
+                        toast.error("Error: Please create a PCRP Ticket", {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "dark",
+                        });
+                    }
+                })
+        }, 2500)
+            .catch((error) => {
+                toast.error(
+                    "Unable to login at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
+                    {
+                        position: "top-right",
+                        autoClose: 10000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    }
+                );
+                console.log(error);
+            });
+        /*         fetch(`${config.apiDomain}/api/user/logged/info`, {
+                    method: "POST",
+                    crossDomain: true,
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                        "Access-Control-Allow-Origin": "*",
+                        token: config.requiredToken,
+                    },
+                    body: JSON.stringify({
+                        token: window.localStorage.getItem("token"),
+                    }),
+                }).then((res) => {
+                    return res.json();
+                }).then((data) => {
+                    console.log(data);
+                    fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
+                        method: "POST",
+                        crossDomain: true,
+                        headers: {
+                            "Content-Type": "application/json",
+                            Accept: "application/json",
+                            "Access-Control-Allow-Origin": "*",
+                            token: config.requiredToken,
+                        },
+                        body: JSON.stringify({
+                            userMongoId: data.data._id,
+                        })
+                    }).then((res) => {
+                        return res.json();
+                    }).then((data) => {
+                        console.log(data)
+                        window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
+                    })
+                }) */
     }
     return (
         <div className="register-container">
