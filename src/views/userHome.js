@@ -216,7 +216,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                         <div className="user-home-container">
                             <div className="user-home-container01">
                                 <h1 className="user-home-text">
-                                    Welcome {capitalizeFirstLetter(data.fname)} to your PDRP Account!
+                                    Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!
                                 </h1>
                                 <div className="user-home-container02">
                                     <div className="user-home-container03">

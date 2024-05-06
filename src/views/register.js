@@ -185,7 +185,7 @@ const Register = (props) => {
 
                     });
                 } else {
-                    toast.error('Something Went Wrong | Please Create a PDPRP Support Ticket.', {
+                    toast.error('Something Went Wrong | Please Create a PCRP Support Ticket.', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
