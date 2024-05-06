@@ -220,16 +220,6 @@ const Register = (props) => {
                 })
                 .then((data) => {
                     if (data.status === "ok") {
-                        toast.success("Login Successfully!", {
-                            position: "top-right",
-                            autoClose: 2000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: false,
-                            draggable: false,
-                            progress: undefined,
-                            theme: "dark",
-                        });
                         window.localStorage.setItem("token", data.data);
                         window.localStorage.setItem("loggedIn", true);
                         setTimeout(() => {
