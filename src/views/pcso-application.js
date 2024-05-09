@@ -129,7 +129,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                         <div className="pcso-applicaiton-container3">
                             <img
                                 alt="image"
-                                src="https://www.pinalcountyrp.com/PCSO_background.png"
+                                src="https://www.pinalcountyrp.com/MCSO_background.png"
                                 className="pcso-applicaiton-image1"
                             />
                             <span className="pcso-applicaiton-text">
