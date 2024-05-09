@@ -60,16 +60,16 @@ const Departments = (props) => {
                         <div className="departments-gallery-card">
                             <img
                                 alt="image"
-                                src="https://www.pinalcountyrp.com/PCSO_LOGO.png"
+                                src="https://www.pinalcountyrp.com/MCSO_logo.png"
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
-                                <span>Pinal County Sheriffs Office</span>
+                                <span>Maricopa County Sheriffs Office</span>
                                 <br></br>
                             </h2>
                             <span className="departments-text09">
                                 <span>
-                                    The Pinal County’s Sheriffs Office is a diverse community with in the office that Preserve the Peace, Protect Life and Property, and promote Public Safety while upholding the Constitution. And we Ensures that we have the  integrity by implementing policy, investigating citizen complaints. Are Mission Core Value is to serve the Pinal County resident with pride and honor, and in a professional manner awhile Protecting the our community.
+                                    The Maricopa County’s Sheriffs Office is a diverse community with in the office that Preserve the Peace, Protect Life and Property, and promote Public Safety while upholding the Constitution. And we Ensures that we have the  integrity by implementing policy, investigating citizen complaints. Are Mission Core Value is to serve the Pinal County resident with pride and honor, and in a professional manner awhile Protecting the our community.
                                 </span>
                                 <br></br>
                             </span>
