@@ -480,15 +480,15 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <br></br>
                                         </h1>
                                         <div className="applications-container17">
-                                            <Link to="/user/pcso-application" className="applications-navlink">
+                                            <Link to="/user/mcso-application" className="applications-navlink">
                                                 <div className="applications-container18">
                                                     <img
                                                         alt="image"
-                                                        src="https://www.pinalcountyrp.com/PCSO_LOGO.png"
+                                                        src="https://www.pinalcountyrp.com/MCSO_logo.png"
                                                         className="applications-image10"
                                                     />
                                                     <span className="applications-text080">
-                                                        <span>Pinal County</span>
+                                                        <span>Maricopa County</span>
                                                         <br></br>
                                                         <span>Sheriff&apos;s Office</span>
                                                         <br></br>

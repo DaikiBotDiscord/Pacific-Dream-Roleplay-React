@@ -114,14 +114,14 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
     return (
         <div className="pcso-applicaiton-container">
             <Helmet>
-                <title>PCSO Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="PCSO Application - Pinal County Roleplay" />
+                <title>MCSO Application - Pinal County Roleplay</title>
+                <meta property="og:title" content="MCSO Application - Pinal County Roleplay" />
             </Helmet>
             <div className="pcso-applicaiton-container1">
                 {headerComponent}
                 <img
                     alt="image"
-                    src="https://www.pinalcountyrp.com/PCSO_title.png"
+                    src="https://www.pinalcountyrp.com/MCSO_title.png"
                     className="pcso-applicaiton-image"
                 />
                 <div className="pcso-applicaiton-hero">
@@ -134,7 +134,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                             />
                             <span className="pcso-applicaiton-text">
                                 This is an application for the FiveM Roleplay server Pinal
-                                County Roleplay | PCSO. This is in a way related to a real law
+                                County Roleplay | MCSO. This is in a way related to a real law
                                 enforcement agency.
                             </span>
                             <h1 className="pcso-applicaiton-text01">Requirements:</h1>

@@ -229,7 +229,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                                             <div className="user-home-container05">
                                                 <span className="user-home-text05">
                                                     <span>
-                                                        Pinal County
+                                                        Maricopa County
                                                         <span
                                                             dangerouslySetInnerHTML={{
                                                                 __html: ' ',

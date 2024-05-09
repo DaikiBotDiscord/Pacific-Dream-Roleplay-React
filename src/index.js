@@ -279,7 +279,7 @@ const App = () => {
         />
         <Route
           exact
-          path='/user/pcso-application'
+          path='/user/mcso-application'
           render={() => {
             return checkTokenRepeat() ? <PCSOApplication userData={userData}
               discordAuthenticated={discordAuthenticated}
