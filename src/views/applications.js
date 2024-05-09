@@ -293,7 +293,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         <div className="applications-container04">
                                             <span className="applications-text004">
                                                 <span>
-                                                    Pinal County
+                                                    Maricopa County
                                                     <span
                                                         dangerouslySetInnerHTML={{
                                                             __html: ' ',
