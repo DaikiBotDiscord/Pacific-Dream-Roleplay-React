@@ -1,5 +1,5 @@
 const config = {
-    requiredToken: process.env.token || "KhAdtuE8D7k9bJWYuYGrHPMmuPmYd29B1QtDv4MWMbgUDumjY5tDuPhwc9B85uv5uMxgp5rqK4KNe7tssgCQTDzujuB1pyBvWUPM374851jAUKNePWReQascYdmfeGFcWeJrSJ5w9r4aecxGrmudXb4P5UrJFefc6CX2VkJByxN9r1HTqC2DjXrRD5ddX9N5dzpBZgzQ",
+    requiredToken: process.env.token || "tmRNDzA6ady6Y8AuAssYx5tVDvuekka2ArUZQpaMMQHKZFPQnreGhruU1RMQcD6Jn7Bf2ucvk5rkh8VCTW2xGaHKyrDUB8qt3rpeqtdfhvcGPhMYUgYtGhQDxr2hQrqbdHP4Q5eRqs26eFMG3UypxWHk1Qaue6Tw1AcRaUBYMUqMrsx5GdkkBBHQUfbdTuG2PtWAtN3g",
     /* webDomain: "http://localhost:3000",
     apiDomain: "http://localhost:3001" */
     webDomain: "https://www.pinalcountyrp.com",
