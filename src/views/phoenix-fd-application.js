@@ -126,8 +126,8 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     return (
         <div className="phoenix-fd-application-container">
             <Helmet>
-                <title>Phoenix FD Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Phoenix FD Application - Pinal County Roleplay" />
+                <title>Phoenix FD Application - Arizona State Roleplay</title>
+                <meta property="og:title" content="Phoenix FD Application - Arizona State Roleplay" />
             </Helmet>
             <div className="phoenix-fd-application-container1">
                 {headerComponent}
@@ -145,7 +145,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                     This document is in no way, shape or form, affiliated with
                                     Federal, Governmental, or National Agencies. This document is
                                     purely fictional in nature, and offers no accreditation to
-                                    legal agencies. Property of Pinal County Roleplay
+                                    legal agencies. Property of Arizona State Roleplay
                                 </span>
                                 <br></br>
                             </span>

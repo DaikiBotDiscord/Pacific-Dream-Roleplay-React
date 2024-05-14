@@ -247,8 +247,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     return (
         <div className="applications-container">
             <Helmet>
-                <title>Applications - Pinal County Roleplay</title>
-                <meta property="og:title" content="Applications - Pinal County Roleplay" />
+                <title>Applications - Arizona State Roleplay</title>
+                <meta property="og:title" content="Applications - Arizona State Roleplay" />
             </Helmet>
             <div className="applications-container01">
                 {discordAuthenticated === false ? (
@@ -260,7 +260,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             <h1 className="a-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                             <span className="a-home-text3">
                                 <span>
-                                    To be able to access your PCRP account you are required to integrate with Discord
+                                    To be able to access your AZRPaccount you are required to integrate with Discord
                                 </span>
                                 <br></br>
                                 <span>

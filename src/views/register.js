@@ -83,7 +83,7 @@ const Register = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        /* return toast.error('Pinal County RP Account Services are currently unavailable. Please try again later', {
+        /* return toast.error('Arizona State RP Account Services are currently unavailable. Please try again later', {
             position: "top-right",
             hideProgressBar: true,
             closeOnClick: true,
@@ -185,7 +185,7 @@ const Register = (props) => {
 
                     });
                 } else {
-                    toast.error('Something Went Wrong | Please Create a PCRP Support Ticket.', {
+                    toast.error('Something Went Wrong | Please Create a AZRPSupport Ticket.', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -260,7 +260,7 @@ const Register = (props) => {
                             })
                         }, 1000);
                     } else {
-                        toast.error("Error: Please create a PCRP Ticket", {
+                        toast.error("Error: Please create a AZRPTicket", {
                             position: "top-right",
                             autoClose: 5000,
                             hideProgressBar: false,
@@ -275,7 +275,7 @@ const Register = (props) => {
         }, 2500)
             .catch((error) => {
                 toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
+                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,
@@ -328,8 +328,8 @@ const Register = (props) => {
     return (
         <div className="register-container">
             <Helmet>
-                <title>Register - Pinal County Roleplay</title>
-                <meta property="og:title" content="Register - Pinal County Roleplay" />
+                <title>Register - Arizona State Roleplay</title>
+                <meta property="og:title" content="Register - Arizona State Roleplay" />
             </Helmet>
             <div className="register-container1">
                 {headerComponent}

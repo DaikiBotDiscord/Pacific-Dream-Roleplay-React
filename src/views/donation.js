@@ -244,7 +244,7 @@ const Donation = (props) => {
         </a>
       </div>
       <span className='disclaimer'>
-        *Pinal County Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Pinal County Roleplay Server*
+        *Arizona State Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Arizona State Roleplay Server*
         <br></br>
         *Your Personals will have a script to lock them only to you and you may give access to other users*
         <br></br>

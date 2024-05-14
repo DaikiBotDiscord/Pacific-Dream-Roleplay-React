@@ -111,8 +111,8 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
     return (
         <div className="doc-application-container">
             <Helmet>
-                <title>DOC Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="DOC Application - Pinal County Roleplay" />
+                <title>DOC Application - Arizona State Roleplay</title>
+                <meta property="og:title" content="DOC Application - Arizona State Roleplay" />
             </Helmet>
             <div className="doc-application-container1">
                 {headerComponent}
@@ -130,7 +130,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                 className="doc-application-image1"
                             />
                             <span className="doc-application-text">
-                                The Official PCRP SADOC Application.
+                                The Official AZRPSADOC Application.
                             </span>
                             <span className="doc-application-text01">
                                 <span className="doc-application-text02">

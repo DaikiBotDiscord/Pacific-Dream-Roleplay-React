@@ -229,7 +229,7 @@ const App = () => {
         <br></br>
         <span className="home-notification-text">
           <span>
-            Some Pinal County Roleplay Account Services will be unavailable until further notice!
+            Some Arizona State Roleplay Account Services will be unavailable until further notice!
           </span>
           <br></br>
         </span>

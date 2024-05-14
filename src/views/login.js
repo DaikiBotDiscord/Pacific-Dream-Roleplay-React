@@ -109,7 +109,7 @@ const Login = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    /* return toast.error('Pinal County RP Account Services are currently unavailable. Please try again later', {
+    /* return toast.error('Arizona State RP Account Services are currently unavailable. Please try again later', {
       position: "top-right",
       hideProgressBar: true,
       closeOnClick: true,
@@ -213,7 +213,7 @@ const Login = (props) => {
       })
       .catch((error) => {
         toast.error(
-          "Unable to login at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
+          "Unable to login at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
           {
             position: "top-right",
             autoClose: 10000,
@@ -233,8 +233,8 @@ const Login = (props) => {
     <div className="login-container">
 
       <Helmet>
-        <title>Login - Pinal County Roleplay</title>
-        <meta property="og:title" content="Login - Pinal County Roleplay" />
+        <title>Login - Arizona State Roleplay</title>
+        <meta property="og:title" content="Login - Arizona State Roleplay" />
       </Helmet>
       <div className="login-container1">
         {headerComponent}

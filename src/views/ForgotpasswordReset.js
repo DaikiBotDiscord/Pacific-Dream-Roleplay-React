@@ -147,7 +147,7 @@ const ForgotResetPassword = () => {
             })
             .catch((error) => {
                 toast.error(
-                    "Unable to request at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
+                    "Unable to request at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,
@@ -210,8 +210,8 @@ const ForgotResetPassword = () => {
     return (
         <div className="login-container">
             <Helmet>
-                <title>Login - Pinal County Roleplay</title>
-                <meta property="og:title" content="Login - Pinal County Roleplay" />
+                <title>Login - Arizona State Roleplay</title>
+                <meta property="og:title" content="Login - Arizona State Roleplay" />
             </Helmet>
             <div className="login-container1">
                 {headerComponent}

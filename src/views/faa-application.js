@@ -142,7 +142,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                             />
                             <span className="faa-application-text">
                                 <br></br>
-                                <span>Pinal County Roleplay FAA Department</span>
+                                <span>Arizona State Roleplay FAA Department</span>
                                 <br></br>
                                 <br></br>
                                 <span>
@@ -176,7 +176,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                                 </div>
                                 <div className="faa-application-question-2">
                                     <span className="faa-application-text13">
-                                        <span>When did you first join Pinal County Roleplay? </span>
+                                        <span>When did you first join Arizona State Roleplay? </span>
                                         <span className="faa-application-text15">*</span>
                                     </span>
                                     <input

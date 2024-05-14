@@ -51,10 +51,10 @@ const FooterContainer = (props) => {
 }
 
 FooterContainer.defaultProps = {
-  text: 'Pinal County Roleplay',
+  text: 'Arizona State Roleplay',
   image_alt: 'image',
   image_src: 'https://www.daiki-bot.xyz/playground_assets/discord%20logo.svg',
-  text1: 'All Rights Reserved, Pinal County Roleplay',
+  text1: 'All Rights Reserved, Arizona State Roleplay',
   rootClassName: '',
 }
 

@@ -115,8 +115,8 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     return (
         <div className="phoenix-pd-application-container">
             <Helmet>
-                <title>Phoenix PD Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="Phoenix PD Application - Pinal County Roleplay" />
+                <title>Phoenix PD Application - Arizona State Roleplay</title>
+                <meta property="og:title" content="Phoenix PD Application - Arizona State Roleplay" />
             </Helmet>
             <div className="phoenix-pd-application-container1">
                 {headerComponent}
@@ -134,7 +134,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 className="phoenix-pd-application-image1"
                             />
                             <span className="phoenix-pd-application-text">
-                                PCRP Official PHXPD Application
+                                AZRPOfficial PHXPD Application
                             </span>
                             <span className="phoenix-pd-application-text01">
                                 <span className="phoenix-pd-application-text02">
@@ -175,7 +175,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 <div className="phoenix-pd-application-question-3">
                                     <span className="phoenix-pd-application-text10">
                                         <span>
-                                            Are you a Certified Civilian with PCRP? (Pinal County
+                                            Are you a Certified Civilian with PCRP? (Arizona County
                                             Roleplay)
                                         </span>
                                         <span className="phoenix-pd-application-text12">*</span>

@@ -183,8 +183,8 @@ class PFP extends Component {
       <div className="staff-container">
 
         <Helmet>
-          <title>Staff - Pinal County Roleplay</title>
-          <meta property="og:title" content="Staff - Pinal County Roleplay" />
+          <title>Staff - Arizona State Roleplay</title>
+          <meta property="og:title" content="Staff - Arizona State Roleplay" />
         </Helmet>
         <div className="staff-container1">
           {headerComponent}

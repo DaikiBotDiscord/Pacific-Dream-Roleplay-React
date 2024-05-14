@@ -133,8 +133,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     return (
         <div className="applications-container">
             <Helmet>
-                <title>Applications - Pinal County Roleplay</title>
-                <meta property="og:title" content="Applications - Pinal County Roleplay" />
+                <title>Applications - Arizona State Roleplay</title>
+                <meta property="og:title" content="Applications - Arizona State Roleplay" />
             </Helmet>
             <div className="applications-container01">
                 {headerComponent}
@@ -150,7 +150,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             <div className="applications-container04">
                                 <span className="applications-text01">
                                     <span>
-                                        Pinal County
+                                        Arizona County
                                         <span
                                             dangerouslySetInnerHTML={{
                                                 __html: ' ',
@@ -271,7 +271,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         className="applications-image08"
                                     />
                                     <span className="applications-text60">
-                                        <span>Pinal County</span>
+                                        <span>Arizona County</span>
                                         <br></br>
                                         <span>Sheriff&apos;s Office</span>
                                         <br></br>
