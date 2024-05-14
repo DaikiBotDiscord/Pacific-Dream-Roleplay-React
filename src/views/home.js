@@ -120,7 +120,7 @@ const Home = (props) => {
               />
             </a>
             <a
-              href="https://discord.gg/azpcrp"
+              href="https://discord.gg/azsrp"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link1"
@@ -171,7 +171,7 @@ const Home = (props) => {
         </div>
         <div className="home-container7">
           <a
-            href="https://discord.gg/azpcrp"
+            href="https://discord.gg/azsrp"
             target="_blank"
             rel="noreferrer noopener"
             className="home-link2"
@@ -186,7 +186,7 @@ const Home = (props) => {
               <span className="home-text10">Discord</span>
             </div>
           </a>
-          <a
+          {/* <a
             href="https://www.youtube.com/channel/UCoYE6ssoT28HPCn30r8TNxQ"
             target="_blank"
             rel="noreferrer noopener"
@@ -198,9 +198,9 @@ const Home = (props) => {
               </svg>
               <span className="home-text11">Youtube</span>
             </div>
-          </a>
+          </a> */}
           <a
-            href="https://www.tiktok.com/@pacific.dream.rol"
+            href="https://www.tiktok.com/@arizonastaterpfivem"
             target="_blank"
             rel="noreferrer noopener"
             className="home-link4"
@@ -215,7 +215,7 @@ const Home = (props) => {
               <span className="home-text12">TikTok</span>
             </div>
           </a>
-          <a
+          {/* <a
             href="https://www.instagram.com/pacificdream.official/"
             target="_blank"
             rel="noreferrer noopener"
@@ -232,7 +232,7 @@ const Home = (props) => {
                 <span className="home-text14">Instagram</span>
               </span>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
       <FooterContainer></FooterContainer>
