@@ -260,7 +260,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                             <h1 className="a-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                             <span className="a-home-text3">
                                 <span>
-                                    To be able to access your AZRPaccount you are required to integrate with Discord
+                                    To be able to access your AZSRP account you are required to integrate with Discord
                                 </span>
                                 <br></br>
                                 <span>

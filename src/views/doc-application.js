@@ -130,7 +130,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                 className="doc-application-image1"
                             />
                             <span className="doc-application-text">
-                                The Official AZRPSADOC Application.
+                                The Official AZSRP SADOC Application.
                             </span>
                             <span className="doc-application-text01">
                                 <span className="doc-application-text02">

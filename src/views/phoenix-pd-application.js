@@ -134,7 +134,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                 className="phoenix-pd-application-image1"
                             />
                             <span className="phoenix-pd-application-text">
-                                AZRPOfficial PHXPD Application
+                                AZSRP Official PHXPD Application
                             </span>
                             <span className="phoenix-pd-application-text01">
                                 <span className="phoenix-pd-application-text02">

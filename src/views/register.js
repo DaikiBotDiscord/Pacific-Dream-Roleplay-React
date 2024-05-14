@@ -185,7 +185,7 @@ const Register = (props) => {
 
                     });
                 } else {
-                    toast.error('Something Went Wrong | Please Create a AZRPSupport Ticket.', {
+                    toast.error('Something Went Wrong | Please Create a AZSRP Support Ticket.', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -260,7 +260,7 @@ const Register = (props) => {
                             })
                         }, 1000);
                     } else {
-                        toast.error("Error: Please create a AZRPTicket", {
+                        toast.error("Error: Please create a AZSRP Ticket", {
                             position: "top-right",
                             autoClose: 5000,
                             hideProgressBar: false,
@@ -275,7 +275,7 @@ const Register = (props) => {
         }, 2500)
             .catch((error) => {
                 toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
+                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,

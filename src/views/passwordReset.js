@@ -225,7 +225,7 @@ const ResetPassword = () => {
             })
             .catch((error) => {
                 toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
+                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,

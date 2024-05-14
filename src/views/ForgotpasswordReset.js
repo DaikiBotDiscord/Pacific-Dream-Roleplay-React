@@ -147,7 +147,7 @@ const ForgotResetPassword = () => {
             })
             .catch((error) => {
                 toast.error(
-                    "Unable to request at this time. Please try again | If you continue to see this message please create a  AZRPSupport Ticket.",
+                    "Unable to request at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,
