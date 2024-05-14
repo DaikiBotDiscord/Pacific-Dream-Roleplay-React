@@ -30,7 +30,7 @@ const FooterContainer = (props) => {
               </a> */}
           <script src="https://static.copyrighted.com/badges/helper.js"></script>
           <a
-            href="https://app.copyrighted.com/website/nF3fYdJ2PP54SkXj"
+            href="https://app.copyrighted.com/website/kmADrTNMgrhp3dZY"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link1"
