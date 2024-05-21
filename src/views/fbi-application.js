@@ -1,12 +1,131 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
+import config from './config/config'
 import FooterContainer from '../components/footer-container'
 import './fbi-application.css'
+import { ToastContainer, toast } from 'react-toastify';
 
-const FBIApplication = (props) => {
+
+export default function FBIApplication({ userData, discordAuthenticated, verifiedCiv }) {
+    const [headerComponent, setHeaderComponent] = useState(false);
+    const [q1, setQ1] = useState("");
+    const [q2, setQ2] = useState("");
+    const [q3, setQ3] = useState("");
+    const [q4, setQ4] = useState("");
+    const [q5, setQ5] = useState("");
+    const [q6, setQ6] = useState("");
+    const [q7, setQ7] = useState("");
+    const [q8, setQ8] = useState("");
+    const [q9, setQ9] = useState("");
+    const [q10, setQ10] = useState("");
+    const [q11, setQ11] = useState("");
+    const [q12, setQ12] = useState("");
+    const [q13, setQ13] = useState("");
+    const [q14, setQ14] = useState("");
+    const [q15, setQ15] = useState("");
+    const [q16, setQ16] = useState("");
+    const [q17, setQ17] = useState("");
+    const maxLength = 1024;
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        fetch(`${config.apiDomain}/api/user/applications/fbi-submit/${userData.data.email}/${userData.data.discordId}`, {
+            method: 'POST',
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            },
+            body: JSON.stringify({
+                Q1: q1,
+                Q2: q2,
+                Q3: q3,
+                Q4: q4,
+                Q5: q5,
+                Q6: q6,
+                Q7: q7,
+                Q8: q8,
+                Q9: q9,
+                Q10: q10,
+                Q11: q11,
+                Q12: q12,
+                Q13: q13,
+                Q14: q14,
+                Q15: q15,
+                Q16: q16,
+                Q17: q17,
+            }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.message === "Successfully Applied") {
+                    toast.success('Successfully Applied!', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                } else if (data.error) {
+                    toast.error(`${data.error}`, {
+                        position: "top-right",
+                        autoClose: 10000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                }
+            })
+    }
+
     return (
         <div className="fbi-application-container">
             <Helmet>
@@ -68,10 +187,13 @@ const FBIApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q1"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textinput input"
+                                        onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="fbi-application-question-2">
                                     <span className="fbi-application-text16">
@@ -81,10 +203,13 @@ const FBIApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q2"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textinput1 input"
+                                        onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={1024}
                                     />
+                                    <p>Characters left: {1024 - q2.length}</p>
                                 </div>
                                 <div className="fbi-application-question-3">
                                     <span className="fbi-application-text19">
@@ -95,10 +220,13 @@ const FBIApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q3"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textinput2 input"
+                                        onChange={(e) => setQ3(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q3.length}</p>
                                 </div>
                                 <div className="fbi-application-question-4">
                                     <span className="fbi-application-text23">
@@ -109,9 +237,10 @@ const FBIApplication = (props) => {
                                     <input
                                         type="date"
                                         id="q4"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textinput3 input"
+                                        onChange={(e) => setQ4(e.target.value)}
                                     />
                                 </div>
                                 <div className="fbi-application-question-5">
@@ -123,10 +252,13 @@ const FBIApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q5"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textinput4 input"
+                                        onChange={(e) => setQ5(e.target.value)}
+                                        maxLength={10}
                                     />
+                                    <p>Characters left: {10 - q5.length}</p>
                                 </div>
                                 <div className="fbi-application-question-6">
                                     <span className="fbi-application-text31">
@@ -141,9 +273,13 @@ const FBIApplication = (props) => {
                                         id="q6"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q6.length}</p>
                                 </div>
                                 <div className="fbi-application-question-7">
                                     <span className="fbi-application-text35">
@@ -157,7 +293,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea01 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q7.length}</p>
                                 </div>
                                 <div className="fbi-application-question-8">
                                     <span className="fbi-application-text39">
@@ -174,7 +313,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea02 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ8(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q8.length}</p>
                                 </div>
                                 <div className="fbi-application-question-9">
                                     <span className="fbi-application-text43">
@@ -191,7 +333,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea03 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ9(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q9.length}</p>
                                 </div>
                                 <div className="fbi-application-question-10">
                                     <span className="fbi-application-text47">
@@ -205,7 +350,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea04 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q10.length}</p>
                                 </div>
                                 <div className="fbi-application-question-11">
                                     <span className="fbi-application-text51">
@@ -219,7 +367,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea05 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ11(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q11.length}</p>
                                 </div>
                                 <div className="fbi-application-question-12">
                                     <span className="fbi-application-text55">
@@ -236,7 +387,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea06 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ12(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q12.length}</p>
                                 </div>
                                 <div className="fbi-application-question-13">
                                     <span className="fbi-application-text59">
@@ -256,7 +410,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea07 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ13(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q13.length}</p>
                                 </div>
                                 <div className="fbi-application-question-14">
                                     <span className="fbi-application-text63">
@@ -275,7 +432,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea08 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ14(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q14.length}</p>
                                 </div>
                                 <div className="fbi-application-question-15">
                                     <span className="fbi-application-text67">
@@ -294,7 +454,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea09 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ15(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q15.length}</p>
                                 </div>
                                 <div className="fbi-application-question-16">
                                     <span className="fbi-application-text71">
@@ -314,7 +477,10 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea10 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ16(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q16.length}</p>
                                 </div>
                                 <div className="fbi-application-question-17">
                                     <span className="fbi-application-text75">
@@ -331,9 +497,12 @@ const FBIApplication = (props) => {
                                         rows="3"
                                         placeholder="Your Answer"
                                         className="fbi-application-textarea11 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ17(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q17.length}</p>
                                 </div>
-                                <button className="fbi-application-button button">
+                                <button onClick={handleSubmit} className="fbi-application-button button">
                                     <span>
                                         <span className="fbi-application-text80">Submit</span>
                                         <br></br>
@@ -348,5 +517,3 @@ const FBIApplication = (props) => {
         </div>
     )
 }
-
-export default FBIApplication
