@@ -12,7 +12,7 @@ const FooterContainer = (props) => {
       <div className="footer-container-footer">
         <div className="footer-container-social-links">
           <a
-            href="https://discord.gg/pinalcountyrp"
+            href="https://discord.gg/azsrp"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link"

@@ -172,6 +172,98 @@ const Register = (props) => {
                         progress: undefined,
                         theme: "dark",
                     });
+                    setTimeout(() => {
+                        fetch(`${config.apiDomain}/api/login-user`, {
+                            method: "POST",
+                            crossDomain: true,
+                            headers: {
+                                "Content-Type": "application/json",
+                                Accept: "application/json",
+                                "Access-Control-Allow-Origin": "*",
+                                token: config.requiredToken,
+                            },
+                            body: JSON.stringify({
+                                email,
+                                password,
+                            }),
+                        })
+                            .then((res) => {
+                                if (!res.ok) {
+                                    throw new Error("Failed to fetch!");
+                                }
+                                return res.json();
+                            })
+                            .then((data) => {
+                                if (data.status === "ok") {
+                                    window.localStorage.setItem("token", data.data);
+                                    window.localStorage.setItem("loggedIn", true);
+                                    setTimeout(() => {
+                                        fetch(`${config.apiDomain}/api/user/logged/info`, {
+                                            method: "POST",
+                                            crossDomain: true,
+                                            headers: {
+                                                "Content-Type": "application/json",
+                                                Accept: "application/json",
+                                                "Access-Control-Allow-Origin": "*",
+                                                token: config.requiredToken,
+                                            },
+                                            body: JSON.stringify({
+                                                token: window.localStorage.getItem("token"),
+                                            }),
+                                        }).then((res) => {
+                                            return res.json();
+                                        }).then((data) => {
+                                            console.log(data);
+                                            fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
+                                                method: "POST",
+                                                crossDomain: true,
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    Accept: "application/json",
+                                                    "Access-Control-Allow-Origin": "*",
+                                                    token: config.requiredToken,
+                                                },
+                                                body: JSON.stringify({
+                                                    userMongoId: data.data._id,
+                                                })
+                                            }).then((res) => {
+                                                return res.json();
+                                            }).then((data) => {
+                                                console.log(data)
+                                                window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
+                                            })
+                                        })
+                                    }, 1000);
+                                } else {
+                                    toast.error("Error: Please create a AZSRP Ticket", {
+                                        position: "top-right",
+                                        autoClose: 5000,
+                                        hideProgressBar: false,
+                                        closeOnClick: true,
+                                        pauseOnHover: true,
+                                        draggable: true,
+                                        progress: undefined,
+                                        theme: "dark",
+                                    });
+                                }
+                            })
+                    }, 2500)
+                        .catch((error) => {
+                            toast.error(
+                                "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
+                                {
+                                    position: "top-right",
+                                    autoClose: 10000,
+                                    hideProgressBar: false,
+                                    closeOnClick: true,
+                                    pauseOnHover: true,
+                                    draggable: true,
+                                    progress: undefined,
+                                    theme: "dark",
+                                }
+                            );
+                            console.log(error);
+                        });
                 } else if (data.error === 'User Exists') {
                     toast.warn('User Already Exists | Please Login to your account', {
                         position: "top-right",
@@ -197,98 +289,6 @@ const Register = (props) => {
                     });
                 }
             })
-        setTimeout(() => {
-            fetch(`${config.apiDomain}/api/login-user`, {
-                method: "POST",
-                crossDomain: true,
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    token: config.requiredToken,
-                },
-                body: JSON.stringify({
-                    email,
-                    password,
-                }),
-            })
-                .then((res) => {
-                    if (!res.ok) {
-                        throw new Error("Failed to fetch!");
-                    }
-                    return res.json();
-                })
-                .then((data) => {
-                    if (data.status === "ok") {
-                        window.localStorage.setItem("token", data.data);
-                        window.localStorage.setItem("loggedIn", true);
-                        setTimeout(() => {
-                            fetch(`${config.apiDomain}/api/user/logged/info`, {
-                                method: "POST",
-                                crossDomain: true,
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    Accept: "application/json",
-                                    "Access-Control-Allow-Origin": "*",
-                                    token: config.requiredToken,
-                                },
-                                body: JSON.stringify({
-                                    token: window.localStorage.getItem("token"),
-                                }),
-                            }).then((res) => {
-                                return res.json();
-                            }).then((data) => {
-                                console.log(data);
-                                fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
-                                    method: "POST",
-                                    crossDomain: true,
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                        Accept: "application/json",
-                                        "Access-Control-Allow-Origin": "*",
-                                        token: config.requiredToken,
-                                    },
-                                    body: JSON.stringify({
-                                        userMongoId: data.data._id,
-                                    })
-                                }).then((res) => {
-                                    return res.json();
-                                }).then((data) => {
-                                    console.log(data)
-                                    window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
-                                })
-                            })
-                        }, 1000);
-                    } else {
-                        toast.error("Error: Please create a AZSRP Ticket", {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "dark",
-                        });
-                    }
-                })
-        }, 2500)
-            .catch((error) => {
-                toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
-                    {
-                        position: "top-right",
-                        autoClose: 10000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                    }
-                );
-                console.log(error);
-            });
         /*         fetch(`${config.apiDomain}/api/user/logged/info`, {
                     method: "POST",
                     crossDomain: true,

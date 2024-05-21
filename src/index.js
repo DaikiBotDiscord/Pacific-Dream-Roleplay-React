@@ -29,6 +29,7 @@ import DOCApplication from "./views/doc-application";
 import DOTApplication from "./views/azdot-application";
 import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
 import FAAApplication from "./views/faa-application";
+import FBIApplication from "./views/fbi-application";
 import './views/home.css'
 
 const App = () => {
@@ -333,6 +334,15 @@ const App = () => {
           path='/user/faa-application'
           render={() => {
             return checkTokenRepeat() ? <FAAApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
+        {/* <Route
+          exact
+          path='/user/fbi-application'
+          render={() => {
+            return checkTokenRepeat() ? <FBIApplication userData={userData}
               discordAuthenticated={discordAuthenticated}
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}

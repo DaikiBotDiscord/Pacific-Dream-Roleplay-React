@@ -27,6 +27,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [AZDOTLight, setAZDOTLight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const [FAAStatus, setFAAStatus] = useState('Loading...');
     const [FAALight, setFAALight] = useState('https://www.pinalcountyrp.com/not_started.png');
+    const [FBIStatus, setFBIStatus] = useState('Loading...');
+    const [FBILight, setFBILight] = useState('https://www.pinalcountyrp.com/not_started.png')
 
     const user = userData.data
     const { data } = userData;
@@ -233,6 +235,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setFAAStatus(data.status);
                 setFAALight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/fbi-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setFBIStatus(data.status);
+                setFBILight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -414,6 +430,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 className="applications-image07"
                                             />
                                         </div>
+                                        <div className="applications-container10">
+                                            <span className="applications-text052">
+                                                <span>Federal Bureau of Investigation</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text055">
+                                                <span>{FBIStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={FBILight}
+                                                className="applications-image07"
+                                            />
+                                        </div>
                                         {/* <div className="applications-container10">
                                             <span className="applications-text052">
                                                 <span>Federal Aviation Administration</span>
@@ -553,21 +584,6 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link to="/user/dot-application" className="applications-navlink5">
-                                                <div className="applications-container23">
-                                                    <img
-                                                        alt="image"
-                                                        src="https://www.pinalcountyrp.com/AZDOT_LOGO.png"
-                                                        className="applications-image15"
-                                                    />
-                                                    <span className="applications-text103">
-                                                        <span>Department of</span>
-                                                        <br></br>
-                                                        <span>Transportation</span>
-                                                        <br></br>
-                                                    </span>
-                                                </div>
-                                            </Link>
                                             <Link to="/user/civ-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
@@ -583,6 +599,36 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
+                                            <Link to="/user/dot-application" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://www.pinalcountyrp.com/AZDOT_LOGO.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Department of</span>
+                                                        <br></br>
+                                                        <span>Transportation</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            {/* <Link to="/user/fbi-application" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://www.pinalcountyrp.com/FBI_logo.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Federal Bureau</span>
+                                                        <br></br>
+                                                        <span>of Investigation</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link> */}
                                             {/* <Link to="/user/faa-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
