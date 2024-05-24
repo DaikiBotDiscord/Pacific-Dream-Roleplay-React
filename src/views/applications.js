@@ -614,7 +614,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            {/* <Link to="/user/fbi-application" className="applications-navlink5">
+                                            <Link to="/user/fbi-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
@@ -628,7 +628,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link> */}
+                                            </Link>
                                             {/* <Link to="/user/faa-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
