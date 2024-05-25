@@ -107,7 +107,7 @@ const Home = (props) => {
           />
           <div className="home-btn-group">
             <a
-              href="https://cfx.re/join/zz8mqp"
+              href="https://cfx.re/join/r6vx48"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link"
