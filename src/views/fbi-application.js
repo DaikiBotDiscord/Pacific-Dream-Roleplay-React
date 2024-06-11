@@ -140,7 +140,7 @@ export default function FBIApplication({ userData, discordAuthenticated, verifie
                 />
             </Helmet>
             <div className="fbi-application-container1">
-                <headerComponent />
+                <headerComponent rootClassName="header-root-class-name16"></headerComponent>
                 <img
                     alt="image"
                     src="https://pinalcountyrp.com/FBI_title.png"
