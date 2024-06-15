@@ -235,20 +235,6 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setFAAStatus(data.status);
                 setFAALight(data.statusLight)
             })
-        fetch(`${config.apiDomain}/api/user/applications/fbi-status/${user.email}`, {
-            method: "POST",
-            crossDomain: true,
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                "Access-Control-Allow-Origin": "*",
-                token: config.requiredToken,
-            }
-        }).then((res) => res.json())
-            .then((data) => {
-                setFBIStatus(data.status);
-                setFBILight(data.statusLight)
-            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -430,7 +416,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 className="applications-image07"
                                             />
                                         </div>
-                                        <div className="applications-container10">
+                                        {/* <div className="applications-container10">
                                             <span className="applications-text052">
                                                 <span>Federal Bureau of Investigation</span>
                                                 <br></br>
@@ -444,7 +430,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                 src={FBILight}
                                                 className="applications-image07"
                                             />
-                                        </div>
+                                        </div> */}
                                         {/* <div className="applications-container10">
                                             <span className="applications-text052">
                                                 <span>Federal Aviation Administration</span>
@@ -614,7 +600,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <Link to="/user/fbi-application" className="applications-navlink5">
+                                            {/* <Link to="/user/fbi-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
                                                         alt="image"
@@ -628,7 +614,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <br></br>
                                                     </span>
                                                 </div>
-                                            </Link>
+                                            </Link> */}
                                             {/* <Link to="/user/faa-application" className="applications-navlink5">
                                                 <div className="applications-container23">
                                                     <img
