@@ -94,10 +94,10 @@ const Departments = (props) => {
                                 className="departments-image-fire"
                             />
                             <h2 className="departments-text">
-                                Phoenix Fire Department
+                                Arizona Fire & Medical
                             </h2>
                             <span className="departments-text01">
-                                Phoenix Fire Department supports the city of Phoenix and Arizona County, providing emergency medicine, technical rescue fire services for both structural and wildland, along with hazardous material management.
+                                Arizona Fire & Medical supports the city of Phoenix and Arizona County, providing emergency medicine, technical rescue fire services for both structural and wildland, along with hazardous material management.
                             </span>
                         </div>
                     </div>
@@ -108,12 +108,12 @@ const Departments = (props) => {
                                 src="https://www.pinalcountyrp.com/DOC_LOGO.png"
                                 className="departments-image4"
                             />
-                            <h2 className="departments-text14">Arizona Department of Communications</h2>
+                            <h2 className="departments-text14">Regional Emergency Dispatch Services (R.E.D.S)</h2>
                             <span className="departments-text15">
-                                The Arizona Department of Communications strives for utmost
+                                R.E.D.S strives for utmost
                                 professionalism in radio communication.
                                 As the backbone of Arizona departments, we aim to excel, not just within our own
-                                ranks but also for those who depend on us, including the Pinal
+                                ranks but also for those who depend on us, including the Arizona
                                 State Roleplay FiveM server.
                             </span>
                         </div>

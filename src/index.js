@@ -31,6 +31,7 @@ import CertifiedCivilianApplicaiton from "./views/certified-civilian-application
 import FAAApplication from "./views/faa-application";
 import FBIApplication from "./views/fbi-application";
 import './views/home.css'
+import StaffApplication from "./views/staff-application";
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -343,6 +344,15 @@ const App = () => {
           path='/user/fbi-application'
           render={() => {
             return checkTokenRepeat() ? <FBIApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
+        {/* <Route
+          exact
+          path='/user/staff-application'
+          render={() => {
+            return checkTokenRepeat() ? <StaffApplication userData={userData}
               discordAuthenticated={discordAuthenticated}
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}

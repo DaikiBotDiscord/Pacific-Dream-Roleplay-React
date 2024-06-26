@@ -1,0 +1,604 @@
+.staff-application-container {
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.staff-application-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyrp.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.staff-application-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.staff-application-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.staff-application-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: var(--dl-space-space-oneandhalfunits);
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.staff-application-container3 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.staff-application-text {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.staff-application-text01 {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.staff-application-text02 {
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.staff-application-text03 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text04 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text05 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text06 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text07 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text08 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text09 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text10 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text11 {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.staff-application-text13 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.staff-application-text14 {
+    color: #dc3424;
+}
+
+.staff-application-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.staff-application-text16 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.staff-application-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.staff-application-text19 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text21 {
+    color: #dc3424;
+}
+
+.staff-application-textinput {
+    margin-top: 3px;
+}
+
+.staff-application-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text22 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text24 {
+    color: #dc3424;
+}
+
+.staff-application-textinput1 {
+    margin-top: 3px;
+}
+
+.staff-application-text25 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.staff-application-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text26 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text28 {
+    color: #dc3424;
+}
+
+.staff-application-textarea {
+    margin-top: 3px;
+}
+
+.staff-application-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text30 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text32 {
+    color: #dc3424;
+}
+
+.staff-application-textarea01 {
+    margin-top: 3px;
+}
+
+.staff-application-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text34 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text36 {
+    color: #dc3424;
+}
+
+.staff-application-textarea02 {
+    margin-top: 3px;
+}
+
+.staff-application-question-6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text38 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text40 {
+    color: #dc3424;
+}
+
+.staff-application-textarea03 {
+    margin-top: 3px;
+}
+
+.staff-application-question-7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text42 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text44 {
+    color: #dc3424;
+}
+
+.staff-application-textarea04 {
+    margin-top: 3px;
+}
+
+.staff-application-question-8 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text46 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text48 {
+    color: #dc3424;
+}
+
+.staff-application-textarea05 {
+    margin-top: 3px;
+}
+
+.staff-application-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text50 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text52 {
+    color: #dc3424;
+}
+
+.staff-application-textarea06 {
+    margin-top: 3px;
+}
+
+.staff-application-text54 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.staff-application-question-10 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text55 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text57 {
+    color: #dc3424;
+}
+
+.staff-application-textarea07 {
+    margin-top: 3px;
+}
+
+.staff-application-question-11 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text59 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text61 {
+    color: #dc3424;
+}
+
+.staff-application-textarea08 {
+    margin-top: 3px;
+}
+
+.staff-application-text63 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.staff-application-question-12 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text64 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text66 {
+    color: #dc3424;
+}
+
+.staff-application-textarea09 {
+    margin-top: 3px;
+}
+
+.staff-application-question-13 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.staff-application-text68 {
+    font-size: 1.5rem;
+}
+
+.staff-application-text70 {
+    color: #dc3424;
+}
+
+.staff-application-textarea10 {
+    margin-top: 3px;
+}
+
+.staff-application-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.staff-application-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.staff-application-text73:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .staff-application-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .staff-application-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .staff-application-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .staff-application-text73 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 390px) {
+    .staff-application-container1 {
+        background-position: top left, center;
+    }
+
+    .staff-application-image {
+        width: 100%;
+    }
+
+    .staff-application-hero {
+        width: 100%;
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+
+    .staff-application-container2 {
+        width: 100%;
+    }
+
+    .staff-application-container3 {
+        width: 100%;
+    }
+
+    .staff-application-text {
+        margin-right: var(--dl-space-space-unit);
+    }
+
+    .staff-application-form {
+        flex-wrap: wrap;
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .staff-application-question-1 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-2 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-3 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-4 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-5 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-6 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-7 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-8 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-9 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-10 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-11 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-12 {
+        flex-wrap: wrap;
+    }
+
+    .staff-application-question-13 {
+        flex-wrap: wrap;
+    }
+}
