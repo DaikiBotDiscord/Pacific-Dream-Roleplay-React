@@ -218,6 +218,10 @@ const Donation = (props) => {
         <br></br>
         *Donation Assets are a privilege and may be taken away by community directors at any point*
       </span>
+      <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+        <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+      </a>
+      <script src="https://static.copyrighted.com/badges/helper.js"></script>
       <FooterContainer rootClassName="footer-container-root-class-name1"></FooterContainer>
     </div>
   )

@@ -38,6 +38,7 @@
   --dl-color-primary-daikipurple: #5e17ebff;
   --dl-space-space-oneandhalfunits: 24px;
 }
+
 .button {
   color: var(--dl-color-gray-black);
   display: inline-block;
@@ -47,6 +48,7 @@
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
 }
+
 .input {
   color: var(--dl-color-gray-black);
   cursor: auto;
@@ -56,6 +58,7 @@
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
 }
+
 .textarea {
   color: var(--dl-color-gray-black);
   cursor: auto;
@@ -65,6 +68,7 @@
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
 }
+
 .list {
   width: 100%;
   margin: 1em 0px 1em 0px;
@@ -73,13 +77,16 @@
   list-style-type: none;
   list-style-position: outside;
 }
+
 .list-item {
   display: list-item;
 }
+
 .teleport-show {
   display: flex !important;
   transform: none !important;
 }
+
 .Heading {
   font-size: 32px;
   font-family: Inter;
@@ -88,6 +95,7 @@
   text-transform: none;
   text-decoration: none;
 }
+
 .Content {
   font-size: 16px;
   font-family: Inter;
@@ -95,4 +103,8 @@
   line-height: 1.15;
   text-transform: none;
   text-decoration: none;
+}
+
+.copyrighted-badge {
+  display: none;
 }
