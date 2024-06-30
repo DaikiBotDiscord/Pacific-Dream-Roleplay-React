@@ -92,7 +92,7 @@ class PFP extends Component {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/CommunityDirectors`)
+    axios.get(`${config.apiDomain}/api/staff/BoardDirectors`)
       .then(response => {
         this.setState({ CommunityDirectorsData: response.data, CommunityDirectorsDataLoading: false });
       }).catch(error => {
@@ -207,23 +207,13 @@ class PFP extends Component {
           <div className="staff-separator01"></div>
           <div className="staff-user-container">
             {FoundersData && this.renderStaffMembers(FoundersData, 'Founder', this.state.FoundersDataLoading)}
-          </div>
-        </div>
-        <div className="staff-container2">
-          <div className="staff-separator"></div>
-          <h1 className="staff-text">
-            <span>Co-Owner</span>
-            <br></br>
-          </h1>
-          <div className="staff-separator01"></div>
-          <div className="staff-user-container">
             {CoOwnerData && this.renderStaffMembers(CoOwnerData, 'Co Owner', this.state.CoOwnerDataLoading)}
           </div>
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
           <h1 className="staff-text03">
-            <span>Community Directors</span>
+            <span>Board of Directors</span>
             <br></br>
           </h1>
           <div className="staff-separator03"></div>
