@@ -246,7 +246,7 @@ class PFP extends Component {
         <div className="staff-container6">
           <div className="staff-separator08"></div>
           <h1 className="staff-text12">
-            <span>Junior Administrator</span>
+            <span>Junior Administrators</span>
             <br></br>
           </h1>
           <div className="staff-separator09"></div>
@@ -257,7 +257,7 @@ class PFP extends Component {
         <div className="staff-container7">
           <div className="staff-separator10"></div>
           <h1 className="staff-text15">
-            <span>Senior Moderator</span>
+            <span>Senior Moderators</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
@@ -268,7 +268,7 @@ class PFP extends Component {
         <div className="staff-container7">
           <div className="staff-separator10"></div>
           <h1 className="staff-text15">
-            <span>Moderator</span>
+            <span>Moderators</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
