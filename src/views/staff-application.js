@@ -1,12 +1,121 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
 import Header from '../components/header'
+import UserHeader from '../components/user-header'
+import config from './config/config'
 import FooterContainer from '../components/footer-container'
 import './staff-application.css'
+import { ToastContainer, toast } from 'react-toastify';
 
-const StaffApplication = (props) => {
+export default function StaffApplication({ userData, discordAuthenticated, verifiedCiv }) {
+    const [headerComponent, setHeaderComponent] = useState(false);
+    const [q1, setQ1] = useState("");
+    const [q2, setQ2] = useState("");
+    const [q3, setQ3] = useState("");
+    const [q4, setQ4] = useState("");
+    const [q5, setQ5] = useState("");
+    const [q6, setQ6] = useState("");
+    const [q7, setQ7] = useState("");
+    const [q8, setQ8] = useState("");
+    const [q9, setQ9] = useState("");
+    const [q10, setQ10] = useState("");
+    const [q11, setQ11] = useState("");
+    const [q12, setQ12] = useState("");
+    const [q13, setQ13] = useState("");
+    const maxLength = 1024;
+
+    useEffect(() => {
+        checkTokenRepeat();
+    }, []);
+
+
+    const checkTokenRepeat = async () => {
+        try {
+            const response = await fetch(`${config.apiDomain}/api/token-check`, {
+                method: 'POST',
+                crossDomain: true,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    token: config.requiredToken,
+                },
+                body: JSON.stringify({
+                    token: window.localStorage.getItem('token'),
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.data === 'token expired') {
+                window.localStorage.clear();
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            } else if (data.status === 'active') {
+                setHeaderComponent(<UserHeader rootClassName="header-root-class-name2" />);
+            } else {
+                setHeaderComponent(<Header rootClassName="header-root-class-name2" />);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        fetch(`${config.apiDomain}/api/user/applications/staff-submit/${userData.data.email}/${userData.data.discordId}`, {
+            method: 'POST',
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            },
+            body: JSON.stringify({
+                Q1: q1,
+                Q2: q2,
+                Q3: q3,
+                Q4: q4,
+                Q5: q5,
+                Q6: q6,
+                Q7: q7,
+                Q8: q8,
+                Q9: q9,
+                Q10: q10,
+                Q11: q11,
+                Q12: q12,
+                Q13: q13
+            }),
+        }).then((res) => res.json())
+            .then((data) => {
+                console.log(data)
+                if (data.message === "Successfully Applied") {
+                    toast.success('Successfully Applied!', {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                } else if (data.error) {
+                    toast.error(`${data.error}`, {
+                        position: "top-right",
+                        autoClose: 10000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                    });
+                }
+            })
+    }
     return (
         <div className="staff-application-container">
             <Helmet>
@@ -17,7 +126,7 @@ const StaffApplication = (props) => {
                 />
             </Helmet>
             <div className="staff-application-container1">
-                <Header rootClassName="header-root-class-name17"></Header>
+                <UserHeader rootClassName="header-root-class-name17" />
                 <img
                     alt="image"
                     src="https://pinalcountyrp.com/staff_app_title.png"
@@ -71,10 +180,13 @@ const StaffApplication = (props) => {
                                     <input
                                         type="text"
                                         id="q1"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textinput input"
+                                        onChange={(e) => setQ1(e.target.value)}
+                                        maxLength={32}
                                     />
+                                    <p>Characters left: {32 - q1.length}</p>
                                 </div>
                                 <div className="staff-application-question-2">
                                     <span className="staff-application-text22">
@@ -84,13 +196,18 @@ const StaffApplication = (props) => {
                                         </span>
                                         <span className="staff-application-text24">*</span>
                                     </span>
-                                    <input
+                                    <textarea
                                         type="text"
                                         id="q2"
-                                        required="true"
+                                        cols="60"
+                                        rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textinput1 input"
+                                        onChange={(e) => setQ2(e.target.value)}
+                                        maxLength={4096}
                                     />
+                                    <p>Characters left: {4096 - q2.length}</p>
                                 </div>
                                 <span className="staff-application-text25">Section 2</span>
                                 <div className="staff-application-question-3">
@@ -103,9 +220,13 @@ const StaffApplication = (props) => {
                                         id="q3"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ3(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q3.length}</p>
                                 </div>
                                 <div className="staff-application-question-4">
                                     <span className="staff-application-text30">
@@ -120,9 +241,13 @@ const StaffApplication = (props) => {
                                         id="q4"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea01 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ4(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q4.length}</p>
                                 </div>
                                 <div className="staff-application-question-5">
                                     <span className="staff-application-text34">
@@ -137,9 +262,13 @@ const StaffApplication = (props) => {
                                         id="q5"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea02 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ5(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q5.length}</p>
                                 </div>
                                 <div className="staff-application-question-6">
                                     <span className="staff-application-text38">
@@ -154,9 +283,13 @@ const StaffApplication = (props) => {
                                         id="q6"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea03 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q6.length}</p>
                                 </div>
                                 <div className="staff-application-question-7">
                                     <span className="staff-application-text42">
@@ -171,9 +304,13 @@ const StaffApplication = (props) => {
                                         id="q7"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea04 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ7(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q7.length}</p>
                                 </div>
                                 <div className="staff-application-question-8">
                                     <span className="staff-application-text46">
@@ -188,9 +325,13 @@ const StaffApplication = (props) => {
                                         id="q8"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea05 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ8(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q8.length}</p>
                                 </div>
                                 <div className="staff-application-question-9">
                                     <span className="staff-application-text50">
@@ -202,9 +343,13 @@ const StaffApplication = (props) => {
                                         id="q9"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea06 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ9(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q9.length}</p>
                                 </div>
                                 <span className="staff-application-text54">Section 3</span>
                                 <div className="staff-application-question-10">
@@ -221,9 +366,13 @@ const StaffApplication = (props) => {
                                         id="q10"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea07 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ10(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q10.length}</p>
                                 </div>
                                 <div className="staff-application-question-11">
                                     <span className="staff-application-text59">
@@ -238,9 +387,13 @@ const StaffApplication = (props) => {
                                         id="q11"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea08 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ11(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q11.length}</p>
                                 </div>
                                 <span className="staff-application-text63">Section 4</span>
                                 <div className="staff-application-question-12">
@@ -256,9 +409,13 @@ const StaffApplication = (props) => {
                                         id="q12"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea09 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ12(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q12.length}</p>
                                 </div>
                                 <div className="staff-application-question-13">
                                     <span className="staff-application-text68">
@@ -270,11 +427,15 @@ const StaffApplication = (props) => {
                                         id="q13"
                                         cols="60"
                                         rows="3"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="staff-application-textarea10 textarea"
-                                    ></textarea>
+                                        onChange={(e) => setQ13(e.target.value)}
+                                        maxLength={4096}
+                                    />
+                                    <p>Characters left: {4096 - q13.length}</p>
                                 </div>
-                                <button className="staff-application-button button">
+                                <button onClick={handleSubmit} className="staff-application-button button">
                                     <span>
                                         <span className="staff-application-text73">Submit</span>
                                         <br></br>
@@ -293,5 +454,3 @@ const StaffApplication = (props) => {
         </div>
     )
 }
-
-export default StaffApplication
