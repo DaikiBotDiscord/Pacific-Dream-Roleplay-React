@@ -50,8 +50,8 @@ const Departments = (props) => {
     return (
         <div className="departments-container">
             <Helmet>
-                <title>Departments - Pinal County Roleplay</title>
-                <meta property="og:title" content="Pinal County Roleplay" />
+                <title>Departments - Arizona State Roleplay</title>
+                <meta property="og:title" content="Arizona State Roleplay" />
             </Helmet>
             <div className="departments-container1">
                 {headerComponent}
@@ -64,12 +64,12 @@ const Departments = (props) => {
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
-                                <span>Maricopa County Sheriffs Office</span>
+                                <span>Maricopa State Sheriffs Office</span>
                                 <br></br>
                             </h2>
                             <span className="departments-text09">
                                 <span>
-                                    The Maricopa County’s Sheriffs Office is a diverse community with in the office that Preserve the Peace, Protect Life and Property, and promote Public Safety while upholding the Constitution. And we Ensures that we have the  integrity by implementing policy, investigating citizen complaints. Are Mission Core Value is to serve the Pinal County resident with pride and honor, and in a professional manner awhile Protecting the our community.
+                                    The Maricopa County’s Sheriffs Office is a diverse community with in the office that Preserve the Peace, Protect Life and Property, and promote Public Safety while upholding the Constitution. And we Ensures that we have the  integrity by implementing policy, investigating citizen complaints. Are Mission Core Value is to serve the Arizona State resident with pride and honor, and in a professional manner awhile Protecting the our community.
                                 </span>
                                 <br></br>
                             </span>
@@ -94,10 +94,10 @@ const Departments = (props) => {
                                 className="departments-image-fire"
                             />
                             <h2 className="departments-text">
-                                Phoenix Fire Department
+                                Arizona Fire & Medical
                             </h2>
                             <span className="departments-text01">
-                                Phoenix Fire Department supports the city of Phoenix and Pinal County, providing emergency medicine, technical rescue fire services for both structural and wildland, along with hazardous material management.
+                                Arizona Fire & Medical supports the city of Phoenix and Arizona County, providing emergency medicine, technical rescue fire services for both structural and wildland, along with hazardous material management.
                             </span>
                         </div>
                     </div>
@@ -108,13 +108,13 @@ const Departments = (props) => {
                                 src="https://www.pinalcountyrp.com/DOC_LOGO.png"
                                 className="departments-image4"
                             />
-                            <h2 className="departments-text14">Arizona Department of Communications</h2>
+                            <h2 className="departments-text14">Regional Emergency Dispatch Services (R.E.D.S)</h2>
                             <span className="departments-text15">
-                                The Arizona Department of Communications strives for utmost
+                                R.E.D.S strives for utmost
                                 professionalism in radio communication.
                                 As the backbone of Arizona departments, we aim to excel, not just within our own
-                                ranks but also for those who depend on us, including the Pinal
-                                County Roleplay FiveM server.
+                                ranks but also for those who depend on us, including the Arizona
+                                State Roleplay FiveM server.
                             </span>
                         </div>
                         <div className="departments-gallery-card1">
@@ -148,6 +148,10 @@ const Departments = (props) => {
                 </div>
                 <div className="departments-gallery"></div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name5"></FooterContainer>
         </div>
     )

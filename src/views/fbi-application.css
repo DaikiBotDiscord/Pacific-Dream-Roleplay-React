@@ -1,0 +1,645 @@
+.fbi-application-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fbi-application-container1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-size: auto, cover;
+    background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%), url('https://pinalcountyrp.com/blank_banner.png');
+    background-repeat: repeat, no-repeat;
+    background-position: top left, center;
+}
+
+.fbi-application-image {
+    width: 750px;
+    align-self: center;
+    margin-top: var(--dl-space-space-unit);
+    object-fit: cover;
+}
+
+.fbi-application-hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    min-height: 80vh;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-threeunits);
+    padding-right: var(--dl-space-space-threeunits);
+    flex-direction: row;
+    padding-bottom: var(--dl-space-space-sixunits);
+    justify-content: center;
+}
+
+.fbi-application-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: var(--dl-space-space-oneandhalfunits);
+    align-items: center;
+    border-radius: var(--dl-radius-radius-radius4);
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.fbi-application-container3 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.fbi-application-image1 {
+    width: 100%;
+    align-self: center;
+    object-fit: cover;
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+}
+
+.fbi-application-text {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.fbi-application-text10 {
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-unit);
+}
+
+.fbi-application-text11 {
+    color: #dc3424;
+}
+
+.fbi-application-form {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-self: flex-start;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-unit);
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.fbi-application-question-1 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.fbi-application-text13 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text15 {
+    color: #dc3424;
+}
+
+.fbi-application-textinput {
+    margin-top: 3px;
+}
+
+.fbi-application-question-2 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text16 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text18 {
+    color: #dc3424;
+}
+
+.fbi-application-textinput1 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-3 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text19 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text21 {
+    color: #dc3424;
+}
+
+.fbi-application-textinput2 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-4 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text23 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text25 {
+    color: #dc3424;
+}
+
+.fbi-application-textinput3 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-5 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text27 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text29 {
+    color: #dc3424;
+}
+
+.fbi-application-textinput4 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-6 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text31 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text33 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea {
+    margin-top: 3px;
+}
+
+.fbi-application-question-7 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text35 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text37 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea01 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-8 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text39 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text41 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea02 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-9 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text43 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text45 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea03 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-10 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text47 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text49 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea04 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-11 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text51 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text53 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea05 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-12 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text55 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text57 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea06 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-13 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text59 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text61 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea07 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-14 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text63 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text65 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea08 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-15 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text67 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text69 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea09 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-16 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text71 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text73 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea10 {
+    margin-top: 3px;
+}
+
+.fbi-application-question-17 {
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-top: var(--dl-space-space-unit);
+    align-items: flex-start;
+    margin-bottom: var(--dl-space-space-unit);
+    flex-direction: column;
+}
+
+.fbi-application-text75 {
+    font-size: 1.5rem;
+}
+
+.fbi-application-text77 {
+    color: #dc3424;
+}
+
+.fbi-application-textarea11 {
+    margin-top: 3px;
+}
+
+.fbi-application-button {
+    color: var(--dl-color-gray-white);
+    width: var(--dl-size-size-medium);
+    font-size: 0.75rem;
+    transition: 0.3s;
+    margin-left: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-gray-black);
+}
+
+.fbi-application-button:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+.fbi-application-text80:hover {
+    color: var(--dl-color-gray-black);
+    background-color: transparent;
+}
+
+@media(max-width: 991px) {
+    .fbi-application-hero {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 767px) {
+    .fbi-application-hero {
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+    }
+}
+
+@media(max-width: 479px) {
+    .fbi-application-button {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+
+    .fbi-application-text80 {
+        margin-top: var(--dl-space-space-unit);
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 390px) {
+    .fbi-application-container1 {
+        background-position: top left, center;
+    }
+
+    .fbi-application-image {
+        width: 100%;
+    }
+
+    .fbi-application-hero {
+        width: 100%;
+        padding-top: var(--dl-space-space-twounits);
+        padding-left: var(--dl-space-space-twounits);
+        padding-right: var(--dl-space-space-twounits);
+        padding-bottom: var(--dl-space-space-twounits);
+    }
+
+    .fbi-application-container2 {
+        width: 100%;
+    }
+
+    .fbi-application-container3 {
+        width: 100%;
+    }
+
+    .fbi-application-image1 {
+        width: 95%;
+    }
+
+    .fbi-application-text {
+        margin-right: var(--dl-space-space-unit);
+    }
+
+    .fbi-application-form {
+        flex-wrap: wrap;
+        margin-left: var(--dl-space-space-halfunit);
+    }
+
+    .fbi-application-question-1 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-2 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-3 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-4 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-5 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-6 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-7 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-8 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-9 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-10 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-11 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-12 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-13 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-14 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-15 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-16 {
+        flex-wrap: wrap;
+    }
+
+    .fbi-application-question-17 {
+        flex-wrap: wrap;
+    }
+}

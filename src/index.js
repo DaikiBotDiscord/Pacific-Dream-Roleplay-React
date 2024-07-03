@@ -29,7 +29,9 @@ import DOCApplication from "./views/doc-application";
 import DOTApplication from "./views/azdot-application";
 import CertifiedCivilianApplicaiton from "./views/certified-civilian-application";
 import FAAApplication from "./views/faa-application";
+import FBIApplication from "./views/fbi-application";
 import './views/home.css'
+import StaffApplication from "./views/staff-application";
 
 const App = () => {
   const [userData, setUserData] = useState("");
@@ -229,7 +231,7 @@ const App = () => {
         <br></br>
         <span className="home-notification-text">
           <span>
-            Some Pinal County Roleplay Account Services will be unavailable until further notice!
+            Some Arizona State Roleplay Account Services will be unavailable until further notice!
           </span>
           <br></br>
         </span>
@@ -333,6 +335,24 @@ const App = () => {
           path='/user/faa-application'
           render={() => {
             return checkTokenRepeat() ? <FAAApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
+        {/* <Route
+          exact
+          path='/user/fbi-application'
+          render={() => {
+            return checkTokenRepeat() ? <FBIApplication userData={userData}
+              discordAuthenticated={discordAuthenticated}
+              verifiedCiv={verifiedCiv} /> : <Login />;
+          }}
+        /> */}
+        {/* <Route
+          exact
+          path='/user/staff-application'
+          render={() => {
+            return checkTokenRepeat() ? <StaffApplication userData={userData}
               discordAuthenticated={discordAuthenticated}
               verifiedCiv={verifiedCiv} /> : <Login />;
           }}

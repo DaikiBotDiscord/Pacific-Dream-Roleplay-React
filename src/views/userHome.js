@@ -198,7 +198,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                             <h1 className="a-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                             <span className="a-home-text3">
                                 <span>
-                                    To be able to access your PCRP account you are required to integrate with Discord
+                                    To be able to access your AZSRP account you are required to integrate with Discord
                                 </span>
                                 <br></br>
                                 <span>
@@ -216,7 +216,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                         <div className="user-home-container">
                             <div className="user-home-container01">
                                 <h1 className="user-home-text">
-                                    Welcome {capitalizeFirstLetter(data.fname)} to your PCRP Account!
+                                    Welcome {capitalizeFirstLetter(data.fname)} to your AZSRP Account!
                                 </h1>
                                 <div className="user-home-container02">
                                     <div className="user-home-container03">
@@ -396,6 +396,10 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                     ) : null
                 )}
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name4"></FooterContainer>
         </div>
     );
@@ -410,7 +414,7 @@ export default function UserHome({ userData, discordAuthenticated, verifiedCiv }
                     <h1 className="user-home-text2">{capitalizeFirstLetter(data.fname)} Discord Integration is Required</h1>
                     <span className="user-home-text3">
                         <span>
-                            To be able to access your PCRP account you are required to integrate with Discord
+                            To be able to access your AZSRP account you are required to integrate with Discord
                         </span>
                         <br></br>
                         <span>

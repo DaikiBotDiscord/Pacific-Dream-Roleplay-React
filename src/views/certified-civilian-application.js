@@ -110,8 +110,8 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
     return (
         <div className="certified-civilian-applicaiton-container">
             <Helmet>
-                <title>Certified Civilian - Pinal County Roleplay</title>
-                <meta property="og:title" content="Certified Civilian Application - Pinal County Roleplay" />
+                <title>Certified Civilian - Arizona State Roleplay</title>
+                <meta property="og:title" content="Certified Civilian Application - Arizona State Roleplay" />
             </Helmet>
             <div className="certified-civilian-applicaiton-container1">
                 {headerComponent}
@@ -130,7 +130,7 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                             />
                             <span className="certified-civilian-applicaiton-text">
                                 <br></br>
-                                <span>The Official Pinal County Roleplay Civilian APP.</span>
+                                <span>The Official Arizona State Roleplay Civilian APP.</span>
                                 <br></br>
                             </span>
                             <span className="certified-civilian-applicaiton-text04">
@@ -300,6 +300,10 @@ export default function CertifiedCivilianApplicaiton({ userData, discordAuthenti
                     </div>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name12"></FooterContainer>
         </div>
     )

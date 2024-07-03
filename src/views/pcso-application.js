@@ -114,8 +114,8 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
     return (
         <div className="pcso-applicaiton-container">
             <Helmet>
-                <title>MCSO Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="MCSO Application - Pinal County Roleplay" />
+                <title>MCSO Application - Arizona State Roleplay</title>
+                <meta property="og:title" content="MCSO Application - Arizona State Roleplay" />
             </Helmet>
             <div className="pcso-applicaiton-container1">
                 {headerComponent}
@@ -134,7 +134,7 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                             />
                             <span className="pcso-applicaiton-text">
                                 This is an application for the FiveM Roleplay server Pinal
-                                County Roleplay | MCSO. This is in a way related to a real law
+                                State Roleplay | MCSO. This is in a way related to a real law
                                 enforcement agency.
                             </span>
                             <h1 className="pcso-applicaiton-text01">Requirements:</h1>
@@ -361,6 +361,10 @@ export default function PCSOApplicaiton({ userData, discordAuthenticated, verifi
                     </div>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name10"></FooterContainer>
         </div>
     )

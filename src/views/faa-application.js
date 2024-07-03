@@ -142,7 +142,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                             />
                             <span className="faa-application-text">
                                 <br></br>
-                                <span>Pinal County Roleplay FAA Department</span>
+                                <span>Arizona State Roleplay FAA Department</span>
                                 <br></br>
                                 <br></br>
                                 <span>
@@ -176,7 +176,7 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                                 </div>
                                 <div className="faa-application-question-2">
                                     <span className="faa-application-text13">
-                                        <span>When did you first join Pinal County Roleplay? </span>
+                                        <span>When did you first join Arizona State Roleplay? </span>
                                         <span className="faa-application-text15">*</span>
                                     </span>
                                     <input
@@ -395,6 +395,10 @@ export default function FAAApplication({ userData, discordAuthenticated, verifie
                     </div>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name15"></FooterContainer>
         </div>
     )

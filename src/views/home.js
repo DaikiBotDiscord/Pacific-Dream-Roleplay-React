@@ -87,8 +87,8 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <Helmet>
-        <title>Pinal County Roleplay</title>
-        <meta property="og:title" content="Pinal County Roleplay" />
+        <title>Arizona State Roleplay</title>
+        <meta property="og:title" content="Arizona State Roleplay" />
       </Helmet>
       <div className="home-container1">
         {headerComponent}
@@ -107,7 +107,7 @@ const Home = (props) => {
           />
           <div className="home-btn-group">
             <a
-              href="https://cfx.re/join/zz8mqp"
+              href="https://cfx.re/join/r6vx48"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link"
@@ -120,7 +120,7 @@ const Home = (props) => {
               />
             </a>
             <a
-              href="https://discord.gg/azpcrp"
+              href="https://discord.gg/azsrp"
               target="_blank"
               rel="noreferrer noopener"
               className="home-link1"
@@ -171,7 +171,7 @@ const Home = (props) => {
         </div>
         <div className="home-container7">
           <a
-            href="https://discord.gg/azpcrp"
+            href="https://discord.gg/azsrp"
             target="_blank"
             rel="noreferrer noopener"
             className="home-link2"
@@ -186,7 +186,7 @@ const Home = (props) => {
               <span className="home-text10">Discord</span>
             </div>
           </a>
-          <a
+          {/* <a
             href="https://www.youtube.com/channel/UCoYE6ssoT28HPCn30r8TNxQ"
             target="_blank"
             rel="noreferrer noopener"
@@ -198,9 +198,9 @@ const Home = (props) => {
               </svg>
               <span className="home-text11">Youtube</span>
             </div>
-          </a>
+          </a> */}
           <a
-            href="https://www.tiktok.com/@pacific.dream.rol"
+            href="https://www.tiktok.com/@arizonastaterpfivem"
             target="_blank"
             rel="noreferrer noopener"
             className="home-link4"
@@ -215,7 +215,7 @@ const Home = (props) => {
               <span className="home-text12">TikTok</span>
             </div>
           </a>
-          <a
+          {/* <a
             href="https://www.instagram.com/pacificdream.official/"
             target="_blank"
             rel="noreferrer noopener"
@@ -232,9 +232,13 @@ const Home = (props) => {
                 <span className="home-text14">Instagram</span>
               </span>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
+      <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+        <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+      </a>
+      <script src="https://static.copyrighted.com/badges/helper.js"></script>
       <FooterContainer></FooterContainer>
     </div>
   )

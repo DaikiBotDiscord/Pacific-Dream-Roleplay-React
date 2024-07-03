@@ -83,7 +83,7 @@ const Register = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        /* return toast.error('Pinal County RP Account Services are currently unavailable. Please try again later', {
+        /* return toast.error('Arizona State RP Account Services are currently unavailable. Please try again later', {
             position: "top-right",
             hideProgressBar: true,
             closeOnClick: true,
@@ -172,6 +172,98 @@ const Register = (props) => {
                         progress: undefined,
                         theme: "dark",
                     });
+                    setTimeout(() => {
+                        fetch(`${config.apiDomain}/api/login-user`, {
+                            method: "POST",
+                            crossDomain: true,
+                            headers: {
+                                "Content-Type": "application/json",
+                                Accept: "application/json",
+                                "Access-Control-Allow-Origin": "*",
+                                token: config.requiredToken,
+                            },
+                            body: JSON.stringify({
+                                email,
+                                password,
+                            }),
+                        })
+                            .then((res) => {
+                                if (!res.ok) {
+                                    throw new Error("Failed to fetch!");
+                                }
+                                return res.json();
+                            })
+                            .then((data) => {
+                                if (data.status === "ok") {
+                                    window.localStorage.setItem("token", data.data);
+                                    window.localStorage.setItem("loggedIn", true);
+                                    setTimeout(() => {
+                                        fetch(`${config.apiDomain}/api/user/logged/info`, {
+                                            method: "POST",
+                                            crossDomain: true,
+                                            headers: {
+                                                "Content-Type": "application/json",
+                                                Accept: "application/json",
+                                                "Access-Control-Allow-Origin": "*",
+                                                token: config.requiredToken,
+                                            },
+                                            body: JSON.stringify({
+                                                token: window.localStorage.getItem("token"),
+                                            }),
+                                        }).then((res) => {
+                                            return res.json();
+                                        }).then((data) => {
+                                            console.log(data);
+                                            fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
+                                                method: "POST",
+                                                crossDomain: true,
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    Accept: "application/json",
+                                                    "Access-Control-Allow-Origin": "*",
+                                                    token: config.requiredToken,
+                                                },
+                                                body: JSON.stringify({
+                                                    userMongoId: data.data._id,
+                                                })
+                                            }).then((res) => {
+                                                return res.json();
+                                            }).then((data) => {
+                                                console.log(data)
+                                                window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
+                                            })
+                                        })
+                                    }, 1000);
+                                } else {
+                                    toast.error("Error: Please create a AZSRP Ticket", {
+                                        position: "top-right",
+                                        autoClose: 5000,
+                                        hideProgressBar: false,
+                                        closeOnClick: true,
+                                        pauseOnHover: true,
+                                        draggable: true,
+                                        progress: undefined,
+                                        theme: "dark",
+                                    });
+                                }
+                            })
+                    }, 2500)
+                        .catch((error) => {
+                            toast.error(
+                                "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
+                                {
+                                    position: "top-right",
+                                    autoClose: 10000,
+                                    hideProgressBar: false,
+                                    closeOnClick: true,
+                                    pauseOnHover: true,
+                                    draggable: true,
+                                    progress: undefined,
+                                    theme: "dark",
+                                }
+                            );
+                            console.log(error);
+                        });
                 } else if (data.error === 'User Exists') {
                     toast.warn('User Already Exists | Please Login to your account', {
                         position: "top-right",
@@ -185,7 +277,7 @@ const Register = (props) => {
 
                     });
                 } else {
-                    toast.error('Something Went Wrong | Please Create a PCRP Support Ticket.', {
+                    toast.error('Something Went Wrong | Please Create a AZSRP Support Ticket.', {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -197,98 +289,6 @@ const Register = (props) => {
                     });
                 }
             })
-        setTimeout(() => {
-            fetch(`${config.apiDomain}/api/login-user`, {
-                method: "POST",
-                crossDomain: true,
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                    "Access-Control-Allow-Origin": "*",
-                    token: config.requiredToken,
-                },
-                body: JSON.stringify({
-                    email,
-                    password,
-                }),
-            })
-                .then((res) => {
-                    if (!res.ok) {
-                        throw new Error("Failed to fetch!");
-                    }
-                    return res.json();
-                })
-                .then((data) => {
-                    if (data.status === "ok") {
-                        window.localStorage.setItem("token", data.data);
-                        window.localStorage.setItem("loggedIn", true);
-                        setTimeout(() => {
-                            fetch(`${config.apiDomain}/api/user/logged/info`, {
-                                method: "POST",
-                                crossDomain: true,
-                                headers: {
-                                    "Content-Type": "application/json",
-                                    Accept: "application/json",
-                                    "Access-Control-Allow-Origin": "*",
-                                    token: config.requiredToken,
-                                },
-                                body: JSON.stringify({
-                                    token: window.localStorage.getItem("token"),
-                                }),
-                            }).then((res) => {
-                                return res.json();
-                            }).then((data) => {
-                                console.log(data);
-                                fetch(`${config.apiDomain}/api/auth/generate-pair-code`, {
-                                    method: "POST",
-                                    crossDomain: true,
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                        Accept: "application/json",
-                                        "Access-Control-Allow-Origin": "*",
-                                        token: config.requiredToken,
-                                    },
-                                    body: JSON.stringify({
-                                        userMongoId: data.data._id,
-                                    })
-                                }).then((res) => {
-                                    return res.json();
-                                }).then((data) => {
-                                    console.log(data)
-                                    window.location.href = `${config.apiDomain}/api/auth/attach-pair-code/${data.pairCode}`;
-                                })
-                            })
-                        }, 1000);
-                    } else {
-                        toast.error("Error: Please create a PCRP Ticket", {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "dark",
-                        });
-                    }
-                })
-        }, 2500)
-            .catch((error) => {
-                toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
-                    {
-                        position: "top-right",
-                        autoClose: 10000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "dark",
-                    }
-                );
-                console.log(error);
-            });
         /*         fetch(`${config.apiDomain}/api/user/logged/info`, {
                     method: "POST",
                     crossDomain: true,
@@ -328,8 +328,8 @@ const Register = (props) => {
     return (
         <div className="register-container">
             <Helmet>
-                <title>Register - Pinal County Roleplay</title>
-                <meta property="og:title" content="Register - Pinal County Roleplay" />
+                <title>Register - Arizona State Roleplay</title>
+                <meta property="og:title" content="Register - Arizona State Roleplay" />
             </Helmet>
             <div className="register-container1">
                 {headerComponent}
@@ -388,6 +388,10 @@ const Register = (props) => {
                     </form>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name3"></FooterContainer>
             <ToastContainer />
         </div>

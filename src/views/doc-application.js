@@ -111,8 +111,8 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
     return (
         <div className="doc-application-container">
             <Helmet>
-                <title>DOC Application - Pinal County Roleplay</title>
-                <meta property="og:title" content="DOC Application - Pinal County Roleplay" />
+                <title>DOC Application - Arizona State Roleplay</title>
+                <meta property="og:title" content="DOC Application - Arizona State Roleplay" />
             </Helmet>
             <div className="doc-application-container1">
                 {headerComponent}
@@ -130,7 +130,7 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                                 className="doc-application-image1"
                             />
                             <span className="doc-application-text">
-                                The Official PCRP SADOC Application.
+                                The Official AZSRP SADOC Application.
                             </span>
                             <span className="doc-application-text01">
                                 <span className="doc-application-text02">
@@ -346,6 +346,10 @@ export default function DOCApplication({ userData, discordAuthenticated, verifie
                     </div>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name11"></FooterContainer>
         </div>
     )

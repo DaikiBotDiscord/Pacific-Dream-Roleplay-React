@@ -143,7 +143,7 @@ const ResetPassword = () => {
 
     function OldhandleSubmit(e) {
         e.preventDefault();
-        /* toast.error('Pinal County RP Account Services are currently unavailable. Please try again later', {
+        /* toast.error('Arizona State RP Account Services are currently unavailable. Please try again later', {
           position: "top-right",
           hideProgressBar: true,
           closeOnClick: true,
@@ -225,7 +225,7 @@ const ResetPassword = () => {
             })
             .catch((error) => {
                 toast.error(
-                    "Unable to login at this time. Please try again | If you continue to see this message please create a  PCRP Support Ticket.",
+                    "Unable to login at this time. Please try again | If you continue to see this message please create a  AZSRP Support Ticket.",
                     {
                         position: "top-right",
                         autoClose: 10000,
@@ -288,8 +288,8 @@ const ResetPassword = () => {
     return (
         <div className="login-container">
             <Helmet>
-                <title>Login - Pinal County Roleplay</title>
-                <meta property="og:title" content="Login - Pinal County Roleplay" />
+                <title>Login - Arizona State Roleplay</title>
+                <meta property="og:title" content="Login - Arizona State Roleplay" />
             </Helmet>
             <div className="login-container1">
                 {headerComponent}
@@ -322,6 +322,10 @@ const ResetPassword = () => {
                     </form>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name2"></FooterContainer>
             <ToastContainer />
         </div>

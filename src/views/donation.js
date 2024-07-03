@@ -104,7 +104,7 @@ const Donation = (props) => {
                 <span></span>
               </span>
               <span className="donation-text20">
-                <span>20</span>
+                <span>25</span>
                 <br></br>
               </span>
               <span className="donation-text23">
@@ -125,38 +125,6 @@ const Donation = (props) => {
               Learn More
             </a>
           </div>
-          <div className="donation-pricing-card2">
-            <span className="donation-text29">
-              <span>Platinum</span>
-              <br></br>
-            </span>
-            <div className="donation-container07">
-              <span className="donation-text32">
-                <span>$</span>
-                <span></span>
-              </span>
-              <span className="donation-text35">
-                <span>35</span>
-                <br></br>
-              </span>
-              <span className="donation-text38">
-                <span>.00</span>
-                <br></br>
-              </span>
-            </div>
-            <div className="donation-container08">
-              <span className="donation-text41">
-                ✔ All features Gold Includes
-              </span>
-              <span className="donation-text42">
-                <span>✔ Free Personal LEO Vehicle</span>
-                <br></br>
-              </span>
-            </div>
-            <a href="#how-to-donate" className="donation-link2 button">
-              Learn More
-            </a>
-          </div>
           <div className="donation-pricing-card3">
             <span className="donation-text45">
               <span>Diamond</span>
@@ -168,7 +136,7 @@ const Donation = (props) => {
                 <span></span>
               </span>
               <span className="donation-text51">
-                <span>65</span>
+                <span>60</span>
                 <br></br>
               </span>
               <span className="donation-text54">
@@ -182,7 +150,7 @@ const Donation = (props) => {
               </span>
               <span className="donation-text58">
                 <span>
-                  ✔ Personal Custom Modeled Vehicle By our developmers
+                  ✔ Personal LEO Vehicle
                 </span>
                 <br></br>
               </span>
@@ -244,12 +212,16 @@ const Donation = (props) => {
         </a>
       </div>
       <span className='disclaimer'>
-        *Pinal County Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Pinal County Roleplay Server*
+        *Arizona State Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Arizona State Roleplay Server*
         <br></br>
         *Your Personals will have a script to lock them only to you and you may give access to other users*
         <br></br>
         *Donation Assets are a privilege and may be taken away by community directors at any point*
       </span>
+      <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+        <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+      </a>
+      <script src="https://static.copyrighted.com/badges/helper.js"></script>
       <FooterContainer rootClassName="footer-container-root-class-name1"></FooterContainer>
     </div>
   )

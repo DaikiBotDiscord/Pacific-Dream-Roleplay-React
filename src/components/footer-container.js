@@ -12,7 +12,7 @@ const FooterContainer = (props) => {
       <div className="footer-container-footer">
         <div className="footer-container-social-links">
           <a
-            href="https://discord.gg/pinalcountyrp"
+            href="https://discord.gg/azsrp"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link"
@@ -30,7 +30,7 @@ const FooterContainer = (props) => {
               </a> */}
           <script src="https://static.copyrighted.com/badges/helper.js"></script>
           <a
-            href="https://app.copyrighted.com/website/nF3fYdJ2PP54SkXj"
+            href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI"
             target="_blank"
             rel="noreferrer noopener"
             className="footer-container-link1"
@@ -51,10 +51,10 @@ const FooterContainer = (props) => {
 }
 
 FooterContainer.defaultProps = {
-  text: 'Pinal County Roleplay',
+  text: 'Arizona State Roleplay',
   image_alt: 'image',
   image_src: 'https://www.daiki-bot.xyz/playground_assets/discord%20logo.svg',
-  text1: 'All Rights Reserved, Pinal County Roleplay',
+  text1: 'All Rights Reserved, Arizona State Roleplay',
   rootClassName: '',
 }
 

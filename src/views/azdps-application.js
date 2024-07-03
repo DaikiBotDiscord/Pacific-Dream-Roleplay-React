@@ -203,7 +203,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                     <input
                                         type="text"
                                         id="q1"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput input"
                                         onChange={(e) => setQ1(e.target.value)}
@@ -226,7 +226,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                     <input
                                         type="text"
                                         id="q2"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
@@ -242,7 +242,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                     <input
                                         type="number"
                                         id="q3"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput2 input"
                                         onChange={(e) => setQ3(e.target.value)}
@@ -265,7 +265,7 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                                     <input
                                         type="date"
                                         id="q4"
-                                        required="true"
+                                        required={true}
                                         placeholder="Your Answer"
                                         className="azdps-application-textinput3 input"
                                         onChange={(e) => setQ4(e.target.value)}
@@ -408,6 +408,10 @@ export default function AZDPSApplication({ userData, discordAuthenticated, verif
                     </div>
                 </div>
             </div>
+            <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+                <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+            </a>
+            <script src="https://static.copyrighted.com/badges/helper.js"></script>
             <FooterContainer rootClassName="footer-container-root-class-name7"></FooterContainer>
         </div>
     )

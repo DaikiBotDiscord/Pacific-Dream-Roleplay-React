@@ -92,7 +92,7 @@ class PFP extends Component {
         console.error('API Error:', error);
       });
 
-    axios.get(`${config.apiDomain}/api/staff/CommunityDirectors`)
+    axios.get(`${config.apiDomain}/api/staff/BoardDirectors`)
       .then(response => {
         this.setState({ CommunityDirectorsData: response.data, CommunityDirectorsDataLoading: false });
       }).catch(error => {
@@ -183,8 +183,8 @@ class PFP extends Component {
       <div className="staff-container">
 
         <Helmet>
-          <title>Staff - Pinal County Roleplay</title>
-          <meta property="og:title" content="Staff - Pinal County Roleplay" />
+          <title>Staff - Arizona State Roleplay</title>
+          <meta property="og:title" content="Staff - Arizona State Roleplay" />
         </Helmet>
         <div className="staff-container1">
           {headerComponent}
@@ -207,23 +207,13 @@ class PFP extends Component {
           <div className="staff-separator01"></div>
           <div className="staff-user-container">
             {FoundersData && this.renderStaffMembers(FoundersData, 'Founder', this.state.FoundersDataLoading)}
-          </div>
-        </div>
-        <div className="staff-container2">
-          <div className="staff-separator"></div>
-          <h1 className="staff-text">
-            <span>Co-Owner</span>
-            <br></br>
-          </h1>
-          <div className="staff-separator01"></div>
-          <div className="staff-user-container">
             {CoOwnerData && this.renderStaffMembers(CoOwnerData, 'Co Owner', this.state.CoOwnerDataLoading)}
           </div>
         </div>
         <div className="staff-container3">
           <div className="staff-separator02"></div>
           <h1 className="staff-text03">
-            <span>Community Directors</span>
+            <span>Board of Directors</span>
             <br></br>
           </h1>
           <div className="staff-separator03"></div>
@@ -256,7 +246,7 @@ class PFP extends Component {
         <div className="staff-container6">
           <div className="staff-separator08"></div>
           <h1 className="staff-text12">
-            <span>Junior Administrator</span>
+            <span>Junior Administrators</span>
             <br></br>
           </h1>
           <div className="staff-separator09"></div>
@@ -267,7 +257,7 @@ class PFP extends Component {
         <div className="staff-container7">
           <div className="staff-separator10"></div>
           <h1 className="staff-text15">
-            <span>Senior Moderator</span>
+            <span>Senior Moderators</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
@@ -278,7 +268,7 @@ class PFP extends Component {
         <div className="staff-container7">
           <div className="staff-separator10"></div>
           <h1 className="staff-text15">
-            <span>Moderator</span>
+            <span>Moderators</span>
             <br></br>
           </h1>
           <div className="staff-separator11"></div>
@@ -286,6 +276,10 @@ class PFP extends Component {
         <div className="staff-user-container">
           {ModData && this.renderStaffMembers(ModData, 'Staff in Training', this.state.ModDataLoading)}
         </div>
+        <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
+          <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
+        </a>
+        <script src="https://static.copyrighted.com/badges/helper.js"></script>
         <FooterContainer rootClassName="footer-container-root-class-name"></FooterContainer>
       </div >
     )
