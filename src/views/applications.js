@@ -334,9 +334,9 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                         </div>
                                         <div className="applications-container06">
                                             <span className="applications-text019">
-                                                <span>Phoenix Fire</span>
+                                                <span>Arizona Fire</span>
                                                 <br></br>
-                                                <span>Department</span>
+                                                <span>&amp; Medical</span>
                                                 <br></br>
                                             </span>
                                             <span className="applications-text024">
@@ -520,7 +520,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         className="applications-image11"
                                                     />
                                                     <span className="applications-text085">
-                                                        <span>Phoenix Fire &amp; Rescue</span>
+                                                        <span>Arizona Fire &amp; Medical</span>
                                                         <br></br>
                                                     </span>
                                                 </div>

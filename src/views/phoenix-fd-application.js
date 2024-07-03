@@ -16,7 +16,6 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     const [q4, setQ4] = useState("");
     const [q5, setQ5] = useState("");
     const [q6, setQ6] = useState("");
-    const [q7, setQ7] = useState("");
     const [q8, setQ8] = useState("");
     const [q9, setQ9] = useState("");
     const [q10, setQ10] = useState("");
@@ -83,7 +82,6 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                 Q4: q4,
                 Q5: q5,
                 Q6: q6,
-                Q7: q7,
                 Q8: q8,
                 Q9: q9,
                 Q10: q10,
@@ -126,7 +124,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
     return (
         <div className="phoenix-fd-application-container">
             <Helmet>
-                <title>Phoenix FD Application - Arizona State Roleplay</title>
+                <title>Arizona Fire & Medical Application - Arizona State Roleplay</title>
                 <meta property="og:title" content="Phoenix FD Application - Arizona State Roleplay" />
             </Helmet>
             <div className="phoenix-fd-application-container1">
@@ -265,7 +263,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                     />
                                     <p>Characters left: {2 - q6.length}</p>
                                 </div>
-                                <div className="phoenix-fd-application-question-7">
+                                {/* <div className="phoenix-fd-application-question-7">
                                     <span className="phoenix-fd-application-text31">
                                         <span>Have you read over the SOP? </span>
                                         <span className="phoenix-fd-application-text33">*</span>
@@ -282,7 +280,7 @@ export default function PhoenixPDApplication({ userData, discordAuthenticated, v
                                         <option value="No">No</option>
                                         <option value="Other">Other</option>
                                     </select>
-                                </div>
+                                </div> */}
                                 <div className="phoenix-fd-application-separator">
                                     <div className="phoenix-fd-application-separator1"></div>
                                 </div>
