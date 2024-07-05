@@ -15,6 +15,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
     const [q3, setQ3] = useState("");
     const [q4, setQ4] = useState("");
     const [q5, setQ5] = useState("");
+    const [q6, setQ6] = useState("");
     const maxLength = 1024;
 
 
@@ -72,6 +73,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                 Q3: q3,
                 Q4: q4,
                 Q5: q5,
+                Q6, q6
             }),
         }).then((res) => res.json())
             .then((data) => {
@@ -139,15 +141,12 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                 <div className="azdot-application-question-1">
                                     <span className="azdot-application-text06">
                                         <span>
-                                            What is your rp name
+                                            What is your character's name?
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
                                                 }}
                                             />
-                                        </span>
-                                        <span className="azdot-application-text08">
-                                            (ex. Jack G.)
                                         </span>
                                         <span> </span>
                                         <span className="azdot-application-text10">*</span>
@@ -166,15 +165,12 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                 <div className="azdot-application-question-2">
                                     <span className="azdot-application-text11">
                                         <span>
-                                            Why Do you want to join ADOT
+                                            How old is your character?
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
                                                 }}
                                             />
-                                        </span>
-                                        <span className="azdot-application-text13">
-                                            (3-5 Sentences)
                                         </span>
                                         <span>
                                             <span
@@ -186,48 +182,44 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                         <span className="azdot-application-text15">*</span>
                                     </span>
                                     <input
-                                        type="text"
+                                        type="number"
                                         id="q2"
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdot-application-textinput1 input"
                                         onChange={(e) => setQ2(e.target.value)}
-                                        maxLength={1024}
+                                        maxLength={2}
                                     />
-                                    <p>Characters left: {1024 - q2.length}</p>
+                                    <p>Characters left: {2 - q2.length}</p>
                                 </div>
                                 <div className="azdot-application-question-3">
                                     <span className="azdot-application-text16">
                                         <span>
-                                            Do you have any previous experience with Mechanical or
-                                            Transportation IRL or In FiveM? If so please explain here, N/A If none
+                                            Is your character a felon?
                                         </span>
                                         <span className="azdot-application-text18">*</span>
                                         <br></br>
                                     </span>
-                                    <input
-                                        type="text"
+                                    <select
                                         id="q3"
                                         required={true}
-                                        placeholder="Your Answer"
                                         className="azdot-application-textinput2 input"
                                         onChange={(e) => setQ3(e.target.value)}
-                                        maxLength={1024}
-                                    />
-                                    <p>Characters left: {1024 - q3.length}</p>
+                                    >
+                                        <option defaultValue value=""></option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
                                 </div>
                                 <div className="azdot-application-question-4">
                                     <span className="azdot-application-text20">
                                         <span>
-                                            Why should we pick your application over others?
+                                            In 2-5 sentences tell us why you want to be apart of ADOT.
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
                                                 }}
                                             />
-                                        </span>
-                                        <span className="azdot-application-text22">
-                                            (3-5 Sentences)
                                         </span>
                                         <span> </span>
                                         <span className="azdot-application-text24">*</span>
@@ -247,7 +239,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                 <div className="azdot-application-question-5">
                                     <span className="azdot-application-text26">
                                         <span>
-                                            Date of submission
+                                            Tell us why we should chose you over other applicants
                                             <span
                                                 dangerouslySetInnerHTML={{
                                                     __html: ' ',
@@ -258,13 +250,39 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                                         <br></br>
                                     </span>
                                     <input
-                                        type="date"
+                                        type="text"
                                         id="q5"
                                         required={true}
                                         placeholder="Your Answer"
                                         className="azdot-application-textinput4 input"
                                         onChange={(e) => setQ5(e.target.value)}
+                                        maxLength={1024}
                                     />
+                                    <p>Characters left: {1024 - q5.length}</p>
+                                </div>
+                                <div className="azdot-application-question-5">
+                                    <span className="azdot-application-text26">
+                                        <span>
+                                            Any comments questions or concerns?
+                                            <span
+                                                dangerouslySetInnerHTML={{
+                                                    __html: ' ',
+                                                }}
+                                            />
+                                        </span>
+                                        <span className="azdot-application-text28">*</span>
+                                        <br></br>
+                                    </span>
+                                    <input
+                                        type="text"
+                                        id="q6"
+                                        required={true}
+                                        placeholder="Your Answer"
+                                        className="azdot-application-textinput4 input"
+                                        onChange={(e) => setQ6(e.target.value)}
+                                        maxLength={1024}
+                                    />
+                                    <p>Characters left: {1024 - q6.length}</p>
                                 </div>
                                 <button onClick={handleSubmit} className="azdot-application-button button">
                                     <span>
