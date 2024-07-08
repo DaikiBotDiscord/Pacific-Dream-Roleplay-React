@@ -73,7 +73,7 @@ export default function AZDOTApplication({ userData, discordAuthenticated, verif
                 Q3: q3,
                 Q4: q4,
                 Q5: q5,
-                Q6, q6
+                Q6: q6,
             }),
         }).then((res) => res.json())
             .then((data) => {
