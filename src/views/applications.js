@@ -29,6 +29,8 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
     const [FAALight, setFAALight] = useState('https://www.pinalcountyrp.com/not_started.png');
     const [FBIStatus, setFBIStatus] = useState('Loading...');
     const [FBILight, setFBILight] = useState('https://www.pinalcountyrp.com/not_started.png')
+    const [StaffStatus, setStaffStatus] = useState('Loading...');
+    const [StaffLight, setStaffLight] = useState('https://www.pinalcountyrp.com/not_started.png');
 
     const user = userData.data
     const { data } = userData;
@@ -235,6 +237,20 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                 setFAAStatus(data.status);
                 setFAALight(data.statusLight)
             })
+        fetch(`${config.apiDomain}/api/user/applications/staff-status/${user.email}`, {
+            method: "POST",
+            crossDomain: true,
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "Access-Control-Allow-Origin": "*",
+                token: config.requiredToken,
+            }
+        }).then((res) => res.json())
+            .then((data) => {
+                setStaffStatus(data.status);
+                setStaffLight(data.statusLight)
+            })
     }
 
     function capitalizeFirstLetter(str) {
@@ -413,6 +429,21 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                             <img
                                                 alt="image"
                                                 src={AZDOTLight}
+                                                className="applications-image07"
+                                            />
+                                        </div>
+                                        <div className="applications-container10">
+                                            <span className="applications-text052">
+                                                <span>Staff Application</span>
+                                                <br></br>
+                                            </span>
+                                            <span className="applications-text055">
+                                                <span>{StaffStatus.toUpperCase()}</span>
+                                                <br></br>
+                                            </span>
+                                            <img
+                                                alt="image"
+                                                src={StaffLight}
                                                 className="applications-image07"
                                             />
                                         </div>
@@ -596,6 +627,19 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
                                                         <span>Department of</span>
                                                         <br></br>
                                                         <span>Transportation</span>
+                                                        <br></br>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link to="/user/staff-application" className="applications-navlink5">
+                                                <div className="applications-container23">
+                                                    <img
+                                                        alt="image"
+                                                        src="https://www.azsrp.com/pcrp_logo.png"
+                                                        className="applications-image15"
+                                                    />
+                                                    <span className="applications-text103">
+                                                        <span>Staff Application</span>
                                                         <br></br>
                                                     </span>
                                                 </div>
