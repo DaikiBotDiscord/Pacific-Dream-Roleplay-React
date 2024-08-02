@@ -217,7 +217,7 @@ const App = () => {
     }
     setInterval(() => {
       checkToken();
-    }, 10 * 1000);
+    }, 30 * 1000);
   }
 
   return (
