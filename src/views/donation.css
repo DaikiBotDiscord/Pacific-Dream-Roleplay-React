@@ -367,6 +367,7 @@
 }
 
 .donation-pricing-card3 {
+  width: 13%;
   height: var(--dl-size-size-large);
   display: flex;
   transition: 0.3s;
