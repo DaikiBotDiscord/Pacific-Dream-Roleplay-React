@@ -115,7 +115,7 @@ const Donation = (props) => {
                 <br></br>
               </span>
               <span className="donation-text25">
-                <span>99</span>
+                <span>.99</span>
                 <br></br>
               </span>
             </div>
@@ -160,7 +160,11 @@ const Donation = (props) => {
               </span>
               <span className="donation-text44">
                 <span>
-                  ✔ Personal Custom Modeled Vehicle By our developmers
+                  ✔ Personal Custom Modeled
+                </span>
+                <br></br>
+                <span>
+                  Vehicle By our developmers
                 </span>
                 <br></br>
               </span>
@@ -178,14 +182,6 @@ const Donation = (props) => {
       <h1 id="how-to-donate" className="donation-text48">
         How to Donate
       </h1>
-      <span className="donation-text49">
-        <span>
-          Please remember to enter your discord username inside of the note on
-          the payment
-        </span>
-        <br></br>
-        <span>So that you can receive your donator benefits </span>
-      </span>
       <h1 className="donation-text53">please be aware there are no refunds</h1>
       <div className="donation-container09">
         <a

@@ -224,7 +224,7 @@ class PFP extends Component {
         <div className="staff-container4">
           <div className="staff-separator04"></div>
           <h1 className="staff-text06">
-            <span>Community Managers</span>
+            <span>Community Manager</span>
             <br></br>
           </h1>
           <div className="staff-separator05"></div>
