@@ -15,7 +15,7 @@
   align-items: flex-start;
   flex-direction: column;
   background-size: auto, cover;
-  background-image: linear-gradient(113deg, rgba(31, 35, 34, 0.8) 7.00%, rgba(58, 78, 110, 0.8) 93.00%);
+  background-image: linear-gradient(113.8deg, rgba(255, 76, 92, 0.8) 7.5%, rgba(255, 177, 70, 0.8) 94.47%);
   background-repeat: top left;
   background-position: top left, center;
 }
@@ -57,10 +57,7 @@
   padding-bottom: var(--dl-space-space-twounits);
   background-size: auto, cover;
   justify-content: space-between;
-  background-image: linear-gradient(90deg,
-      rgba(193, 127, 95, 0.5) 33%,
-      rgba(44, 62, 80, 0.5) 100%),
-    url('https://www.pinalcountyrp.com/copper_donations.png');
+  background-image: linear-gradient(90deg, rgba(193, 127, 95, 0.5) 33.00%, rgba(44, 62, 80, 0.5) 100.00%), url('https://pinalcountyrp.com/copper_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -91,10 +88,11 @@
 
 .donation-text07 {
   font-size: 4rem;
+  font-style: normal;
   font-weight: 700;
 }
 
-.donation-text08 {
+.donation-text10 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -108,21 +106,21 @@
   flex-direction: column;
 }
 
-.donation-text11 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
-.donation-text12 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
 .donation-text13 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text14 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text15 {
   font-style: normal;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
@@ -156,10 +154,7 @@
   padding-bottom: var(--dl-space-space-twounits);
   background-size: auto, cover;
   justify-content: space-between;
-  background-image: linear-gradient(90deg,
-      rgba(238, 192, 2, 0.25) 32%,
-      rgba(44, 62, 80, 0.5) 100%),
-    url('https://www.pinalcountyrp.com/gold_donations.png');
+  background-image: linear-gradient(90deg, rgba(238, 192, 2, 0.25) 32.00%, rgba(44, 62, 80, 0.5) 100.00%), url('https://pinalcountyrp.com/gold_donations.png');
   background-repeat: repeat, no-repeat;
   background-position: top left, right;
 }
@@ -168,7 +163,7 @@
   transform: scale(1.02);
 }
 
-.donation-text14 {
+.donation-text16 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
@@ -182,19 +177,19 @@
   flex-direction: row;
 }
 
-.donation-text17 {
+.donation-text19 {
   font-size: 1.15rem;
   margin-top: var(--dl-space-space-twounits);
   font-weight: 300;
 }
 
-.donation-text20 {
+.donation-text22 {
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
 }
 
-.donation-text23 {
+.donation-text25 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -208,21 +203,21 @@
   flex-direction: column;
 }
 
-.donation-text26 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
-.donation-text27 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
 .donation-text28 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text29 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text30 {
   font-style: normal;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
@@ -254,21 +249,17 @@
   padding-right: var(--dl-space-space-twounits);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
-  background-size: auto, cover;
+  background-size: cover;
   justify-content: space-between;
-  background-image: linear-gradient(90deg,
-      rgba(189, 195, 199, 0.5) 34%,
-      rgba(44, 62, 80, 0.5) 100%),
-    url('https://www.pinalcountyrp.com/platinum_donations.png');
-  background-repeat: repeat, no-repeat;
-  background-position: top left, right;
+  background-image: linear-gradient(90deg, rgba(112, 225, 255, 0.5) 34.00%, rgba(44, 62, 80, 0.5) 100.00%), url('https://pinalcountyrp.com/diamond_donations.png');
+  background-position: right;
 }
 
 .donation-pricing-card2:hover {
   transform: scale(1.02);
 }
 
-.donation-text29 {
+.donation-text31 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
@@ -282,19 +273,19 @@
   flex-direction: row;
 }
 
-.donation-text32 {
+.donation-text34 {
   font-size: 1.15rem;
   margin-top: var(--dl-space-space-twounits);
   font-weight: 300;
 }
 
-.donation-text35 {
+.donation-text37 {
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
 }
 
-.donation-text38 {
+.donation-text40 {
   font-size: 2rem;
   align-self: flex-end;
   font-weight: 700;
@@ -308,13 +299,20 @@
   flex-direction: column;
 }
 
-.donation-text41 {
+.donation-text43 {
   font-style: normal;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
 }
 
-.donation-text42 {
+.donation-text44 {
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+  text-transform: capitalize;
+}
+
+.donation-text47 {
   font-style: normal;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
@@ -332,110 +330,12 @@
   background-color: var(--dl-color-gray-black);
 }
 
-.donation-pricing-card3 {
-  width: 100%;
-  display: flex;
-  padding: var(--dl-space-space-threeunits);
-  max-width: 450px;
-  min-height: 450px;
-  transition: 0.3s;
-  align-items: flex-start;
-  padding-top: var(--dl-space-space-twounits);
-  margin-right: var(--dl-space-space-twounits);
-  padding-left: var(--dl-space-space-twounits);
-  padding-right: var(--dl-space-space-twounits);
-  flex-direction: column;
-  padding-bottom: var(--dl-space-space-twounits);
-  background-size: cover;
-  justify-content: space-between;
-  background-image: linear-gradient(90deg,
-      rgba(112, 225, 255, 0.5) 34%,
-      rgba(44, 62, 80, 0.5) 100%),
-    url('https://www.pinalcountyrp.com/diamond_donations.png');
-  background-position: right;
-}
-
-.donation-pricing-card3:hover {
-  transform: scale(1.02);
-}
-
-.donation-text45 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-twounits);
-  text-transform: uppercase;
-}
-
-.donation-container09 {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--dl-space-space-twounits);
-  flex-direction: row;
-}
-
 .donation-text48 {
-  font-size: 1.15rem;
-  margin-top: var(--dl-space-space-twounits);
-  font-weight: 300;
-}
-
-.donation-text51 {
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.donation-text54 {
-  font-size: 2rem;
-  align-self: flex-end;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.donation-container10 {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: var(--dl-space-space-threeunits);
-  flex-direction: column;
-}
-
-.donation-text57 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-}
-
-.donation-text58 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
-.donation-text61 {
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-unit);
-  text-transform: capitalize;
-}
-
-.donation-link3 {
-  color: var(--dl-color-gray-white);
-  margin-top: auto;
-  padding-top: var(--dl-space-space-unit);
-  padding-left: var(--dl-space-space-twounits);
-  padding-right: var(--dl-space-space-twounits);
-  padding-bottom: var(--dl-space-space-unit);
-  text-decoration: none;
-  background-color: var(--dl-color-gray-black);
-}
-
-.donation-text62 {
   font-size: 3em;
   margin-top: var(--dl-space-space-threeunits);
 }
 
-.donation-text63 {
+.donation-text49 {
   font-size: 16px;
   text-align: center;
   font-family: Inter;
@@ -445,28 +345,12 @@
   text-decoration: none;
 }
 
-.refund {
+.donation-text53 {
   font-size: 16px;
-  text-align: center;
-  font-family: Inter;
-  font-weight: bold;
-  line-height: 1.15;
   text-transform: uppercase;
-  text-decoration: none;
 }
 
-.disclaimer {
-  font-size: 16px;
-  text-align: center;
-  font-family: Inter;
-  font-weight: bold;
-  line-height: 1.15;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.donation-container11 {
+.donation-container09 {
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-threeunits);
@@ -474,18 +358,17 @@
   justify-content: center;
 }
 
-.donation-link4 {
+.donation-link3 {
   display: contents;
 }
 
-.donation-pricing-card4 {
+.donation-pricing-card3 {
   width: 15%;
   height: var(--dl-size-size-large);
   display: flex;
   transition: 0.3s;
   align-items: center;
   padding-top: var(--dl-space-space-twounits);
-  margin-right: var(--dl-space-space-twounits);
   padding-left: var(--dl-space-space-twounits);
   border-radius: 10px;
   padding-right: var(--dl-space-space-twounits);
@@ -495,80 +378,41 @@
   background-color: var(--dl-color-gray-900);
 }
 
-.donation-pricing-card4:hover {
+.donation-pricing-card3:hover {
   transform: scale(1.02);
   border-color: var(--dl-color-gray-black);
-  border-width: 0.5px;
+  border-width: .5px;
 }
 
-.donation-image {
-  width: var(--dl-size-size-small);
-  height: auto;
-  object-fit: cover;
-  margin-bottom: var(--dl-space-space-halfunit);
+.donation-pasted-image {
+  width: 55px;
 }
 
-.donation-text67 {
+.donation-text54 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: var(--dl-space-space-twounits);
   text-transform: uppercase;
 }
 
-.donation-text68 {
-  font-weight: 600;
+.donation-text55 {
   text-transform: capitalize;
 }
 
-.donation-link5 {
-  display: contents;
-}
-
-.donation-pricing-card5 {
-  width: 15%;
-  height: var(--dl-size-size-large);
-  display: flex;
-  align-self: center;
-  transition: 0.3s;
-  align-items: center;
-  padding-top: var(--dl-space-space-twounits);
-  margin-right: var(--dl-space-space-twounits);
-  padding-left: var(--dl-space-space-twounits);
-  border-radius: 10px;
-  padding-right: var(--dl-space-space-twounits);
-  flex-direction: column;
-  text-decoration: none;
-  background-color: var(--dl-color-gray-900);
-}
-
-.donation-pricing-card5:hover {
-  transform: scale(1.02);
-  border-color: var(--dl-color-gray-black);
-  border-width: 0.5px;
-}
-
-.donation-image1 {
-  width: var(--dl-size-size-small);
-  height: auto;
-  object-fit: cover;
-  margin-bottom: var(--dl-space-space-halfunit);
-}
-
-.donation-text69 {
-  width: var(--dl-size-size-large);
-  font-size: 1.5rem;
+.donation-text57 {
+  font-size: 16px;
+  font-style: normal;
   text-align: center;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-twounits);
-  text-transform: capitalize;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.donation-text70 {
-  font-weight: 600;
-  text-transform: capitalize;
+.donation-text58 {
+  font-style: normal;
+  font-weight: 700;
 }
 
-@media (max-width: 991px) {
+@media(max-width: 991px) {
   .donation-pricing-card {
     width: 100%;
     padding: var(--dl-space-space-twounits);
@@ -591,27 +435,14 @@
   }
 
   .donation-pricing-card3 {
-    width: 100%;
-    padding: var(--dl-space-space-twounits);
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .donation-pricing-card4 {
     width: var(--dl-size-size-large);
     padding: var(--dl-space-space-twounits);
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .donation-pricing-card5 {
-    width: var(--dl-size-size-large);
     max-width: 100%;
     align-items: center;
   }
 }
 
-@media (max-width: 767px) {
+@media(max-width: 767px) {
   .donation-container02 {
     flex-flow: column;
     padding-left: var(--dl-space-space-twounits);
@@ -642,29 +473,13 @@
     margin-bottom: var(--dl-space-space-twounits);
   }
 
-  .donation-pricing-card3 {
-    width: 100%;
-    max-width: 450px;
-    align-items: center;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-
-  .donation-container11 {
+  .donation-container09 {
     flex-flow: column;
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
 
-  .donation-pricing-card4 {
-    width: 100%;
-    max-width: 450px;
-    align-items: center;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-twounits);
-  }
-
-  .donation-pricing-card5 {
+  .donation-pricing-card3 {
     width: 100%;
     max-width: 450px;
     align-items: center;
@@ -673,7 +488,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media(max-width: 390px) {
   .donation-container02 {
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
@@ -681,7 +496,7 @@
     padding-bottom: var(--dl-space-space-twounits);
   }
 
-  .donation-container11 {
+  .donation-container09 {
     padding-top: var(--dl-space-space-twounits);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
