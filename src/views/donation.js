@@ -50,12 +50,13 @@ const Donation = (props) => {
     }
   };
   return (
-    <div className="donation-container">
+    <div>
       <Helmet>
-        <title>Donation - Pacific Dream Roleplay</title>
+        <title>Donation - Arizona State Roleplay</title>
+        <meta property="og:title" content="Donation - Arizona State Roleplay" />
         <meta
-          property="og:title"
-          content="Donation - Pacific Dream Roleplay"
+          property="og:image"
+          content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/151790f7-6583-4936-911e-8f0137220d74/b871f600-3969-4903-b609-41571670b9e4?org_if_sml=1&amp;force_format=original"
         />
       </Helmet>
       <div className="donation-container01">
@@ -74,156 +75,156 @@ const Donation = (props) => {
                 <span>$</span>
                 <span></span>
               </span>
-              <span className="donation-text07">5</span>
-              <span className="donation-text08">
-                <span>.00</span>
+              <span className="donation-text07">
+                <span>4</span>
+                <br></br>
+              </span>
+              <span className="donation-text10">
+                <span>.99</span>
                 <br></br>
               </span>
             </div>
             <div className="donation-container04">
-              <span className="donation-text11">✔ Discord Donator Role</span>
-              <span className="donation-text12">
+              <span className="donation-text13">✔ Discord Donator Role</span>
+              <span className="donation-text14">
                 ✔ Discord donator category
               </span>
-              <span className="donation-text13">
+              <span className="donation-text15">
                 ✔ early access Server sneak peeks
               </span>
             </div>
-            <a href="#how-to-donate" className="donation-link button">
+            <a
+              href="https://shop.azsrp.com/package/6395421"
+              className="donation-link button"
+            >
               Learn More
             </a>
           </div>
           <div className="donation-pricing-card1">
-            <span className="donation-text14">
+            <span className="donation-text16">
               <span>gold</span>
               <br></br>
             </span>
             <div className="donation-container05">
-              <span className="donation-text17">
+              <span className="donation-text19">
                 <span>$</span>
                 <span></span>
               </span>
-              <span className="donation-text20">
-                <span>25</span>
+              <span className="donation-text22">
+                <span>24</span>
                 <br></br>
               </span>
-              <span className="donation-text23">
-                <span>.00</span>
+              <span className="donation-text25">
+                <span>99</span>
                 <br></br>
               </span>
             </div>
             <div className="donation-container06">
-              <span className="donation-text26">
-                ✔ All Features Copper Includes
+              <span className="donation-text28">
+                ✔ All Features Basic Includes
               </span>
-              <span className="donation-text27">
+              <span className="donation-text29">
                 ✔ Free Personal civilian Vehicle
               </span>
-              <span className="donation-text28">✔ Donator Vehicle Menu</span>
+              <span className="donation-text30">✔ Donator Vehicle Menu</span>
             </div>
-            <a href="#how-to-donate" className="donation-link1 button">
+            <a
+              href="https://shop.azsrp.com/package/6395421"
+              className="donation-link1 button"
+            >
               Learn More
             </a>
           </div>
-          <div className="donation-pricing-card3">
-            <span className="donation-text45">
+          <div className="donation-pricing-card2">
+            <span className="donation-text31">
               <span>Diamond</span>
               <br></br>
             </span>
-            <div className="donation-container09">
-              <span className="donation-text48">
+            <div className="donation-container07">
+              <span className="donation-text34">
                 <span>$</span>
                 <span></span>
               </span>
-              <span className="donation-text51">
-                <span>60</span>
+              <span className="donation-text37">
+                <span>59</span>
                 <br></br>
               </span>
-              <span className="donation-text54">
-                <span>.00</span>
+              <span className="donation-text40">
+                <span>.99</span>
                 <br></br>
               </span>
             </div>
-            <div className="donation-container10">
-              <span className="donation-text57">
-                ✔ All features Copper Includes
+            <div className="donation-container08">
+              <span className="donation-text43">
+                ✔ All features Basic Includes
               </span>
-              <span className="donation-text58">
+              <span className="donation-text44">
                 <span>
-                  ✔ Personal LEO Vehicle
+                  ✔ Personal Custom Modeled Vehicle By our developmers
                 </span>
                 <br></br>
               </span>
-              <span className="donation-text61">✔ Donator Vehicle Menu</span>
+              <span className="donation-text47">✔ Donator Vehicle Menu</span>
             </div>
-            <a href="#how-to-donate" className="donation-link3 button">
+            <a
+              href="https://shop.azsrp.com/package/6395437"
+              className="donation-link2 button"
+            >
               Learn More
             </a>
           </div>
         </div>
       </div>
-      <h1 id="how-to-donate" className="donation-text62">
+      <h1 id="how-to-donate" className="donation-text48">
         How to Donate
       </h1>
-      <span className="donation-text63">
+      <span className="donation-text49">
         <span>
           Please remember to enter your discord username inside of the note on
           the payment
         </span>
         <br></br>
-        <span>So that you can receive your donator benefits.</span>
-        <br></br>
-        <span className='refund'>Please be aware there are no refunds</span>
+        <span>So that you can receive your donator benefits </span>
       </span>
-      <div className="donation-container11">
+      <h1 className="donation-text53">please be aware there are no refunds</h1>
+      <div className="donation-container09">
         <a
-          href="https://www.paypal.com/paypalme/Scopex07"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="donation-link4"
+          href="https://shop.azsrp.com/category/store"
+          className="donation-link3"
         >
-          <div className="donation-pricing-card4">
+          <div className="donation-pricing-card3">
             <img
-              alt="image"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/151790f7-6583-4936-911e-8f0137220d74/88fcd8cb-c96c-41bc-bcb1-428293bb423f?org_if_sml=14915&amp;force_format=original"
-              className="donation-image"
+              alt="pastedImage"
+              src="/external/pastedimage-hlvh-200h.webp"
+              className="donation-pasted-image"
             />
-            <span className="donation-text67">
-              <span className="donation-text68">Paypal</span>
-            </span>
-          </div>
-        </a>
-        <a
-          href="https://cash.app/$scopex07"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="donation-link5"
-        >
-          <div className="donation-pricing-card5">
-            <img
-              alt="image"
-              src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/151790f7-6583-4936-911e-8f0137220d74/62096b95-ddaf-4d14-aa54-2571c37f94b1?org_if_sml=114047&amp;force_format=original"
-              className="donation-image1"
-            />
-            <span className="donation-text69">
-              <span className="donation-text70">cash App</span>
+            <span className="donation-text54">
+              <span className="donation-text55">Tebex</span>
+              <br></br>
             </span>
           </div>
         </a>
       </div>
-      <span className='disclaimer'>
-        *Arizona State Roleplay has the right to revoke any donation perks from you if you are to be banned or found to be breaking the rules of the Arizona State Roleplay Server*
+      <h1 className="donation-text57">
+        <span className="donation-text58">
+          *Arizona State Roleplay has the right to revoke any donation perks
+          from you if you are to be banned or found to be breaking the rules of
+          the Arizona State Roleplay Server*
+        </span>
         <br></br>
-        *Your Personals will have a script to lock them only to you and you may give access to other users*
+        <span>
+          *Your personals will have a script to lock them only to you and you
+          may give access to other users*
+        </span>
         <br></br>
-        *Donation Assets are a privilege and may be taken away by community directors at any point*
-      </span>
-      <a className="copyrighted-badge" title="Copyrighted.com Registered &amp; Protected" target="_blank" href="https://app.copyrighted.com/website/VdyDkIgA3GE82WWI">
-        <img alt="Copyrighted.com Registered &amp; Protected" border="0" width="125" height="25" srcSet="https://static.copyrighted.com/badges/125x25/01_1_2x.png 2x" src="https://static.copyrighted.com/badges/125x25/01_1.png" />
-      </a>
-      <script src="https://static.copyrighted.com/badges/helper.js"></script>
+        <span>
+          *Donation assets are a privilege and may be taken away by community
+          directors at any point*
+        </span>
+        <br></br>
+      </h1>
       <FooterContainer rootClassName="footer-container-root-class-name1"></FooterContainer>
-    </div>
+    </div >
   )
 }
 

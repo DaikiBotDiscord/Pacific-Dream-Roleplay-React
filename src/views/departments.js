@@ -64,7 +64,7 @@ const Departments = (props) => {
                                 className="departments-image2"
                             />
                             <h2 className="departments-text06">
-                                <span>Maricopa State Sheriffs Office</span>
+                                <span>Maricopa Sheriffs Office</span>
                                 <br></br>
                             </h2>
                             <span className="departments-text09">
