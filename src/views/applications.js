@@ -84,7 +84,7 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
 
     setInterval(() => {
         fetchData();
-    }, 10 * 1000);
+    }, 30 * 1000);
 
     const checkTokenRepeat = async () => {
         try {
@@ -116,7 +116,6 @@ export default function Applications({ userData, discordAuthenticated, VerifiedC
             }
         } catch (err) {
             console.error(err);
-            // Handle error (e.g., display an error message or redirect)
         }
     };
 
